@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BEST_PLAYER_2024.Resources;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,31 @@ namespace BEST_PLAYER_2024
         public Form1()
         {
             InitializeComponent();
+
+           
+        }
+
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // Crea una instancia de Form2
+            FrmLogin frmlogin = new FrmLogin();
+
+            // Muestra Form2
+            frmlogin.ShowDialog();
+
+            // Cierra el formulario actual (Form1)
+            this.Close();
         }
     }
 }
