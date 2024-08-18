@@ -137,6 +137,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Iniciar Sesion";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // linkLabel1
             // 
@@ -214,8 +215,11 @@
             this.MaximumSize = new System.Drawing.Size(1000, 650);
             this.MinimumSize = new System.Drawing.Size(1000, 650);
             this.Name = "FrmLogin";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLogin";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmLogin_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmLogin_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FrmLogin_MouseUp);
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

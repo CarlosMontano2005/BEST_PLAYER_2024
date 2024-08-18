@@ -11,13 +11,11 @@ using System.Windows.Forms;
 
 namespace BEST_PLAYER_2024
 {
-    public partial class Form1 : Form
+    public partial class FrmInicio : Form
     {
-        public Form1()
+        public FrmInicio()
         {
             InitializeComponent();
-
-           
         }
 
 
@@ -33,14 +31,14 @@ namespace BEST_PLAYER_2024
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            // Crea una instancia de Form2
+            // Crear una instancia del nuevo formulario
             FrmLogin frmlogin = new FrmLogin();
 
-            // Muestra Form2
-            frmlogin.ShowDialog();
+            // Mostrar el nuevo formulario de manera no modal
+            frmlogin.Show();
 
-            // Cierra el formulario actual (Form1)
-            this.Close();
+            // Ocultar el formulario actual (Form1)
+            this.Hide();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
