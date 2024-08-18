@@ -19,6 +19,7 @@ namespace BEST_PLAYER_2024.Resources
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            //Agrengando codigo para cerrar la ventana
             this.Close();
         }
     }
