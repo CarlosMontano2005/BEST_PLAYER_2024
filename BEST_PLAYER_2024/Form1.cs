@@ -42,5 +42,10 @@ namespace BEST_PLAYER_2024
             // Cierra el formulario actual (Form1)
             this.Close();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
