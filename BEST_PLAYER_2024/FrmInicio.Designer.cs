@@ -1,6 +1,6 @@
 ﻿namespace BEST_PLAYER_2024
 {
-    partial class Form1
+    partial class FrmInicio
     {
         /// <summary>
         /// Variable del diseñador necesaria.
