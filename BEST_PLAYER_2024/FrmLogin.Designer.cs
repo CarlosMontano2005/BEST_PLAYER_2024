@@ -35,7 +35,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.rjRadioButton1 = new RJCodeAdvance.RJControls.RJRadioButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
@@ -59,7 +58,7 @@
             this.rjTextBox1.PasswordChar = false;
             this.rjTextBox1.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.rjTextBox1.PlaceholderText = "Correo@example.com";
-            this.rjTextBox1.Size = new System.Drawing.Size(250, 36);
+            this.rjTextBox1.Size = new System.Drawing.Size(250, 41);
             this.rjTextBox1.TabIndex = 0;
             this.rjTextBox1.Texts = "";
             this.rjTextBox1.UnderlinedStyle = true;
@@ -99,7 +98,7 @@
             this.rjTextBox2.PasswordChar = true;
             this.rjTextBox2.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.rjTextBox2.PlaceholderText = "Clave";
-            this.rjTextBox2.Size = new System.Drawing.Size(250, 36);
+            this.rjTextBox2.Size = new System.Drawing.Size(250, 41);
             this.rjTextBox2.TabIndex = 2;
             this.rjTextBox2.Texts = "";
             this.rjTextBox2.UnderlinedStyle = true;
@@ -111,7 +110,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.label1.Location = new System.Drawing.Point(402, 236);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 21);
+            this.label1.Size = new System.Drawing.Size(212, 25);
             this.label1.TabIndex = 3;
             this.label1.Text = "Correo Electronico";
             // 
@@ -122,7 +121,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.label2.Location = new System.Drawing.Point(402, 333);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 21);
+            this.label2.Size = new System.Drawing.Size(78, 25);
             this.label2.TabIndex = 4;
             this.label2.Text = "Clave";
             // 
@@ -146,27 +145,10 @@
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
             this.linkLabel1.Location = new System.Drawing.Point(371, 594);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(329, 21);
+            this.linkLabel1.Size = new System.Drawing.Size(416, 25);
             this.linkLabel1.TabIndex = 6;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "¿No tienes cuenta? Crear una cuenta";
-            // 
-            // rjRadioButton1
-            // 
-            this.rjRadioButton1.AutoSize = true;
-            this.rjRadioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.rjRadioButton1.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.rjRadioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.rjRadioButton1.Location = new System.Drawing.Point(406, 401);
-            this.rjRadioButton1.MinimumSize = new System.Drawing.Size(0, 21);
-            this.rjRadioButton1.Name = "rjRadioButton1";
-            this.rjRadioButton1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rjRadioButton1.Size = new System.Drawing.Size(123, 25);
-            this.rjRadioButton1.TabIndex = 7;
-            this.rjRadioButton1.TabStop = true;
-            this.rjRadioButton1.Text = "Ver Clave";
-            this.rjRadioButton1.UnCheckedColor = System.Drawing.Color.Gray;
-            this.rjRadioButton1.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -187,13 +169,13 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(467, 184);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 37);
+            this.label3.Size = new System.Drawing.Size(124, 46);
             this.label3.TabIndex = 9;
             this.label3.Text = "LOGIN";
             // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.BackgroundImage = global::BEST_PLAYER_2024.Properties.Resources.SL_030822_49070_19;
@@ -201,7 +183,6 @@
             this.ClientSize = new System.Drawing.Size(1000, 650);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.rjRadioButton1);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
@@ -233,7 +214,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private RJCodeAdvance.RJControls.RJRadioButton rjRadioButton1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
     }
