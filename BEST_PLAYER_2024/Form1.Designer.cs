@@ -82,6 +82,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label4
             // 
@@ -89,7 +90,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(256, 596);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(129, 21);
+            this.label4.Size = new System.Drawing.Size(157, 23);
             this.label4.TabIndex = 5;
             this.label4.Text = "Para Continuar";
             // 
@@ -101,7 +102,7 @@
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
             this.linkLabel1.Location = new System.Drawing.Point(195, 596);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(61, 21);
+            this.linkLabel1.Size = new System.Drawing.Size(71, 23);
             this.linkLabel1.TabIndex = 4;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "\"Enter\"";
@@ -113,7 +114,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(122, 596);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 21);
+            this.label3.Size = new System.Drawing.Size(90, 23);
             this.label3.TabIndex = 3;
             this.label3.Text = "Presione";
             // 
@@ -124,7 +125,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(124, 331);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(261, 37);
+            this.label2.Size = new System.Drawing.Size(327, 46);
             this.label2.TabIndex = 2;
             this.label2.Text = "BEST  PLAYER 2024";
             // 
@@ -135,7 +136,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(187, 260);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 71);
+            this.label1.Size = new System.Drawing.Size(172, 89);
             this.label1.TabIndex = 1;
             this.label1.Text = "FIFA";
             // 
@@ -159,7 +160,7 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.BackgroundImage = global::BEST_PLAYER_2024.Properties.Resources.SL_030822_49070_19;
