@@ -30,6 +30,7 @@ namespace BEST_PLAYER_2024
             // Establece "Escoja una opción" como el ítem seleccionado por defecto
             CmbNiveles.SelectedIndex = 0;
         }
+      
         void LlenarAgencia()
         {
             try
@@ -95,12 +96,36 @@ namespace BEST_PLAYER_2024
             }
 
         }
+        //Cargar Datos
+        void CargarGridDatos()
+        {
+            try
+            {
+                DataTable datos = ServUsuario.CargarUsuarios();
+                DgvUsuarios.DataSource = datos;
+
+                // Renombrar las columnas en el DataGridView
+                DgvUsuarios.Columns["IdUsuario"].HeaderText = "ID";
+                DgvUsuarios.Columns["NombreUsuario"].HeaderText = "Nombre de Usuario";
+                DgvUsuarios.Columns["Correo"].HeaderText = "Correo Electrónico";
+                DgvUsuarios.Columns["FechaNacimiento"].HeaderText = "Fecha de Nacimiento";
+                DgvUsuarios.Columns["Foto"].HeaderText = "Foto";
+                DgvUsuarios.Columns["Pasaporte"].HeaderText = "Número de Pasaporte";
+                DgvUsuarios.Columns["Nivel_Usuario"].HeaderText = "Nivel de Usuario";
+                DgvUsuarios.Columns["NombreAgencia"].HeaderText = "Agencia";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar los datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
         private void FrmPrueba_Load(object sender, EventArgs e)
         {
             //Llenar Combobox 
             LlenarNiveles();
             LlenarAgencia();
+            CargarGridDatos();
         }
         public FrmPrueba()
         {
