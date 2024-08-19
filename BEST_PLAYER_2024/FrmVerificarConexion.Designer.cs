@@ -33,6 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.TxtServer = new System.Windows.Forms.TextBox();
             this.TxtDb = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -79,11 +80,22 @@
             this.TxtDb.TabIndex = 7;
             this.TxtDb.Text = "DBVotacionJugadores_Nueva";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(206, 331);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(288, 56);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Verificar ";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // FrmVerificarConexion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.TxtDb);
             this.Controls.Add(this.TxtServer);
             this.Controls.Add(this.label2);
@@ -103,5 +115,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TxtServer;
         private System.Windows.Forms.TextBox TxtDb;
+        private System.Windows.Forms.Button button2;
     }
 }
