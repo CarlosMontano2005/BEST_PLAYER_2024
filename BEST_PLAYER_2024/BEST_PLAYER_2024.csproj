@@ -49,7 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatabaseConnection.cs" />
     <Compile Include="FrmHijo2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +72,12 @@
     </Compile>
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrueba.Designer.cs">
+      <DependentUpon>FrmPrueba.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmUsuarios.cs">
       <SubType>Form</SubType>
@@ -99,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrueba.resx">
+      <DependentUpon>FrmPrueba.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
@@ -141,6 +149,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\x-lg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Configuracion\Configuracion.csproj">
+      <Project>{1DA61AF0-8806-44E7-A4AC-6200F587D722}</Project>
+      <Name>Configuracion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Controlador\Controlador.csproj">
+      <Project>{E5BB86C4-2040-45DA-A7A6-A1937AF3023D}</Project>
+      <Name>Controlador</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Servicios\Servicios.csproj">
+      <Project>{2DAF9EFC-96E8-4021-8441-0FC80052EF40}</Project>
+      <Name>Servicios</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
