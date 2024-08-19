@@ -10,6 +10,32 @@ namespace Modelo
 {
     public class ModelUsuario
     {
+        public static DataTable CargarUsuario(out string message)
+        {
+            DatabaseConnection dbConnection = new DatabaseConnection();
+            DataTable data = new DataTable(); // Inicializar aquí para evitar problemas de null
+
+            try
+            {
+                string query = "SELECT U.IdUsuario, U.NombreUsuario, U.Correo, U.FechaNacimiento, U.Foto, U.Pasaporte, U.Nivel_Usuario, A.NombreAgencia " + " FROM Usuarios U INNER JOIN Agencias A ON U.IdAgencia = A.IdAgencia; ";
+                // Obtén la conexión SQL Server usando la instancia de DatabaseConnection
+                using (SqlConnection connection = dbConnection.GetConnection())
+                using (SqlCommand cmdselect = new SqlCommand(query, connection))
+                using (SqlDataAdapter adp = new SqlDataAdapter(cmdselect))
+                {
+                    connection.Open();
+                    adp.Fill(data);
+                }
+            }
+            catch (Exception ex)
+            {
+                message = $"Error al cargar datos: {ex.Message}";
+                data = null;
+            }
+            message = null;
+            return data;
+        }
+
         public static DataTable CargarAgencias(out string message)
         {
             DatabaseConnection dbConnection = new DatabaseConnection();

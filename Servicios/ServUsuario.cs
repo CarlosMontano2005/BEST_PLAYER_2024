@@ -12,6 +12,12 @@ namespace Servicios
 {
     public class ServUsuario
     {
+        //cargar grid de datos a tabla 
+        public static DataTable CargarUsuarios()
+        {
+            DataTable datos = ModelUsuario.CargarUsuario(out string message);
+            return datos;
+        }
         //cargar niveles usuarios SERVIOS ServUsuario
         public static DataTable CargarAgencias()
         {
