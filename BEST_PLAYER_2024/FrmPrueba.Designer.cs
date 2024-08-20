@@ -47,6 +47,7 @@
             this.CmbNiveles = new System.Windows.Forms.ComboBox();
             this.CmbAgencias = new System.Windows.Forms.ComboBox();
             this.DgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.DgvUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -221,11 +222,30 @@
             this.DgvUsuarios.Size = new System.Drawing.Size(997, 270);
             this.DgvUsuarios.TabIndex = 18;
             // 
+            // rjButton1
+            // 
+            this.rjButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton1.BorderRadius = 0;
+            this.rjButton1.BorderSize = 0;
+            this.rjButton1.FlatAppearance.BorderSize = 0;
+            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton1.ForeColor = System.Drawing.Color.White;
+            this.rjButton1.Location = new System.Drawing.Point(621, 35);
+            this.rjButton1.Name = "rjButton1";
+            this.rjButton1.Size = new System.Drawing.Size(150, 40);
+            this.rjButton1.TabIndex = 19;
+            this.rjButton1.Text = "rjButton1";
+            this.rjButton1.TextColor = System.Drawing.Color.White;
+            this.rjButton1.UseVisualStyleBackColor = false;
+            // 
             // FrmPrueba
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1021, 570);
+            this.Controls.Add(this.rjButton1);
             this.Controls.Add(this.DgvUsuarios);
             this.Controls.Add(this.CmbAgencias);
             this.Controls.Add(this.CmbNiveles);
@@ -270,5 +290,6 @@
         private System.Windows.Forms.ComboBox CmbNiveles;
         private System.Windows.Forms.ComboBox CmbAgencias;
         private System.Windows.Forms.DataGridView DgvUsuarios;
+        private RJCodeAdvance.RJControls.RJButton rjButton1;
     }
 }
