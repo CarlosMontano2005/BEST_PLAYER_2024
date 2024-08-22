@@ -1,0 +1,380 @@
+CREATE DATABASE DBVotacionJugadores_Nueva;
+GO
+
+USE DBVotacionJugadores_Nueva;
+GO
+
+-- Crear la tabla Agencias
+CREATE TABLE Agencias (
+    IdAgencia INT IDENTITY(1,1) PRIMARY KEY,  -- Auto incrementa el ID
+    NombreAgencia VARCHAR(100) NOT NULL,  -- Nombre de la agencia
+    --TipoAgencia VARCHAR(50) NOT NULL CHECK (TipoAgencia IN ('Deportiva', 'Televisión', 'Publicidad', 'Otro')),  -- Validación del tipo de agencia
+    FechaFundacion DATE NOT NULL CHECK (FechaFundacion <= GETDATE()),  -- La fecha de fundación no puede ser en el futuro
+    Direccion VARCHAR(255) NULL,
+    Telefono VARCHAR(20) NULL CHECK (Telefono LIKE '%[0-9]%'),  -- Validación básica de que contiene números
+    EmailContacto VARCHAR(50) NULL CHECK (EmailContacto LIKE '%@%.%'),  -- Validación básica del formato del correo electrónico
+	Documento_Agencia VARCHAR(50)  NOT NULL
+);
+GO
+
+-- Crear la tabla Paises
+CREATE TABLE Paises (
+    IdPais INT IDENTITY(1,1) PRIMARY KEY,
+    Nombre VARCHAR(50) NOT NULL,
+    Nacionalidad VARCHAR(50) NOT NULL,
+	CodigoPais VARCHAR(15)  NOT NULL
+);
+GO
+
+-- Crear la tabla Equipos
+CREATE TABLE Equipos (
+    IdEquipo INT IDENTITY(1,1) PRIMARY KEY,
+    Nombre VARCHAR(30) NOT NULL,
+    IdPais INT NOT NULL,
+    CantidadJugadores INT NOT NULL DEFAULT(0),
+    NombreDirectorTecnico VARCHAR(50) NOT NULL,
+    Foto_DT VARCHAR(200) NULL,
+    FotoLogoEquipo VARCHAR(200) NULL,
+    CONSTRAINT FK_Pais FOREIGN KEY (IdPais) REFERENCES Paises(IdPais)
+);
+GO
+
+-- Crear la tabla Usuarios
+CREATE TABLE Usuarios (
+    IdUsuario INT IDENTITY(1,1) PRIMARY KEY,  -- Auto incrementa el ID
+    NombreUsuario VARCHAR(100) NOT NULL,
+    Correo VARCHAR(50) NOT NULL CHECK (Correo LIKE '%@%.%'),  -- Validación básica del formato del correo
+    FechaNacimiento DATE NOT NULL CHECK (DATEDIFF(YEAR, FechaNacimiento, GETDATE()) >= 18),  -- Mayor de edad
+    Clave VARCHAR(100) NOT NULL CHECK (LEN(Clave) >= 8),  -- Al menos 8 caracteres
+    Foto VARCHAR(200) NULL,
+    Pasaporte VARCHAR(20) NOT NULL CHECK (Pasaporte LIKE '[A-Za-z0-9]%'),  -- Asegura caracteres alfanuméricos en el pasaporte
+    Nivel_Usuario VARCHAR(20) NOT NULL CHECK (Nivel_Usuario IN ('Administrador', 'Comentarista')),  -- Restricción de niveles válidos
+    IdAgencia INT NOT NULL,
+    CONSTRAINT FK_Agencia FOREIGN KEY (IdAgencia) REFERENCES Agencias(IdAgencia)
+);
+GO
+
+-- Crear la tabla Jugadores
+CREATE TABLE Jugadores (
+    IdJugador INT IDENTITY(1,1) PRIMARY KEY,
+    Nombre VARCHAR(40) NOT NULL,
+    Apellido VARCHAR(40) NOT NULL,
+    IdEquipo INT NOT NULL,
+    IdPais INT NOT NULL,
+    Edad DATE NOT NULL CHECK (DATEDIFF(YEAR, Edad, GETDATE()) >= 0),  -- Verifica que la edad sea una fecha válida
+    Altura FLOAT NOT NULL CHECK (Altura > 0),  -- Usa FLOAT en lugar de DOUBLE
+    Foto VARCHAR(200) NULL,
+    CONSTRAINT FK_Equipo FOREIGN KEY (IdEquipo) REFERENCES Equipos(IdEquipo),
+    CONSTRAINT FK_Pais_Jugador FOREIGN KEY (IdPais) REFERENCES Paises(IdPais)
+);
+GO
+
+-- Crear la tabla EstadisticaJugadores
+CREATE TABLE EstadisticaJugadores (
+    IdEstadisticaJugador INT IDENTITY(1,1) PRIMARY KEY,
+    IdJugador INT NOT NULL,
+    Posicion VARCHAR(25) NOT NULL CHECK (Posicion IN ('Delantero', 'Centrocampista', 'Defensa', 'Portero')),  -- Restricción de posiciones
+    NumeroCamisa INT NOT NULL CHECK (NumeroCamisa > 0),  
+    PartidosJugados INT NOT NULL DEFAULT(0) CHECK (PartidosJugados >= 0),
+    Goles INT NOT NULL DEFAULT(0) CHECK (Goles >= 0),
+    PorcentajeGoles FLOAT NOT NULL CHECK (PorcentajeGoles >= 0 AND PorcentajeGoles <= 100),  -- Porcentaje entre 0 y 100
+    Asistencias INT NOT NULL CHECK (Asistencias >= 0),
+    TargetasAmarillas INT NOT NULL DEFAULT(0) CHECK (TargetasAmarillas >= 0),
+    TargetasRojas INT NOT NULL DEFAULT(0) CHECK (TargetasRojas >= 0),
+    CONSTRAINT FK_Jugador FOREIGN KEY (IdJugador) REFERENCES Jugadores(IdJugador)
+);
+GO
+
+-- Crear la tabla Votacion
+CREATE TABLE Votacion (
+    IdVotacion INT IDENTITY(1,1) PRIMARY KEY,
+    IdUsuario INT NOT NULL UNIQUE,
+    IdJugador INT NOT NULL UNIQUE,
+    FechaHoraVoto DATETIME NOT NULL,
+    CONSTRAINT FK_Usuario FOREIGN KEY (IdUsuario) REFERENCES Usuarios(IdUsuario),
+    CONSTRAINT FK_Jugador_Votacion FOREIGN KEY (IdJugador) REFERENCES Jugadores(IdJugador)
+);
+GO
+INSERT INTO Paises (Nombre, Nacionalidad, CodigoPais)
+VALUES
+    ('El Salvador', 'Salvadoreña', '503'),
+    ('Estados Unidos', 'Estadounidense', '840'),
+    ('Canadá', 'Canadiense', '124'),
+    ('México', 'Mexicana', '484'),
+    ('Argentina', 'Argentina', '032'),
+    ('Brasil', 'Brasileña', '076'),
+    ('Chile', 'Chilena', '152'),
+    ('Colombia', 'Colombiana', '170'),
+    ('España', 'Española', '724'),
+    ('Francia', 'Francesa', '250'),
+    ('Alemania', 'Alemana', '276'),
+    ('Italia', 'Italiana', '380'),
+    ('Reino Unido', 'Británica', '826'),
+    ('Japón', 'Japonesa', '392'),
+    ('China', 'China', '156'),
+    ('India', 'India', '356'),
+    ('Australia', 'Australiana', '036'),
+    ('Sudáfrica', 'Sudafricana', '710'),
+    ('Rusia', 'Rusa', '643'),
+    ('Corea del Sur', 'Surcoreana', '410');
+GO
+
+
+INSERT INTO Agencias (NombreAgencia, FechaFundacion, Direccion, Telefono, EmailContacto, Documento_Agencia)
+VALUES
+    ('EA Sports', '1991-05-14', '1234 Sports Ave, Los Angeles, CA', '555-1234', 'contacto@easports.com', 'DOC-EA001'),
+    ('ESPN',  '1979-09-07', '4567 Media Rd, Bristol, CT', '555-5678', 'info@espn.com', 'DOC-ES002'),
+    ('Nike', '1964-01-25', '7890 Innovation Dr, Beaverton, OR', '555-8765', 'support@nike.com', 'DOC-NI003'),
+    ('Fox Sports', '1994-10-01', '3210 Sports Pkwy, Los Angeles, CA', '555-4321', 'info@foxsports.com', 'DOC-FO004'),
+    ('Adidas',  '1949-08-18', '1234 Brand Blvd, Herzogenaurach, Germany', '555-2345', 'service@adidas.com', 'DOC-AD005'),
+    ('Bwin', '1997-02-10', '5678 Betting St, Gibraltar', '555-3456', 'support@bwin.com', 'DOC-BW006'),
+    ('Telemundo',  '1984-10-03', '7890 Media Ave, Miami, FL', '555-6543', 'info@telemundo.com', 'DOC-TE007'),
+    ('Puma', '1948-03-01', '8901 Athletic Way, Herzogenaurach, Germany', '555-7890', 'contact@puma.com', 'DOC-PU008');
+GO
+
+
+
+-- Insertar usuarios comentariastas
+INSERT INTO Usuarios (NombreUsuario, Correo, FechaNacimiento, Clave, Foto, Pasaporte, Nivel_Usuario, IdAgencia)
+VALUES
+    ('Néstor Alejandro González García', 'nestor.gonzalez@example.com', '1985-04-12', 'N3st0rG0nz', NULL, 'N123456789', 'Comentarista', 1),
+    ('Carlos Roberto Montano Hernández', 'carlos.montano@example.com', '1990-06-22', 'C4rl0sM0nt4n0', NULL, 'C987654321', 'Comentarista', 2),
+    ('Anderson Isaac Aguilar Ramos', 'anderson.aguilar@example.com', '1988-11-05', '4nd3rs0n2024', NULL, 'A112233445', 'Comentarista', 3),
+    ('David Andrés Flores Valle', 'david.flores@example.com', '1992-02-18', 'D@vid2024', NULL, 'D223344556', 'Comentarista', 4),
+    ('Katherine Nahomí González Melgar', 'katherine.gonzalez@example.com', '1995-09-09', 'K@th3r1n3', NULL, 'K334455667', 'Comentarista', 5);
+
+-- Insertar usuario administrador
+INSERT INTO Usuarios (NombreUsuario, Correo, FechaNacimiento, Clave, Foto, Pasaporte, Nivel_Usuario, IdAgencia)
+VALUES
+    ('Usuario Admin', 'admin@example.com', '1980-01-01', 'Admin2024!', NULL, 'A000000001', 'Administrador', 1);
+
+-- Insertar usuarios comentariastas adicionales
+INSERT INTO Usuarios (NombreUsuario, Correo, FechaNacimiento, Clave, Foto, Pasaporte, Nivel_Usuario, IdAgencia)
+VALUES
+    ('Alejandro Pérez', 'alejandro.perez@example.com', '1984-07-15', 'A1e2x3P@', NULL, 'A234567890', 'Comentarista', 1),
+    ('Laura Martínez', 'laura.martinez@example.com', '1991-03-20', 'L@ur4M@rt1n3z', NULL, 'L345678901', 'Comentarista', 2),
+    ('Jorge Ramírez', 'jorge.ramirez@example.com', '1987-12-10', 'J0rg3R@m1r3z', NULL, 'J456789012', 'Comentarista', 3),
+    ('Mariana López', 'mariana.lopez@example.com', '1993-05-25', 'M@r14n4L0pez', NULL, 'M567890123', 'Comentarista', 4),
+    ('Fernando Torres', 'fernando.torres@example.com', '1990-09-30', 'F3rn@nd0T0rr3s', NULL, 'F678901234', 'Comentarista', 5),
+    ('Sofía Morales', 'sofia.morales@example.com', '1989-11-02', 'S0f14M0r@l3s', NULL, 'S789012345', 'Comentarista', 1);
+
+
+INSERT INTO Equipos (Nombre, IdPais, CantidadJugadores, NombreDirectorTecnico, Foto_DT, FotoLogoEquipo)
+VALUES
+    ('Manchester United', 15, 25, 'Erik ten Hag', NULL, NULL),
+    ('Real Madrid', 18, 25, 'Carlo Ancelotti', NULL, NULL),
+    ('Barcelona', 18, 25, 'Xavi Hernández', NULL, NULL),
+    ('Boca Juniors', 7, 25, 'Jorge Almirón', NULL, NULL),
+    ('River Plate', 7, 25, 'Marcelo Gallardo', NULL, NULL),
+    ('Paris Saint-Germain', 10, 25, 'Luis Enrique', NULL, NULL),
+    ('Juventus', 12, 25, 'Massimiliano Allegri', NULL, NULL),
+    ('Bayern Munich', 13, 25, 'Julian Nagelsmann', NULL, NULL),
+    ('AC Milan', 12, 25, 'Stefano Pioli', NULL, NULL),
+    ('Chelsea', 15, 25, 'Mauricio Pochettino', NULL, NULL);
+GO
+
+-- Manchester United
+INSERT INTO Jugadores (Nombre, Apellido, IdEquipo, IdPais, Edad, Altura, Foto)
+VALUES
+    ('David', 'De Gea', 1, 15, '1990-11-07', 1.92, NULL),
+    ('Bruno', 'Fernandes', 1, 15, '1994-09-08', 1.79, NULL),
+    ('Marcus', 'Rashford', 1, 15, '1997-10-31', 1.83, NULL),
+    ('Harry', 'Maguire', 1, 15, '1993-03-05', 1.94, NULL),
+    ('Paul', 'Pogba', 1, 15, '1993-03-15', 1.91, NULL),
+
+-- Real Madrid
+    ('Karim', 'Benzema', 2, 18, '1987-12-19', 1.85, NULL),
+    ('Luka', 'Modrić', 2, 18, '1985-09-09', 1.72, NULL),
+    ('Vinícius', 'Júnior', 2, 18, '2000-07-12', 1.76, NULL),
+    ('Toni', 'Kroos', 2, 18, '1990-01-04', 1.83, NULL),
+    ('Eder', 'Militão', 2, 18, '1998-01-18', 1.86, NULL),
+
+-- Barcelona
+    ('Robert', 'Lewandowski', 3, 18, '1988-08-21', 1.85, NULL),
+    ('Sergio', 'Busquets', 3, 18, '1988-07-16', 1.89, NULL),
+    ('Ansu', 'Fati', 3, 18, '2002-10-31', 1.80, NULL),
+    ('Pedri', 'González', 3, 18, '2002-11-25', 1.74, NULL),
+    ('Jules', 'Koundé', 3, 18, '1998-11-12', 1.78, NULL),
+
+-- Boca Juniors
+    ('Carlos', 'Tevez', 4, 7, '1984-02-05', 1.73, NULL),
+    ('Juan', 'Román Riquelme', 4, 7, '1978-06-24', 1.82, NULL),
+    ('Edwin', 'Cardona', 4, 7, '1993-12-08', 1.77, NULL),
+    ('Darío', 'Benedetto', 4, 7, '1985-11-17', 1.81, NULL),
+    ('Ábila', 'Wanchope', 4, 7, '1989-10-14', 1.80, NULL),
+
+-- River Plate
+    ('Ezequiel', 'Palacios', 5, 7, '1998-10-05', 1.78, NULL),
+    ('Enzo', 'Fernández', 5, 7, '2001-01-17', 1.79, NULL),
+    ('Martín', 'Gómez', 5, 7, '1998-07-01', 1.82, NULL),
+    ('Lucas', 'Pratto', 5, 7, '1988-06-04', 1.85, NULL),
+    ('Nicolás', 'De La Cruz', 5, 7, '1997-06-01', 1.74, NULL),
+
+-- Paris Saint-Germain
+    ('Kylian', 'Mbappé', 6, 10, '1998-12-20', 1.78, NULL),
+    ('Neymar', 'Júnior', 6, 10, '1992-02-05', 1.75, NULL),
+    ('Lionel', 'Messi', 6, 10, '1987-06-24', 1.70, NULL),
+    ('Marco', 'Verratti', 6, 10, '1992-11-05', 1.65, NULL),
+    ('Achraf', 'Hakimi', 6, 10, '1998-11-04', 1.82, NULL),
+
+-- Juventus
+    ('Paul', 'Pogba', 7, 12, '1993-03-15', 1.91, NULL),
+    ('Dusan', 'Vlahović', 7, 12, '2000-01-28', 1.90, NULL),
+    ('Federico', 'Chiesa', 7, 12, '1997-10-25', 1.77, NULL),
+    ('Leonardo', 'Bonucci', 7, 12, '1987-05-01', 1.90, NULL),
+    ('Ángel', 'Di María', 7, 12, '1988-02-14', 1.80, NULL),
+
+-- Bayern Munich
+    ('Leroy', 'Sané', 8, 13, '1996-01-11', 1.84, NULL),
+    ('Joshua', 'Kimmich', 8, 13, '1995-02-08', 1.76, NULL),
+    ('Robert', 'Lewandowski', 8, 13, '1988-08-21', 1.85, NULL),
+    ('Manuel', 'Neuer', 8, 13, '1986-03-27', 1.93, NULL),
+    ('Thomas', 'Müller', 8, 13, '1989-09-13', 1.86, NULL),
+
+-- AC Milan
+    ('Olivier', 'Giroud', 9, 12, '1986-09-30', 1.92, NULL),
+    ('Theo', 'Hernández', 9, 12, '1997-10-06', 1.84, NULL),
+    ('Brahim', 'Díaz', 9, 12, '1999-08-03', 1.71, NULL),
+    ('Sandro', 'Tonali', 9, 12, '2000-05-08', 1.81, NULL),
+    ('Simon', 'Kjaer', 9, 12, '1989-03-26', 1.92, NULL),
+
+-- Chelsea
+    ('Raheem', 'Sterling', 10, 15, '1994-12-08', 1.70, NULL),
+    ('Kai', 'Havertz', 10, 15, '1999-06-11', 1.89, NULL),
+    ('Reece', 'James', 10, 15, '1999-12-08', 1.82, NULL),
+    ('Enzo', 'Fernández', 10, 15, '2001-01-17', 1.79, NULL),
+    ('Thiago', 'Silva', 10, 15, '1984-09-22', 1.87, NULL);
+GO
+/*
+ALTER TABLE EstadisticaJugadores
+DROP CONSTRAINT CK__Estadisti__Posic__3D5E1FD2;*/
+
+-- Estadísticas para jugadores de Manchester United
+INSERT INTO EstadisticaJugadores (IdJugador, Posicion, NumeroCamisa, PartidosJugados, Goles, PorcentajeGoles, Asistencias, TargetasAmarillas, TargetasRojas)
+VALUES
+    (1, 'Portero', 1, 25, 0, 0.0, 0, 2, 0),  -- David De Gea
+    (2, 'Centrocampista', 18, 30, 8, 0.27, 12, 5, 0),  -- Bruno Fernandes
+    (3, 'Delantero', 10, 28, 15, 0.54, 7, 3, 0),  -- Marcus Rashford
+    (4, 'Defensa', 5, 25, 1, 0.04, 0, 8, 1),  -- Harry Maguire
+    (5, 'Centrocampista', 6, 24, 5, 0.21, 10, 4, 0);  -- Paul Pogba
+GO
+-- Estadísticas para jugadores de Real Madrid
+INSERT INTO EstadisticaJugadores (IdJugador, Posicion, NumeroCamisa, PartidosJugados, Goles, PorcentajeGoles, Asistencias, TargetasAmarillas, TargetasRojas)
+VALUES
+    (6, 'Delantero', 9, 30, 22, 0.73, 5, 1, 0),  -- Karim Benzema
+    (7, 'Centrocampista', 10, 28, 3, 0.11, 15, 3, 0),  -- Luka Modrić
+    (8, 'Delantero', 11, 27, 17, 0.63, 10, 2, 0),  -- Vinícius Júnior
+    (9, 'Centrocampista', 8, 29, 5, 0.17, 12, 2, 0),  -- Toni Kroos
+    (10, 'Defensa', 3, 26, 2, 0.08, 1, 6, 1);  -- Eder Militão
+GO
+-- Estadísticas para jugadores de Barcelona
+INSERT INTO EstadisticaJugadores (IdJugador, Posicion, NumeroCamisa, PartidosJugados, Goles, PorcentajeGoles, Asistencias, TargetasAmarillas, TargetasRojas)
+VALUES
+    (11, 'Delantero', 9, 28, 21, 0.75, 8, 1, 0),  -- Robert Lewandowski
+    (12, 'Centrocampista', 5, 29, 4, 0.14, 16, 4, 0),  -- Sergio Busquets
+    (13, 'Delantero', 11, 26, 12, 0.46, 7, 2, 0),  -- Ansu Fati
+    (14, 'Centrocampista', 16, 27, 2, 0.08, 9, 3, 0),  -- Pedri González
+    (15, 'Defensa', 23, 25, 1, 0.04, 0, 5, 1);  -- Jules Koundé
+GO
+-- Estadísticas para jugadores de Boca Juniors
+INSERT INTO EstadisticaJugadores (IdJugador, Posicion, NumeroCamisa, PartidosJugados, Goles, PorcentajeGoles, Asistencias, TargetasAmarillas, TargetasRojas)
+VALUES
+    (16, 'Delantero', 32, 30, 17, 0.57, 6, 4, 1),  -- Carlos Tevez
+    (17, 'Centrocampista', 8, 28, 6, 0.21, 13, 2, 0),  -- Juan Román Riquelme
+    (18, 'Centrocampista', 10, 29, 5, 0.17, 8, 3, 0),  -- Edwin Cardona
+    (19, 'Delantero', 9, 30, 14, 0.47, 5, 1, 0),  -- Darío Benedetto
+    (20, 'Delantero', 7, 27, 8, 0.29, 4, 2, 0);  -- Ábila Wanchope
+GO
+-- Estadísticas para jugadores de River Plate
+INSERT INTO EstadisticaJugadores (IdJugador, Posicion, NumeroCamisa, PartidosJugados, Goles, PorcentajeGoles, Asistencias, TargetasAmarillas, TargetasRojas)
+VALUES
+    (21, 'Centrocampista', 20, 29, 4, 0.14, 11, 3, 0),  -- Ezequiel Palacios
+    (22, 'Centrocampista', 24, 26, 5, 0.19, 9, 2, 0),  -- Enzo Fernández
+    (23, 'Delantero', 27, 28, 12, 0.43, 7, 3, 0),  -- Martín Gómez
+    (24, 'Delantero', 9, 25, 10, 0.40, 6, 1, 0),  -- Lucas Pratto
+    (25, 'Centrocampista', 8, 26, 7, 0.27, 10, 2, 0);  -- Nicolás De La Cruz
+GO
+-- Estadísticas para jugadores de Paris Saint-Germain
+INSERT INTO EstadisticaJugadores (IdJugador, Posicion, NumeroCamisa, PartidosJugados, Goles, PorcentajeGoles, Asistencias, TargetasAmarillas, TargetasRojas)
+VALUES
+    (26, 'Delantero', 7, 29, 21, 0.72, 10, 3, 0),  -- Kylian Mbappé
+    (27, 'Delantero', 11, 28, 15, 0.54, 8, 2, 0),  -- Neymar Júnior
+    (28, 'Delantero', 30, 26, 12, 0.46, 6, 1, 0),  -- Lionel Messi
+    (29, 'Centrocampista', 6, 27, 3, 0.11, 15, 4, 0),  -- Marco Verratti
+    (30, 'Defensa', 2, 26, 1, 0.04, 0, 2, 0);  -- Achraf Hakimi
+GO
+-- Estadísticas para jugadores de Juventus
+INSERT INTO EstadisticaJugadores (IdJugador, Posicion, NumeroCamisa, PartidosJugados, Goles, PorcentajeGoles, Asistencias, TargetasAmarillas, TargetasRojas)
+VALUES
+    (31, 'Centrocampista', 10, 28, 4, 0.14, 12, 3, 0),  -- Paul Pogba
+    (32, 'Delantero', 9, 30, 20, 0.67, 7, 2, 0),  -- Dusan Vlahović
+    (33, 'Centrocampista', 7, 29, 6, 0.21, 14, 4, 0),  -- Federico Chiesa
+    (34, 'Defensa', 19, 26, 2, 0.08, 1, 5, 0),  -- Leonardo Bonucci
+    (35, 'Delantero', 22, 27, 8, 0.30, 5, 2, 0);  -- Ángel Di María
+GO
+-- Estadísticas para jugadores de Bayern Munich
+INSERT INTO EstadisticaJugadores (IdJugador, Posicion, NumeroCamisa, PartidosJugados, Goles, PorcentajeGoles, Asistencias, TargetasAmarillas, TargetasRojas)
+VALUES
+    (36, 'Delantero', 10, 30, 22, 0.73, 6, 1, 0),  -- Leroy Sané
+    (37, 'Centrocampista', 6, 28, 4, 0.14, 13, 2, 0),  -- Joshua Kimmich
+    (38, 'Delantero', 9, 27, 18, 0.67, 8, 3, 0),  -- Robert Lewandowski
+    (39, 'Portero', 1, 30, 0, 0.0, 0, 2, 0),  -- Manuel Neuer
+    (40, 'Centrocampista', 25, 26, 6, 0.23, 11, 1, 0);  -- Leon Goretzka
+GO
+-- Estadísticas para jugadores del AC Milan
+INSERT INTO EstadisticaJugadores (IdJugador, Posicion, NumeroCamisa, PartidosJugados, Goles, PorcentajeGoles, Asistencias, TargetasAmarillas, TargetasRojas)
+VALUES
+    (41, 'Delantero', 9, 25, 15, 0.60, 4, 2, 0),  -- Olivier Giroud
+    (42, 'Defensa', 5, 24, 2, 0.08, 1, 5, 1),  -- Theo Hernández
+    (43, 'Centrocampista', 21, 26, 5, 0.20, 8, 3, 0),  -- Brahim Díaz
+    (44, 'Centrocampista', 8, 23, 3, 0.13, 7, 1, 0),  -- Sandro Tonali
+    (45, 'Defensa', 3, 27, 1, 0.04, 0, 4, 0);  -- Simon Kjaer
+GO
+-- Estadísticas para jugadores del Chelsea
+INSERT INTO EstadisticaJugadores (IdJugador, Posicion, NumeroCamisa, PartidosJugados, Goles, PorcentajeGoles, Asistencias, TargetasAmarillas, TargetasRojas)
+VALUES
+    (46, 'Delantero', 11, 28, 10, 0.36, 7, 1, 0),  -- Raheem Sterling
+    (47, 'Centrocampista', 29, 25, 7, 0.28, 9, 2, 0),  -- Kai Havertz
+    (48, 'Defensa', 24, 27, 1, 0.04, 2, 6, 0),  -- Reece James
+    (49, 'Centrocampista', 20, 24, 2, 0.08, 6, 3, 0),  -- Enzo Fernández
+    (50, 'Defensa', 6, 30, 0, 0.00, 0, 4, 1);  -- Thiago Silva
+GO
+
+-- Insertar datos en la tabla Votacion
+INSERT INTO Votacion (IdUsuario, IdJugador, FechaHoraVoto)
+VALUES
+    (1, 1, '2024-08-09 10:00:00'),
+    (2, 2, '2024-08-09 10:05:00'),
+    (3, 3, '2024-08-09 10:10:00'),
+    (4, 4, '2024-08-09 10:15:00'),
+    (5, 5, '2024-08-09 10:20:00'),
+    (6, 6, '2024-08-09 10:25:00');
+GO
+--Consulta de jugadores con nombre del país en lugar de IdPais:
+SELECT J.IdJugador, J.Nombre, J.Apellido, E.Nombre AS NombreEquipo, P.Nombre AS NombrePais, J.Edad, J.Altura, J.Foto
+FROM Jugadores J
+INNER JOIN Equipos E ON J.IdEquipo = E.IdEquipo
+INNER JOIN Paises P ON J.IdPais = P.IdPais;
+
+--Consulta de equipos con nombre del país en lugar de IdPais:
+SELECT E.IdEquipo, E.Nombre AS NombreEquipo, P.Nombre AS NombrePais, E.CantidadJugadores, E.NombreDirectorTecnico, E.Foto_DT, E.FotoLogoEquipo
+FROM Equipos E
+INNER JOIN Paises P ON E.IdPais = P.IdPais;
+
+--Consulta de usuarios con nombre de la agencia en lugar de IdAgencia:
+SELECT U.IdUsuario, U.NombreUsuario, U.Correo, U.FechaNacimiento, U.Clave, U.Foto, U.Pasaporte, U.Nivel_Usuario, A.NombreAgencia
+FROM Usuarios U
+INNER JOIN Agencias A ON U.IdAgencia = A.IdAgencia;
+
+--Consulta de estadísticas de jugadores con nombre del jugador en lugar de IdJugador:
+SELECT E.IdEstadisticaJugador, J.Nombre AS NombreJugador, J.Apellido AS ApellidoJugador, E.Posicion, E.NumeroCamisa, E.PartidosJugados, E.Goles, E.PorcentajeGoles, E.Asistencias, E.TargetasAmarillas, E.TargetasRojas
+FROM EstadisticaJugadores E
+INNER JOIN Jugadores J ON E.IdJugador = J.IdJugador;
+
+--Consulta de votaciones con nombre del jugador y nombre del usuario en lugar de IdJugador e IdUsuario:
+SELECT V.IdVotacion, U.NombreUsuario, J.Nombre AS NombreJugador, V.FechaHoraVoto
+FROM Votacion V
+INNER JOIN Usuarios U ON V.IdUsuario = U.IdUsuario
+INNER JOIN Jugadores J ON V.IdJugador = J.IdJugador;
+
+
