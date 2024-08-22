@@ -95,6 +95,14 @@ CREATE TABLE Votacion (
     CONSTRAINT FK_Jugador_Votacion FOREIGN KEY (IdJugador) REFERENCES Jugadores(IdJugador)
 );
 GO
+
+ALTER TABLE [DBVotacionJugadores_Nueva].[dbo].[Usuarios]
+ADD CONSTRAINT UQ_Clave UNIQUE ([Clave]);
+ALTER TABLE [DBVotacionJugadores_Nueva].[dbo].[Usuarios]
+ADD CONSTRAINT UQ_Correo UNIQUE ([Correo]);
+ALTER TABLE [DBVotacionJugadores_Nueva].[dbo].[Usuarios]
+ADD CONSTRAINT UQ_Pasaporte UNIQUE ([Pasaporte]);
+
 INSERT INTO Paises (Nombre, Nacionalidad, CodigoPais)
 VALUES
     ('El Salvador', 'Salvadoreña', '503'),
