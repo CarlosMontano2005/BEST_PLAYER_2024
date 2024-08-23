@@ -240,6 +240,7 @@
     <None Include="Resources\house-door-fill.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\x-regular-24 %282%291.png" />
     <None Include="Resources\mesi-680x375.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
