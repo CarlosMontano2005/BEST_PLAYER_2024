@@ -243,5 +243,8 @@
     <None Include="Resources\x-regular-24 %282%291.png" />
     <None Include="Resources\mesi-680x375.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FC_Barcelona_%28crest%29.svg.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
