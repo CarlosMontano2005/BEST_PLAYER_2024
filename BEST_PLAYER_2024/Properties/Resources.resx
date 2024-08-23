@@ -127,6 +127,12 @@
   <data name="SL-030822-49070-19" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SL-030822-49070-19.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="person_fill_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\person-fill-green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gear-fill" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gear-fill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="person-bounding-box" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\person-bounding-box.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,6 +163,9 @@
   <data name="person_bounding_box_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\person-bounding-box-green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="x-regular-24 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\x-regular-24 (2)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="house_door_fill_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\house-door-fill-green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -175,22 +184,27 @@
   <data name="x-lg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\x-lg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gear-fill" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gear-fill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="default" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="globe-americas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\globe-americas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="mesi-680x375" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mesi-680x375.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="star-fill" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\star-fill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="person_fill_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\person-fill-green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="house-door-fill" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\house-door-fill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="trophy-solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\trophy-solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="escudo barquita" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\escudo barquita.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FC_Barcelona_(crest).svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FC_Barcelona_(crest).svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

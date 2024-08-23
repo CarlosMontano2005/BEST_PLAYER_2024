@@ -93,9 +93,14 @@ namespace BEST_PLAYER_2024.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+
         internal static System.Drawing.Bitmap escudo_barquita {
             get {
                 object obj = ResourceManager.GetObject("escudo barquita", resourceCulture);
+                
+        internal static System.Drawing.Bitmap FC_Barcelona__crest__svg {
+            get {
+                object obj = ResourceManager.GetObject("FC_Barcelona_(crest).svg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,6 +181,16 @@ namespace BEST_PLAYER_2024.Properties {
         internal static System.Drawing.Bitmap house_door_fill_green {
             get {
                 object obj = ResourceManager.GetObject("house_door_fill_green", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mesi_680x375 {
+            get {
+                object obj = ResourceManager.GetObject("mesi-680x375", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -306,6 +321,16 @@ namespace BEST_PLAYER_2024.Properties {
         internal static System.Drawing.Bitmap x_lg1 {
             get {
                 object obj = ResourceManager.GetObject("x-lg1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap x_regular_24__2_ {
+            get {
+                object obj = ResourceManager.GetObject("x-regular-24 (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

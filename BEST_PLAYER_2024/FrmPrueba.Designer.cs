@@ -76,7 +76,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(734, 611);
+            this.panel1.Size = new System.Drawing.Size(872, 611);
             this.panel1.TabIndex = 0;
             // 
             // DgvUsuarios
@@ -272,13 +272,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 611);
+            this.ClientSize = new System.Drawing.Size(872, 611);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.MaximumSize = new System.Drawing.Size(750, 650);
             this.Name = "FrmPrueba";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPrueba";
             this.Load += new System.EventHandler(this.FrmPrueba_Load);
             this.panel1.ResumeLayout(false);

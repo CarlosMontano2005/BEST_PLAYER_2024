@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using BEST_PLAYER_2024.Resources;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -149,6 +150,8 @@ namespace BEST_PLAYER_2024
         {
             LblTopJagadores.ForeColor = ColorTranslator.FromHtml("#09E878");
             LblTopJagadores.Image = Properties.Resources.star_fill_green;
+            FrmTopJugadores frm = new FrmTopJugadores();
+            OpenChildForm(frm);
         }
 
         private void LblTopJagadores_MouseHover(object sender, EventArgs e)
@@ -201,6 +204,8 @@ namespace BEST_PLAYER_2024
         {
             LblJugadores.ForeColor = ColorTranslator.FromHtml("#B0B0B0");
             LblJugadores.Image = Properties.Resources.futbol_regular__1_;
+            FrmJugadores frmJugadores = new FrmJugadores();
+            OpenChildForm(frmJugadores);
         }
 
         private void LblJugadores_MouseHover(object sender, EventArgs e)
@@ -335,11 +340,71 @@ namespace BEST_PLAYER_2024
             DialogResult result = MessageBox.Show("¿Está seguro que desea salir del sistema?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                Application.Exit(); // Cierra la aplicación
+                FrmLogin frmlogin = new FrmLogin();
+                frmlogin.Show();
+                this.Close();// Cierra la aplicación
             }
         }
+
         #endregion
 
+        private void PtbClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
+        private void FrmDashboard_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isDragging = true;
+                lastCursor = Cursor.Position;
+                lastForm = this.Location;
+            }
+        }
+
+        private void FrmDashboard_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDragging)
+            {
+                Point delta = Point.Subtract(Cursor.Position, new Size(lastCursor));
+                this.Location = Point.Add(lastForm, new Size(delta));
+            }
+        }
+
+        private void FrmDashboard_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isDragging = false;
+            }
+        }
+
+        private void PanelOpciones_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isDragging = true;
+                lastCursor = Cursor.Position;
+                lastForm = this.Location;
+            }
+        }
+
+        private void PanelOpciones_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDragging)
+            {
+                Point delta = Point.Subtract(Cursor.Position, new Size(lastCursor));
+                this.Location = Point.Add(lastForm, new Size(delta));
+            }
+        }
+
+        private void PanelOpciones_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isDragging = false;
+            }
+        }
     }
 }
