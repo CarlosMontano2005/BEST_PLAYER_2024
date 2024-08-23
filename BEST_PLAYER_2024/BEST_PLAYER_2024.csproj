@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEquipo.Designer.cs">
+      <DependentUpon>FrmEquipo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmHijo2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,12 @@
     <Compile Include="FrmPrueba.Designer.cs">
       <DependentUpon>FrmPrueba.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTopJugadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTopJugadores.Designer.cs">
+      <DependentUpon>FrmTopJugadores.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,8 +103,17 @@
     <Compile Include="FrmVerificarConexion.Designer.cs">
       <DependentUpon>FrmVerificarConexion.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmJugadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmJugadores.Designer.cs">
+      <DependentUpon>FrmJugadores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmEquipo.resx">
+      <DependentUpon>FrmEquipo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmHijo2.resx">
       <DependentUpon>FrmHijo2.cs</DependentUpon>
     </EmbeddedResource>
@@ -108,11 +129,17 @@
     <EmbeddedResource Include="FrmPrueba.resx">
       <DependentUpon>FrmPrueba.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmTopJugadores.resx">
+      <DependentUpon>FrmTopJugadores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVerificarConexion.resx">
       <DependentUpon>FrmVerificarConexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmJugadores.resx">
+      <DependentUpon>FrmJugadores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -163,6 +190,71 @@
       <Project>{2DAF9EFC-96E8-4021-8441-0FC80052EF40}</Project>
       <Name>Servicios</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person-bounding-box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star-fill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people-fill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\globe-americas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person-fill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear-fill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\futbol-regular %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trophy-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house-door-fill-green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people-fill-green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person-bounding-box-green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person-fill-green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star-fill-green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trophy-solid-green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\futbol-regular-green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear-fill-green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\globe-americas-green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house-door-fill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\escudo barquita.png" />
+    <None Include="Resources\x-regular-24 %282%291.png" />
+    <None Include="Resources\mesi-680x375.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FC_Barcelona_%28crest%29.svg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

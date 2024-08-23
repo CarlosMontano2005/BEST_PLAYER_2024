@@ -149,6 +149,19 @@ namespace BEST_PLAYER_2024
             LlenarAgencia();
         }
 
-      
+        private void TxtNombreUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnGuardar_Click_1(object sender, EventArgs e)
+        {
+            guardarDatos();
+        }
     }
 }
