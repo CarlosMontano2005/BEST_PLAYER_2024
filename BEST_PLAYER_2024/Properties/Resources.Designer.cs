@@ -93,6 +93,16 @@ namespace BEST_PLAYER_2024.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap escudo_barquita {
+            get {
+                object obj = ResourceManager.GetObject("escudo barquita", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FC_Barcelona__crest__svg {
             get {
                 object obj = ResourceManager.GetObject("FC_Barcelona_(crest).svg", resourceCulture);
