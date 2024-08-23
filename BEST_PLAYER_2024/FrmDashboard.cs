@@ -149,6 +149,8 @@ namespace BEST_PLAYER_2024
         {
             LblTopJagadores.ForeColor = ColorTranslator.FromHtml("#09E878");
             LblTopJagadores.Image = Properties.Resources.star_fill_green;
+            FrmTopJugadores frm = new FrmTopJugadores();
+            OpenChildForm(frm);
         }
 
         private void LblTopJagadores_MouseHover(object sender, EventArgs e)
@@ -201,6 +203,8 @@ namespace BEST_PLAYER_2024
         {
             LblJugadores.ForeColor = ColorTranslator.FromHtml("#B0B0B0");
             LblJugadores.Image = Properties.Resources.futbol_regular__1_;
+            FrmJugadores frmJugadores = new FrmJugadores();
+            OpenChildForm(frmJugadores);
         }
 
         private void LblJugadores_MouseHover(object sender, EventArgs e)
