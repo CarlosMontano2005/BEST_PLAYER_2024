@@ -85,6 +85,12 @@
     <Compile Include="FrmPrueba.Designer.cs">
       <DependentUpon>FrmPrueba.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTablaVotaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTablaVotaciones.Designer.cs">
+      <DependentUpon>FrmTablaVotaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmTopJugadores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrueba.resx">
       <DependentUpon>FrmPrueba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTablaVotaciones.resx">
+      <DependentUpon>FrmTablaVotaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTopJugadores.resx">
       <DependentUpon>FrmTopJugadores.cs</DependentUpon>
