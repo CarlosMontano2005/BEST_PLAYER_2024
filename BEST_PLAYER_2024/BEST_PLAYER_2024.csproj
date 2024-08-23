@@ -79,6 +79,12 @@
     <Compile Include="FrmPrueba.Designer.cs">
       <DependentUpon>FrmPrueba.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTopJugadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTopJugadores.Designer.cs">
+      <DependentUpon>FrmTopJugadores.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,12 @@
     </Compile>
     <Compile Include="FrmVerificarConexion.Designer.cs">
       <DependentUpon>FrmVerificarConexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmJugadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmJugadores.Designer.cs">
+      <DependentUpon>FrmJugadores.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -108,11 +120,17 @@
     <EmbeddedResource Include="FrmPrueba.resx">
       <DependentUpon>FrmPrueba.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmTopJugadores.resx">
+      <DependentUpon>FrmTopJugadores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVerificarConexion.resx">
       <DependentUpon>FrmVerificarConexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmJugadores.resx">
+      <DependentUpon>FrmJugadores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -220,6 +238,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\house-door-fill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mesi-680x375.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
