@@ -1,6 +1,6 @@
 ﻿namespace BEST_PLAYER_2024
 {
-    partial class FrmEquipo
+    partial class FrmInfoEquipo
     {
         /// <summary>
         /// Required designer variable.

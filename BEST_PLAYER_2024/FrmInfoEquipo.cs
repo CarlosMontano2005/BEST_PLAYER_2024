@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BEST_PLAYER_2024
 {
-    public partial class FrmEquipo : Form
+    public partial class FrmInfoEquipo : Form
     {
-        public FrmEquipo()
+        public FrmInfoEquipo()
         {
             InitializeComponent();
         }
