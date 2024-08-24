@@ -32,12 +32,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DgvVotaciones = new System.Windows.Forms.DataGridView();
-            this.BtnRegresar = new System.Windows.Forms.Label();
-            this.BtnDescargar = new System.Windows.Forms.Button();
             this.ColTop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColEquipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColVotos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnRegresar = new System.Windows.Forms.Label();
+            this.BtnDescargar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvVotaciones)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,31 +85,6 @@
             this.DgvVotaciones.Size = new System.Drawing.Size(831, 489);
             this.DgvVotaciones.TabIndex = 37;
             // 
-            // BtnRegresar
-            // 
-            this.BtnRegresar.AutoSize = true;
-            this.BtnRegresar.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRegresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.BtnRegresar.Location = new System.Drawing.Point(766, 40);
-            this.BtnRegresar.Name = "BtnRegresar";
-            this.BtnRegresar.Size = new System.Drawing.Size(82, 21);
-            this.BtnRegresar.TabIndex = 41;
-            this.BtnRegresar.Text = "Regresar";
-            // 
-            // BtnDescargar
-            // 
-            this.BtnDescargar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.BtnDescargar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnDescargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnDescargar.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDescargar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
-            this.BtnDescargar.Location = new System.Drawing.Point(47, 25);
-            this.BtnDescargar.Name = "BtnDescargar";
-            this.BtnDescargar.Size = new System.Drawing.Size(187, 36);
-            this.BtnDescargar.TabIndex = 42;
-            this.BtnDescargar.Text = "Descargar tabla";
-            this.BtnDescargar.UseVisualStyleBackColor = false;
-            // 
             // ColTop
             // 
             this.ColTop.FillWeight = 18.27411F;
@@ -133,6 +108,31 @@
             this.ColVotos.FillWeight = 18.27411F;
             this.ColVotos.HeaderText = "Votos";
             this.ColVotos.Name = "ColVotos";
+            // 
+            // BtnRegresar
+            // 
+            this.BtnRegresar.AutoSize = true;
+            this.BtnRegresar.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRegresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.BtnRegresar.Location = new System.Drawing.Point(766, 40);
+            this.BtnRegresar.Name = "BtnRegresar";
+            this.BtnRegresar.Size = new System.Drawing.Size(82, 21);
+            this.BtnRegresar.TabIndex = 41;
+            this.BtnRegresar.Text = "Regresar";
+            // 
+            // BtnDescargar
+            // 
+            this.BtnDescargar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.BtnDescargar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnDescargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDescargar.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDescargar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
+            this.BtnDescargar.Location = new System.Drawing.Point(14, 25);
+            this.BtnDescargar.Name = "BtnDescargar";
+            this.BtnDescargar.Size = new System.Drawing.Size(187, 36);
+            this.BtnDescargar.TabIndex = 42;
+            this.BtnDescargar.Text = "Descargar tabla";
+            this.BtnDescargar.UseVisualStyleBackColor = false;
             // 
             // FrmTablaVotaciones
             // 
