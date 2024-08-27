@@ -178,6 +178,8 @@ namespace BEST_PLAYER_2024
         {
             LblEquipos.ForeColor = ColorTranslator.FromHtml("#B0B0B0");
             LblEquipos.Image = Properties.Resources.people_fill;
+            FrmInfoEquipo frmEquipo = new FrmInfoEquipo();
+            OpenChildForm(frmEquipo);
         }
 
         private void LblEquipos_MouseHover(object sender, EventArgs e)

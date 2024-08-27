@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmInfoEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInfoEquipo.Designer.cs">
+      <DependentUpon>FrmInfoEquipo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmHijo2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,18 @@
     <Compile Include="FrmPrueba.Designer.cs">
       <DependentUpon>FrmPrueba.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTablaAgencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTablaAgencia.Designer.cs">
+      <DependentUpon>FrmTablaAgencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTablaVotaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTablaVotaciones.Designer.cs">
+      <DependentUpon>FrmTablaVotaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmTopJugadores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +123,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmInfoEquipo.resx">
+      <DependentUpon>FrmInfoEquipo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmHijo2.resx">
       <DependentUpon>FrmHijo2.cs</DependentUpon>
     </EmbeddedResource>
@@ -119,6 +140,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrueba.resx">
       <DependentUpon>FrmPrueba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTablaAgencia.resx">
+      <DependentUpon>FrmTablaAgencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTablaVotaciones.resx">
+      <DependentUpon>FrmTablaVotaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTopJugadores.resx">
       <DependentUpon>FrmTopJugadores.cs</DependentUpon>
@@ -240,8 +267,12 @@
     <None Include="Resources\house-door-fill.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\escudo barquita.png" />
     <None Include="Resources\x-regular-24 %282%291.png" />
     <None Include="Resources\mesi-680x375.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FC_Barcelona_%28crest%29.svg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
