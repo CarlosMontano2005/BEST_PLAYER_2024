@@ -49,11 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmEquipo.cs">
+    <Compile Include="FrmInfoEquipo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEquipo.Designer.cs">
-      <DependentUpon>FrmEquipo.cs</DependentUpon>
+    <Compile Include="FrmInfoEquipo.Designer.cs">
+      <DependentUpon>FrmInfoEquipo.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmHijo2.cs">
       <SubType>Form</SubType>
@@ -85,6 +85,12 @@
     <Compile Include="FrmPrueba.Designer.cs">
       <DependentUpon>FrmPrueba.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTablaVotaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTablaVotaciones.Designer.cs">
+      <DependentUpon>FrmTablaVotaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmTopJugadores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,8 +117,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmEquipo.resx">
-      <DependentUpon>FrmEquipo.cs</DependentUpon>
+    <EmbeddedResource Include="FrmInfoEquipo.resx">
+      <DependentUpon>FrmInfoEquipo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHijo2.resx">
       <DependentUpon>FrmHijo2.cs</DependentUpon>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrueba.resx">
       <DependentUpon>FrmPrueba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTablaVotaciones.resx">
+      <DependentUpon>FrmTablaVotaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTopJugadores.resx">
       <DependentUpon>FrmTopJugadores.cs</DependentUpon>
