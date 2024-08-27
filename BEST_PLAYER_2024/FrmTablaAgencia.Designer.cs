@@ -32,15 +32,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DgvTabla = new System.Windows.Forms.DataGridView();
-            this.rjComboBox1 = new RJCodeAdvance.RJControls.RJComboBox();
-            this.rjTextBox1 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.BtnBuscar = new System.Windows.Forms.Button();
-            this.BtnRegresar = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rjComboBox1 = new RJCodeAdvance.RJControls.RJComboBox();
+            this.rjTextBox1 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.BtnBuscar = new System.Windows.Forms.Button();
+            this.BtnRegresar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DgvTabla)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,6 +89,31 @@
             this.DgvTabla.Size = new System.Drawing.Size(831, 489);
             this.DgvTabla.TabIndex = 36;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "#";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Nombres";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Tipo";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Telefono";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Email";
+            this.Column5.Name = "Column5";
+            // 
             // rjComboBox1
             // 
             this.rjComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
@@ -110,7 +135,7 @@
             this.rjComboBox1.Name = "rjComboBox1";
             this.rjComboBox1.Size = new System.Drawing.Size(200, 36);
             this.rjComboBox1.TabIndex = 37;
-            this.rjComboBox1.Texts = "Filtrar por equipo";
+            this.rjComboBox1.Texts = "Filtrar por Agencia";
             // 
             // rjTextBox1
             // 
@@ -128,7 +153,7 @@
             this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.rjTextBox1.PasswordChar = false;
             this.rjTextBox1.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.rjTextBox1.PlaceholderText = "Buscar Jugador";
+            this.rjTextBox1.PlaceholderText = "Buscar Agencia";
             this.rjTextBox1.Size = new System.Drawing.Size(313, 36);
             this.rjTextBox1.TabIndex = 38;
             this.rjTextBox1.Texts = "";
@@ -156,31 +181,6 @@
             this.BtnRegresar.Size = new System.Drawing.Size(82, 21);
             this.BtnRegresar.TabIndex = 40;
             this.BtnRegresar.Text = "Regresar";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "#";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Nombres";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Tipo";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Telefono";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Email";
-            this.Column5.Name = "Column5";
             // 
             // FrmTablaAgencia
             // 
