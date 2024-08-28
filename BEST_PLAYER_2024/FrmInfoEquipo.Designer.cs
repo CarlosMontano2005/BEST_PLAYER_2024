@@ -130,6 +130,7 @@
             this.rjCircularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             this.rjCircularPictureBox1.BorderSize = 2;
             this.rjCircularPictureBox1.GradientAngle = 50F;
+            this.rjCircularPictureBox1.Image = global::BEST_PLAYER_2024.Properties.Resources.images;
             this.rjCircularPictureBox1.Location = new System.Drawing.Point(596, 49);
             this.rjCircularPictureBox1.Name = "rjCircularPictureBox1";
             this.rjCircularPictureBox1.Size = new System.Drawing.Size(75, 75);
@@ -200,6 +201,7 @@
             this.rjCircularPictureBox2.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             this.rjCircularPictureBox2.BorderSize = 5;
             this.rjCircularPictureBox2.GradientAngle = 50F;
+            this.rjCircularPictureBox2.Image = global::BEST_PLAYER_2024.Properties.Resources.BrunoFernandes;
             this.rjCircularPictureBox2.Location = new System.Drawing.Point(38, 195);
             this.rjCircularPictureBox2.Name = "rjCircularPictureBox2";
             this.rjCircularPictureBox2.Size = new System.Drawing.Size(116, 116);
@@ -281,6 +283,7 @@
             this.rjCircularPictureBox3.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             this.rjCircularPictureBox3.BorderSize = 5;
             this.rjCircularPictureBox3.GradientAngle = 50F;
+            this.rjCircularPictureBox3.Image = global::BEST_PLAYER_2024.Properties.Resources.Cristiano_Ronaldo;
             this.rjCircularPictureBox3.Location = new System.Drawing.Point(271, 195);
             this.rjCircularPictureBox3.Name = "rjCircularPictureBox3";
             this.rjCircularPictureBox3.Size = new System.Drawing.Size(116, 116);
@@ -329,6 +332,7 @@
             this.rjCircularPictureBox4.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             this.rjCircularPictureBox4.BorderSize = 5;
             this.rjCircularPictureBox4.GradientAngle = 50F;
+            this.rjCircularPictureBox4.Image = global::BEST_PLAYER_2024.Properties.Resources.Luka_modric;
             this.rjCircularPictureBox4.Location = new System.Drawing.Point(510, 195);
             this.rjCircularPictureBox4.Name = "rjCircularPictureBox4";
             this.rjCircularPictureBox4.Size = new System.Drawing.Size(116, 116);
@@ -377,6 +381,7 @@
             this.rjCircularPictureBox5.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             this.rjCircularPictureBox5.BorderSize = 5;
             this.rjCircularPictureBox5.GradientAngle = 50F;
+            this.rjCircularPictureBox5.Image = global::BEST_PLAYER_2024.Properties.Resources.mesi_680x375;
             this.rjCircularPictureBox5.Location = new System.Drawing.Point(739, 195);
             this.rjCircularPictureBox5.Name = "rjCircularPictureBox5";
             this.rjCircularPictureBox5.Size = new System.Drawing.Size(116, 116);

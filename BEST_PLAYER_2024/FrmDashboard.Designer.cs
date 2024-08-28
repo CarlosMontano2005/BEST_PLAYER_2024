@@ -196,6 +196,7 @@
             // 
             this.LblBestPlayerContenedor.AutoSize = true;
             this.LblBestPlayerContenedor.BackColor = System.Drawing.Color.Transparent;
+            this.LblBestPlayerContenedor.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.LblBestPlayerContenedor.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblBestPlayerContenedor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LblBestPlayerContenedor.Location = new System.Drawing.Point(278, 349);
@@ -203,7 +204,6 @@
             this.LblBestPlayerContenedor.Size = new System.Drawing.Size(309, 45);
             this.LblBestPlayerContenedor.TabIndex = 11;
             this.LblBestPlayerContenedor.Text = "BEST  PLAYER 2024";
-            this.LblBestPlayerContenedor.UseWaitCursor = true;
             // 
             // lblFiFaContendor
             // 

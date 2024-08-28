@@ -85,6 +85,12 @@
     <Compile Include="FrmPrueba.Designer.cs">
       <DependentUpon>FrmPrueba.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTablaAgencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTablaAgencia.Designer.cs">
+      <DependentUpon>FrmTablaAgencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmTablaVotaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,11 +115,11 @@
     <Compile Include="FrmVerificarConexion.Designer.cs">
       <DependentUpon>FrmVerificarConexion.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmJugadores.cs">
+    <Compile Include="FrmTablaJugadores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmJugadores.Designer.cs">
-      <DependentUpon>FrmJugadores.cs</DependentUpon>
+    <Compile Include="FrmTablaJugadores.Designer.cs">
+      <DependentUpon>FrmTablaJugadores.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -135,6 +141,9 @@
     <EmbeddedResource Include="FrmPrueba.resx">
       <DependentUpon>FrmPrueba.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmTablaAgencia.resx">
+      <DependentUpon>FrmTablaAgencia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmTablaVotaciones.resx">
       <DependentUpon>FrmTablaVotaciones.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,8 +156,8 @@
     <EmbeddedResource Include="FrmVerificarConexion.resx">
       <DependentUpon>FrmVerificarConexion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmJugadores.resx">
-      <DependentUpon>FrmJugadores.cs</DependentUpon>
+    <EmbeddedResource Include="FrmTablaJugadores.resx">
+      <DependentUpon>FrmTablaJugadores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -264,6 +273,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\FC_Barcelona_%28crest%29.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BrunoFernandes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cristiano-Ronaldo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luka-modric.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BrunoFernandes1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo_Real_Madrid.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
