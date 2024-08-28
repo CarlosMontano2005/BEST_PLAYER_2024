@@ -320,5 +320,14 @@
   <ItemGroup>
     <None Include="Resources\images.jpeg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancha-posiciones.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancha-posiciones-rotado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancha-posiciones-rotado1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

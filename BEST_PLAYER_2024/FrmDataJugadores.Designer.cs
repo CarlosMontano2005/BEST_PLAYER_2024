@@ -77,7 +77,8 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.rjButton1);
-            this.panel1.Location = new System.Drawing.Point(3, 0);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(888, 69);
             this.panel1.TabIndex = 0;
@@ -118,11 +119,13 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label3.Location = new System.Drawing.Point(30, 367);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(385, 121);
             this.label3.TabIndex = 4;
             this.label3.Text = resources.GetString("label3.Text");
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
@@ -132,9 +135,9 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.label4.Location = new System.Drawing.Point(470, 100);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 19);
+            this.label4.Size = new System.Drawing.Size(55, 19);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Datos:";
+            this.label4.Text = "Datos";
             // 
             // panel2
             // 
@@ -315,9 +318,9 @@
             this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.label25.Location = new System.Drawing.Point(470, 335);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(78, 19);
+            this.label25.Size = new System.Drawing.Size(73, 19);
             this.label25.TabIndex = 8;
-            this.label25.Text = "Partidos:";
+            this.label25.Text = "Partidos";
             // 
             // label26
             // 
@@ -349,7 +352,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(79, 22);
+            this.label1.Location = new System.Drawing.Point(86, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 23);
             this.label1.TabIndex = 5;
@@ -370,9 +373,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::BEST_PLAYER_2024.Properties.Resources.escudo_barquita;
-            this.pictureBox1.Location = new System.Drawing.Point(32, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(34, 34);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(41, 41);
+            this.pictureBox1.Size = new System.Drawing.Size(34, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;

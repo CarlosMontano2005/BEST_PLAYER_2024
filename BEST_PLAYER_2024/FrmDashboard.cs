@@ -210,7 +210,7 @@ namespace BEST_PLAYER_2024
             LblJugadores.ForeColor = ColorTranslator.FromHtml("#09E878");
             LblJugadores.Image = Properties.Resources.futbol_regular_green;
             isFormActive = true;
-            FrmTablaJugadores frmJugadores = new FrmTablaJugadores();
+            FrmDataJugadores frmJugadores = new FrmDataJugadores();
             OpenChildForm(frmJugadores);
         }
 
