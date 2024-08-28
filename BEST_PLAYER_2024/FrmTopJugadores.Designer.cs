@@ -49,27 +49,27 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.BtnBuscar = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.rjCircularPictureBox4 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.rjCircularPictureBox3 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
             this.rjCircularPictureBox2 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rjCircularPictureBox1 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.BtnBuscar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -148,11 +148,11 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.rjCircularPictureBox2);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.rjCircularPictureBox2);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Location = new System.Drawing.Point(24, 233);
             this.panel2.Name = "panel2";
@@ -188,9 +188,9 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.label7.Location = new System.Drawing.Point(201, 25);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(204, 45);
+            this.label7.Size = new System.Drawing.Size(287, 45);
             this.label7.TabIndex = 43;
-            this.label7.Text = "Lionel Messi";
+            this.label7.Text = "Cristiano Ronaldo";
             // 
             // label8
             // 
@@ -249,9 +249,9 @@
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.label11.Location = new System.Drawing.Point(201, 25);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(204, 45);
+            this.label11.Size = new System.Drawing.Size(207, 45);
             this.label11.TabIndex = 43;
-            this.label11.Text = "Lionel Messi";
+            this.label11.Text = "Luka Modric";
             // 
             // label12
             // 
@@ -310,9 +310,9 @@
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.label15.Location = new System.Drawing.Point(201, 25);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(204, 45);
+            this.label15.Size = new System.Drawing.Size(274, 45);
             this.label15.TabIndex = 43;
-            this.label15.Text = "Lionel Messi";
+            this.label15.Text = "Bruno Fernandes";
             // 
             // label16
             // 
@@ -327,6 +327,29 @@
             this.label16.Text = "4";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.BtnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
+            this.BtnBuscar.Location = new System.Drawing.Point(619, 38);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(242, 36);
+            this.BtnBuscar.TabIndex = 50;
+            this.BtnBuscar.Text = "Ver Tabla de Jugadores";
+            this.BtnBuscar.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::BEST_PLAYER_2024.Properties.Resources.FC_Barcelona__crest__svg;
+            this.pictureBox4.Location = new System.Drawing.Point(529, 25);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(60, 65);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 47;
+            this.pictureBox4.TabStop = false;
+            // 
             // rjCircularPictureBox4
             // 
             this.rjCircularPictureBox4.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
@@ -335,13 +358,23 @@
             this.rjCircularPictureBox4.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             this.rjCircularPictureBox4.BorderSize = 4;
             this.rjCircularPictureBox4.GradientAngle = 50F;
-            this.rjCircularPictureBox4.Image = global::BEST_PLAYER_2024.Properties.Resources.mesi_680x375;
+            this.rjCircularPictureBox4.Image = global::BEST_PLAYER_2024.Properties.Resources.BrunoFernandes1;
             this.rjCircularPictureBox4.Location = new System.Drawing.Point(87, 6);
             this.rjCircularPictureBox4.Name = "rjCircularPictureBox4";
             this.rjCircularPictureBox4.Size = new System.Drawing.Size(108, 108);
             this.rjCircularPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.rjCircularPictureBox4.TabIndex = 13;
             this.rjCircularPictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::BEST_PLAYER_2024.Properties.Resources.FC_Barcelona__crest__svg;
+            this.pictureBox3.Location = new System.Drawing.Point(529, 25);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(60, 65);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 47;
+            this.pictureBox3.TabStop = false;
             // 
             // rjCircularPictureBox3
             // 
@@ -351,7 +384,7 @@
             this.rjCircularPictureBox3.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             this.rjCircularPictureBox3.BorderSize = 4;
             this.rjCircularPictureBox3.GradientAngle = 50F;
-            this.rjCircularPictureBox3.Image = global::BEST_PLAYER_2024.Properties.Resources.mesi_680x375;
+            this.rjCircularPictureBox3.Image = global::BEST_PLAYER_2024.Properties.Resources.Luka_modric;
             this.rjCircularPictureBox3.Location = new System.Drawing.Point(87, 6);
             this.rjCircularPictureBox3.Name = "rjCircularPictureBox3";
             this.rjCircularPictureBox3.Size = new System.Drawing.Size(108, 108);
@@ -367,13 +400,23 @@
             this.rjCircularPictureBox2.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             this.rjCircularPictureBox2.BorderSize = 4;
             this.rjCircularPictureBox2.GradientAngle = 50F;
-            this.rjCircularPictureBox2.Image = global::BEST_PLAYER_2024.Properties.Resources.mesi_680x375;
-            this.rjCircularPictureBox2.Location = new System.Drawing.Point(87, 6);
+            this.rjCircularPictureBox2.Image = global::BEST_PLAYER_2024.Properties.Resources.Cristiano_Ronaldo;
+            this.rjCircularPictureBox2.Location = new System.Drawing.Point(87, 8);
             this.rjCircularPictureBox2.Name = "rjCircularPictureBox2";
             this.rjCircularPictureBox2.Size = new System.Drawing.Size(108, 108);
             this.rjCircularPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.rjCircularPictureBox2.TabIndex = 13;
+            this.rjCircularPictureBox2.TabIndex = 48;
             this.rjCircularPictureBox2.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::BEST_PLAYER_2024.Properties.Resources.Logo_Real_Madrid_svg;
+            this.pictureBox2.Location = new System.Drawing.Point(529, 25);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(60, 65);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 47;
+            this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -401,49 +444,6 @@
             this.rjCircularPictureBox1.TabIndex = 13;
             this.rjCircularPictureBox1.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::BEST_PLAYER_2024.Properties.Resources.FC_Barcelona__crest__svg;
-            this.pictureBox2.Location = new System.Drawing.Point(529, 25);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(60, 65);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 47;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::BEST_PLAYER_2024.Properties.Resources.FC_Barcelona__crest__svg;
-            this.pictureBox3.Location = new System.Drawing.Point(529, 25);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(60, 65);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 47;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::BEST_PLAYER_2024.Properties.Resources.FC_Barcelona__crest__svg;
-            this.pictureBox4.Location = new System.Drawing.Point(529, 25);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(60, 65);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 47;
-            this.pictureBox4.TabStop = false;
-            // 
-            // BtnBuscar
-            // 
-            this.BtnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.BtnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
-            this.BtnBuscar.Location = new System.Drawing.Point(619, 38);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(242, 36);
-            this.BtnBuscar.TabIndex = 50;
-            this.BtnBuscar.Text = "Ver Tabla de Jugadores";
-            this.BtnBuscar.UseVisualStyleBackColor = false;
-            // 
             // FrmTopJugadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -469,14 +469,14 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -494,7 +494,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private RJCodeAdvance.RJControls.RJCircularPictureBox rjCircularPictureBox2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label9;
@@ -513,5 +512,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button BtnBuscar;
+        private RJCodeAdvance.RJControls.RJCircularPictureBox rjCircularPictureBox2;
     }
 }

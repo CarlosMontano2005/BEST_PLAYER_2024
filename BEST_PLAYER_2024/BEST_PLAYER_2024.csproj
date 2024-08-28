@@ -121,11 +121,11 @@
     <Compile Include="FrmVerificarConexion.Designer.cs">
       <DependentUpon>FrmVerificarConexion.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmJugadores.cs">
+    <Compile Include="FrmTablaJugadores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmJugadores.Designer.cs">
-      <DependentUpon>FrmJugadores.cs</DependentUpon>
+    <Compile Include="FrmTablaJugadores.Designer.cs">
+      <DependentUpon>FrmTablaJugadores.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -165,8 +165,8 @@
     <EmbeddedResource Include="FrmVerificarConexion.resx">
       <DependentUpon>FrmVerificarConexion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmJugadores.resx">
-      <DependentUpon>FrmJugadores.cs</DependentUpon>
+    <EmbeddedResource Include="FrmTablaJugadores.resx">
+      <DependentUpon>FrmTablaJugadores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -294,6 +294,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\tarjetas-roja1.png" />
+    <None Include="Resources\BrunoFernandes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cristiano-Ronaldo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luka-modric.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BrunoFernandes1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo_Real_Madrid.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

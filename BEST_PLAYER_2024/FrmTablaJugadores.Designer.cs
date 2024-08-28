@@ -1,6 +1,6 @@
 ﻿namespace BEST_PLAYER_2024
 {
-    partial class FrmJugadores
+    partial class FrmTablaJugadores
     {
         /// <summary>
         /// Required designer variable.

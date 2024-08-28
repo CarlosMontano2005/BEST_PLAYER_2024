@@ -83,6 +83,36 @@ namespace BEST_PLAYER_2024.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BrunoFernandes {
+            get {
+                object obj = ResourceManager.GetObject("BrunoFernandes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BrunoFernandes1 {
+            get {
+                object obj = ResourceManager.GetObject("BrunoFernandes1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cristiano_Ronaldo {
+            get {
+                object obj = ResourceManager.GetObject("Cristiano-Ronaldo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ea_sports_fc_logo_freelogovectors_net_ {
             get {
                 object obj = ResourceManager.GetObject("ea_sports-fc-logo-freelogovectors.net_", resourceCulture);
@@ -196,6 +226,36 @@ namespace BEST_PLAYER_2024.Properties {
         internal static System.Drawing.Bitmap house_door_fill_green {
             get {
                 object obj = ResourceManager.GetObject("house_door_fill_green", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap images {
+            get {
+                object obj = ResourceManager.GetObject("images", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_Real_Madrid_svg {
+            get {
+                object obj = ResourceManager.GetObject("Logo_Real_Madrid.svg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Luka_modric {
+            get {
+                object obj = ResourceManager.GetObject("Luka-modric", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
