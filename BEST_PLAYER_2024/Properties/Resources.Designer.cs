@@ -103,6 +103,36 @@ namespace BEST_PLAYER_2024.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cancha_posiciones {
+            get {
+                object obj = ResourceManager.GetObject("cancha-posiciones", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cancha_posiciones_rotado {
+            get {
+                object obj = ResourceManager.GetObject("cancha-posiciones-rotado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cancha_posiciones_rotado1 {
+            get {
+                object obj = ResourceManager.GetObject("cancha-posiciones-rotado1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cristiano_Ronaldo {
             get {
                 object obj = ResourceManager.GetObject("Cristiano-Ronaldo", resourceCulture);

@@ -51,5 +51,10 @@ namespace BEST_PLAYER_2024
         {
 
         }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
