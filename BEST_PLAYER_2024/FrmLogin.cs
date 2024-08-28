@@ -22,6 +22,7 @@ namespace BEST_PLAYER_2024.Resources
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            Application.Exit();
         }
 
         private void button1_Click(object sender, EventArgs e)

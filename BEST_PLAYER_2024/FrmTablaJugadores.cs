@@ -16,5 +16,9 @@ namespace BEST_PLAYER_2024
         {
             InitializeComponent();
         }
+
+        private void BtnRegresar_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

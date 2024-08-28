@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmDataJugadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDataJugadores.Designer.cs">
+      <DependentUpon>FrmDataJugadores.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInfoEquipo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmDataJugadores.resx">
+      <DependentUpon>FrmDataJugadores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmInfoEquipo.resx">
       <DependentUpon>FrmInfoEquipo.cs</DependentUpon>
     </EmbeddedResource>
@@ -275,6 +284,16 @@
     <None Include="Resources\FC_Barcelona_%28crest%29.svg.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\futbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tarjeta-amarilla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tarjetas-roja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tarjetas-roja1.png" />
     <None Include="Resources\BrunoFernandes.jpg" />
   </ItemGroup>
   <ItemGroup>
