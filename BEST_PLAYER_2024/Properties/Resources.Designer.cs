@@ -113,6 +113,16 @@ namespace BEST_PLAYER_2024.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap futbol {
+            get {
+                object obj = ResourceManager.GetObject("futbol", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap futbol_regular__1_ {
             get {
                 object obj = ResourceManager.GetObject("futbol-regular (1)", resourceCulture);
@@ -286,6 +296,36 @@ namespace BEST_PLAYER_2024.Properties {
         internal static System.Drawing.Bitmap star_fill_green {
             get {
                 object obj = ResourceManager.GetObject("star_fill_green", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tarjeta_amarilla {
+            get {
+                object obj = ResourceManager.GetObject("tarjeta-amarilla", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tarjetas_roja {
+            get {
+                object obj = ResourceManager.GetObject("tarjetas-roja", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tarjetas_roja1 {
+            get {
+                object obj = ResourceManager.GetObject("tarjetas-roja1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

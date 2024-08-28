@@ -42,6 +42,7 @@
             this.rjTextBox1 = new RJCodeAdvance.RJControls.RJTextBox();
             this.BtnBuscar = new System.Windows.Forms.Button();
             this.BtnRegresar = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.DgvTabla)).BeginInit();
             this.SuspendLayout();
             // 
@@ -161,7 +162,7 @@
             this.rjTextBox1.PasswordChar = false;
             this.rjTextBox1.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.rjTextBox1.PlaceholderText = "Buscar Jugador";
-            this.rjTextBox1.Size = new System.Drawing.Size(313, 36);
+            this.rjTextBox1.Size = new System.Drawing.Size(313, 41);
             this.rjTextBox1.TabIndex = 38;
             this.rjTextBox1.Texts = "";
             this.rjTextBox1.UnderlinedStyle = true;
@@ -185,13 +186,22 @@
             this.BtnRegresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
             this.BtnRegresar.Location = new System.Drawing.Point(777, 68);
             this.BtnRegresar.Name = "BtnRegresar";
-            this.BtnRegresar.Size = new System.Drawing.Size(82, 21);
+            this.BtnRegresar.Size = new System.Drawing.Size(106, 25);
             this.BtnRegresar.TabIndex = 40;
             this.BtnRegresar.Text = "Regresar";
+            this.BtnRegresar.Click += new System.EventHandler(this.BtnRegresar_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(888, 650);
+            this.panel1.TabIndex = 41;
             // 
             // FrmJugadores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.ClientSize = new System.Drawing.Size(888, 650);
@@ -200,6 +210,7 @@
             this.Controls.Add(this.rjTextBox1);
             this.Controls.Add(this.rjComboBox1);
             this.Controls.Add(this.DgvTabla);
+            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -225,5 +236,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.Panel panel1;
     }
 }
