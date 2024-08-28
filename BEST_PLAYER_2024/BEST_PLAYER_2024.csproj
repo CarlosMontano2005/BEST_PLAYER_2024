@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAjustes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAjustes.Designer.cs">
+      <DependentUpon>FrmAjustes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDataJugadores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAjustes.resx">
+      <DependentUpon>FrmAjustes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDataJugadores.resx">
       <DependentUpon>FrmDataJugadores.cs</DependentUpon>
     </EmbeddedResource>
@@ -310,6 +319,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\images.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancha-posiciones.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancha-posiciones-rotado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancha-posiciones-rotado1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
