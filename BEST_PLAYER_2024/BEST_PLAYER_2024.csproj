@@ -49,6 +49,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAjustes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAjustes.Designer.cs">
+      <DependentUpon>FrmAjustes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDataJugadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDataJugadores.Designer.cs">
+      <DependentUpon>FrmDataJugadores.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInfoEquipo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +135,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAjustes.resx">
+      <DependentUpon>FrmAjustes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDataJugadores.resx">
+      <DependentUpon>FrmDataJugadores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmInfoEquipo.resx">
       <DependentUpon>FrmInfoEquipo.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,19 +179,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -275,6 +293,16 @@
     <None Include="Resources\FC_Barcelona_%28crest%29.svg.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\futbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tarjeta-amarilla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tarjetas-roja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tarjetas-roja1.png" />
     <None Include="Resources\BrunoFernandes.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -291,6 +319,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\images.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancha-posiciones.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancha-posiciones-rotado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancha-posiciones-rotado1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

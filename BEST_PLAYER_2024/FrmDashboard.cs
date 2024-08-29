@@ -210,7 +210,7 @@ namespace BEST_PLAYER_2024
             LblJugadores.ForeColor = ColorTranslator.FromHtml("#09E878");
             LblJugadores.Image = Properties.Resources.futbol_regular_green;
             isFormActive = true;
-            FrmTablaJugadores frmJugadores = new FrmTablaJugadores();
+            FrmDataJugadores frmJugadores = new FrmDataJugadores();
             OpenChildForm(frmJugadores);
         }
 
@@ -294,6 +294,9 @@ namespace BEST_PLAYER_2024
         {
             LblAjuste.ForeColor = ColorTranslator.FromHtml("#09E878");
             LblAjuste.Image = Properties.Resources.gear_fill_green;
+            FrmAjustes ajustes = new FrmAjustes();
+            OpenChildForm(ajustes);
+            isFormActive = true;
         }
 
         private void LblAjuste_MouseHover(object sender, EventArgs e)
