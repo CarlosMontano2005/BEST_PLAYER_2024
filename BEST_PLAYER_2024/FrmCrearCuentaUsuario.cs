@@ -4,20 +4,20 @@ using System.Windows.Forms;
 
 namespace BEST_PLAYER_2024.Resources
 {
-    public partial class FrmLogin : Form
+    public partial class FrmCrearCuentaUsuario : Form
     {
         // Declarar variables para el movimiento del formulario
         private bool isDragging = false;
         private Point lastCursor;
         private Point lastForm;
 
-        public FrmLogin()
+        public FrmCrearCuentaUsuario()
         {
-            InitializeComponent();
 
-            this.MouseDown += new MouseEventHandler(FrmLogin_MouseDown);
-            this.MouseMove += new MouseEventHandler(FrmLogin_MouseMove);
-            this.MouseUp += new MouseEventHandler(FrmLogin_MouseUp);
+            InitializeComponent();
+            rjRadioButton1.BackColor = Color.Transparent;
+            rjRadioButton2.BackColor = Color.Transparent;
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -69,9 +69,22 @@ namespace BEST_PLAYER_2024.Resources
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FrmCrearCuentaUsuario frmCrearCuenta = new FrmCrearCuentaUsuario();
-            frmCrearCuenta.Show();
-            this.Hide();
+            FrmLogin frmLogin = new FrmLogin(); // 
+
+            DialogResult result = MessageBox.Show(
+               "¿Desea salir y descartar la creacion de cuenta de usuario?",
+               "Confirmar cierre",
+               MessageBoxButtons.YesNo,
+               MessageBoxIcon.Question
+           );
+
+            // Regresar al formulario hijo 1
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                frmLogin.Show();
+            }
+           
         }
     }
 }

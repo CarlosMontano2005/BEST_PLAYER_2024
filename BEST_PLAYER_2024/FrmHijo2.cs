@@ -12,23 +12,44 @@ namespace BEST_PLAYER_2024
 {
     public partial class FrmHijo2 : Form
     {
-        private FrmUsuarios parentForm;
 
         public FrmHijo2()
         {
             InitializeComponent();
+
         }
 
         private void btnRegrasarAlFrmHijo1_Click(object sender, EventArgs e)
         {
-            // Cerrar el formulario actual
-            this.Close();
+            FrmHijo frmHijo1Regresar = new FrmHijo(); // 
 
-            // Regresar al formulario hijo 1
-            if (parentForm != null)
+            DialogResult result = MessageBox.Show(
+               "¿Desea cambiar al formulario hijo y cerrar el formulario subhijo?",
+               "Confirmar cierre",
+               MessageBoxButtons.YesNo,
+               MessageBoxIcon.Question
+           );
+
+            if (result == DialogResult.Yes)
             {
-                parentForm.BringToFront(); // Asegurarse de que el formulario padre está al frente
+                panleContenedorHijoDos.Controls.Clear();
+                frmHijo1Regresar.TopLevel = false;
+                frmHijo1Regresar.FormBorderStyle = FormBorderStyle.None;
+                frmHijo1Regresar.Dock = DockStyle.Fill;
+                panleContenedorHijoDos.Controls.Add(frmHijo1Regresar);
+                frmHijo1Regresar.Show();
             }
+            else
+            {
+                return;
+            }
+
+            
+        }
+
+        private void panleContenedorHijo_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
