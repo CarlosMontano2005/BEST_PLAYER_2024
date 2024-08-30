@@ -85,6 +85,12 @@
     <Compile Include="FrmDashboard.Designer.cs">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCrearCuentaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCrearCuentaUsuario.Designer.cs">
+      <DependentUpon>FrmCrearCuentaUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,11 +121,11 @@
     <Compile Include="FrmTopJugadores.Designer.cs">
       <DependentUpon>FrmTopJugadores.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmUsuarios.cs">
+    <Compile Include="FrmHijo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmUsuarios.Designer.cs">
-      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    <Compile Include="FrmHijo.Designer.cs">
+      <DependentUpon>FrmHijo.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmVerificarConexion.cs">
       <SubType>Form</SubType>
@@ -153,6 +159,9 @@
     <EmbeddedResource Include="FrmDashboard.resx">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCrearCuentaUsuario.resx">
+      <DependentUpon>FrmCrearCuentaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,8 +177,8 @@
     <EmbeddedResource Include="FrmTopJugadores.resx">
       <DependentUpon>FrmTopJugadores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmUsuarios.resx">
-      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    <EmbeddedResource Include="FrmHijo.resx">
+      <DependentUpon>FrmHijo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVerificarConexion.resx">
       <DependentUpon>FrmVerificarConexion.cs</DependentUpon>

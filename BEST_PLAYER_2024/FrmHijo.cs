@@ -10,35 +10,40 @@ using System.Windows.Forms;
 
 namespace BEST_PLAYER_2024
 {
-    public partial class FrmUsuarios : Form
+    public partial class FrmHijo : Form
     {
-        public FrmUsuarios()
+        public FrmHijo()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Crear una instancia de FrmHijo2
             FrmHijo2 child2 = new FrmHijo2();
 
-            // Verificar si el panel está disponible
-            if (PnlHijoContendraHijo2 != null)
-            {
-                // Limpiar el panel y agregar el nuevo formulario hijo
-                PnlHijoContendraHijo2.Controls.Clear();
+            DialogResult result = MessageBox.Show(
+                "¿Desea cambiar al formulario subhijo y cerrar el formulario hijo?",
+                "Confirmar cierre",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
 
+            if (result == DialogResult.Yes)
+            {
+                // Cerrar el formulario abierto
+                // Limpiar el panel y abrir el nuevo formulario
+                PnlHijoContendraHijo_1.Controls.Clear();
                 child2.TopLevel = false;
                 child2.FormBorderStyle = FormBorderStyle.None;
                 child2.Dock = DockStyle.Fill;
-
-                PnlHijoContendraHijo2.Controls.Add(child2);
+                PnlHijoContendraHijo_1.Controls.Add(child2);
                 child2.Show();
             }
             else
             {
-                MessageBox.Show("El panel no está disponible.");
+                return;
             }
+
         }
     }
 }
