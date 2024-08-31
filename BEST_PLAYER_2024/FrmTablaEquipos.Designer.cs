@@ -54,6 +54,7 @@
             this.BtnRegresar.Size = new System.Drawing.Size(82, 21);
             this.BtnRegresar.TabIndex = 45;
             this.BtnRegresar.Text = "Regresar";
+            this.BtnRegresar.Click += new System.EventHandler(this.BtnRegresar_Click);
             // 
             // BtnBuscar
             // 
@@ -202,7 +203,7 @@
             this.Controls.Add(this.DgvTabla);
             this.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmTablaEquipos";
             this.Text = "FrmTablaEquipos";
             ((System.ComponentModel.ISupportInitialize)(this.DgvTabla)).EndInit();

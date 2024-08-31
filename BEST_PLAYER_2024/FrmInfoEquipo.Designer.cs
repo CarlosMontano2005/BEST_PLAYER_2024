@@ -69,6 +69,7 @@
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.rjCircularPictureBox9 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
+            this.BtnRegresar = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -85,6 +86,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.panel1.Controls.Add(this.BtnRegresar);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.rjCircularPictureBox1);
@@ -581,6 +583,17 @@
             this.rjCircularPictureBox9.TabIndex = 24;
             this.rjCircularPictureBox9.TabStop = false;
             // 
+            // BtnRegresar
+            // 
+            this.BtnRegresar.AutoSize = true;
+            this.BtnRegresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.BtnRegresar.Location = new System.Drawing.Point(773, 134);
+            this.BtnRegresar.Name = "BtnRegresar";
+            this.BtnRegresar.Size = new System.Drawing.Size(82, 21);
+            this.BtnRegresar.TabIndex = 46;
+            this.BtnRegresar.Text = "Regresar";
+            this.BtnRegresar.Click += new System.EventHandler(this.BtnRegresar_Click);
+            // 
             // FrmInfoEquipo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -686,5 +699,6 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
         private RJCodeAdvance.RJControls.RJCircularPictureBox rjCircularPictureBox9;
+        private System.Windows.Forms.Label BtnRegresar;
     }
 }

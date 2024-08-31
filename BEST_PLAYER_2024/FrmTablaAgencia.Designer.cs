@@ -40,7 +40,6 @@
             this.rjComboBox1 = new RJCodeAdvance.RJControls.RJComboBox();
             this.rjTextBox1 = new RJCodeAdvance.RJControls.RJTextBox();
             this.BtnBuscar = new System.Windows.Forms.Button();
-            this.BtnRegresar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DgvTabla)).BeginInit();
             this.SuspendLayout();
             // 
@@ -154,7 +153,7 @@
             this.rjTextBox1.PasswordChar = false;
             this.rjTextBox1.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.rjTextBox1.PlaceholderText = "Buscar Agencia";
-            this.rjTextBox1.Size = new System.Drawing.Size(313, 41);
+            this.rjTextBox1.Size = new System.Drawing.Size(313, 36);
             this.rjTextBox1.TabIndex = 38;
             this.rjTextBox1.Texts = "";
             this.rjTextBox1.UnderlinedStyle = true;
@@ -172,23 +171,12 @@
             this.BtnBuscar.Text = "Buscar";
             this.BtnBuscar.UseVisualStyleBackColor = false;
             // 
-            // BtnRegresar
-            // 
-            this.BtnRegresar.AutoSize = true;
-            this.BtnRegresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.BtnRegresar.Location = new System.Drawing.Point(777, 68);
-            this.BtnRegresar.Name = "BtnRegresar";
-            this.BtnRegresar.Size = new System.Drawing.Size(106, 25);
-            this.BtnRegresar.TabIndex = 40;
-            this.BtnRegresar.Text = "Regresar";
-            // 
             // FrmTablaAgencia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.ClientSize = new System.Drawing.Size(888, 650);
-            this.Controls.Add(this.BtnRegresar);
             this.Controls.Add(this.BtnBuscar);
             this.Controls.Add(this.rjTextBox1);
             this.Controls.Add(this.rjComboBox1);
@@ -202,14 +190,12 @@
             this.Load += new System.EventHandler(this.FrmTablaAgencia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvTabla)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
         private System.Windows.Forms.DataGridView DgvTabla;
         private RJCodeAdvance.RJControls.RJComboBox rjComboBox1;
         private RJCodeAdvance.RJControls.RJTextBox rjTextBox1;
         private System.Windows.Forms.Button BtnBuscar;
-        private System.Windows.Forms.Label BtnRegresar;
         #endregion
 
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
