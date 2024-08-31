@@ -297,7 +297,7 @@ namespace BEST_PLAYER_2024
         {
             LblAjuste.ForeColor = ColorTranslator.FromHtml("#09E878");
             LblAjuste.Image = Properties.Resources.gear_fill_green;
-            FrmHijo ajustes = new FrmHijo();//FrmAjustes ajustes = new FrmAjustes();
+            FrmAjustes ajustes = new FrmAjustes();//FrmAjustes ajustes = new FrmAjustes();
             OpenChildForm(ajustes);
             isFormActive = true;
         }
