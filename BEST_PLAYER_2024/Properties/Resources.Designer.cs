@@ -73,6 +73,16 @@ namespace BEST_PLAYER_2024.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AndresIniesta {
+            get {
+                object obj = ResourceManager.GetObject("AndresIniesta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bcdcc833ef5e93053f701eef185d9113 {
             get {
                 object obj = ResourceManager.GetObject("bcdcc833ef5e93053f701eef185d9113", resourceCulture);
@@ -273,6 +283,26 @@ namespace BEST_PLAYER_2024.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Kaka {
+            get {
+                object obj = ResourceManager.GetObject("Kaka", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Like {
+            get {
+                object obj = ResourceManager.GetObject("Like", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo_Real_Madrid_svg {
             get {
                 object obj = ResourceManager.GetObject("Logo_Real_Madrid.svg", resourceCulture);
@@ -296,6 +326,16 @@ namespace BEST_PLAYER_2024.Properties {
         internal static System.Drawing.Bitmap mesi_680x375 {
             get {
                 object obj = ResourceManager.GetObject("mesi-680x375", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Neymar {
+            get {
+                object obj = ResourceManager.GetObject("Neymar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -363,6 +403,26 @@ namespace BEST_PLAYER_2024.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Ribery {
+            get {
+                object obj = ResourceManager.GetObject("Ribery", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ronaldinho {
+            get {
+                object obj = ResourceManager.GetObject("Ronaldinho", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SL_030822_49070_19 {
             get {
                 object obj = ResourceManager.GetObject("SL-030822-49070-19", resourceCulture);
@@ -423,6 +483,16 @@ namespace BEST_PLAYER_2024.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Toni_Kroos {
+            get {
+                object obj = ResourceManager.GetObject("Toni Kroos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap trophy_solid {
             get {
                 object obj = ResourceManager.GetObject("trophy-solid", resourceCulture);
@@ -466,6 +536,16 @@ namespace BEST_PLAYER_2024.Properties {
         internal static System.Drawing.Bitmap x_regular_24__2_ {
             get {
                 object obj = ResourceManager.GetObject("x-regular-24 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Zidane {
+            get {
+                object obj = ResourceManager.GetObject("Zidane", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

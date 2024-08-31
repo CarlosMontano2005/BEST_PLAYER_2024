@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace BEST_PLAYER_2024
 {
-    public partial class FrmTablaAgencia : Form
+    public partial class FrmVotos : Form
     {
-        public FrmTablaAgencia()
+        public FrmVotos()
         {
             InitializeComponent();
-        }
-
-        private void FrmTablaAgencia_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

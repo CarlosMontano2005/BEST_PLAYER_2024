@@ -47,7 +47,7 @@
             // DgvTabla
             // 
             this.DgvTabla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DgvTabla.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.DgvTabla.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.DgvTabla.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.DgvTabla.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DgvTabla.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -154,7 +154,7 @@
             this.rjTextBox1.PasswordChar = false;
             this.rjTextBox1.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.rjTextBox1.PlaceholderText = "Buscar Agencia";
-            this.rjTextBox1.Size = new System.Drawing.Size(313, 36);
+            this.rjTextBox1.Size = new System.Drawing.Size(313, 41);
             this.rjTextBox1.TabIndex = 38;
             this.rjTextBox1.Texts = "";
             this.rjTextBox1.UnderlinedStyle = true;
@@ -167,7 +167,7 @@
             this.BtnBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
             this.BtnBuscar.Location = new System.Drawing.Point(570, 60);
             this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(76, 36);
+            this.BtnBuscar.Size = new System.Drawing.Size(103, 36);
             this.BtnBuscar.TabIndex = 39;
             this.BtnBuscar.Text = "Buscar";
             this.BtnBuscar.UseVisualStyleBackColor = false;
@@ -178,13 +178,13 @@
             this.BtnRegresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
             this.BtnRegresar.Location = new System.Drawing.Point(777, 68);
             this.BtnRegresar.Name = "BtnRegresar";
-            this.BtnRegresar.Size = new System.Drawing.Size(82, 21);
+            this.BtnRegresar.Size = new System.Drawing.Size(106, 25);
             this.BtnRegresar.TabIndex = 40;
             this.BtnRegresar.Text = "Regresar";
             // 
             // FrmTablaAgencia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.ClientSize = new System.Drawing.Size(888, 650);
@@ -199,6 +199,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmTablaAgencia";
             this.Text = "FtmJugadores";
+            this.Load += new System.EventHandler(this.FrmTablaAgencia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvTabla)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

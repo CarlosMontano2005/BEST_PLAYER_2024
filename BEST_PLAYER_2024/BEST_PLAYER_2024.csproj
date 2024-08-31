@@ -139,6 +139,12 @@
     <Compile Include="FrmTablaJugadores.Designer.cs">
       <DependentUpon>FrmTablaJugadores.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmVotos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVotos.Designer.cs">
+      <DependentUpon>FrmVotos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmAjustes.resx">
@@ -185,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTablaJugadores.resx">
       <DependentUpon>FrmTablaJugadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVotos.resx">
+      <DependentUpon>FrmVotos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -337,6 +346,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cancha-posiciones-rotado1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Like.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toni Kroos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Neymar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ronaldinho.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kaka.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zidane.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ribery.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AndresIniesta.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
