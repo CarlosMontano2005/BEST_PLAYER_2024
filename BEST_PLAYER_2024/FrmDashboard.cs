@@ -69,7 +69,7 @@ namespace BEST_PLAYER_2024
         }
         private void button1_Click_1(object sender, EventArgs e)
         {
-           FrmUsuarios formUsuarios = new FrmUsuarios();
+           FrmHijo formUsuarios = new FrmHijo();
            OpenChildForm(formUsuarios);
         }
         #region Variables y Propiedades
@@ -297,7 +297,7 @@ namespace BEST_PLAYER_2024
         {
             LblAjuste.ForeColor = ColorTranslator.FromHtml("#09E878");
             LblAjuste.Image = Properties.Resources.gear_fill_green;
-            FrmAjustes ajustes = new FrmAjustes();
+            FrmHijo ajustes = new FrmHijo();//FrmAjustes ajustes = new FrmAjustes();
             OpenChildForm(ajustes);
             isFormActive = true;
         }
