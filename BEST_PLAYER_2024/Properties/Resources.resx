@@ -163,6 +163,12 @@
   <data name="tarjeta-amarilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tarjeta-amarilla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="person_bounding_box_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\person-bounding-box-green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Kat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kat.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tarjetas-roja1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tarjetas-roja1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -193,8 +199,8 @@
   <data name="x-regular-24 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\x-regular-24 (2)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="person-fill" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\person-fill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AndresIniesta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AndresIniesta.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="person-bounding-box" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\person-bounding-box.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,6 +223,9 @@
   <data name="gear-fill" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gear-fill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="David" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\David.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -229,8 +238,8 @@
   <data name="globe-americas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\globe-americas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="person_bounding_box_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\person-bounding-box-green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="person-fill" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\person-fill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gear_fill_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gear-fill-green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -253,8 +262,14 @@
   <data name="Like" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Like.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Charlie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Charlie.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="SL-030822-49070-19" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SL-030822-49070-19.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nestor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nestor.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BrunoFernandes1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BrunoFernandes1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -262,7 +277,7 @@
   <data name="default" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AndresIniesta" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AndresIniesta.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Anderson" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Anderson.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
