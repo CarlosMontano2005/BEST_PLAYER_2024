@@ -122,8 +122,9 @@ namespace BEST_PLAYER_2024
             LblVotar.ForeColor = ColorTranslator.FromHtml("#09E878");
             LblVotar.Image = Properties.Resources.trophy_solid_green;
             isFormActive = true;
-            FrmPrueba frmPrueba = new FrmPrueba();
-            OpenChildForm(frmPrueba);
+            FrmVotos frm = new FrmVotos();
+            //  FrmPrueba frmPrueba = new FrmPrueba();
+            OpenChildForm(frm);
         }
 
         private void LblVotar_MouseHover(object sender, EventArgs e)
@@ -151,8 +152,8 @@ namespace BEST_PLAYER_2024
             LblTopJagadores.ForeColor = ColorTranslator.FromHtml("#09E878");
             isFormActive = true;
             LblTopJagadores.Image = Properties.Resources.star_fill_green;
-            // FrmTopJugadores frm = new FrmTopJugadores();
-            FrmTablaVotaciones frm = new FrmTablaVotaciones();
+            FrmTopJugadores frm = new FrmTopJugadores();
+            //  FrmTablaVotaciones frm = new FrmTablaVotaciones();
             OpenChildForm(frm);
         }
 
@@ -267,6 +268,8 @@ namespace BEST_PLAYER_2024
         {
             LblUsuario.ForeColor = ColorTranslator.FromHtml("#09E878");
             LblUsuario.Image = Properties.Resources.person_fill_green;
+            FrmPrueba prueba = new FrmPrueba();
+            OpenChildForm(prueba);
             isFormActive = true;
         }
 
