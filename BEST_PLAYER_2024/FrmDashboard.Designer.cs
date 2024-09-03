@@ -30,7 +30,17 @@
         {
             System.Windows.Forms.Label label1;
             this.PnlNav = new System.Windows.Forms.Panel();
+            this.rjCircularPictureBox1 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
+            this.LblJugadores = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnCerrarSecion = new System.Windows.Forms.Button();
+            this.LblAjuste = new System.Windows.Forms.Label();
+            this.LblUsuario = new System.Windows.Forms.Label();
+            this.LblAgencias = new System.Windows.Forms.Label();
+            this.LblTopJagadores = new System.Windows.Forms.Label();
+            this.LblEquipos = new System.Windows.Forms.Label();
+            this.LblVotar = new System.Windows.Forms.Label();
+            this.lblInicio = new System.Windows.Forms.Label();
             this.LblNivelUsuario = new System.Windows.Forms.Label();
             this.LblCorreo = new System.Windows.Forms.Label();
             this.PnlImagenFondo = new System.Windows.Forms.Panel();
@@ -40,25 +50,15 @@
             this.LblBestPlayerContenedor = new System.Windows.Forms.Label();
             this.lblFiFaContendor = new System.Windows.Forms.Label();
             this.CirBoxPictorLogo = new RJCodeAdvance.RJControls.RJCircularPictureBox();
-            this.LblJugadores = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.LblAjuste = new System.Windows.Forms.Label();
-            this.LblUsuario = new System.Windows.Forms.Label();
-            this.LblAgencias = new System.Windows.Forms.Label();
-            this.LblTopJagadores = new System.Windows.Forms.Label();
-            this.LblEquipos = new System.Windows.Forms.Label();
-            this.LblVotar = new System.Windows.Forms.Label();
-            this.lblInicio = new System.Windows.Forms.Label();
-            this.rjCircularPictureBox1 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
             label1 = new System.Windows.Forms.Label();
             this.PnlNav.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PnlImagenFondo.SuspendLayout();
             this.PanelOpciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PtbClose)).BeginInit();
             this.PnlContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CirBoxPictorLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -68,7 +68,7 @@
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            label1.Location = new System.Drawing.Point(30, 9);
+            label1.Location = new System.Drawing.Point(10, 9);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(161, 30);
             label1.TabIndex = 0;
@@ -103,139 +103,21 @@
             this.PnlNav.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PnlNav_MouseMove);
             this.PnlNav.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PnlNav_MouseUp);
             // 
-            // BtnCerrarSecion
+            // rjCircularPictureBox1
             // 
-            this.BtnCerrarSecion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.BtnCerrarSecion.Cursor = System.Windows.Forms.Cursors.Default;
-            this.BtnCerrarSecion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCerrarSecion.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCerrarSecion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
-            this.BtnCerrarSecion.Location = new System.Drawing.Point(29, 460);
-            this.BtnCerrarSecion.Name = "BtnCerrarSecion";
-            this.BtnCerrarSecion.Size = new System.Drawing.Size(162, 35);
-            this.BtnCerrarSecion.TabIndex = 12;
-            this.BtnCerrarSecion.Text = "Cerrar Sesion";
-            this.BtnCerrarSecion.UseVisualStyleBackColor = false;
-            this.BtnCerrarSecion.Click += new System.EventHandler(this.BtnCerrarSecion_Click);
-            // 
-            // LblNivelUsuario
-            // 
-            this.LblNivelUsuario.AutoSize = true;
-            this.LblNivelUsuario.Cursor = System.Windows.Forms.Cursors.Default;
-            this.LblNivelUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNivelUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(255)))));
-            this.LblNivelUsuario.Location = new System.Drawing.Point(52, 174);
-            this.LblNivelUsuario.Name = "LblNivelUsuario";
-            this.LblNivelUsuario.Size = new System.Drawing.Size(98, 17);
-            this.LblNivelUsuario.TabIndex = 3;
-            this.LblNivelUsuario.Text = "Administrador";
-            // 
-            // LblCorreo
-            // 
-            this.LblCorreo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(176)))), ((int)(((byte)(176)))));
-            this.LblCorreo.Location = new System.Drawing.Point(26, 154);
-            this.LblCorreo.Name = "LblCorreo";
-            this.LblCorreo.Size = new System.Drawing.Size(161, 20);
-            this.LblCorreo.TabIndex = 2;
-            this.LblCorreo.Text = "correo@example.com";
-            // 
-            // PnlImagenFondo
-            // 
-            this.PnlImagenFondo.BackColor = System.Drawing.Color.Black;
-            this.PnlImagenFondo.BackgroundImage = global::BEST_PLAYER_2024.Properties.Resources.bcdcc833ef5e93053f701eef185d9113;
-            this.PnlImagenFondo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PnlImagenFondo.Controls.Add(this.PanelOpciones);
-            this.PnlImagenFondo.Controls.Add(this.PnlContenedor);
-            this.PnlImagenFondo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PnlImagenFondo.Location = new System.Drawing.Point(212, 0);
-            this.PnlImagenFondo.Margin = new System.Windows.Forms.Padding(5);
-            this.PnlImagenFondo.Name = "PnlImagenFondo";
-            this.PnlImagenFondo.Size = new System.Drawing.Size(888, 650);
-            this.PnlImagenFondo.TabIndex = 3;
-            // 
-            // PanelOpciones
-            // 
-            this.PanelOpciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.PanelOpciones.Controls.Add(this.PtbClose);
-            this.PanelOpciones.Cursor = System.Windows.Forms.Cursors.Default;
-            this.PanelOpciones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelOpciones.Location = new System.Drawing.Point(0, 0);
-            this.PanelOpciones.Name = "PanelOpciones";
-            this.PanelOpciones.Size = new System.Drawing.Size(888, 28);
-            this.PanelOpciones.TabIndex = 1;
-            this.PanelOpciones.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelOpciones_MouseDown);
-            this.PanelOpciones.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelOpciones_MouseMove);
-            this.PanelOpciones.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelOpciones_MouseUp);
-            // 
-            // PtbClose
-            // 
-            this.PtbClose.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.PtbClose.Image = global::BEST_PLAYER_2024.Properties.Resources.x_regular_24__2_;
-            this.PtbClose.Location = new System.Drawing.Point(857, 0);
-            this.PtbClose.Name = "PtbClose";
-            this.PtbClose.Size = new System.Drawing.Size(31, 28);
-            this.PtbClose.TabIndex = 0;
-            this.PtbClose.TabStop = false;
-            this.PtbClose.Click += new System.EventHandler(this.PtbClose_Click);
-            // 
-            // PnlContenedor
-            // 
-            this.PnlContenedor.Controls.Add(this.LblBestPlayerContenedor);
-            this.PnlContenedor.Controls.Add(this.lblFiFaContendor);
-            this.PnlContenedor.Controls.Add(this.CirBoxPictorLogo);
-            this.PnlContenedor.Cursor = System.Windows.Forms.Cursors.Default;
-            this.PnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PnlContenedor.Location = new System.Drawing.Point(0, 0);
-            this.PnlContenedor.Name = "PnlContenedor";
-            this.PnlContenedor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.PnlContenedor.Size = new System.Drawing.Size(888, 650);
-            this.PnlContenedor.TabIndex = 0;
-            // 
-            // LblBestPlayerContenedor
-            // 
-            this.LblBestPlayerContenedor.AutoSize = true;
-            this.LblBestPlayerContenedor.BackColor = System.Drawing.Color.Transparent;
-            this.LblBestPlayerContenedor.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.LblBestPlayerContenedor.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblBestPlayerContenedor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LblBestPlayerContenedor.Location = new System.Drawing.Point(278, 349);
-            this.LblBestPlayerContenedor.Name = "LblBestPlayerContenedor";
-            this.LblBestPlayerContenedor.Size = new System.Drawing.Size(309, 45);
-            this.LblBestPlayerContenedor.TabIndex = 11;
-            this.LblBestPlayerContenedor.Text = "BEST  PLAYER 2024";
-            // 
-            // lblFiFaContendor
-            // 
-            this.lblFiFaContendor.AutoSize = true;
-            this.lblFiFaContendor.BackColor = System.Drawing.Color.Transparent;
-            this.lblFiFaContendor.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.lblFiFaContendor.Font = new System.Drawing.Font("Segoe UI", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFiFaContendor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblFiFaContendor.Location = new System.Drawing.Point(375, 271);
-            this.lblFiFaContendor.Name = "lblFiFaContendor";
-            this.lblFiFaContendor.Size = new System.Drawing.Size(137, 71);
-            this.lblFiFaContendor.TabIndex = 10;
-            this.lblFiFaContendor.Text = "FIFA";
-            // 
-            // CirBoxPictorLogo
-            // 
-            this.CirBoxPictorLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.CirBoxPictorLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.CirBoxPictorLogo.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Round;
-            this.CirBoxPictorLogo.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.CirBoxPictorLogo.BorderColor2 = System.Drawing.Color.HotPink;
-            this.CirBoxPictorLogo.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.CirBoxPictorLogo.BorderSize = 0;
-            this.CirBoxPictorLogo.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.CirBoxPictorLogo.GradientAngle = 50F;
-            this.CirBoxPictorLogo.Image = global::BEST_PLAYER_2024.Properties.Resources.ea_sports_fc_logo_freelogovectors_net_;
-            this.CirBoxPictorLogo.Location = new System.Drawing.Point(375, 118);
-            this.CirBoxPictorLogo.Name = "CirBoxPictorLogo";
-            this.CirBoxPictorLogo.Size = new System.Drawing.Size(138, 138);
-            this.CirBoxPictorLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.CirBoxPictorLogo.TabIndex = 2;
-            this.CirBoxPictorLogo.TabStop = false;
+            this.rjCircularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.rjCircularPictureBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(35)))), ((int)(((byte)(95)))));
+            this.rjCircularPictureBox1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.rjCircularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.rjCircularPictureBox1.BorderSize = 2;
+            this.rjCircularPictureBox1.GradientAngle = 50F;
+            this.rjCircularPictureBox1.Image = global::BEST_PLAYER_2024.Properties.Resources._default;
+            this.rjCircularPictureBox1.Location = new System.Drawing.Point(55, 42);
+            this.rjCircularPictureBox1.Name = "rjCircularPictureBox1";
+            this.rjCircularPictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.rjCircularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.rjCircularPictureBox1.TabIndex = 15;
+            this.rjCircularPictureBox1.TabStop = false;
             // 
             // LblJugadores
             // 
@@ -270,6 +152,21 @@
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
+            // BtnCerrarSecion
+            // 
+            this.BtnCerrarSecion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.BtnCerrarSecion.Cursor = System.Windows.Forms.Cursors.Default;
+            this.BtnCerrarSecion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCerrarSecion.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCerrarSecion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
+            this.BtnCerrarSecion.Location = new System.Drawing.Point(29, 460);
+            this.BtnCerrarSecion.Name = "BtnCerrarSecion";
+            this.BtnCerrarSecion.Size = new System.Drawing.Size(162, 35);
+            this.BtnCerrarSecion.TabIndex = 12;
+            this.BtnCerrarSecion.Text = "Cerrar Sesion";
+            this.BtnCerrarSecion.UseVisualStyleBackColor = false;
+            this.BtnCerrarSecion.Click += new System.EventHandler(this.BtnCerrarSecion_Click);
+            // 
             // LblAjuste
             // 
             this.LblAjuste.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -284,7 +181,7 @@
             this.LblAjuste.Name = "LblAjuste";
             this.LblAjuste.Size = new System.Drawing.Size(166, 21);
             this.LblAjuste.TabIndex = 11;
-            this.LblAjuste.Text = "Ajustes";
+            this.LblAjuste.Text = "Creditos";
             this.LblAjuste.Click += new System.EventHandler(this.LblAjuste_Click);
             this.LblAjuste.MouseLeave += new System.EventHandler(this.LblAjuste_MouseLeave);
             this.LblAjuste.MouseHover += new System.EventHandler(this.LblAjuste_MouseHover);
@@ -403,21 +300,124 @@
             this.lblInicio.MouseLeave += new System.EventHandler(this.lblInicio_MouseLeave);
             this.lblInicio.MouseHover += new System.EventHandler(this.lblInicio_MouseHover);
             // 
-            // rjCircularPictureBox1
+            // LblNivelUsuario
             // 
-            this.rjCircularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.rjCircularPictureBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(35)))), ((int)(((byte)(95)))));
-            this.rjCircularPictureBox1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.rjCircularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.rjCircularPictureBox1.BorderSize = 2;
-            this.rjCircularPictureBox1.GradientAngle = 50F;
-            this.rjCircularPictureBox1.Image = global::BEST_PLAYER_2024.Properties.Resources._default;
-            this.rjCircularPictureBox1.Location = new System.Drawing.Point(55, 42);
-            this.rjCircularPictureBox1.Name = "rjCircularPictureBox1";
-            this.rjCircularPictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.rjCircularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.rjCircularPictureBox1.TabIndex = 15;
-            this.rjCircularPictureBox1.TabStop = false;
+            this.LblNivelUsuario.AutoSize = true;
+            this.LblNivelUsuario.Cursor = System.Windows.Forms.Cursors.Default;
+            this.LblNivelUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNivelUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(255)))));
+            this.LblNivelUsuario.Location = new System.Drawing.Point(52, 174);
+            this.LblNivelUsuario.Name = "LblNivelUsuario";
+            this.LblNivelUsuario.Size = new System.Drawing.Size(98, 17);
+            this.LblNivelUsuario.TabIndex = 3;
+            this.LblNivelUsuario.Text = "Administrador";
+            // 
+            // LblCorreo
+            // 
+            this.LblCorreo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(176)))), ((int)(((byte)(176)))));
+            this.LblCorreo.Location = new System.Drawing.Point(26, 154);
+            this.LblCorreo.Name = "LblCorreo";
+            this.LblCorreo.Size = new System.Drawing.Size(161, 20);
+            this.LblCorreo.TabIndex = 2;
+            this.LblCorreo.Text = "correo@example.com";
+            // 
+            // PnlImagenFondo
+            // 
+            this.PnlImagenFondo.BackColor = System.Drawing.Color.Black;
+            this.PnlImagenFondo.BackgroundImage = global::BEST_PLAYER_2024.Properties.Resources.bcdcc833ef5e93053f701eef185d9113;
+            this.PnlImagenFondo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PnlImagenFondo.Controls.Add(this.PanelOpciones);
+            this.PnlImagenFondo.Controls.Add(this.PnlContenedor);
+            this.PnlImagenFondo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PnlImagenFondo.Location = new System.Drawing.Point(212, 0);
+            this.PnlImagenFondo.Margin = new System.Windows.Forms.Padding(5);
+            this.PnlImagenFondo.Name = "PnlImagenFondo";
+            this.PnlImagenFondo.Size = new System.Drawing.Size(888, 650);
+            this.PnlImagenFondo.TabIndex = 3;
+            // 
+            // PanelOpciones
+            // 
+            this.PanelOpciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.PanelOpciones.Controls.Add(this.PtbClose);
+            this.PanelOpciones.Cursor = System.Windows.Forms.Cursors.Default;
+            this.PanelOpciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelOpciones.Location = new System.Drawing.Point(0, 0);
+            this.PanelOpciones.Name = "PanelOpciones";
+            this.PanelOpciones.Size = new System.Drawing.Size(888, 28);
+            this.PanelOpciones.TabIndex = 1;
+            this.PanelOpciones.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelOpciones_MouseDown);
+            this.PanelOpciones.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelOpciones_MouseMove);
+            this.PanelOpciones.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelOpciones_MouseUp);
+            // 
+            // PtbClose
+            // 
+            this.PtbClose.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.PtbClose.Image = global::BEST_PLAYER_2024.Properties.Resources.x_regular_24__2_;
+            this.PtbClose.Location = new System.Drawing.Point(857, 0);
+            this.PtbClose.Name = "PtbClose";
+            this.PtbClose.Size = new System.Drawing.Size(31, 28);
+            this.PtbClose.TabIndex = 0;
+            this.PtbClose.TabStop = false;
+            this.PtbClose.Click += new System.EventHandler(this.PtbClose_Click);
+            // 
+            // PnlContenedor
+            // 
+            this.PnlContenedor.Controls.Add(this.LblBestPlayerContenedor);
+            this.PnlContenedor.Controls.Add(this.lblFiFaContendor);
+            this.PnlContenedor.Controls.Add(this.CirBoxPictorLogo);
+            this.PnlContenedor.Cursor = System.Windows.Forms.Cursors.Default;
+            this.PnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PnlContenedor.Location = new System.Drawing.Point(0, 0);
+            this.PnlContenedor.Name = "PnlContenedor";
+            this.PnlContenedor.Padding = new System.Windows.Forms.Padding(0, 0, 0, 20);
+            this.PnlContenedor.Size = new System.Drawing.Size(888, 650);
+            this.PnlContenedor.TabIndex = 0;
+            // 
+            // LblBestPlayerContenedor
+            // 
+            this.LblBestPlayerContenedor.AutoSize = true;
+            this.LblBestPlayerContenedor.BackColor = System.Drawing.Color.Transparent;
+            this.LblBestPlayerContenedor.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.LblBestPlayerContenedor.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblBestPlayerContenedor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LblBestPlayerContenedor.Location = new System.Drawing.Point(278, 349);
+            this.LblBestPlayerContenedor.Name = "LblBestPlayerContenedor";
+            this.LblBestPlayerContenedor.Size = new System.Drawing.Size(309, 45);
+            this.LblBestPlayerContenedor.TabIndex = 11;
+            this.LblBestPlayerContenedor.Text = "BEST  PLAYER 2024";
+            // 
+            // lblFiFaContendor
+            // 
+            this.lblFiFaContendor.AutoSize = true;
+            this.lblFiFaContendor.BackColor = System.Drawing.Color.Transparent;
+            this.lblFiFaContendor.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.lblFiFaContendor.Font = new System.Drawing.Font("Segoe UI", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFiFaContendor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblFiFaContendor.Location = new System.Drawing.Point(375, 271);
+            this.lblFiFaContendor.Name = "lblFiFaContendor";
+            this.lblFiFaContendor.Size = new System.Drawing.Size(137, 71);
+            this.lblFiFaContendor.TabIndex = 10;
+            this.lblFiFaContendor.Text = "FIFA";
+            // 
+            // CirBoxPictorLogo
+            // 
+            this.CirBoxPictorLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.CirBoxPictorLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.CirBoxPictorLogo.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Round;
+            this.CirBoxPictorLogo.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.CirBoxPictorLogo.BorderColor2 = System.Drawing.Color.HotPink;
+            this.CirBoxPictorLogo.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.CirBoxPictorLogo.BorderSize = 0;
+            this.CirBoxPictorLogo.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.CirBoxPictorLogo.GradientAngle = 50F;
+            this.CirBoxPictorLogo.Image = global::BEST_PLAYER_2024.Properties.Resources.ea_sports_fc_logo_freelogovectors_net_;
+            this.CirBoxPictorLogo.Location = new System.Drawing.Point(375, 118);
+            this.CirBoxPictorLogo.Name = "CirBoxPictorLogo";
+            this.CirBoxPictorLogo.Size = new System.Drawing.Size(138, 138);
+            this.CirBoxPictorLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.CirBoxPictorLogo.TabIndex = 2;
+            this.CirBoxPictorLogo.TabStop = false;
             // 
             // FrmDashboard
             // 
@@ -441,14 +441,14 @@
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FrmDashboard_MouseUp);
             this.PnlNav.ResumeLayout(false);
             this.PnlNav.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.PnlImagenFondo.ResumeLayout(false);
             this.PanelOpciones.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PtbClose)).EndInit();
             this.PnlContenedor.ResumeLayout(false);
             this.PnlContenedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CirBoxPictorLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

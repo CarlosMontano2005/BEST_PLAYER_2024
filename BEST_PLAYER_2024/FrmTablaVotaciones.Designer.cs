@@ -68,7 +68,7 @@
             this.DgvVotaciones.EnableHeadersVisualStyles = false;
             this.DgvVotaciones.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(62)))));
             this.DgvVotaciones.Location = new System.Drawing.Point(24, 135);
-            this.DgvVotaciones.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.DgvVotaciones.Margin = new System.Windows.Forms.Padding(8);
             this.DgvVotaciones.Name = "DgvVotaciones";
             this.DgvVotaciones.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -132,7 +132,7 @@
             this.BtnDescargar.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnDescargar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
             this.BtnDescargar.Location = new System.Drawing.Point(23, 40);
-            this.BtnDescargar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.BtnDescargar.Margin = new System.Windows.Forms.Padding(5);
             this.BtnDescargar.Name = "BtnDescargar";
             this.BtnDescargar.Size = new System.Drawing.Size(173, 36);
             this.BtnDescargar.TabIndex = 42;
@@ -148,6 +148,7 @@
             this.label1.Size = new System.Drawing.Size(82, 21);
             this.label1.TabIndex = 45;
             this.label1.Text = "Regresar";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // BtnBuscar
             // 
@@ -198,7 +199,7 @@
             this.Controls.Add(this.DgvVotaciones);
             this.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmTablaVotaciones";
             this.Text = "FrmTablaVotaciones";
             ((System.ComponentModel.ISupportInitialize)(this.DgvVotaciones)).EndInit();

@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace BEST_PLAYER_2024
 {
-    public partial class FrmTopJugadores : Form
+    public partial class FrmTablaEquipos : Form
     {
-        public FrmTopJugadores()
+        public FrmTablaEquipos()
         {
             InitializeComponent();
         }
 
-        private void BtnBuscar_Click(object sender, EventArgs e)
+        private void BtnRegresar_Click(object sender, EventArgs e)
         {
-            FrmTablaVotaciones child2 = new FrmTablaVotaciones();
+            FrmInfoEquipo child2 = new FrmInfoEquipo();
 
             DialogResult result = MessageBox.Show(
                 "¿Desea cambiar al formulario subhijo y cerrar el formulario hijo?",

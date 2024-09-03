@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace BEST_PLAYER_2024
 {
-    public partial class FrmPrueba : Form
+    public partial class FrmAdministrarUsuarios : Form
     {
         //Metodos Llenar CMB
         void LlenarNiveles()
@@ -70,11 +70,12 @@ namespace BEST_PLAYER_2024
                 CtrUsuario ctrUsuario = new CtrUsuario();
                 // Asignar propiedades una por una
                 ctrUsuario.NombreUsuario = TxtNombreUsuario.Text;
-                ctrUsuario.Correo = TxtCorreo.Text;
+                ctrUsuario.Correo = TxtNombreUsuario.Text;
                 ctrUsuario.Clave = TxtClave.Text;
                 ctrUsuario.FechaNacimiento = dtNacimiento.Value.ToString("yyyy-MM-dd"); // Asegúrate de que el formato sea correcto
                 ctrUsuario.Pasaporte = TxtPasaporte.Text;
-                ctrUsuario.IdAgencia = Convert.ToInt32(CmbAgencias.SelectedValue);
+                //ctrUsuario.IdAgencia = Convert.ToInt32(CmbAgencias.SelectedValue);
+                ctrUsuario.IdAgencia = Convert.ToInt32(CmbAgencias.SelectedItem);
                 ctrUsuario.NivelUsuario = CmbNiveles.SelectedItem.ToString();
                 string message;
                 bool isSuccess = ServUsuario.RegistrarUsuario(ctrUsuario, out message);
@@ -127,7 +128,7 @@ namespace BEST_PLAYER_2024
             LlenarAgencia();
             CargarGridDatos();
         }
-        public FrmPrueba()
+        public FrmAdministrarUsuarios()
         {
             InitializeComponent();
         }
