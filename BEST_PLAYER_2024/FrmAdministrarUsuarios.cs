@@ -14,6 +14,7 @@ namespace BEST_PLAYER_2024
 {
     public partial class FrmAdministrarUsuarios : Form
     {
+        private String ID;
         //Metodos Llenar CMB
         void LlenarNiveles()
         {
@@ -30,7 +31,36 @@ namespace BEST_PLAYER_2024
             // Establece "Escoja una opción" como el ítem seleccionado por defecto
             CmbNiveles.SelectedIndex = 0;
         }
-      
+        void LlenarAgenciaCmbOriginal()
+        {
+            try
+            {
+                //antes 
+                /*CmbAgencias.DataSource = ServUsuario.CargarAgencias();
+                CmbAgencias.DisplayMember = "NombreAgencia";
+                CmbAgencias.ValueMember = "IdAgencia";*/
+                // Obtén las agencias desde el servicio
+                DataTable agencias = ServUsuario.CargarAgencias();
+
+                // Crea una nueva fila para "Escoja una opción"
+                DataRow newRow = agencias.NewRow();
+                newRow["IdAgencia"] = DBNull.Value; // Valor nulo para el IdAgencia
+                newRow["NombreAgencia"] = "Escoja una opción";
+                agencias.Rows.InsertAt(newRow, 0); // Inserta al inicio del DataTable
+
+                // Asigna el DataTable al ComboBox
+                cmbBoxOrigianl.DataSource = agencias;
+                cmbBoxOrigianl.DisplayMember = "NombreAgencia";
+                cmbBoxOrigianl.ValueMember = "IdAgencia";
+
+                // Establece "Escoja una opción" como el ítem seleccionado por defecto
+                cmbBoxOrigianl.SelectedIndex = 0;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al cargar las agencias, verifique su conexión a internet o que el cable de red está conectado.", "Error de carga", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         void LlenarAgencia()
         {
             try
@@ -61,7 +91,44 @@ namespace BEST_PLAYER_2024
                 MessageBox.Show("Error al cargar las agencias, verifique su conexión a internet o que el cable de red está conectado.", "Error de carga", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Guardar Datos
+        private void actualizarDatos()
+        {
+            try
+            {
+                // Crear una instancia usando el constructor vacío
+                CtrUsuario ctrUsuario = new CtrUsuario();
+                //Enviar el ID Del usuario a actualizar 
+                ctrUsuario.IdUsuario = Convert.ToInt32(ID);
+                // Asignar propiedades una por una
+                Console.WriteLine(TxtNombreUsuario.Texts);
+                ctrUsuario.NombreUsuario = TxtNombreUsuario.Texts;
+                ctrUsuario.Correo = TxtCorreo.Texts;
+                ctrUsuario.FechaNacimiento = dtNacimiento.Value.ToString("yyyy-MM-dd");
+                ctrUsuario.Pasaporte = TxtPasaporte.Texts;
+                //ctrUsuario.IdAgencia = Convert.ToInt32(CmbAgencias.SelectedValue);
+                ctrUsuario.IdAgencia = Convert.ToInt32(cmbBoxOrigianl.SelectedValue);
+                ctrUsuario.NivelUsuario = CmbNiveles.SelectedItem.ToString();
+                Console.WriteLine(Convert.ToInt32(ID));
+                string message;
+                bool isSuccess = ServUsuario.ActualizarUsuario(ctrUsuario, out message);
+
+                if (isSuccess)
+                {
+                    MessageBox.Show("Usuario actualizado exitosamente.");
+                }
+                else
+                {
+                    MessageBox.Show(message, " Error al actualizado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    CargarGridDatos();
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejo de excepciones general
+                MessageBox.Show($"Se produjo un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
         private void guardarDatos()
         {
             try
@@ -72,10 +139,17 @@ namespace BEST_PLAYER_2024
                 ctrUsuario.NombreUsuario = TxtNombreUsuario.Text;
                 ctrUsuario.Correo = TxtNombreUsuario.Text;
                 ctrUsuario.Clave = TxtClave.Text;
+                ctrUsuario.NombreUsuario = TxtNombreUsuario.Texts;
+                ctrUsuario.Correo = TxtCorreo.Texts;
+                ctrUsuario.Clave = TxtClave.Texts;
                 ctrUsuario.FechaNacimiento = dtNacimiento.Value.ToString("yyyy-MM-dd"); // Asegúrate de que el formato sea correcto
                 ctrUsuario.Pasaporte = TxtPasaporte.Text;
                 //ctrUsuario.IdAgencia = Convert.ToInt32(CmbAgencias.SelectedValue);
                 ctrUsuario.IdAgencia = Convert.ToInt32(CmbAgencias.SelectedItem);
+                ctrUsuario.Pasaporte = TxtPasaporte.Texts;
+                // ctrUsuario.IdAgencia = Convert.ToInt32(CmbAgencias.SelectedValue);
+                ctrUsuario.IdAgencia = Convert.ToInt32(cmbBoxOrigianl.SelectedValue);
+                //ctrUsuario.IdAgencia = Convert.ToInt32(CmbAgencias.SelectedItem);
                 ctrUsuario.NivelUsuario = CmbNiveles.SelectedItem.ToString();
                 string message;
                 bool isSuccess = ServUsuario.RegistrarUsuario(ctrUsuario, out message);
@@ -83,11 +157,11 @@ namespace BEST_PLAYER_2024
                 if (isSuccess)
                 {
                     MessageBox.Show("Usuario registrado exitosamente.");
+                    CargarGridDatos();
                 }
                 else
                 {
                     MessageBox.Show(message, " Error al registrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                 }
             }
             catch (Exception ex)
@@ -95,7 +169,6 @@ namespace BEST_PLAYER_2024
                 // Manejo de excepciones general
                 MessageBox.Show($"Se produjo un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
         //Cargar Datos
         void CargarGridDatos()
@@ -104,7 +177,6 @@ namespace BEST_PLAYER_2024
             {
                 DataTable datos = ServUsuario.CargarUsuarios();
                 DgvUsuarios.DataSource = datos;
-
                 // Renombrar las columnas en el DataGridView
                 DgvUsuarios.Columns["IdUsuario"].HeaderText = "ID";
                 DgvUsuarios.Columns["NombreUsuario"].HeaderText = "Nombre de Usuario";
@@ -126,6 +198,7 @@ namespace BEST_PLAYER_2024
             //Llenar Combobox 
             LlenarNiveles();
             LlenarAgencia();
+            LlenarAgenciaCmbOriginal();
             CargarGridDatos();
         }
         public FrmAdministrarUsuarios()
@@ -168,6 +241,92 @@ namespace BEST_PLAYER_2024
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void DgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                //REINICIAR CONTROLES DE TEXTO
+                TxtNombreUsuario.ResetText();
+                TxtCorreo.ResetText();
+                //CAPTURAR EL NUMERO DE LA FILA EN LA QUE SE HACE CLIC
+                int posicion = DgvUsuarios.CurrentRow.Index;
+                //ENVIAR DATOS A LOS CONTROLES RESPECTIVOS
+                ID = DgvUsuarios[0, posicion].Value.ToString();
+                TxtId.Texts = DgvUsuarios[0, posicion].Value.ToString();
+
+                TxtNombreUsuario.Texts = DgvUsuarios[1, posicion].Value.ToString();
+                TxtCorreo.Texts = DgvUsuarios[2, posicion].Value.ToString();
+                dtNacimiento.Text = DgvUsuarios[3, posicion].Value.ToString();
+                //La foto es la posicion 4 pero aun no se hace proceso
+                TxtPasaporte.Texts = DgvUsuarios[5, posicion].Value.ToString();
+
+                //INTERPRETAR LOS IDS DE LAS LLAVES FORÁNEAS
+                string Nivel_Usuario = DgvUsuarios[6, posicion].Value.ToString();
+                string NombreAgencia = DgvUsuarios[7, posicion].Value.ToString();
+                //COMBOBOX
+                CmbNiveles.SelectedItem = Nivel_Usuario;
+                //COMBOBOX ID Cargar el combobox con los datos 
+                CmbAgencias.DataSource = ServUsuario.CargarAgencias();
+                CmbAgencias.DisplayMember = "NombreAgencia";
+                CmbAgencias.ValueMember = "IdAgencia";
+                //COMBOBOX ID Cargar el combobox con los datos 
+                cmbBoxOrigianl.DataSource = ServUsuario.CargarAgencias();
+                cmbBoxOrigianl.DisplayMember = "NombreAgencia";
+                cmbBoxOrigianl.ValueMember = "IdAgencia";                //Seleccionar el elemento seleccionado en el dgvUsuario de la tabla
+                foreach (DataRowView item in CmbAgencias.Items)
+                {
+                    if (item["NombreAgencia"].ToString() == NombreAgencia)
+                    {
+                        CmbAgencias.SelectedItem = item;
+                        break;
+                    }
+                }
+                foreach (DataRowView item in cmbBoxOrigianl.Items)
+                {
+                    if (item["NombreAgencia"].ToString() == NombreAgencia)
+                    {
+                        cmbBoxOrigianl.SelectedItem = item;
+                        break;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al cargar los datos.", "Error de carga", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            actualizarDatos();
+        }
+
+        private void ChBxVerClave_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ChBxVerClave.Checked)
+            {
+                TxtClave.PasswordChar = false; //ver contraseña
+            }
+            else
+            {
+                TxtClave.PasswordChar = true; //Ocultar contraseña
+
+            }
+        }
+
+        private void ChBxVerClaveRepetir_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ChBxVerClaveRepetir.Checked)
+            {
+                TxtRepetirClave.PasswordChar = false; //ver contraseña
+            }
+            else
+            {
+                TxtRepetirClave.PasswordChar = true; //Ocultar contraseña
+
+            }
         }
     }
 }

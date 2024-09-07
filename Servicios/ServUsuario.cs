@@ -22,7 +22,35 @@ namespace Servicios
         public static DataTable CargarAgencias()
         {
             DataTable datos = ModelUsuario.CargarAgencias(out string message);
-            return datos ;
+            return datos;
+        }
+        //cargar niveles usuarios SERVIOS ServUsuario InnerJoin
+        public static DataTable CargarAgenciasInnerJoin(string nombre)
+        {
+            DataTable datos = ModelUsuario.CargarAgenciasInnerJoin(out string message, nombre);
+            return datos;
+        }
+        public static bool ActualizarUsuario(CtrUsuario usuario, out string message)
+        {
+            try
+            {
+                return ModelUsuario.ActualizarUsuario(
+                    usuario.NombreUsuario,
+                    usuario.Correo,
+                    usuario.FechaNacimiento,
+                    usuario.Foto,
+                    usuario.Pasaporte,
+                    usuario.NivelUsuario,
+                    usuario.IdAgencia,
+                    usuario.IdUsuario,
+                    out message
+                    );
+            }
+            catch (Exception ex)
+            {
+                message = $"Error al actualizar al usuario: {ex.Message}";
+                return false;
+            }
         }
         public static bool RegistrarUsuario(CtrUsuario usuario, out string message)
         {
@@ -45,7 +73,7 @@ namespace Servicios
                 return false;
             }
         }
-     
+
 
     }
 }
