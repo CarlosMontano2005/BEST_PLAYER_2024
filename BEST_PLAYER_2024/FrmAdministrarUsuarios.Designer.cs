@@ -28,12 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.cmbBoxOrigianl = new System.Windows.Forms.ComboBox();
+            this.ChBxVerClaveRepetir = new System.Windows.Forms.CheckBox();
+            this.ChBxVerClave = new System.Windows.Forms.CheckBox();
+            this.TxtId = new RJCodeAdvance.RJControls.RJTextBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.CmbNiveles = new RJCodeAdvance.RJControls.RJComboBox();
@@ -56,6 +63,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.TxtNombreUsuario = new RJCodeAdvance.RJControls.RJTextBox();
             this.DgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvUsuarios)).BeginInit();
@@ -67,6 +75,13 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.cmbBoxOrigianl);
+            this.panel1.Controls.Add(this.ChBxVerClaveRepetir);
+            this.panel1.Controls.Add(this.ChBxVerClave);
+            this.panel1.Controls.Add(this.TxtId);
+            this.panel1.Controls.Add(this.btnEliminar);
+            this.panel1.Controls.Add(this.btnActualizar);
             this.panel1.Controls.Add(this.BtnGuardar);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.CmbNiveles);
@@ -121,6 +136,90 @@
             this.button3.TabIndex = 65;
             this.button3.Text = "Actualizar";
             this.button3.UseVisualStyleBackColor = false;
+            // 
+            // cmbBoxOrigianl
+            // 
+            this.cmbBoxOrigianl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.cmbBoxOrigianl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbBoxOrigianl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cmbBoxOrigianl.FormattingEnabled = true;
+            this.cmbBoxOrigianl.Location = new System.Drawing.Point(320, 392);
+            this.cmbBoxOrigianl.Name = "cmbBoxOrigianl";
+            this.cmbBoxOrigianl.Size = new System.Drawing.Size(250, 29);
+            this.cmbBoxOrigianl.TabIndex = 71;
+            // 
+            // ChBxVerClaveRepetir
+            // 
+            this.ChBxVerClaveRepetir.AutoSize = true;
+            this.ChBxVerClaveRepetir.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChBxVerClaveRepetir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ChBxVerClaveRepetir.Location = new System.Drawing.Point(488, 306);
+            this.ChBxVerClaveRepetir.Name = "ChBxVerClaveRepetir";
+            this.ChBxVerClaveRepetir.Size = new System.Drawing.Size(91, 21);
+            this.ChBxVerClaveRepetir.TabIndex = 69;
+            this.ChBxVerClaveRepetir.Text = "Ver Clave";
+            this.ChBxVerClaveRepetir.UseVisualStyleBackColor = true;
+            this.ChBxVerClaveRepetir.CheckedChanged += new System.EventHandler(this.ChBxVerClaveRepetir_CheckedChanged);
+            // 
+            // ChBxVerClave
+            // 
+            this.ChBxVerClave.AutoSize = true;
+            this.ChBxVerClave.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChBxVerClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ChBxVerClave.Location = new System.Drawing.Point(479, 227);
+            this.ChBxVerClave.Name = "ChBxVerClave";
+            this.ChBxVerClave.Size = new System.Drawing.Size(91, 21);
+            this.ChBxVerClave.TabIndex = 68;
+            this.ChBxVerClave.Text = "Ver Clave";
+            this.ChBxVerClave.UseVisualStyleBackColor = true;
+            this.ChBxVerClave.CheckedChanged += new System.EventHandler(this.ChBxVerClave_CheckedChanged);
+            // 
+            // TxtId
+            // 
+            this.TxtId.BackColor = System.Drawing.SystemColors.Window;
+            this.TxtId.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.TxtId.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.TxtId.BorderRadius = 0;
+            this.TxtId.BorderSize = 2;
+            this.TxtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TxtId.Location = new System.Drawing.Point(276, 27);
+            this.TxtId.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtId.Multiline = false;
+            this.TxtId.Name = "TxtId";
+            this.TxtId.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.TxtId.PasswordChar = false;
+            this.TxtId.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.TxtId.PlaceholderText = "";
+            this.TxtId.Size = new System.Drawing.Size(250, 31);
+            this.TxtId.TabIndex = 67;
+            this.TxtId.Texts = "";
+            this.TxtId.UnderlinedStyle = false;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(26)))), ((int)(((byte)(37)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(249)))), ((int)(((byte)(236)))));
+            this.btnEliminar.Location = new System.Drawing.Point(434, 424);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(136, 33);
+            this.btnEliminar.TabIndex = 66;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(35)))), ((int)(((byte)(95)))));
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(249)))), ((int)(((byte)(236)))));
+            this.btnActualizar.Location = new System.Drawing.Point(225, 424);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(136, 33);
+            this.btnActualizar.TabIndex = 65;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // BtnGuardar
             // 
@@ -470,14 +569,14 @@
             this.DgvUsuarios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.DgvUsuarios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DgvUsuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvUsuarios.EnableHeadersVisualStyles = false;
             this.DgvUsuarios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(62)))));
@@ -485,22 +584,33 @@
             this.DgvUsuarios.Margin = new System.Windows.Forms.Padding(5);
             this.DgvUsuarios.Name = "DgvUsuarios";
             this.DgvUsuarios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvUsuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.DgvUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvUsuarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.DgvUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.DgvUsuarios.Size = new System.Drawing.Size(850, 222);
             this.DgvUsuarios.TabIndex = 35;
+
+            this.DgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvUsuarios_CellClick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(27, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 21);
+            this.label1.TabIndex = 72;
+            this.label1.Text = "label1";
             // 
             // FrmAdministrarUsuarios
             // 
@@ -550,5 +660,10 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button BtnGuardar;
+        private RJCodeAdvance.RJControls.RJTextBox TxtId;
+        private System.Windows.Forms.CheckBox ChBxVerClave;
+        private System.Windows.Forms.CheckBox ChBxVerClaveRepetir;
+        private System.Windows.Forms.ComboBox cmbBoxOrigianl;
+        private System.Windows.Forms.Label label1;
     }
 }
