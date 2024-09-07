@@ -256,7 +256,7 @@ namespace BEST_PLAYER_2024
                 //La foto es la posicion 4 pero aun no se hace proceso
                 TxtPasaporte.Texts = DgvUsuarios[5, posicion].Value.ToString();
 
-                //INTERPRETAR LOS IDS DE LAS LLAVES FORÁNEAS
+                //INTERPRETAR LOS IDS DE LAS LLAVES FORÁNEAS foiewjfowefoiewn
                 string Nivel_Usuario = DgvUsuarios[6, posicion].Value.ToString();
                 string NombreAgencia = DgvUsuarios[7, posicion].Value.ToString();
                 //COMBOBOX
