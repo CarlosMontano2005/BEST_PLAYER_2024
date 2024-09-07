@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.PnlHijoContendraHijo_1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.PnlHijoContendraHijo_1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,10 +50,16 @@
             // 
             // PnlHijoContendraHijo_1
             // 
+            this.PnlHijoContendraHijo_1.Controls.Add(this.label2);
             this.PnlHijoContendraHijo_1.Controls.Add(this.label1);
             this.PnlHijoContendraHijo_1.Controls.Add(this.button1);
             resources.ApplyResources(this.PnlHijoContendraHijo_1, "PnlHijoContendraHijo_1");
             this.PnlHijoContendraHijo_1.Name = "PnlHijoContendraHijo_1";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
             // 
             // FrmHijo
             // 
@@ -72,5 +79,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel PnlHijoContendraHijo_1;
+        private System.Windows.Forms.Label label2;
     }
 }

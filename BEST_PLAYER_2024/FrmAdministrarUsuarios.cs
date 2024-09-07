@@ -164,5 +164,10 @@ namespace BEST_PLAYER_2024
         {
             guardarDatos();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
