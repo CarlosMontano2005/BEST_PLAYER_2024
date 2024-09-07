@@ -198,6 +198,7 @@ namespace BEST_PLAYER_2024
             //Llenar Combobox 
             LlenarNiveles();
             LlenarAgencia();
+            LlenarAgenciaCmbOriginal();
             CargarGridDatos();
         }
         public FrmAdministrarUsuarios()
