@@ -32,18 +32,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ChBxVerClaveRepetir = new System.Windows.Forms.CheckBox();
-            this.ChBxVerClave = new System.Windows.Forms.CheckBox();
-            this.TxtId = new RJCodeAdvance.RJControls.RJTextBox();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.CmbNiveles = new RJCodeAdvance.RJControls.RJComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.rjRadioButton2 = new RJCodeAdvance.RJControls.RJRadioButton();
             this.label12 = new System.Windows.Forms.Label();
             this.TxtRepetirClave = new RJCodeAdvance.RJControls.RJTextBox();
+            this.rjRadioButton1 = new RJCodeAdvance.RJControls.RJRadioButton();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.TxtClave = new RJCodeAdvance.RJControls.RJTextBox();
@@ -57,7 +56,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.TxtNombreUsuario = new RJCodeAdvance.RJControls.RJTextBox();
             this.DgvUsuarios = new System.Windows.Forms.DataGridView();
-            this.cmbBoxOrigianl = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvUsuarios)).BeginInit();
@@ -67,19 +65,17 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.panel1.Controls.Add(this.cmbBoxOrigianl);
-            this.panel1.Controls.Add(this.ChBxVerClaveRepetir);
-            this.panel1.Controls.Add(this.ChBxVerClave);
-            this.panel1.Controls.Add(this.TxtId);
-            this.panel1.Controls.Add(this.btnEliminar);
-            this.panel1.Controls.Add(this.btnActualizar);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.BtnGuardar);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.CmbNiveles);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.rjRadioButton2);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.TxtRepetirClave);
+            this.panel1.Controls.Add(this.rjRadioButton1);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.TxtClave);
@@ -100,79 +96,31 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(888, 650);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // ChBxVerClaveRepetir
+            // button4
             // 
-            this.ChBxVerClaveRepetir.AutoSize = true;
-            this.ChBxVerClaveRepetir.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChBxVerClaveRepetir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ChBxVerClaveRepetir.Location = new System.Drawing.Point(488, 306);
-            this.ChBxVerClaveRepetir.Name = "ChBxVerClaveRepetir";
-            this.ChBxVerClaveRepetir.Size = new System.Drawing.Size(91, 21);
-            this.ChBxVerClaveRepetir.TabIndex = 69;
-            this.ChBxVerClaveRepetir.Text = "Ver Clave";
-            this.ChBxVerClaveRepetir.UseVisualStyleBackColor = true;
-            this.ChBxVerClaveRepetir.CheckedChanged += new System.EventHandler(this.ChBxVerClaveRepetir_CheckedChanged);
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(26)))), ((int)(((byte)(37)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(249)))), ((int)(((byte)(236)))));
+            this.button4.Location = new System.Drawing.Point(434, 424);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(136, 33);
+            this.button4.TabIndex = 66;
+            this.button4.Text = "Eliminar";
+            this.button4.UseVisualStyleBackColor = false;
             // 
-            // ChBxVerClave
+            // button3
             // 
-            this.ChBxVerClave.AutoSize = true;
-            this.ChBxVerClave.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChBxVerClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ChBxVerClave.Location = new System.Drawing.Point(479, 227);
-            this.ChBxVerClave.Name = "ChBxVerClave";
-            this.ChBxVerClave.Size = new System.Drawing.Size(91, 21);
-            this.ChBxVerClave.TabIndex = 68;
-            this.ChBxVerClave.Text = "Ver Clave";
-            this.ChBxVerClave.UseVisualStyleBackColor = true;
-            this.ChBxVerClave.CheckedChanged += new System.EventHandler(this.ChBxVerClave_CheckedChanged);
-            // 
-            // TxtId
-            // 
-            this.TxtId.BackColor = System.Drawing.SystemColors.Window;
-            this.TxtId.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.TxtId.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.TxtId.BorderRadius = 0;
-            this.TxtId.BorderSize = 2;
-            this.TxtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.TxtId.Location = new System.Drawing.Point(276, 27);
-            this.TxtId.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtId.Multiline = false;
-            this.TxtId.Name = "TxtId";
-            this.TxtId.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.TxtId.PasswordChar = false;
-            this.TxtId.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.TxtId.PlaceholderText = "";
-            this.TxtId.Size = new System.Drawing.Size(250, 31);
-            this.TxtId.TabIndex = 67;
-            this.TxtId.Texts = "";
-            this.TxtId.UnderlinedStyle = false;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(26)))), ((int)(((byte)(37)))));
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(249)))), ((int)(((byte)(236)))));
-            this.btnEliminar.Location = new System.Drawing.Point(434, 424);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(136, 33);
-            this.btnEliminar.TabIndex = 66;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(35)))), ((int)(((byte)(95)))));
-            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(249)))), ((int)(((byte)(236)))));
-            this.btnActualizar.Location = new System.Drawing.Point(225, 424);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(136, 33);
-            this.btnActualizar.TabIndex = 65;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = false;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(35)))), ((int)(((byte)(95)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(249)))), ((int)(((byte)(236)))));
+            this.button3.Location = new System.Drawing.Point(225, 424);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(136, 33);
+            this.button3.TabIndex = 65;
+            this.button3.Text = "Actualizar";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // BtnGuardar
             // 
@@ -249,12 +197,29 @@
             this.pictureBox2.TabIndex = 60;
             this.pictureBox2.TabStop = false;
             // 
+            // rjRadioButton2
+            // 
+            this.rjRadioButton2.AutoSize = true;
+            this.rjRadioButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.rjRadioButton2.CheckedColor = System.Drawing.Color.MediumSeaGreen;
+            this.rjRadioButton2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjRadioButton2.Location = new System.Drawing.Point(320, 306);
+            this.rjRadioButton2.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rjRadioButton2.Name = "rjRadioButton2";
+            this.rjRadioButton2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rjRadioButton2.Size = new System.Drawing.Size(100, 21);
+            this.rjRadioButton2.TabIndex = 59;
+            this.rjRadioButton2.TabStop = true;
+            this.rjRadioButton2.Text = "Ver Clave";
+            this.rjRadioButton2.UnCheckedColor = System.Drawing.Color.Gray;
+            this.rjRadioButton2.UseVisualStyleBackColor = false;
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.label12.Location = new System.Drawing.Point(316, 148);
+            this.label12.Location = new System.Drawing.Point(316, 141);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(61, 21);
             this.label12.TabIndex = 58;
@@ -276,18 +241,35 @@
             this.TxtRepetirClave.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.TxtRepetirClave.PasswordChar = true;
             this.TxtRepetirClave.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.TxtRepetirClave.PlaceholderText = "";
+            this.TxtRepetirClave.PlaceholderText = "Repetir Clave";
             this.TxtRepetirClave.Size = new System.Drawing.Size(250, 36);
             this.TxtRepetirClave.TabIndex = 57;
             this.TxtRepetirClave.Texts = "";
             this.TxtRepetirClave.UnderlinedStyle = true;
+            // 
+            // rjRadioButton1
+            // 
+            this.rjRadioButton1.AutoSize = true;
+            this.rjRadioButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.rjRadioButton1.CheckedColor = System.Drawing.Color.MediumSeaGreen;
+            this.rjRadioButton1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjRadioButton1.Location = new System.Drawing.Point(320, 209);
+            this.rjRadioButton1.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rjRadioButton1.Name = "rjRadioButton1";
+            this.rjRadioButton1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rjRadioButton1.Size = new System.Drawing.Size(100, 21);
+            this.rjRadioButton1.TabIndex = 56;
+            this.rjRadioButton1.TabStop = true;
+            this.rjRadioButton1.Text = "Ver Clave";
+            this.rjRadioButton1.UnCheckedColor = System.Drawing.Color.Gray;
+            this.rjRadioButton1.UseVisualStyleBackColor = false;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.label13.Location = new System.Drawing.Point(316, 242);
+            this.label13.Location = new System.Drawing.Point(316, 240);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(125, 21);
             this.label13.TabIndex = 55;
@@ -313,14 +295,14 @@
             this.TxtClave.BorderSize = 2;
             this.TxtClave.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtClave.ForeColor = System.Drawing.Color.White;
-            this.TxtClave.Location = new System.Drawing.Point(320, 184);
+            this.TxtClave.Location = new System.Drawing.Point(320, 166);
             this.TxtClave.Margin = new System.Windows.Forms.Padding(4);
             this.TxtClave.Multiline = false;
             this.TxtClave.Name = "TxtClave";
             this.TxtClave.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.TxtClave.PasswordChar = true;
             this.TxtClave.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.TxtClave.PlaceholderText = "";
+            this.TxtClave.PlaceholderText = "Clave";
             this.TxtClave.Size = new System.Drawing.Size(250, 36);
             this.TxtClave.TabIndex = 53;
             this.TxtClave.Texts = "";
@@ -342,7 +324,7 @@
             this.TxtCorreo.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.TxtCorreo.PasswordChar = false;
             this.TxtCorreo.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.TxtCorreo.PlaceholderText = "";
+            this.TxtCorreo.PlaceholderText = "Correo@example.com";
             this.TxtCorreo.Size = new System.Drawing.Size(250, 36);
             this.TxtCorreo.TabIndex = 52;
             this.TxtCorreo.Texts = "";
@@ -401,7 +383,10 @@
             this.CmbAgencias.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.CmbAgencias.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(62)))));
             this.CmbAgencias.Items.AddRange(new object[] {
-            "Filtrar por equipo"});
+            "Filtrar por equipo",
+            "Barcelona",
+            "Real Madrid",
+            "Manchester"});
             this.CmbAgencias.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.CmbAgencias.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
             this.CmbAgencias.Location = new System.Drawing.Point(320, 350);
@@ -417,7 +402,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.label10.Location = new System.Drawing.Point(12, 242);
+            this.label10.Location = new System.Drawing.Point(12, 235);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(97, 21);
             this.label10.TabIndex = 47;
@@ -439,7 +424,7 @@
             this.TxtPasaporte.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.TxtPasaporte.PasswordChar = false;
             this.TxtPasaporte.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.TxtPasaporte.PlaceholderText = "";
+            this.TxtPasaporte.PlaceholderText = "N123456789";
             this.TxtPasaporte.Size = new System.Drawing.Size(250, 36);
             this.TxtPasaporte.TabIndex = 46;
             this.TxtPasaporte.Texts = "";
@@ -472,7 +457,7 @@
             this.TxtNombreUsuario.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.TxtNombreUsuario.PasswordChar = false;
             this.TxtNombreUsuario.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.TxtNombreUsuario.PlaceholderText = "";
+            this.TxtNombreUsuario.PlaceholderText = "Nombre Usuario";
             this.TxtNombreUsuario.Size = new System.Drawing.Size(250, 36);
             this.TxtNombreUsuario.TabIndex = 44;
             this.TxtNombreUsuario.Texts = "";
@@ -516,18 +501,6 @@
             this.DgvUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.DgvUsuarios.Size = new System.Drawing.Size(850, 222);
             this.DgvUsuarios.TabIndex = 35;
-            this.DgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvUsuarios_CellClick);
-            // 
-            // cmbBoxOrigianl
-            // 
-            this.cmbBoxOrigianl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.cmbBoxOrigianl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbBoxOrigianl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cmbBoxOrigianl.FormattingEnabled = true;
-            this.cmbBoxOrigianl.Location = new System.Drawing.Point(320, 392);
-            this.cmbBoxOrigianl.Name = "cmbBoxOrigianl";
-            this.cmbBoxOrigianl.Size = new System.Drawing.Size(250, 29);
-            this.cmbBoxOrigianl.TabIndex = 71;
             // 
             // FrmAdministrarUsuarios
             // 
@@ -562,8 +535,10 @@
         private RJCodeAdvance.RJControls.RJTextBox TxtPasaporte;
         private System.Windows.Forms.Label label11;
         private RJCodeAdvance.RJControls.RJTextBox TxtNombreUsuario;
+        private RJCodeAdvance.RJControls.RJRadioButton rjRadioButton2;
         private System.Windows.Forms.Label label12;
         private RJCodeAdvance.RJControls.RJTextBox TxtRepetirClave;
+        private RJCodeAdvance.RJControls.RJRadioButton rjRadioButton1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private RJCodeAdvance.RJControls.RJTextBox TxtClave;
@@ -572,12 +547,8 @@
         private RJCodeAdvance.RJControls.RJComboBox CmbNiveles;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button BtnGuardar;
-        private RJCodeAdvance.RJControls.RJTextBox TxtId;
-        private System.Windows.Forms.CheckBox ChBxVerClave;
-        private System.Windows.Forms.CheckBox ChBxVerClaveRepetir;
-        private System.Windows.Forms.ComboBox cmbBoxOrigianl;
     }
 }
