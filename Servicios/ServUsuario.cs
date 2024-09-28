@@ -52,6 +52,21 @@ namespace Servicios
                 return false;
             }
         }
+        public static bool EliminarUsuario(CtrUsuario ctrUsuario, out string message)
+        {
+            try
+            {
+                return ModelUsuario.EliminarUsuario(
+                    ctrUsuario.IdUsuario,
+                    out message
+                    );
+            }
+            catch (Exception ex)
+            {
+                message = $"Error al eliminar al usuario: {ex.Message}";
+                return false;
+            }
+        }
         public static bool RegistrarUsuario(CtrUsuario usuario, out string message)
         {
             try
@@ -74,6 +89,6 @@ namespace Servicios
             }
         }
 
-
+     
     }
 }
