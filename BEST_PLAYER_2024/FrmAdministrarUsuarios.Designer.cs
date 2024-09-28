@@ -32,13 +32,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbBoxOrigianl = new System.Windows.Forms.ComboBox();
             this.ChBxVerClaveRepetir = new System.Windows.Forms.CheckBox();
             this.ChBxVerClave = new System.Windows.Forms.CheckBox();
-            this.TxtId = new RJCodeAdvance.RJControls.RJTextBox();
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.CmbNiveles = new RJCodeAdvance.RJControls.RJComboBox();
@@ -59,6 +58,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.TxtNombreUsuario = new RJCodeAdvance.RJControls.RJTextBox();
             this.DgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.TxtId = new RJCodeAdvance.RJControls.RJTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvUsuarios)).BeginInit();
@@ -68,7 +68,7 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.btnEliminar);
             this.panel1.Controls.Add(this.btnActualizar);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.cmbBoxOrigianl);
@@ -104,17 +104,18 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // button4
+            // btnEliminar
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(26)))), ((int)(((byte)(37)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(249)))), ((int)(((byte)(236)))));
-            this.button4.Location = new System.Drawing.Point(434, 424);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(136, 33);
-            this.button4.TabIndex = 66;
-            this.button4.Text = "Eliminar";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(26)))), ((int)(((byte)(37)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(249)))), ((int)(((byte)(236)))));
+            this.btnEliminar.Location = new System.Drawing.Point(434, 424);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(136, 33);
+            this.btnEliminar.TabIndex = 66;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnActualizar
             // 
@@ -174,28 +175,6 @@
             this.ChBxVerClave.Text = "Ver Clave";
             this.ChBxVerClave.UseVisualStyleBackColor = true;
             this.ChBxVerClave.CheckedChanged += new System.EventHandler(this.ChBxVerClave_CheckedChanged);
-            // 
-            // TxtId
-            // 
-            this.TxtId.BackColor = System.Drawing.SystemColors.Window;
-            this.TxtId.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.TxtId.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.TxtId.BorderRadius = 0;
-            this.TxtId.BorderSize = 2;
-            this.TxtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.TxtId.Location = new System.Drawing.Point(276, 27);
-            this.TxtId.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtId.Multiline = false;
-            this.TxtId.Name = "TxtId";
-            this.TxtId.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.TxtId.PasswordChar = false;
-            this.TxtId.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.TxtId.PlaceholderText = "";
-            this.TxtId.Size = new System.Drawing.Size(250, 31);
-            this.TxtId.TabIndex = 67;
-            this.TxtId.Texts = "";
-            this.TxtId.UnderlinedStyle = false;
             // 
             // BtnGuardar
             // 
@@ -544,6 +523,28 @@
             this.DgvUsuarios.TabIndex = 35;
             this.DgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvUsuarios_CellClick);
             // 
+            // TxtId
+            // 
+            this.TxtId.BackColor = System.Drawing.SystemColors.Window;
+            this.TxtId.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.TxtId.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.TxtId.BorderRadius = 0;
+            this.TxtId.BorderSize = 2;
+            this.TxtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TxtId.Location = new System.Drawing.Point(276, 27);
+            this.TxtId.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtId.Multiline = false;
+            this.TxtId.Name = "TxtId";
+            this.TxtId.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.TxtId.PasswordChar = false;
+            this.TxtId.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.TxtId.PlaceholderText = "";
+            this.TxtId.Size = new System.Drawing.Size(250, 31);
+            this.TxtId.TabIndex = 67;
+            this.TxtId.Texts = "";
+            this.TxtId.UnderlinedStyle = false;
+            // 
             // FrmAdministrarUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -587,13 +588,13 @@
         private RJCodeAdvance.RJControls.RJComboBox CmbNiveles;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button BtnGuardar;
-        private RJCodeAdvance.RJControls.RJTextBox TxtId;
         private System.Windows.Forms.CheckBox ChBxVerClave;
         private System.Windows.Forms.CheckBox ChBxVerClaveRepetir;
         private System.Windows.Forms.ComboBox cmbBoxOrigianl;
         private System.Windows.Forms.Label label1;
+        private RJCodeAdvance.RJControls.RJTextBox TxtId;
     }
 }

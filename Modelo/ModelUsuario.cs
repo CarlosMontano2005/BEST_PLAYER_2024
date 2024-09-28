@@ -65,6 +65,48 @@ namespace Modelo
             return data;
         }
 
+        public static bool EliminarUsuario(int idUsuario, out string message)
+        {
+            DatabaseConnection con = new DatabaseConnection();
+            try
+            {
+                //query para la eleiminacion del dato con su paramentro @idusuario
+                string query = "DELETE Usuarios WHERE IdUsuario = @idusuario";
+                //verificar conexion
+                using (SqlConnection connection = con.GetConnection())
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                   
+                    cmd.Parameters.AddWithValue("@IdUsuario", idUsuario);
+                    //conectamos
+                    connection.Open();
+                    int result = cmd.ExecuteNonQuery();
+
+                    if (result > 0)
+                    {
+                        message = "Eliminado Exitosamente";
+                        return true;
+                    }
+                    else
+                    {
+                        message = "No se no se pudo eliminar ningún registro.";
+                        return false;
+                    }
+                }
+
+            }
+            catch (SqlException ex)
+            {
+                message = DatabaseValidations.FormatSqlErrorMessage(ex);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                message = $"Error al eliminar el usuario: {ex.Message}";
+                return false;
+            }
+        }
+
         public static DataTable CargarAgencias(out string message)
         {
             DatabaseConnection dbConnection = new DatabaseConnection();

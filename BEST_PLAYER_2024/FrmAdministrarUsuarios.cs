@@ -328,5 +328,50 @@ namespace BEST_PLAYER_2024
 
             }
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            //verificar si existe un id seleccionado  para eliminar verificando si hay espacion en blanco o esta vacia
+            if (string.IsNullOrWhiteSpace(TxtId.Texts))
+            {
+                MessageBox.Show("Seleccionar un usuario antes de eliminar","CAMPO VACIO",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                if (true)
+                {
+
+                }
+                try
+                {
+                    DialogResult res = MessageBox.Show("¿Decea eliminar al usuario " + TxtNombreUsuario.Texts + "?", "¿Eliminar?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (res == DialogResult.Yes)
+                    {
+                        CtrUsuario ctrUsuario = new CtrUsuario();
+                        ctrUsuario.IdUsuario = Convert.ToInt32(TxtId.Texts);
+                        string message;
+                        //bool isSuccess = ServUsuario.RegistrarUsuario(ctrUsuario, out message);
+                        bool isSuccess = ServUsuario.EliminarUsuario(ctrUsuario, out message);
+                        if (isSuccess)
+                        {
+                            MessageBox.Show("Usuario eliminado exitosamente.");
+                            CargarGridDatos();
+                            
+                        }
+                        else
+                        {
+                            MessageBox.Show(message, " Error al eliminar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    
+                 
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("Error al eliminar: "+ex, "ERROR DE ELIMINACION", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                }
+            }
+        }
     }
 }
