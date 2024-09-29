@@ -386,3 +386,5 @@ INNER JOIN Usuarios U ON V.IdUsuario = U.IdUsuario
 INNER JOIN Jugadores J ON V.IdJugador = J.IdJugador;
 
 
+ALTER TABLE Votacion
+DROP CONSTRAINT UQ__Votacion__99E3201714ADFB54;
