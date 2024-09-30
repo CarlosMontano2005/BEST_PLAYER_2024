@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -96,8 +97,23 @@ namespace Controlador
             }
         }
 
-        public string Foto { get; set; }
-
+        private byte[] _foto;
+        public byte[] Foto
+        {
+            get { return _foto; }
+            set
+            {
+                if (Validaciones.validateImage(value, out string errorMessage))
+                {
+                    _foto = value;
+                }
+                else
+                {
+                    throw new ArgumentException("IMAGEN: " + errorMessage);
+                }
+              
+            }
+        }
         private string _pasaporte;
         public string Pasaporte
         {
@@ -154,7 +170,7 @@ namespace Controlador
         // Constructor vacío
         public CtrUsuario() { }
 
-        public CtrUsuario(int idUsuario, string nombreUsuario, string correo, string fechaNacimiento, string clave, string pasaporte, string nivelUsuario, int idAgencia, string foto = null)
+        public CtrUsuario(int idUsuario, string nombreUsuario, string correo, string fechaNacimiento, string clave, string pasaporte, string nivelUsuario, int idAgencia, byte[] foto = null)
         {
             IdUsuario = idUsuario;
             NombreUsuario = nombreUsuario;
