@@ -32,17 +32,19 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEnviarDatosOtraTabla = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbBoxOrigianl = new System.Windows.Forms.ComboBox();
             this.ChBxVerClaveRepetir = new System.Windows.Forms.CheckBox();
             this.ChBxVerClave = new System.Windows.Forms.CheckBox();
+            this.TxtId = new RJCodeAdvance.RJControls.RJTextBox();
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.CmbNiveles = new RJCodeAdvance.RJControls.RJComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btExaminarImg = new System.Windows.Forms.Button();
+            this.pxbImg = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.TxtRepetirClave = new RJCodeAdvance.RJControls.RJTextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -58,9 +60,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.TxtNombreUsuario = new RJCodeAdvance.RJControls.RJTextBox();
             this.DgvUsuarios = new System.Windows.Forms.DataGridView();
-            this.TxtId = new RJCodeAdvance.RJControls.RJTextBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pxbImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,6 +70,7 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.panel1.Controls.Add(this.btnEnviarDatosOtraTabla);
             this.panel1.Controls.Add(this.btnEliminar);
             this.panel1.Controls.Add(this.btnActualizar);
             this.panel1.Controls.Add(this.label1);
@@ -78,8 +81,8 @@
             this.panel1.Controls.Add(this.BtnGuardar);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.CmbNiveles);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.btExaminarImg);
+            this.panel1.Controls.Add(this.pxbImg);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.TxtRepetirClave);
             this.panel1.Controls.Add(this.label13);
@@ -103,6 +106,17 @@
             this.panel1.Size = new System.Drawing.Size(888, 650);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnEnviarDatosOtraTabla
+            // 
+            this.btnEnviarDatosOtraTabla.BackColor = System.Drawing.Color.Teal;
+            this.btnEnviarDatosOtraTabla.Location = new System.Drawing.Point(699, 424);
+            this.btnEnviarDatosOtraTabla.Name = "btnEnviarDatosOtraTabla";
+            this.btnEnviarDatosOtraTabla.Size = new System.Drawing.Size(165, 49);
+            this.btnEnviarDatosOtraTabla.TabIndex = 73;
+            this.btnEnviarDatosOtraTabla.Text = "Tabla";
+            this.btnEnviarDatosOtraTabla.UseVisualStyleBackColor = false;
+            this.btnEnviarDatosOtraTabla.Click += new System.EventHandler(this.btnEnviarDatosOtraTabla_Click);
             // 
             // btnEliminar
             // 
@@ -176,6 +190,28 @@
             this.ChBxVerClave.UseVisualStyleBackColor = true;
             this.ChBxVerClave.CheckedChanged += new System.EventHandler(this.ChBxVerClave_CheckedChanged);
             // 
+            // TxtId
+            // 
+            this.TxtId.BackColor = System.Drawing.SystemColors.Window;
+            this.TxtId.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.TxtId.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.TxtId.BorderRadius = 0;
+            this.TxtId.BorderSize = 2;
+            this.TxtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TxtId.Location = new System.Drawing.Point(276, 27);
+            this.TxtId.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtId.Multiline = false;
+            this.TxtId.Name = "TxtId";
+            this.TxtId.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.TxtId.PasswordChar = false;
+            this.TxtId.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.TxtId.PlaceholderText = "";
+            this.TxtId.Size = new System.Drawing.Size(250, 31);
+            this.TxtId.TabIndex = 67;
+            this.TxtId.Texts = "";
+            this.TxtId.UnderlinedStyle = false;
+            // 
             // BtnGuardar
             // 
             this.BtnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(62)))));
@@ -229,27 +265,28 @@
             this.CmbNiveles.TabIndex = 62;
             this.CmbNiveles.Texts = "Seleccionar Nivel";
             // 
-            // button2
+            // btExaminarImg
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(134)))), ((int)(((byte)(19)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(645, 293);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(165, 34);
-            this.button2.TabIndex = 61;
-            this.button2.Text = "Examinar imagen";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btExaminarImg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(134)))), ((int)(((byte)(19)))));
+            this.btExaminarImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btExaminarImg.ForeColor = System.Drawing.Color.White;
+            this.btExaminarImg.Location = new System.Drawing.Point(645, 293);
+            this.btExaminarImg.Name = "btExaminarImg";
+            this.btExaminarImg.Size = new System.Drawing.Size(165, 34);
+            this.btExaminarImg.TabIndex = 61;
+            this.btExaminarImg.Text = "Examinar imagen";
+            this.btExaminarImg.UseVisualStyleBackColor = false;
+            this.btExaminarImg.Click += new System.EventHandler(this.btExaminarImg_Click);
             // 
-            // pictureBox2
+            // pxbImg
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox2.Location = new System.Drawing.Point(645, 46);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(165, 224);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 60;
-            this.pictureBox2.TabStop = false;
+            this.pxbImg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pxbImg.Location = new System.Drawing.Point(645, 46);
+            this.pxbImg.Name = "pxbImg";
+            this.pxbImg.Size = new System.Drawing.Size(165, 224);
+            this.pxbImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pxbImg.TabIndex = 60;
+            this.pxbImg.TabStop = false;
             // 
             // label12
             // 
@@ -281,7 +318,7 @@
             this.TxtRepetirClave.PlaceholderText = "";
             this.TxtRepetirClave.Size = new System.Drawing.Size(250, 36);
             this.TxtRepetirClave.TabIndex = 57;
-            this.TxtRepetirClave.Texts = "";
+            this.TxtRepetirClave.Texts = "Imagen@123";
             this.TxtRepetirClave.UnderlinedStyle = true;
             // 
             // label13
@@ -325,7 +362,7 @@
             this.TxtClave.PlaceholderText = "";
             this.TxtClave.Size = new System.Drawing.Size(250, 36);
             this.TxtClave.TabIndex = 53;
-            this.TxtClave.Texts = "";
+            this.TxtClave.Texts = "Imagen@123";
             this.TxtClave.UnderlinedStyle = true;
             // 
             // TxtCorreo
@@ -347,7 +384,7 @@
             this.TxtCorreo.PlaceholderText = "";
             this.TxtCorreo.Size = new System.Drawing.Size(250, 36);
             this.TxtCorreo.TabIndex = 52;
-            this.TxtCorreo.Texts = "";
+            this.TxtCorreo.Texts = "correoimagen@gmail.com";
             this.TxtCorreo.UnderlinedStyle = true;
             // 
             // label8
@@ -447,7 +484,7 @@
             this.TxtPasaporte.PlaceholderText = "";
             this.TxtPasaporte.Size = new System.Drawing.Size(250, 36);
             this.TxtPasaporte.TabIndex = 46;
-            this.TxtPasaporte.Texts = "";
+            this.TxtPasaporte.Texts = "123456826";
             this.TxtPasaporte.UnderlinedStyle = true;
             // 
             // label11
@@ -480,13 +517,11 @@
             this.TxtNombreUsuario.PlaceholderText = "";
             this.TxtNombreUsuario.Size = new System.Drawing.Size(250, 36);
             this.TxtNombreUsuario.TabIndex = 44;
-            this.TxtNombreUsuario.Texts = "";
+            this.TxtNombreUsuario.Texts = "Imagen Usuario";
             this.TxtNombreUsuario.UnderlinedStyle = true;
             // 
             // DgvUsuarios
             // 
-            this.DgvUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.DgvUsuarios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DgvUsuarios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.DgvUsuarios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DgvUsuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -523,27 +558,9 @@
             this.DgvUsuarios.TabIndex = 35;
             this.DgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvUsuarios_CellClick);
             // 
-            // TxtId
+            // openFileDialog1
             // 
-            this.TxtId.BackColor = System.Drawing.SystemColors.Window;
-            this.TxtId.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.TxtId.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.TxtId.BorderRadius = 0;
-            this.TxtId.BorderSize = 2;
-            this.TxtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.TxtId.Location = new System.Drawing.Point(276, 27);
-            this.TxtId.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtId.Multiline = false;
-            this.TxtId.Name = "TxtId";
-            this.TxtId.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.TxtId.PasswordChar = false;
-            this.TxtId.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.TxtId.PlaceholderText = "";
-            this.TxtId.Size = new System.Drawing.Size(250, 31);
-            this.TxtId.TabIndex = 67;
-            this.TxtId.Texts = "";
-            this.TxtId.UnderlinedStyle = false;
+            this.openFileDialog1.FileName = "opneFD";
             // 
             // FrmAdministrarUsuarios
             // 
@@ -560,7 +577,7 @@
             this.Load += new System.EventHandler(this.FrmPrueba_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pxbImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvUsuarios)).EndInit();
             this.ResumeLayout(false);
 
@@ -586,8 +603,8 @@
         private RJCodeAdvance.RJControls.RJTextBox TxtCorreo;
         private System.Windows.Forms.Label label15;
         private RJCodeAdvance.RJControls.RJComboBox CmbNiveles;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btExaminarImg;
+        private System.Windows.Forms.PictureBox pxbImg;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button BtnGuardar;
@@ -596,5 +613,7 @@
         private System.Windows.Forms.ComboBox cmbBoxOrigianl;
         private System.Windows.Forms.Label label1;
         private RJCodeAdvance.RJControls.RJTextBox TxtId;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button btnEnviarDatosOtraTabla;
     }
 }
