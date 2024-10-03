@@ -32,17 +32,21 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnEnviarDatosOtraTabla = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbBoxOrigianl = new System.Windows.Forms.ComboBox();
+            this.ChBxVerClaveRepetir = new System.Windows.Forms.CheckBox();
+            this.ChBxVerClave = new System.Windows.Forms.CheckBox();
+            this.TxtId = new RJCodeAdvance.RJControls.RJTextBox();
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.CmbNiveles = new RJCodeAdvance.RJControls.RJComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.rjRadioButton2 = new RJCodeAdvance.RJControls.RJRadioButton();
+            this.btExaminarImg = new System.Windows.Forms.Button();
+            this.pxbImg = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.TxtRepetirClave = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjRadioButton1 = new RJCodeAdvance.RJControls.RJRadioButton();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.TxtClave = new RJCodeAdvance.RJControls.RJTextBox();
@@ -56,8 +60,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.TxtNombreUsuario = new RJCodeAdvance.RJControls.RJTextBox();
             this.DgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pxbImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,17 +70,21 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.btnEnviarDatosOtraTabla);
+            this.panel1.Controls.Add(this.btnEliminar);
+            this.panel1.Controls.Add(this.btnActualizar);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.cmbBoxOrigianl);
+            this.panel1.Controls.Add(this.ChBxVerClaveRepetir);
+            this.panel1.Controls.Add(this.ChBxVerClave);
+            this.panel1.Controls.Add(this.TxtId);
             this.panel1.Controls.Add(this.BtnGuardar);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.CmbNiveles);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.rjRadioButton2);
+            this.panel1.Controls.Add(this.btExaminarImg);
+            this.panel1.Controls.Add(this.pxbImg);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.TxtRepetirClave);
-            this.panel1.Controls.Add(this.rjRadioButton1);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.TxtClave);
@@ -98,29 +107,110 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // button4
+            // btnEnviarDatosOtraTabla
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(26)))), ((int)(((byte)(37)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(249)))), ((int)(((byte)(236)))));
-            this.button4.Location = new System.Drawing.Point(434, 424);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(136, 33);
-            this.button4.TabIndex = 66;
-            this.button4.Text = "Eliminar";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnEnviarDatosOtraTabla.BackColor = System.Drawing.Color.Teal;
+            this.btnEnviarDatosOtraTabla.Location = new System.Drawing.Point(699, 424);
+            this.btnEnviarDatosOtraTabla.Name = "btnEnviarDatosOtraTabla";
+            this.btnEnviarDatosOtraTabla.Size = new System.Drawing.Size(165, 49);
+            this.btnEnviarDatosOtraTabla.TabIndex = 73;
+            this.btnEnviarDatosOtraTabla.Text = "Tabla";
+            this.btnEnviarDatosOtraTabla.UseVisualStyleBackColor = false;
+            this.btnEnviarDatosOtraTabla.Click += new System.EventHandler(this.btnEnviarDatosOtraTabla_Click);
             // 
-            // button3
+            // btnEliminar
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(35)))), ((int)(((byte)(95)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(249)))), ((int)(((byte)(236)))));
-            this.button3.Location = new System.Drawing.Point(225, 424);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(136, 33);
-            this.button3.TabIndex = 65;
-            this.button3.Text = "Actualizar";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(26)))), ((int)(((byte)(37)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(249)))), ((int)(((byte)(236)))));
+            this.btnEliminar.Location = new System.Drawing.Point(434, 424);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(136, 33);
+            this.btnEliminar.TabIndex = 66;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(35)))), ((int)(((byte)(95)))));
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(249)))), ((int)(((byte)(236)))));
+            this.btnActualizar.Location = new System.Drawing.Point(225, 424);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(136, 33);
+            this.btnActualizar.TabIndex = 65;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(27, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 21);
+            this.label1.TabIndex = 72;
+            this.label1.Text = "label1";
+            // 
+            // cmbBoxOrigianl
+            // 
+            this.cmbBoxOrigianl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.cmbBoxOrigianl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbBoxOrigianl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cmbBoxOrigianl.FormattingEnabled = true;
+            this.cmbBoxOrigianl.Location = new System.Drawing.Point(320, 392);
+            this.cmbBoxOrigianl.Name = "cmbBoxOrigianl";
+            this.cmbBoxOrigianl.Size = new System.Drawing.Size(250, 29);
+            this.cmbBoxOrigianl.TabIndex = 71;
+            // 
+            // ChBxVerClaveRepetir
+            // 
+            this.ChBxVerClaveRepetir.AutoSize = true;
+            this.ChBxVerClaveRepetir.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChBxVerClaveRepetir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ChBxVerClaveRepetir.Location = new System.Drawing.Point(488, 306);
+            this.ChBxVerClaveRepetir.Name = "ChBxVerClaveRepetir";
+            this.ChBxVerClaveRepetir.Size = new System.Drawing.Size(91, 21);
+            this.ChBxVerClaveRepetir.TabIndex = 69;
+            this.ChBxVerClaveRepetir.Text = "Ver Clave";
+            this.ChBxVerClaveRepetir.UseVisualStyleBackColor = true;
+            this.ChBxVerClaveRepetir.CheckedChanged += new System.EventHandler(this.ChBxVerClaveRepetir_CheckedChanged);
+            // 
+            // ChBxVerClave
+            // 
+            this.ChBxVerClave.AutoSize = true;
+            this.ChBxVerClave.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChBxVerClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ChBxVerClave.Location = new System.Drawing.Point(479, 227);
+            this.ChBxVerClave.Name = "ChBxVerClave";
+            this.ChBxVerClave.Size = new System.Drawing.Size(91, 21);
+            this.ChBxVerClave.TabIndex = 68;
+            this.ChBxVerClave.Text = "Ver Clave";
+            this.ChBxVerClave.UseVisualStyleBackColor = true;
+            this.ChBxVerClave.CheckedChanged += new System.EventHandler(this.ChBxVerClave_CheckedChanged);
+            // 
+            // TxtId
+            // 
+            this.TxtId.BackColor = System.Drawing.SystemColors.Window;
+            this.TxtId.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.TxtId.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.TxtId.BorderRadius = 0;
+            this.TxtId.BorderSize = 2;
+            this.TxtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TxtId.Location = new System.Drawing.Point(276, 27);
+            this.TxtId.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtId.Multiline = false;
+            this.TxtId.Name = "TxtId";
+            this.TxtId.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.TxtId.PasswordChar = false;
+            this.TxtId.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.TxtId.PlaceholderText = "";
+            this.TxtId.Size = new System.Drawing.Size(250, 31);
+            this.TxtId.TabIndex = 67;
+            this.TxtId.Texts = "";
+            this.TxtId.UnderlinedStyle = false;
             // 
             // BtnGuardar
             // 
@@ -175,44 +265,28 @@
             this.CmbNiveles.TabIndex = 62;
             this.CmbNiveles.Texts = "Seleccionar Nivel";
             // 
-            // button2
+            // btExaminarImg
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(134)))), ((int)(((byte)(19)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(645, 293);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(165, 34);
-            this.button2.TabIndex = 61;
-            this.button2.Text = "Examinar imagen";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btExaminarImg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(134)))), ((int)(((byte)(19)))));
+            this.btExaminarImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btExaminarImg.ForeColor = System.Drawing.Color.White;
+            this.btExaminarImg.Location = new System.Drawing.Point(645, 293);
+            this.btExaminarImg.Name = "btExaminarImg";
+            this.btExaminarImg.Size = new System.Drawing.Size(165, 34);
+            this.btExaminarImg.TabIndex = 61;
+            this.btExaminarImg.Text = "Examinar imagen";
+            this.btExaminarImg.UseVisualStyleBackColor = false;
+            this.btExaminarImg.Click += new System.EventHandler(this.btExaminarImg_Click);
             // 
-            // pictureBox2
+            // pxbImg
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox2.Location = new System.Drawing.Point(645, 46);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(165, 224);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 60;
-            this.pictureBox2.TabStop = false;
-            // 
-            // rjRadioButton2
-            // 
-            this.rjRadioButton2.AutoSize = true;
-            this.rjRadioButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.rjRadioButton2.CheckedColor = System.Drawing.Color.MediumSeaGreen;
-            this.rjRadioButton2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjRadioButton2.Location = new System.Drawing.Point(320, 306);
-            this.rjRadioButton2.MinimumSize = new System.Drawing.Size(0, 21);
-            this.rjRadioButton2.Name = "rjRadioButton2";
-            this.rjRadioButton2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rjRadioButton2.Size = new System.Drawing.Size(100, 21);
-            this.rjRadioButton2.TabIndex = 59;
-            this.rjRadioButton2.TabStop = true;
-            this.rjRadioButton2.Text = "Ver Clave";
-            this.rjRadioButton2.UnCheckedColor = System.Drawing.Color.Gray;
-            this.rjRadioButton2.UseVisualStyleBackColor = false;
+            this.pxbImg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pxbImg.Location = new System.Drawing.Point(645, 46);
+            this.pxbImg.Name = "pxbImg";
+            this.pxbImg.Size = new System.Drawing.Size(165, 224);
+            this.pxbImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pxbImg.TabIndex = 60;
+            this.pxbImg.TabStop = false;
             // 
             // label12
             // 
@@ -241,28 +315,11 @@
             this.TxtRepetirClave.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.TxtRepetirClave.PasswordChar = true;
             this.TxtRepetirClave.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.TxtRepetirClave.PlaceholderText = "Repetir Clave";
+            this.TxtRepetirClave.PlaceholderText = "";
             this.TxtRepetirClave.Size = new System.Drawing.Size(250, 36);
             this.TxtRepetirClave.TabIndex = 57;
-            this.TxtRepetirClave.Texts = "";
+            this.TxtRepetirClave.Texts = "Imagen@123";
             this.TxtRepetirClave.UnderlinedStyle = true;
-            // 
-            // rjRadioButton1
-            // 
-            this.rjRadioButton1.AutoSize = true;
-            this.rjRadioButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.rjRadioButton1.CheckedColor = System.Drawing.Color.MediumSeaGreen;
-            this.rjRadioButton1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjRadioButton1.Location = new System.Drawing.Point(320, 209);
-            this.rjRadioButton1.MinimumSize = new System.Drawing.Size(0, 21);
-            this.rjRadioButton1.Name = "rjRadioButton1";
-            this.rjRadioButton1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rjRadioButton1.Size = new System.Drawing.Size(100, 21);
-            this.rjRadioButton1.TabIndex = 56;
-            this.rjRadioButton1.TabStop = true;
-            this.rjRadioButton1.Text = "Ver Clave";
-            this.rjRadioButton1.UnCheckedColor = System.Drawing.Color.Gray;
-            this.rjRadioButton1.UseVisualStyleBackColor = false;
             // 
             // label13
             // 
@@ -302,10 +359,10 @@
             this.TxtClave.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.TxtClave.PasswordChar = true;
             this.TxtClave.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.TxtClave.PlaceholderText = "Clave";
+            this.TxtClave.PlaceholderText = "";
             this.TxtClave.Size = new System.Drawing.Size(250, 36);
             this.TxtClave.TabIndex = 53;
-            this.TxtClave.Texts = "";
+            this.TxtClave.Texts = "Imagen@123";
             this.TxtClave.UnderlinedStyle = true;
             // 
             // TxtCorreo
@@ -324,10 +381,10 @@
             this.TxtCorreo.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.TxtCorreo.PasswordChar = false;
             this.TxtCorreo.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.TxtCorreo.PlaceholderText = "Correo@example.com";
+            this.TxtCorreo.PlaceholderText = "";
             this.TxtCorreo.Size = new System.Drawing.Size(250, 36);
             this.TxtCorreo.TabIndex = 52;
-            this.TxtCorreo.Texts = "";
+            this.TxtCorreo.Texts = "correoimagen@gmail.com";
             this.TxtCorreo.UnderlinedStyle = true;
             // 
             // label8
@@ -424,10 +481,10 @@
             this.TxtPasaporte.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.TxtPasaporte.PasswordChar = false;
             this.TxtPasaporte.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.TxtPasaporte.PlaceholderText = "N123456789";
+            this.TxtPasaporte.PlaceholderText = "";
             this.TxtPasaporte.Size = new System.Drawing.Size(250, 36);
             this.TxtPasaporte.TabIndex = 46;
-            this.TxtPasaporte.Texts = "";
+            this.TxtPasaporte.Texts = "123456826";
             this.TxtPasaporte.UnderlinedStyle = true;
             // 
             // label11
@@ -457,16 +514,14 @@
             this.TxtNombreUsuario.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.TxtNombreUsuario.PasswordChar = false;
             this.TxtNombreUsuario.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.TxtNombreUsuario.PlaceholderText = "Nombre Usuario";
+            this.TxtNombreUsuario.PlaceholderText = "";
             this.TxtNombreUsuario.Size = new System.Drawing.Size(250, 36);
             this.TxtNombreUsuario.TabIndex = 44;
-            this.TxtNombreUsuario.Texts = "";
+            this.TxtNombreUsuario.Texts = "Imagen Usuario";
             this.TxtNombreUsuario.UnderlinedStyle = true;
             // 
             // DgvUsuarios
             // 
-            this.DgvUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.DgvUsuarios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DgvUsuarios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.DgvUsuarios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DgvUsuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -501,6 +556,11 @@
             this.DgvUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.DgvUsuarios.Size = new System.Drawing.Size(850, 222);
             this.DgvUsuarios.TabIndex = 35;
+            this.DgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvUsuarios_CellClick);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "opneFD";
             // 
             // FrmAdministrarUsuarios
             // 
@@ -517,7 +577,7 @@
             this.Load += new System.EventHandler(this.FrmPrueba_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pxbImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvUsuarios)).EndInit();
             this.ResumeLayout(false);
 
@@ -535,20 +595,25 @@
         private RJCodeAdvance.RJControls.RJTextBox TxtPasaporte;
         private System.Windows.Forms.Label label11;
         private RJCodeAdvance.RJControls.RJTextBox TxtNombreUsuario;
-        private RJCodeAdvance.RJControls.RJRadioButton rjRadioButton2;
         private System.Windows.Forms.Label label12;
         private RJCodeAdvance.RJControls.RJTextBox TxtRepetirClave;
-        private RJCodeAdvance.RJControls.RJRadioButton rjRadioButton1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private RJCodeAdvance.RJControls.RJTextBox TxtClave;
         private RJCodeAdvance.RJControls.RJTextBox TxtCorreo;
         private System.Windows.Forms.Label label15;
         private RJCodeAdvance.RJControls.RJComboBox CmbNiveles;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btExaminarImg;
+        private System.Windows.Forms.PictureBox pxbImg;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button BtnGuardar;
+        private System.Windows.Forms.CheckBox ChBxVerClave;
+        private System.Windows.Forms.CheckBox ChBxVerClaveRepetir;
+        private System.Windows.Forms.ComboBox cmbBoxOrigianl;
+        private System.Windows.Forms.Label label1;
+        private RJCodeAdvance.RJControls.RJTextBox TxtId;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button btnEnviarDatosOtraTabla;
     }
 }
