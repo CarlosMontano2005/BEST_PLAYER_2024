@@ -49,6 +49,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAjustes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAjustes.Designer.cs">
+      <DependentUpon>FrmAjustes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDataJugadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDataJugadores.Designer.cs">
+      <DependentUpon>FrmDataJugadores.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInfoEquipo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,17 +85,41 @@
     <Compile Include="FrmDashboard.Designer.cs">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCrearCuentaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCrearCuentaUsuario.Designer.cs">
+      <DependentUpon>FrmCrearCuentaUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmPrueba.cs">
+    <Compile Include="FrmAdministrarUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmPrueba.Designer.cs">
-      <DependentUpon>FrmPrueba.cs</DependentUpon>
+    <Compile Include="FrmAdministrarUsuarios.Designer.cs">
+      <DependentUpon>FrmAdministrarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTablaAgencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTablaAgencia.Designer.cs">
+      <DependentUpon>FrmTablaAgencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTablaEquipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTablaEquipos.Designer.cs">
+      <DependentUpon>FrmTablaEquipos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTablaUsuariosDestino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTablaUsuariosDestino.Designer.cs">
+      <DependentUpon>FrmTablaUsuariosDestino.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmTablaVotaciones.cs">
       <SubType>Form</SubType>
@@ -97,11 +133,11 @@
     <Compile Include="FrmTopJugadores.Designer.cs">
       <DependentUpon>FrmTopJugadores.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmUsuarios.cs">
+    <Compile Include="FrmHijo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmUsuarios.Designer.cs">
-      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    <Compile Include="FrmHijo.Designer.cs">
+      <DependentUpon>FrmHijo.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmVerificarConexion.cs">
       <SubType>Form</SubType>
@@ -109,14 +145,26 @@
     <Compile Include="FrmVerificarConexion.Designer.cs">
       <DependentUpon>FrmVerificarConexion.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmJugadores.cs">
+    <Compile Include="FrmTablaJugadores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmJugadores.Designer.cs">
-      <DependentUpon>FrmJugadores.cs</DependentUpon>
+    <Compile Include="FrmTablaJugadores.Designer.cs">
+      <DependentUpon>FrmTablaJugadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVotos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVotos.Designer.cs">
+      <DependentUpon>FrmVotos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAjustes.resx">
+      <DependentUpon>FrmAjustes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDataJugadores.resx">
+      <DependentUpon>FrmDataJugadores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmInfoEquipo.resx">
       <DependentUpon>FrmInfoEquipo.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,11 +177,23 @@
     <EmbeddedResource Include="FrmDashboard.resx">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCrearCuentaUsuario.resx">
+      <DependentUpon>FrmCrearCuentaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmPrueba.resx">
-      <DependentUpon>FrmPrueba.cs</DependentUpon>
+    <EmbeddedResource Include="FrmAdministrarUsuarios.resx">
+      <DependentUpon>FrmAdministrarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTablaAgencia.resx">
+      <DependentUpon>FrmTablaAgencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTablaEquipos.resx">
+      <DependentUpon>FrmTablaEquipos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTablaUsuariosDestino.resx">
+      <DependentUpon>FrmTablaUsuariosDestino.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTablaVotaciones.resx">
       <DependentUpon>FrmTablaVotaciones.cs</DependentUpon>
@@ -141,30 +201,33 @@
     <EmbeddedResource Include="FrmTopJugadores.resx">
       <DependentUpon>FrmTopJugadores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmUsuarios.resx">
-      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    <EmbeddedResource Include="FrmHijo.resx">
+      <DependentUpon>FrmHijo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVerificarConexion.resx">
       <DependentUpon>FrmVerificarConexion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmJugadores.resx">
-      <DependentUpon>FrmJugadores.cs</DependentUpon>
+    <EmbeddedResource Include="FrmTablaJugadores.resx">
+      <DependentUpon>FrmTablaJugadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVotos.resx">
+      <DependentUpon>FrmVotos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -264,6 +327,82 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\FC_Barcelona_%28crest%29.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\futbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tarjeta-amarilla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tarjetas-roja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tarjetas-roja1.png" />
+    <None Include="Resources\BrunoFernandes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cristiano-Ronaldo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luka-modric.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BrunoFernandes1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo_Real_Madrid.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancha-posiciones.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancha-posiciones-rotado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancha-posiciones-rotado1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Like.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toni Kroos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Neymar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ronaldinho.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kaka.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zidane.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ribery.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AndresIniesta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nestor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Charlie.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\David.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Anderson.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

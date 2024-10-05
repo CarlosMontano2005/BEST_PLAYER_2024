@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panleContenedorHijoDos = new System.Windows.Forms.Panel();
             this.btnRegrasarAlFrmHijo1 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.panleContenedorHijoDos.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -44,15 +44,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Formulario hijo 2";
             // 
-            // panel1
+            // panleContenedorHijoDos
             // 
-            this.panel1.Controls.Add(this.btnRegrasarAlFrmHijo1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 450);
-            this.panel1.TabIndex = 1;
+            this.panleContenedorHijoDos.Controls.Add(this.btnRegrasarAlFrmHijo1);
+            this.panleContenedorHijoDos.Controls.Add(this.label1);
+            this.panleContenedorHijoDos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panleContenedorHijoDos.Location = new System.Drawing.Point(0, 0);
+            this.panleContenedorHijoDos.Name = "panleContenedorHijoDos";
+            this.panleContenedorHijoDos.Size = new System.Drawing.Size(800, 450);
+            this.panleContenedorHijoDos.TabIndex = 1;
+            this.panleContenedorHijoDos.Paint += new System.Windows.Forms.PaintEventHandler(this.panleContenedorHijo_Paint);
             // 
             // btnRegrasarAlFrmHijo1
             // 
@@ -69,12 +70,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panleContenedorHijoDos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmHijo2";
             this.Text = "FrmHijo2";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panleContenedorHijoDos.ResumeLayout(false);
+            this.panleContenedorHijoDos.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -82,7 +83,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panleContenedorHijoDos;
         private System.Windows.Forms.Button btnRegrasarAlFrmHijo1;
     }
 }
