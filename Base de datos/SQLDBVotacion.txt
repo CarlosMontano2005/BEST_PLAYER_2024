@@ -387,16 +387,4 @@ INNER JOIN Jugadores J ON V.IdJugador = J.IdJugador;
 
 
 
---Imagne 
-USE DBVotacionJugadores_Nueva
-ALTER TABLE Usuarios
-ADD FotoTemp VARBINARY(MAX);
 
-UPDATE Usuarios
-SET FotoTemp = CONVERT(VARBINARY(MAX), Foto);
-
-ALTER TABLE Usuarios
-DROP COLUMN Foto;
-EXEC sp_rename 'Usuarios.FotoTemp', 'Foto', 'COLUMN';
-
-SELECT*FROM Usuarios;
