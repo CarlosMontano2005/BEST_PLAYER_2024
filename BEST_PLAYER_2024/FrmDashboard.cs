@@ -182,7 +182,7 @@ namespace BEST_PLAYER_2024
             LblEquipos.ForeColor = ColorTranslator.FromHtml("#09E878");
             isFormActive = true;
             LblEquipos.Image = Properties.Resources.people_fill_green;
-            FrmInfoEquipo frmEquipo = new FrmInfoEquipo();
+            FrmTablaEquipos frmEquipo = new FrmTablaEquipos();
             OpenChildForm(frmEquipo);
         }
 
@@ -211,7 +211,7 @@ namespace BEST_PLAYER_2024
             LblJugadores.ForeColor = ColorTranslator.FromHtml("#09E878");
             LblJugadores.Image = Properties.Resources.futbol_regular_green;
             isFormActive = true;
-            FrmDataJugadores frmJugadores = new FrmDataJugadores();
+            FrmTablaJugadores frmJugadores = new FrmTablaJugadores();
             OpenChildForm(frmJugadores);
         }
 
@@ -268,7 +268,7 @@ namespace BEST_PLAYER_2024
         {
             LblUsuario.ForeColor = ColorTranslator.FromHtml("#09E878");
             LblUsuario.Image = Properties.Resources.person_fill_green;
-            FrmPrueba prueba = new FrmPrueba();
+            FrmAdministrarUsuarios prueba = new FrmAdministrarUsuarios();
             OpenChildForm(prueba);
             isFormActive = true;
         }
@@ -366,7 +366,15 @@ namespace BEST_PLAYER_2024
 
         private void PtbClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show("¿Está seguro que desea salir del sistema?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                FrmLogin frmlogin = new FrmLogin();
+                frmlogin.Show();
+                this.Close();// Cierra la aplicación
+                             //Application.Exit();
+
+            }
         }
 
         private void FrmDashboard_MouseDown(object sender, MouseEventArgs e)

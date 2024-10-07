@@ -70,7 +70,7 @@
             label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
             label1.Location = new System.Drawing.Point(10, 9);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(199, 37);
+            label1.Size = new System.Drawing.Size(161, 30);
             label1.TabIndex = 0;
             label1.Text = "DASHBOARD";
             label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -308,7 +308,7 @@
             this.LblNivelUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(255)))));
             this.LblNivelUsuario.Location = new System.Drawing.Point(52, 174);
             this.LblNivelUsuario.Name = "LblNivelUsuario";
-            this.LblNivelUsuario.Size = new System.Drawing.Size(125, 21);
+            this.LblNivelUsuario.Size = new System.Drawing.Size(98, 17);
             this.LblNivelUsuario.TabIndex = 3;
             this.LblNivelUsuario.Text = "Administrador";
             // 
@@ -371,7 +371,6 @@
             this.PnlContenedor.Location = new System.Drawing.Point(0, 0);
             this.PnlContenedor.Name = "PnlContenedor";
             this.PnlContenedor.Padding = new System.Windows.Forms.Padding(0, 0, 0, 20);
-            this.PnlContenedor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.PnlContenedor.Size = new System.Drawing.Size(888, 650);
             this.PnlContenedor.TabIndex = 0;
             // 
@@ -384,7 +383,7 @@
             this.LblBestPlayerContenedor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LblBestPlayerContenedor.Location = new System.Drawing.Point(278, 349);
             this.LblBestPlayerContenedor.Name = "LblBestPlayerContenedor";
-            this.LblBestPlayerContenedor.Size = new System.Drawing.Size(382, 54);
+            this.LblBestPlayerContenedor.Size = new System.Drawing.Size(309, 45);
             this.LblBestPlayerContenedor.TabIndex = 11;
             this.LblBestPlayerContenedor.Text = "BEST  PLAYER 2024";
             // 
@@ -397,7 +396,7 @@
             this.lblFiFaContendor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblFiFaContendor.Location = new System.Drawing.Point(375, 271);
             this.lblFiFaContendor.Name = "lblFiFaContendor";
-            this.lblFiFaContendor.Size = new System.Drawing.Size(172, 89);
+            this.lblFiFaContendor.Size = new System.Drawing.Size(137, 71);
             this.lblFiFaContendor.TabIndex = 10;
             this.lblFiFaContendor.Text = "FIFA";
             // 

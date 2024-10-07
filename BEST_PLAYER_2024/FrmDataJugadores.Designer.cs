@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDataJugadores));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,8 +39,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label34 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -50,20 +56,15 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.BtnRegresar = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -82,6 +83,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(888, 69);
             this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(86, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 23);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "BARCELONA";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BEST_PLAYER_2024.Properties.Resources.escudo_barquita;
+            this.pictureBox1.Location = new System.Drawing.Point(34, 34);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(34, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // rjButton1
             // 
@@ -159,6 +182,7 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.BtnRegresar);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Controls.Add(this.label2);
@@ -190,6 +214,40 @@
             this.panel4.TabIndex = 17;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(26)))), ((int)(((byte)(37)))));
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(722, 328);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(110, 33);
+            this.label5.TabIndex = 31;
+            this.label5.Text = "DEFENSA";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::BEST_PLAYER_2024.Properties.Resources.cancha_posiciones_rotado;
+            this.pictureBox3.Location = new System.Drawing.Point(610, 367);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(222, 269);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 30;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.BackColor = System.Drawing.Color.Transparent;
+            this.label34.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(62)))));
+            this.label34.Location = new System.Drawing.Point(32, 337);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(101, 17);
+            this.label34.TabIndex = 8;
+            this.label34.Text = "Nacionalidad";
+            // 
             // label32
             // 
             this.label32.BackColor = System.Drawing.Color.Transparent;
@@ -213,6 +271,16 @@
             this.label33.Size = new System.Drawing.Size(45, 32);
             this.label33.TabIndex = 28;
             this.label33.Text = "08";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::BEST_PLAYER_2024.Properties.Resources.mesi_680x375;
+            this.pictureBox2.Location = new System.Drawing.Point(35, 137);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(380, 190);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
             // 
             // label27
             // 
@@ -346,60 +414,6 @@
             this.label28.TabIndex = 5;
             this.label28.Text = "30";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(86, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 23);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "BARCELONA";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.BackColor = System.Drawing.Color.Transparent;
-            this.label34.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(62)))));
-            this.label34.Location = new System.Drawing.Point(32, 337);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(101, 17);
-            this.label34.TabIndex = 8;
-            this.label34.Text = "Nacionalidad";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::BEST_PLAYER_2024.Properties.Resources.escudo_barquita;
-            this.pictureBox1.Location = new System.Drawing.Point(34, 34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::BEST_PLAYER_2024.Properties.Resources.cancha_posiciones_rotado;
-            this.pictureBox3.Location = new System.Drawing.Point(610, 367);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(222, 269);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 30;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::BEST_PLAYER_2024.Properties.Resources.mesi_680x375;
-            this.pictureBox2.Location = new System.Drawing.Point(35, 137);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(380, 190);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
             // pictureBox9
             // 
             this.pictureBox9.Image = global::BEST_PLAYER_2024.Properties.Resources.futbol;
@@ -430,17 +444,16 @@
             this.pictureBox11.TabIndex = 8;
             this.pictureBox11.TabStop = false;
             // 
-            // label5
+            // BtnRegresar
             // 
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(26)))), ((int)(((byte)(37)))));
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(722, 328);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 33);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "DEFENSA";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.BtnRegresar.AutoSize = true;
+            this.BtnRegresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.BtnRegresar.Location = new System.Drawing.Point(750, 98);
+            this.BtnRegresar.Name = "BtnRegresar";
+            this.BtnRegresar.Size = new System.Drawing.Size(82, 21);
+            this.BtnRegresar.TabIndex = 41;
+            this.BtnRegresar.Text = "Regresar";
+            this.BtnRegresar.Click += new System.EventHandler(this.BtnRegresar_Click);
             // 
             // FrmDataJugadores
             // 
@@ -458,11 +471,11 @@
             this.Text = "FrmDataJugadores";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
@@ -504,5 +517,6 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label BtnRegresar;
     }
 }
