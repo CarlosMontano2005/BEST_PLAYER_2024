@@ -151,6 +151,7 @@
             this.linkLabel1.TabIndex = 6;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "¿No tienes cuenta? Crear una cuenta";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // pictureBox1
             // 
@@ -178,17 +179,19 @@
             // rjRadioButton1
             // 
             this.rjRadioButton1.AutoSize = true;
+            this.rjRadioButton1.BackColor = System.Drawing.Color.Transparent;
             this.rjRadioButton1.CheckedColor = System.Drawing.Color.MediumSeaGreen;
-            this.rjRadioButton1.Location = new System.Drawing.Point(408, 504);
+            this.rjRadioButton1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjRadioButton1.Location = new System.Drawing.Point(406, 401);
             this.rjRadioButton1.MinimumSize = new System.Drawing.Size(0, 21);
             this.rjRadioButton1.Name = "rjRadioButton1";
             this.rjRadioButton1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rjRadioButton1.Size = new System.Drawing.Size(158, 25);
+            this.rjRadioButton1.Size = new System.Drawing.Size(100, 21);
             this.rjRadioButton1.TabIndex = 10;
             this.rjRadioButton1.TabStop = true;
-            this.rjRadioButton1.Text = "rjRadioButton1";
+            this.rjRadioButton1.Text = "Ver Clave";
             this.rjRadioButton1.UnCheckedColor = System.Drawing.Color.Gray;
-            this.rjRadioButton1.UseVisualStyleBackColor = true;
+            this.rjRadioButton1.UseVisualStyleBackColor = false;
             // 
             // FrmLogin
             // 

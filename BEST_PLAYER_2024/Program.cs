@@ -16,7 +16,7 @@ namespace BEST_PLAYER_2024
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmInicio()); //FrmInicio
+            Application.Run(new FrmDashboard()); //FrmInicio
         }
     }
 }
