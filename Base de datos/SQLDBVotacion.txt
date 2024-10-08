@@ -384,3 +384,7 @@ SELECT V.IdVotacion, U.NombreUsuario, J.Nombre AS NombreJugador, V.FechaHoraVoto
 FROM Votacion V
 INNER JOIN Usuarios U ON V.IdUsuario = U.IdUsuario
 INNER JOIN Jugadores J ON V.IdJugador = J.IdJugador;
+
+
+
+
