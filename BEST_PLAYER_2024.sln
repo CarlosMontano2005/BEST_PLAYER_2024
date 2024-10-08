@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.35116.124
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BEST_PLAYER_2024", "BEST_PLAYER_2024\BEST_PLAYER_2024.csproj", "{0727B2CC-A697-4E82-BC8F-6541A4AF6151}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configuracion", "Configuracion\Configuracion.csproj", "{1DA61AF0-8806-44E7-A4AC-6200F587D722}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelo", "Modelo\Modelo.csproj", "{0B5BDDC0-ED4C-4280-B694-C5DE352980A9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{0727B2CC-A697-4E82-BC8F-6541A4AF6151}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0727B2CC-A697-4E82-BC8F-6541A4AF6151}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0727B2CC-A697-4E82-BC8F-6541A4AF6151}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DA61AF0-8806-44E7-A4AC-6200F587D722}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DA61AF0-8806-44E7-A4AC-6200F587D722}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DA61AF0-8806-44E7-A4AC-6200F587D722}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DA61AF0-8806-44E7-A4AC-6200F587D722}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B5BDDC0-ED4C-4280-B694-C5DE352980A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B5BDDC0-ED4C-4280-B694-C5DE352980A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B5BDDC0-ED4C-4280-B694-C5DE352980A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B5BDDC0-ED4C-4280-B694-C5DE352980A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
