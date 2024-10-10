@@ -35,7 +35,7 @@
             this.rjComboBox1 = new RJCodeAdvance.RJControls.RJComboBox();
             this.rjTextBox1 = new RJCodeAdvance.RJControls.RJTextBox();
             this.BtnBuscar = new System.Windows.Forms.Button();
-            this.BtnRegresar = new System.Windows.Forms.Label();
+            this.BtnAgregar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DgvJugador)).BeginInit();
             this.SuspendLayout();
             // 
@@ -137,16 +137,16 @@
             this.BtnBuscar.Text = "Buscar";
             this.BtnBuscar.UseVisualStyleBackColor = false;
             // 
-            // BtnRegresar
+            // BtnAgregar
             // 
-            this.BtnRegresar.AutoSize = true;
-            this.BtnRegresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.BtnRegresar.Location = new System.Drawing.Point(777, 68);
-            this.BtnRegresar.Name = "BtnRegresar";
-            this.BtnRegresar.Size = new System.Drawing.Size(106, 25);
-            this.BtnRegresar.TabIndex = 40;
-            this.BtnRegresar.Text = "Regresar";
-            this.BtnRegresar.Click += new System.EventHandler(this.BtnRegresar_Click);
+            this.BtnAgregar.AutoSize = true;
+            this.BtnAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.BtnAgregar.Location = new System.Drawing.Point(753, 66);
+            this.BtnAgregar.Name = "BtnAgregar";
+            this.BtnAgregar.Size = new System.Drawing.Size(102, 25);
+            this.BtnAgregar.TabIndex = 40;
+            this.BtnAgregar.Text = "Agregar";
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnRegresar_Click);
             // 
             // FrmTablaJugadores
             // 
@@ -154,7 +154,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.ClientSize = new System.Drawing.Size(888, 650);
-            this.Controls.Add(this.BtnRegresar);
+            this.Controls.Add(this.BtnAgregar);
             this.Controls.Add(this.BtnBuscar);
             this.Controls.Add(this.rjTextBox1);
             this.Controls.Add(this.rjComboBox1);
@@ -177,6 +177,6 @@
         private RJCodeAdvance.RJControls.RJComboBox rjComboBox1;
         private RJCodeAdvance.RJControls.RJTextBox rjTextBox1;
         private System.Windows.Forms.Button BtnBuscar;
-        private System.Windows.Forms.Label BtnRegresar;
+        private System.Windows.Forms.Label BtnAgregar;
     }
 }
