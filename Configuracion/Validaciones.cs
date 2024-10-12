@@ -65,7 +65,7 @@ namespace Configuracion
                 return false;
             }
         }
-
+       
         public static bool ValidatePassword(string password, out string errorMessage)
         {
             if (string.IsNullOrWhiteSpace(password))
@@ -173,6 +173,20 @@ namespace Configuracion
 
             return true; 
         }
+        public static bool ValidateDatetTime(string value, out string errorMessage)
+        {
+            errorMessage = null;
+            if (DateTime.TryParseExact(value, "yyyy-MM-dd HH:mm:ss.fff", CultureInfo.InvariantCulture, DateTimeStyles.None, out _))
+            {
+                return true;
+            }
+            else
+            {
+                errorMessage = "ERR014: La fecha debe estar en el formato yyyy-MM-dd HH:mm:ss.fff.";
+                return false;
+            }
+        }
+
 
     }
 }
