@@ -61,6 +61,12 @@
     <Compile Include="FrmDataJugadores.Designer.cs">
       <DependentUpon>FrmDataJugadores.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmFormularioDetalleJugador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFormularioDetalleJugador.Designer.cs">
+      <DependentUpon>FrmFormularioDetalleJugador.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmFormularioJugadores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDataJugadores.resx">
       <DependentUpon>FrmDataJugadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFormularioDetalleJugador.resx">
+      <DependentUpon>FrmFormularioDetalleJugador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmFormularioJugadores.resx">
       <DependentUpon>FrmFormularioJugadores.cs</DependentUpon>
@@ -412,6 +421,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Anderson.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shirt.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

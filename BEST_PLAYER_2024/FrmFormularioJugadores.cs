@@ -108,14 +108,19 @@ namespace BEST_PLAYER_2024
                     ctrJugador.FechaNacimiento = DtNacimiento.Text;
                     ctrJugador.Altura = float.Parse(TxtAltura.Texts);
                     //Aun no funciona con la imagen, da un pequeño problema
-                        //ctrJugador.Foto = imageBytes;
-                    
+                    if (imageBytes != null)
+                    {
+                        ctrJugador.Foto = imageBytes;
+                    }
+
                     string message;
                     bool isSuccess = ServJugador.RegistrarJugador(ctrJugador, out message);
-
                     if (isSuccess)
                     {
                         MessageBox.Show("Jugador registrado exitosamente.");
+                        FrmFormularioDetalleJugador frmdetalle = new FrmFormularioDetalleJugador(TxtNombre.Texts,TxtApellido.Texts);
+                        frmdetalle.Show();
+                        this.Close();
                     }
                     else
                     {
@@ -151,7 +156,7 @@ namespace BEST_PLAYER_2024
                     {
                         using (var img = Image.FromStream(stream))
                         {
-                            if (img.Width > 250 || img.Height > 250)
+                            if (img.Width > 500 || img.Height > 500)
                             {
                                 MessageBox.Show("La imagen es demasiado grande. Las dimensiones máximas permitidas son 250x250 píxeles.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 return;
