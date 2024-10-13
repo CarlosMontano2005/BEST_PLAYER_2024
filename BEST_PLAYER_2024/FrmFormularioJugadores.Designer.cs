@@ -29,25 +29,27 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.rjTextBox1 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.TxtNombre = new RJCodeAdvance.RJControls.RJTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.rjTextBox2 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.TxtApellido = new RJCodeAdvance.RJControls.RJTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.rjTextBox3 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.TxtDescripcion = new RJCodeAdvance.RJControls.RJTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.rjTextBox4 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.TxtAltura = new RJCodeAdvance.RJControls.RJTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.rjDatePicker1 = new RJCodeAdvance.RJControls.RJDatePicker();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.rjComboBox1 = new RJCodeAdvance.RJControls.RJComboBox();
-            this.rjComboBox2 = new RJCodeAdvance.RJControls.RJComboBox();
+            this.DtNacimiento = new RJCodeAdvance.RJControls.RJDatePicker();
+            this.PtJugador = new System.Windows.Forms.PictureBox();
+            this.CmbEquipo = new RJCodeAdvance.RJControls.RJComboBox();
+            this.CmbNacionalidad = new RJCodeAdvance.RJControls.RJComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
-            this.rjButton2 = new RJCodeAdvance.RJControls.RJButton();
+            this.BtnExaminar = new RJCodeAdvance.RJControls.RJButton();
+            this.BtnGuardar = new RJCodeAdvance.RJControls.RJButton();
             this.BtnClose = new RJCodeAdvance.RJControls.RJButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.CmbEquipoO = new System.Windows.Forms.ComboBox();
+            this.CmbNacionalidadO = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.PtJugador)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -57,31 +59,31 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
             this.label1.Location = new System.Drawing.Point(179, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(445, 40);
+            this.label1.Size = new System.Drawing.Size(428, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "FORMULARIO JUGADORES";
             // 
-            // rjTextBox1
+            // TxtNombre
             // 
-            this.rjTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.rjTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.rjTextBox1.BorderRadius = 0;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox1.Location = new System.Drawing.Point(44, 116);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox1.PlaceholderText = "";
-            this.rjTextBox1.Size = new System.Drawing.Size(205, 35);
-            this.rjTextBox1.TabIndex = 1;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = true;
+            this.TxtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.TxtNombre.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
+            this.TxtNombre.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.TxtNombre.BorderRadius = 0;
+            this.TxtNombre.BorderSize = 2;
+            this.TxtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNombre.ForeColor = System.Drawing.Color.White;
+            this.TxtNombre.Location = new System.Drawing.Point(44, 116);
+            this.TxtNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtNombre.Multiline = false;
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.TxtNombre.PasswordChar = false;
+            this.TxtNombre.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.TxtNombre.PlaceholderText = "";
+            this.TxtNombre.Size = new System.Drawing.Size(205, 35);
+            this.TxtNombre.TabIndex = 1;
+            this.TxtNombre.Texts = "";
+            this.TxtNombre.UnderlinedStyle = true;
             // 
             // label2
             // 
@@ -105,27 +107,27 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Apellido";
             // 
-            // rjTextBox2
+            // TxtApellido
             // 
-            this.rjTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.rjTextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
-            this.rjTextBox2.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.rjTextBox2.BorderRadius = 0;
-            this.rjTextBox2.BorderSize = 2;
-            this.rjTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox2.Location = new System.Drawing.Point(277, 116);
-            this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox2.Multiline = false;
-            this.rjTextBox2.Name = "rjTextBox2";
-            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox2.PasswordChar = false;
-            this.rjTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox2.PlaceholderText = "";
-            this.rjTextBox2.Size = new System.Drawing.Size(208, 35);
-            this.rjTextBox2.TabIndex = 3;
-            this.rjTextBox2.Texts = "";
-            this.rjTextBox2.UnderlinedStyle = true;
+            this.TxtApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.TxtApellido.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
+            this.TxtApellido.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.TxtApellido.BorderRadius = 0;
+            this.TxtApellido.BorderSize = 2;
+            this.TxtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtApellido.ForeColor = System.Drawing.Color.White;
+            this.TxtApellido.Location = new System.Drawing.Point(277, 116);
+            this.TxtApellido.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtApellido.Multiline = false;
+            this.TxtApellido.Name = "TxtApellido";
+            this.TxtApellido.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.TxtApellido.PasswordChar = false;
+            this.TxtApellido.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.TxtApellido.PlaceholderText = "";
+            this.TxtApellido.Size = new System.Drawing.Size(208, 35);
+            this.TxtApellido.TabIndex = 3;
+            this.TxtApellido.Texts = "";
+            this.TxtApellido.UnderlinedStyle = true;
             // 
             // label4
             // 
@@ -138,27 +140,27 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Descripción";
             // 
-            // rjTextBox3
+            // TxtDescripcion
             // 
-            this.rjTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.rjTextBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
-            this.rjTextBox3.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.rjTextBox3.BorderRadius = 0;
-            this.rjTextBox3.BorderSize = 2;
-            this.rjTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox3.Location = new System.Drawing.Point(44, 427);
-            this.rjTextBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox3.Multiline = false;
-            this.rjTextBox3.Name = "rjTextBox3";
-            this.rjTextBox3.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox3.PasswordChar = false;
-            this.rjTextBox3.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox3.PlaceholderText = "";
-            this.rjTextBox3.Size = new System.Drawing.Size(441, 35);
-            this.rjTextBox3.TabIndex = 5;
-            this.rjTextBox3.Texts = "";
-            this.rjTextBox3.UnderlinedStyle = true;
+            this.TxtDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.TxtDescripcion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
+            this.TxtDescripcion.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.TxtDescripcion.BorderRadius = 0;
+            this.TxtDescripcion.BorderSize = 2;
+            this.TxtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtDescripcion.ForeColor = System.Drawing.Color.White;
+            this.TxtDescripcion.Location = new System.Drawing.Point(44, 427);
+            this.TxtDescripcion.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtDescripcion.Multiline = false;
+            this.TxtDescripcion.Name = "TxtDescripcion";
+            this.TxtDescripcion.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.TxtDescripcion.PasswordChar = false;
+            this.TxtDescripcion.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.TxtDescripcion.PlaceholderText = "";
+            this.TxtDescripcion.Size = new System.Drawing.Size(441, 35);
+            this.TxtDescripcion.TabIndex = 5;
+            this.TxtDescripcion.Texts = "";
+            this.TxtDescripcion.UnderlinedStyle = true;
             // 
             // label5
             // 
@@ -171,27 +173,27 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Altura";
             // 
-            // rjTextBox4
+            // TxtAltura
             // 
-            this.rjTextBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.rjTextBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
-            this.rjTextBox4.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.rjTextBox4.BorderRadius = 0;
-            this.rjTextBox4.BorderSize = 2;
-            this.rjTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox4.Location = new System.Drawing.Point(44, 214);
-            this.rjTextBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox4.Multiline = false;
-            this.rjTextBox4.Name = "rjTextBox4";
-            this.rjTextBox4.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox4.PasswordChar = false;
-            this.rjTextBox4.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox4.PlaceholderText = "";
-            this.rjTextBox4.Size = new System.Drawing.Size(205, 35);
-            this.rjTextBox4.TabIndex = 7;
-            this.rjTextBox4.Texts = "";
-            this.rjTextBox4.UnderlinedStyle = true;
+            this.TxtAltura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.TxtAltura.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
+            this.TxtAltura.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.TxtAltura.BorderRadius = 0;
+            this.TxtAltura.BorderSize = 2;
+            this.TxtAltura.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtAltura.ForeColor = System.Drawing.Color.White;
+            this.TxtAltura.Location = new System.Drawing.Point(44, 214);
+            this.TxtAltura.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtAltura.Multiline = false;
+            this.TxtAltura.Name = "TxtAltura";
+            this.TxtAltura.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.TxtAltura.PasswordChar = false;
+            this.TxtAltura.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.TxtAltura.PlaceholderText = "";
+            this.TxtAltura.Size = new System.Drawing.Size(205, 35);
+            this.TxtAltura.TabIndex = 7;
+            this.TxtAltura.Texts = "";
+            this.TxtAltura.UnderlinedStyle = true;
             // 
             // label6
             // 
@@ -204,66 +206,69 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Fecha Nacimiento";
             // 
-            // rjDatePicker1
+            // DtNacimiento
             // 
-            this.rjDatePicker1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
-            this.rjDatePicker1.BorderSize = 2;
-            this.rjDatePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjDatePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.rjDatePicker1.Location = new System.Drawing.Point(277, 214);
-            this.rjDatePicker1.MinimumSize = new System.Drawing.Size(0, 35);
-            this.rjDatePicker1.Name = "rjDatePicker1";
-            this.rjDatePicker1.Size = new System.Drawing.Size(208, 35);
-            this.rjDatePicker1.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.rjDatePicker1.TabIndex = 11;
-            this.rjDatePicker1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.DtNacimiento.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
+            this.DtNacimiento.BorderSize = 2;
+            this.DtNacimiento.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.DtNacimiento.CustomFormat = "yyyy-MM-dd";
+            this.DtNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DtNacimiento.Location = new System.Drawing.Point(277, 214);
+            this.DtNacimiento.MinimumSize = new System.Drawing.Size(4, 35);
+            this.DtNacimiento.Name = "DtNacimiento";
+            this.DtNacimiento.Size = new System.Drawing.Size(208, 35);
+            this.DtNacimiento.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.DtNacimiento.TabIndex = 11;
+            this.DtNacimiento.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             // 
-            // pictureBox1
+            // PtJugador
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox1.Location = new System.Drawing.Point(635, 89);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(166, 205);
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
+            this.PtJugador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.PtJugador.Location = new System.Drawing.Point(613, 80);
+            this.PtJugador.Name = "PtJugador";
+            this.PtJugador.Size = new System.Drawing.Size(219, 241);
+            this.PtJugador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PtJugador.TabIndex = 12;
+            this.PtJugador.TabStop = false;
             // 
-            // rjComboBox1
+            // CmbEquipo
             // 
-            this.rjComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.rjComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
-            this.rjComboBox1.BorderSize = 2;
-            this.rjComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.rjComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.rjComboBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.rjComboBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(62)))));
-            this.rjComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.rjComboBox1.ListTextColor = System.Drawing.Color.DimGray;
-            this.rjComboBox1.Location = new System.Drawing.Point(44, 316);
-            this.rjComboBox1.MinimumSize = new System.Drawing.Size(200, 30);
-            this.rjComboBox1.Name = "rjComboBox1";
-            this.rjComboBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.rjComboBox1.Size = new System.Drawing.Size(203, 45);
-            this.rjComboBox1.TabIndex = 13;
-            this.rjComboBox1.Texts = "Seleccionar";
+            this.CmbEquipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.CmbEquipo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
+            this.CmbEquipo.BorderSize = 2;
+            this.CmbEquipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.CmbEquipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.CmbEquipo.ForeColor = System.Drawing.Color.White;
+            this.CmbEquipo.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(62)))));
+            this.CmbEquipo.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.CmbEquipo.ListTextColor = System.Drawing.Color.DimGray;
+            this.CmbEquipo.Location = new System.Drawing.Point(44, 316);
+            this.CmbEquipo.MinimumSize = new System.Drawing.Size(200, 30);
+            this.CmbEquipo.Name = "CmbEquipo";
+            this.CmbEquipo.Padding = new System.Windows.Forms.Padding(2);
+            this.CmbEquipo.Size = new System.Drawing.Size(203, 45);
+            this.CmbEquipo.TabIndex = 13;
+            this.CmbEquipo.Texts = "Seleccionar";
             // 
-            // rjComboBox2
+            // CmbNacionalidad
             // 
-            this.rjComboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.rjComboBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
-            this.rjComboBox2.BorderSize = 2;
-            this.rjComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.rjComboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.rjComboBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.rjComboBox2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(62)))));
-            this.rjComboBox2.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.rjComboBox2.ListTextColor = System.Drawing.Color.DimGray;
-            this.rjComboBox2.Location = new System.Drawing.Point(282, 316);
-            this.rjComboBox2.MinimumSize = new System.Drawing.Size(200, 30);
-            this.rjComboBox2.Name = "rjComboBox2";
-            this.rjComboBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.rjComboBox2.Size = new System.Drawing.Size(203, 45);
-            this.rjComboBox2.TabIndex = 14;
-            this.rjComboBox2.Texts = "Seleccionar";
+            this.CmbNacionalidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.CmbNacionalidad.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
+            this.CmbNacionalidad.BorderSize = 2;
+            this.CmbNacionalidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.CmbNacionalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.CmbNacionalidad.ForeColor = System.Drawing.Color.White;
+            this.CmbNacionalidad.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(62)))));
+            this.CmbNacionalidad.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.CmbNacionalidad.ListTextColor = System.Drawing.Color.DimGray;
+            this.CmbNacionalidad.Location = new System.Drawing.Point(282, 316);
+            this.CmbNacionalidad.MinimumSize = new System.Drawing.Size(200, 30);
+            this.CmbNacionalidad.Name = "CmbNacionalidad";
+            this.CmbNacionalidad.Padding = new System.Windows.Forms.Padding(2);
+            this.CmbNacionalidad.Size = new System.Drawing.Size(203, 45);
+            this.CmbNacionalidad.TabIndex = 14;
+            this.CmbNacionalidad.Texts = "Seleccionar";
             // 
             // label7
             // 
@@ -287,43 +292,45 @@
             this.label8.TabIndex = 16;
             this.label8.Text = "Nacionalidad";
             // 
-            // rjButton1
+            // BtnExaminar
             // 
-            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(134)))), ((int)(((byte)(19)))));
-            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(134)))), ((int)(((byte)(19)))));
-            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton1.BorderRadius = 0;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(635, 300);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(166, 40);
-            this.rjButton1.TabIndex = 17;
-            this.rjButton1.Text = "Examinar";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
+            this.BtnExaminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(134)))), ((int)(((byte)(19)))));
+            this.BtnExaminar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(134)))), ((int)(((byte)(19)))));
+            this.BtnExaminar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.BtnExaminar.BorderRadius = 0;
+            this.BtnExaminar.BorderSize = 0;
+            this.BtnExaminar.FlatAppearance.BorderSize = 0;
+            this.BtnExaminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnExaminar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnExaminar.ForeColor = System.Drawing.Color.White;
+            this.BtnExaminar.Location = new System.Drawing.Point(629, 352);
+            this.BtnExaminar.Name = "BtnExaminar";
+            this.BtnExaminar.Size = new System.Drawing.Size(166, 40);
+            this.BtnExaminar.TabIndex = 17;
+            this.BtnExaminar.Text = "Examinar";
+            this.BtnExaminar.TextColor = System.Drawing.Color.White;
+            this.BtnExaminar.UseVisualStyleBackColor = false;
+            this.BtnExaminar.Click += new System.EventHandler(this.BtnExaminar_Click);
             // 
-            // rjButton2
+            // BtnGuardar
             // 
-            this.rjButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(62)))));
-            this.rjButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(62)))));
-            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjButton2.BorderRadius = 0;
-            this.rjButton2.BorderSize = 0;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(702, 473);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(166, 40);
-            this.rjButton2.TabIndex = 18;
-            this.rjButton2.Text = "Guardar";
-            this.rjButton2.TextColor = System.Drawing.Color.White;
-            this.rjButton2.UseVisualStyleBackColor = false;
+            this.BtnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(62)))));
+            this.BtnGuardar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(62)))));
+            this.BtnGuardar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.BtnGuardar.BorderRadius = 0;
+            this.BtnGuardar.BorderSize = 0;
+            this.BtnGuardar.FlatAppearance.BorderSize = 0;
+            this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGuardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGuardar.ForeColor = System.Drawing.Color.White;
+            this.BtnGuardar.Location = new System.Drawing.Point(702, 473);
+            this.BtnGuardar.Name = "BtnGuardar";
+            this.BtnGuardar.Size = new System.Drawing.Size(166, 40);
+            this.BtnGuardar.TabIndex = 18;
+            this.BtnGuardar.Text = "Guardar";
+            this.BtnGuardar.TextColor = System.Drawing.Color.White;
+            this.BtnGuardar.UseVisualStyleBackColor = false;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // BtnClose
             // 
@@ -344,36 +351,56 @@
             this.BtnClose.UseVisualStyleBackColor = false;
             this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
+            // CmbEquipoO
+            // 
+            this.CmbEquipoO.FormattingEnabled = true;
+            this.CmbEquipoO.Location = new System.Drawing.Point(347, 367);
+            this.CmbEquipoO.Name = "CmbEquipoO";
+            this.CmbEquipoO.Size = new System.Drawing.Size(121, 25);
+            this.CmbEquipoO.TabIndex = 20;
+            this.CmbEquipoO.Visible = false;
+            // 
+            // CmbNacionalidadO
+            // 
+            this.CmbNacionalidadO.FormattingEnabled = true;
+            this.CmbNacionalidadO.Location = new System.Drawing.Point(502, 367);
+            this.CmbNacionalidadO.Name = "CmbNacionalidadO";
+            this.CmbNacionalidadO.Size = new System.Drawing.Size(121, 25);
+            this.CmbNacionalidadO.TabIndex = 21;
+            this.CmbNacionalidadO.Visible = false;
+            // 
             // FrmFormularioJugadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.ClientSize = new System.Drawing.Size(890, 525);
+            this.Controls.Add(this.CmbNacionalidadO);
+            this.Controls.Add(this.CmbEquipoO);
             this.Controls.Add(this.BtnClose);
-            this.Controls.Add(this.rjButton2);
-            this.Controls.Add(this.rjButton1);
+            this.Controls.Add(this.BtnGuardar);
+            this.Controls.Add(this.BtnExaminar);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.rjComboBox2);
-            this.Controls.Add(this.rjComboBox1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.CmbNacionalidad);
+            this.Controls.Add(this.CmbEquipo);
+            this.Controls.Add(this.PtJugador);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.rjDatePicker1);
+            this.Controls.Add(this.DtNacimiento);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.rjTextBox4);
+            this.Controls.Add(this.TxtAltura);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.rjTextBox3);
+            this.Controls.Add(this.TxtDescripcion);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.rjTextBox2);
+            this.Controls.Add(this.TxtApellido);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.rjTextBox1);
+            this.Controls.Add(this.TxtNombre);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmFormularioJugadores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PtJugador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -382,23 +409,25 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox1;
+        private RJCodeAdvance.RJControls.RJTextBox TxtNombre;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox2;
+        private RJCodeAdvance.RJControls.RJTextBox TxtApellido;
         private System.Windows.Forms.Label label4;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox3;
+        private RJCodeAdvance.RJControls.RJTextBox TxtDescripcion;
         private System.Windows.Forms.Label label5;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox4;
+        private RJCodeAdvance.RJControls.RJTextBox TxtAltura;
         private System.Windows.Forms.Label label6;
-        private RJCodeAdvance.RJControls.RJDatePicker rjDatePicker1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private RJCodeAdvance.RJControls.RJComboBox rjComboBox1;
-        private RJCodeAdvance.RJControls.RJComboBox rjComboBox2;
+        private RJCodeAdvance.RJControls.RJDatePicker DtNacimiento;
+        private System.Windows.Forms.PictureBox PtJugador;
+        private RJCodeAdvance.RJControls.RJComboBox CmbEquipo;
+        private RJCodeAdvance.RJControls.RJComboBox CmbNacionalidad;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private RJCodeAdvance.RJControls.RJButton rjButton1;
-        private RJCodeAdvance.RJControls.RJButton rjButton2;
+        private RJCodeAdvance.RJControls.RJButton BtnExaminar;
+        private RJCodeAdvance.RJControls.RJButton BtnGuardar;
         private RJCodeAdvance.RJControls.RJButton BtnClose;
+        private System.Windows.Forms.ComboBox CmbEquipoO;
+        private System.Windows.Forms.ComboBox CmbNacionalidadO;
     }
 }

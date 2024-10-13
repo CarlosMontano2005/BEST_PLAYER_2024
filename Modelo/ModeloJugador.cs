@@ -56,5 +56,89 @@ namespace Modelo
             message = null;
             return data;
         }
+        public static DataTable cargarEquipo(out string message) {
+            DatabaseConnection dbConnection = new DatabaseConnection();
+            DataTable data = new DataTable();
+            try
+            {
+                string query = "SELECT idEquipo,Nombre FROM Equipos";
+                // Obtén la conexión SQL Server usando la instancia de DatabaseConnection
+                using (SqlConnection connection = dbConnection.GetConnection())
+                using (SqlCommand cmdselect = new SqlCommand(query, connection))
+                using (SqlDataAdapter adp = new SqlDataAdapter(cmdselect))
+                {
+                    connection.Open();
+                    adp.Fill(data);
+                }
+            }
+            catch (Exception ex)
+            {
+                message = $"Error al cargar datos: {ex.Message}";
+                data = null;
+            }
+            message = null;
+            return data;
+        }
+        public static DataTable cargarNacionalidad(out string message) {
+
+            DatabaseConnection dbConnection = new DatabaseConnection();
+            DataTable data = new DataTable();
+            try
+            {
+                string query = "SELECT IdPais,Nacionalidad FROM Paises";
+                // Obtén la conexión SQL Server usando la instancia de DatabaseConnection
+                using (SqlConnection connection = dbConnection.GetConnection())
+                using (SqlCommand cmdselect = new SqlCommand(query, connection))
+                using (SqlDataAdapter adp = new SqlDataAdapter(cmdselect))
+                {
+                    connection.Open();
+                    adp.Fill(data);
+                }
+            }
+            catch (Exception ex)
+            {
+                message = $"Error al cargar datos: {ex.Message}";
+                data = null;
+            }
+            message = null;
+            return data;
+        }
+        public static bool InsertarJugador(string nombre, string apellido, string descripcion, int equipo, int pais, string fecha_nac, float altura, byte[] foto,out string message ) {
+            DatabaseConnection dbConnection = new DatabaseConnection();
+
+            try
+            {
+                string query = "INSERT INTO Jugadores(Nombre,Apellido,DescripcionJugador,IdEquipo,IdPais,Edad, Altura,Foto) VALUES(@NombreJugador,@ApellidoJugador,@Descripcion,@IdEquipo,@IdPais,@FechaNac,@Altura,@Foto)";
+                using (SqlConnection connection = dbConnection.GetConnection())
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@NombreJugador", nombre);
+                    cmd.Parameters.AddWithValue("@ApellidoJugador", apellido);
+                    cmd.Parameters.AddWithValue("@Descripcion", descripcion);
+                    cmd.Parameters.AddWithValue("@IdEquipo", equipo);
+                    cmd.Parameters.AddWithValue("@IdPais", pais);
+                    cmd.Parameters.AddWithValue("@FechaNac", fecha_nac);
+                    cmd.Parameters.AddWithValue("@Altura", altura);
+                    cmd.Parameters.Add("@Foto", SqlDbType.VarBinary).Value = (object)foto ?? DBNull.Value;
+                    connection.Open();
+                    int result = cmd.ExecuteNonQuery();
+
+                    if (result > 0)
+                    {
+                        message = "Agregado Exitosamente";
+                        return true;
+                    }
+                    else
+                    {
+                        message = "No se insertó ningún registro.";
+                        return false;
+                    }
+                }
+            }
+            catch (SqlException ex) {
+                message = $"Error de SQL: {DatabaseValidations.FormatSqlErrorMessage(ex)}";
+                return false;
+            }
+        }
     }
 }
