@@ -48,6 +48,17 @@ namespace BEST_PLAYER_2024
                 return;
             }
             */
+            //
+            Form existingForm = Application.OpenForms.OfType<FrmFormularioJugadores>().FirstOrDefault();
+
+           
+            if (existingForm==null) {
+                FrmFormularioJugadores frmjugadorfuncion = new FrmFormularioJugadores(1);
+                frmjugadorfuncion.Show();
+
+            }
+            else MessageBox.Show("El formulario ya esta abierto","Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            
         }
         void CargarGridDatos()
         {
