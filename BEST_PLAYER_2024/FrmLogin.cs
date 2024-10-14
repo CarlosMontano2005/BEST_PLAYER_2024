@@ -22,6 +22,7 @@ namespace BEST_PLAYER_2024.Resources
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            Application.Exit();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -64,6 +65,13 @@ namespace BEST_PLAYER_2024.Resources
             {
                 isDragging = false;
             }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmCrearCuentaUsuario frmCrearCuenta = new FrmCrearCuentaUsuario();
+            frmCrearCuenta.Show();
+            this.Hide();
         }
     }
 }

@@ -69,7 +69,7 @@ namespace BEST_PLAYER_2024
         }
         private void button1_Click_1(object sender, EventArgs e)
         {
-           FrmUsuarios formUsuarios = new FrmUsuarios();
+           FrmHijo formUsuarios = new FrmHijo();
            OpenChildForm(formUsuarios);
         }
         #region Variables y Propiedades
@@ -122,8 +122,9 @@ namespace BEST_PLAYER_2024
             LblVotar.ForeColor = ColorTranslator.FromHtml("#09E878");
             LblVotar.Image = Properties.Resources.trophy_solid_green;
             isFormActive = true;
-            FrmPrueba frmPrueba = new FrmPrueba();
-            OpenChildForm(frmPrueba);
+            FrmVotos frm = new FrmVotos();
+            //  FrmPrueba frmPrueba = new FrmPrueba();
+            OpenChildForm(frm);
         }
 
         private void LblVotar_MouseHover(object sender, EventArgs e)
@@ -149,8 +150,10 @@ namespace BEST_PLAYER_2024
         private void LblTopJagadores_Click(object sender, EventArgs e)
         {
             LblTopJagadores.ForeColor = ColorTranslator.FromHtml("#09E878");
+            isFormActive = true;
             LblTopJagadores.Image = Properties.Resources.star_fill_green;
             FrmTopJugadores frm = new FrmTopJugadores();
+            //  FrmTablaVotaciones frm = new FrmTablaVotaciones();
             OpenChildForm(frm);
         }
 
@@ -176,9 +179,10 @@ namespace BEST_PLAYER_2024
         #region LblEquipos
         private void LblEquipos_Click(object sender, EventArgs e)
         {
-            LblEquipos.ForeColor = ColorTranslator.FromHtml("#B0B0B0");
-            LblEquipos.Image = Properties.Resources.people_fill;
-            FrmInfoEquipo frmEquipo = new FrmInfoEquipo();
+            LblEquipos.ForeColor = ColorTranslator.FromHtml("#09E878");
+            isFormActive = true;
+            LblEquipos.Image = Properties.Resources.people_fill_green;
+            FrmTablaEquipos frmEquipo = new FrmTablaEquipos();
             OpenChildForm(frmEquipo);
         }
 
@@ -204,9 +208,10 @@ namespace BEST_PLAYER_2024
         #region LblJugadores
         private void LblJugadores_Click(object sender, EventArgs e)
         {
-            LblJugadores.ForeColor = ColorTranslator.FromHtml("#B0B0B0");
-            LblJugadores.Image = Properties.Resources.futbol_regular__1_;
-            FrmJugadores frmJugadores = new FrmJugadores();
+            LblJugadores.ForeColor = ColorTranslator.FromHtml("#09E878");
+            LblJugadores.Image = Properties.Resources.futbol_regular_green;
+            isFormActive = true;
+            FrmTablaJugadores frmJugadores = new FrmTablaJugadores();
             OpenChildForm(frmJugadores);
         }
 
@@ -232,8 +237,11 @@ namespace BEST_PLAYER_2024
         #region LblAgencias
         private void LblAgencias_Click(object sender, EventArgs e)
         {
-            LblAgencias.ForeColor = ColorTranslator.FromHtml("#B0B0B0");
-            LblAgencias.Image = Properties.Resources.globe_americas;
+            LblAgencias.ForeColor = ColorTranslator.FromHtml("#09E878");
+            LblAgencias.Image = Properties.Resources.globe_americas_green;
+            isFormActive = true;
+            FrmTablaAgencia frmAgencia = new FrmTablaAgencia();
+            OpenChildForm(frmAgencia);
         }
 
         private void LblAgencias_MouseHover(object sender, EventArgs e)
@@ -258,8 +266,11 @@ namespace BEST_PLAYER_2024
         #region LblUsuario
         private void LblUsuario_Click(object sender, EventArgs e)
         {
-            LblUsuario.ForeColor = ColorTranslator.FromHtml("#B0B0B0");
-            LblUsuario.Image = Properties.Resources.person_fill;
+            LblUsuario.ForeColor = ColorTranslator.FromHtml("#09E878");
+            LblUsuario.Image = Properties.Resources.person_fill_green;
+            FrmAdministrarUsuarios prueba = new FrmAdministrarUsuarios();
+            OpenChildForm(prueba);
+            isFormActive = true;
         }
 
         private void LblUsuario_MouseHover(object sender, EventArgs e)
@@ -284,8 +295,11 @@ namespace BEST_PLAYER_2024
         #region LblAjuste
         private void LblAjuste_Click(object sender, EventArgs e)
         {
-            LblAjuste.ForeColor = ColorTranslator.FromHtml("#B0B0B0");
-            LblAjuste.Image = Properties.Resources.gear_fill;
+            LblAjuste.ForeColor = ColorTranslator.FromHtml("#09E878");
+            LblAjuste.Image = Properties.Resources.gear_fill_green;
+            FrmAjustes ajustes = new FrmAjustes();//FrmAjustes ajustes = new FrmAjustes();
+            OpenChildForm(ajustes);
+            isFormActive = true;
         }
 
         private void LblAjuste_MouseHover(object sender, EventArgs e)
@@ -352,7 +366,15 @@ namespace BEST_PLAYER_2024
 
         private void PtbClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show("¿Está seguro que desea salir del sistema?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                FrmLogin frmlogin = new FrmLogin();
+                frmlogin.Show();
+                this.Close();// Cierra la aplicación
+                             //Application.Exit();
+
+            }
         }
 
         private void FrmDashboard_MouseDown(object sender, MouseEventArgs e)

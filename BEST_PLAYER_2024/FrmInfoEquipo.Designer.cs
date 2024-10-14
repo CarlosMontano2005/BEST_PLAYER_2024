@@ -69,6 +69,7 @@
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.rjCircularPictureBox9 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
+            this.BtnRegresar = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -85,6 +86,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.panel1.Controls.Add(this.BtnRegresar);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.rjCircularPictureBox1);
@@ -116,7 +118,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.label5.Location = new System.Drawing.Point(677, 49);
+            this.label5.Location = new System.Drawing.Point(677, 60);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(178, 25);
             this.label5.TabIndex = 6;
@@ -130,6 +132,7 @@
             this.rjCircularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             this.rjCircularPictureBox1.BorderSize = 2;
             this.rjCircularPictureBox1.GradientAngle = 50F;
+            this.rjCircularPictureBox1.Image = global::BEST_PLAYER_2024.Properties.Resources.images;
             this.rjCircularPictureBox1.Location = new System.Drawing.Point(596, 49);
             this.rjCircularPictureBox1.Name = "rjCircularPictureBox1";
             this.rjCircularPictureBox1.Size = new System.Drawing.Size(75, 75);
@@ -142,7 +145,7 @@
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(176)))), ((int)(((byte)(176)))));
             this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label4.Location = new System.Drawing.Point(323, 103);
+            this.label4.Location = new System.Drawing.Point(323, 112);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 21);
             this.label4.TabIndex = 4;
@@ -154,7 +157,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(176)))), ((int)(((byte)(176)))));
             this.label3.Image = global::BEST_PLAYER_2024.Properties.Resources.globe_americas;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Location = new System.Drawing.Point(168, 103);
+            this.label3.Location = new System.Drawing.Point(167, 112);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(108, 21);
             this.label3.TabIndex = 3;
@@ -164,7 +167,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(26)))), ((int)(((byte)(37)))));
-            this.label1.Location = new System.Drawing.Point(161, 22);
+            this.label1.Location = new System.Drawing.Point(157, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 21);
             this.label1.TabIndex = 1;
@@ -176,7 +179,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(149, 32);
+            this.label2.Location = new System.Drawing.Point(149, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(322, 71);
             this.label2.TabIndex = 2;
@@ -185,7 +188,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::BEST_PLAYER_2024.Properties.Resources.escudo_barquita;
-            this.pictureBox1.Location = new System.Drawing.Point(21, 22);
+            this.pictureBox1.Location = new System.Drawing.Point(20, 32);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(123, 123);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -200,6 +203,7 @@
             this.rjCircularPictureBox2.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             this.rjCircularPictureBox2.BorderSize = 5;
             this.rjCircularPictureBox2.GradientAngle = 50F;
+            this.rjCircularPictureBox2.Image = global::BEST_PLAYER_2024.Properties.Resources.BrunoFernandes;
             this.rjCircularPictureBox2.Location = new System.Drawing.Point(38, 195);
             this.rjCircularPictureBox2.Name = "rjCircularPictureBox2";
             this.rjCircularPictureBox2.Size = new System.Drawing.Size(116, 116);
@@ -281,6 +285,7 @@
             this.rjCircularPictureBox3.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             this.rjCircularPictureBox3.BorderSize = 5;
             this.rjCircularPictureBox3.GradientAngle = 50F;
+            this.rjCircularPictureBox3.Image = global::BEST_PLAYER_2024.Properties.Resources.Cristiano_Ronaldo;
             this.rjCircularPictureBox3.Location = new System.Drawing.Point(271, 195);
             this.rjCircularPictureBox3.Name = "rjCircularPictureBox3";
             this.rjCircularPictureBox3.Size = new System.Drawing.Size(116, 116);
@@ -329,6 +334,7 @@
             this.rjCircularPictureBox4.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             this.rjCircularPictureBox4.BorderSize = 5;
             this.rjCircularPictureBox4.GradientAngle = 50F;
+            this.rjCircularPictureBox4.Image = global::BEST_PLAYER_2024.Properties.Resources.Luka_modric;
             this.rjCircularPictureBox4.Location = new System.Drawing.Point(510, 195);
             this.rjCircularPictureBox4.Name = "rjCircularPictureBox4";
             this.rjCircularPictureBox4.Size = new System.Drawing.Size(116, 116);
@@ -377,6 +383,7 @@
             this.rjCircularPictureBox5.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             this.rjCircularPictureBox5.BorderSize = 5;
             this.rjCircularPictureBox5.GradientAngle = 50F;
+            this.rjCircularPictureBox5.Image = global::BEST_PLAYER_2024.Properties.Resources.mesi_680x375;
             this.rjCircularPictureBox5.Location = new System.Drawing.Point(739, 195);
             this.rjCircularPictureBox5.Name = "rjCircularPictureBox5";
             this.rjCircularPictureBox5.Size = new System.Drawing.Size(116, 116);
@@ -576,7 +583,18 @@
             this.rjCircularPictureBox9.TabIndex = 24;
             this.rjCircularPictureBox9.TabStop = false;
             // 
-            // FrmEquipo
+            // BtnRegresar
+            // 
+            this.BtnRegresar.AutoSize = true;
+            this.BtnRegresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.BtnRegresar.Location = new System.Drawing.Point(773, 134);
+            this.BtnRegresar.Name = "BtnRegresar";
+            this.BtnRegresar.Size = new System.Drawing.Size(82, 21);
+            this.BtnRegresar.TabIndex = 46;
+            this.BtnRegresar.Text = "Regresar";
+            this.BtnRegresar.Click += new System.EventHandler(this.BtnRegresar_Click);
+            // 
+            // FrmInfoEquipo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -618,7 +636,7 @@
             this.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "FrmEquipo";
+            this.Name = "FrmInfoEquipo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
@@ -681,5 +699,6 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
         private RJCodeAdvance.RJControls.RJCircularPictureBox rjCircularPictureBox9;
+        private System.Windows.Forms.Label BtnRegresar;
     }
 }

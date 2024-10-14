@@ -10,11 +10,15 @@ using System.Windows.Forms;
 
 namespace BEST_PLAYER_2024
 {
-    public partial class FrmJugadores : Form
+    public partial class FrmTablaUsuariosDestino : Form
     {
-        public FrmJugadores()
+        public FrmTablaUsuariosDestino()
         {
             InitializeComponent();
+        }
+        public void CargarDatos(DataTable datos)
+        {
+            DgvUsuariosDestino.DataSource = datos;
         }
     }
 }

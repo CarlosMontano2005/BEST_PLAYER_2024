@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using System.Text.RegularExpressions;
 using System.Security.Cryptography;
 using System.Globalization;
-using Configuracion;    
+using System.IO;
+using System.Drawing;
+using System.IO;
+using static System.Net.Mime.MediaTypeNames;
+
 namespace Configuracion
 {
     public class Validaciones
@@ -85,7 +87,7 @@ namespace Configuracion
             errorMessage = null;
             return true;
         }
-
+       
         public static string GetMD5(string str)
         {
             using (MD5 md5 = MD5.Create())
@@ -105,7 +107,6 @@ namespace Configuracion
 
         public static bool ValidatePasaporte(string value, out string errorMessage)
         {
-            // Supongamos que el formato de pasaporte tiene que ser alfanumérico de 9 caracteres.
             if (!System.Text.RegularExpressions.Regex.IsMatch(value, @"^[A-Za-z0-9]{9}$"))
             {
                 errorMessage = "Formato de pasaporte incorrecto. Debe ser alfanumérico de 9 caracteres.";
@@ -117,6 +118,18 @@ namespace Configuracion
         public static bool ValidateNaturalNumber(int value, out string errorMessage)
         {
             if (value >= 1)
+            {
+                errorMessage = null;
+                return true;
+            }
+            else
+            {
+                errorMessage = "ERR009: El valor debe ser un número entero mayor o igual a uno.";
+                return false;
+            }
+        }
+        public static bool validateFloatNumber(float value, out string errorMessage) {
+            if (value >= 0.5)
             {
                 errorMessage = null;
                 return true;
@@ -146,7 +159,32 @@ namespace Configuracion
             return true;
         }
 
-        
+        public static bool validateImage(byte[] value, out string errorMessage)
+        {
+            errorMessage = null;
+
+            if (value == null)
+            {
+                errorMessage = "ERR012: La imagen no puede ser nula.";
+                return false;
+            }
+
+            if (value.Length == 0)
+            {
+                errorMessage = "ERR012: La imagen no puede estar vacía.";
+                return false;
+            }
+
+            // Validar el tamaño en bytes (máximo 1 MB)
+            const int maxSizeInBytes = 10 * 1024 * 1024; // 1 MB
+            if (value.Length > maxSizeInBytes)
+            {
+                errorMessage = "ERR013: La imagen es demasiado grande. El tamaño máximo permitido es 10 MB.";
+                return false; 
+            }
+
+            return true; 
+        }
 
     }
 }
