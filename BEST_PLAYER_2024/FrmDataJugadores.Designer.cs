@@ -39,6 +39,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.BtnActualizar = new RJCodeAdvance.RJControls.RJButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblNCamisa = new System.Windows.Forms.Label();
             this.BtnRegresar = new System.Windows.Forms.Label();
             this.lblPosicion = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -58,8 +61,8 @@
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblNCamisa = new System.Windows.Forms.Label();
+            this.BtnEliminar = new RJCodeAdvance.RJControls.RJButton();
+            this.btnDelete = new RJCodeAdvance.RJControls.RJButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -182,6 +185,8 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.btnDelete);
+            this.panel4.Controls.Add(this.BtnActualizar);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.lblNCamisa);
             this.panel4.Controls.Add(this.BtnRegresar);
@@ -213,6 +218,48 @@
             this.panel4.Size = new System.Drawing.Size(888, 650);
             this.panel4.TabIndex = 17;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // BtnActualizar
+            // 
+            this.BtnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(168)))), ((int)(((byte)(0)))));
+            this.BtnActualizar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(168)))), ((int)(((byte)(0)))));
+            this.BtnActualizar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.BtnActualizar.BorderRadius = 0;
+            this.BtnActualizar.BorderSize = 0;
+            this.BtnActualizar.FlatAppearance.BorderSize = 0;
+            this.BtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnActualizar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnActualizar.Location = new System.Drawing.Point(60, 507);
+            this.BtnActualizar.Name = "BtnActualizar";
+            this.BtnActualizar.Size = new System.Drawing.Size(137, 43);
+            this.BtnActualizar.TabIndex = 44;
+            this.BtnActualizar.Text = "Actualizar";
+            this.BtnActualizar.TextColor = System.Drawing.SystemColors.ControlText;
+            this.BtnActualizar.UseVisualStyleBackColor = false;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
+            this.label2.Location = new System.Drawing.Point(235, 497);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(229, 63);
+            this.label2.TabIndex = 43;
+            this.label2.Text = "Número de camiseta";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblNCamisa
+            // 
+            this.lblNCamisa.AutoSize = true;
+            this.lblNCamisa.BackColor = System.Drawing.Color.Transparent;
+            this.lblNCamisa.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNCamisa.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblNCamisa.Location = new System.Drawing.Point(320, 570);
+            this.lblNCamisa.Name = "lblNCamisa";
+            this.lblNCamisa.Size = new System.Drawing.Size(55, 40);
+            this.lblNCamisa.TabIndex = 42;
+            this.lblNCamisa.Text = "08";
             // 
             // BtnRegresar
             // 
@@ -431,29 +478,44 @@
             this.pictureBox11.TabIndex = 8;
             this.pictureBox11.TabStop = false;
             // 
-            // label2
+            // BtnEliminar
             // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
-            this.label2.Location = new System.Drawing.Point(112, 488);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(229, 63);
-            this.label2.TabIndex = 43;
-            this.label2.Text = "Número de camiseta";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.BtnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(12)))), ((int)(((byte)(87)))));
+            this.BtnEliminar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(12)))), ((int)(((byte)(87)))));
+            this.BtnEliminar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.BtnEliminar.BorderRadius = 0;
+            this.BtnEliminar.BorderSize = 0;
+            this.BtnEliminar.FlatAppearance.BorderSize = 0;
+            this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEliminar.ForeColor = System.Drawing.Color.White;
+            this.BtnEliminar.Location = new System.Drawing.Point(60, 567);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(137, 43);
+            this.BtnEliminar.TabIndex = 45;
+            this.BtnEliminar.Text = "Eliminar";
+            this.BtnEliminar.TextColor = System.Drawing.Color.White;
+            this.BtnEliminar.UseVisualStyleBackColor = false;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
-            // lblNCamisa
+            // btnDelete
             // 
-            this.lblNCamisa.AutoSize = true;
-            this.lblNCamisa.BackColor = System.Drawing.Color.Transparent;
-            this.lblNCamisa.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNCamisa.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNCamisa.Location = new System.Drawing.Point(197, 561);
-            this.lblNCamisa.Name = "lblNCamisa";
-            this.lblNCamisa.Size = new System.Drawing.Size(55, 40);
-            this.lblNCamisa.TabIndex = 42;
-            this.lblNCamisa.Text = "08";
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.btnDelete.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.btnDelete.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnDelete.BorderRadius = 0;
+            this.btnDelete.BorderSize = 0;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(62, 572);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnDelete.Size = new System.Drawing.Size(134, 37);
+            this.btnDelete.TabIndex = 45;
+            this.btnDelete.Text = "Eliminar";
+            this.btnDelete.TextColor = System.Drawing.Color.White;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // FrmDataJugadores
             // 
@@ -518,5 +580,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblNCamisa;
         private System.Windows.Forms.Label lblPosicion;
+        private RJCodeAdvance.RJControls.RJButton BtnEliminar;
+        private RJCodeAdvance.RJControls.RJButton BtnActualizar;
+        private RJCodeAdvance.RJControls.RJButton btnDelete;
     }
 }

@@ -140,5 +140,36 @@ namespace Modelo
                 return false;
             }
         }
+        public static bool EliminarJugador(int idjugador, out string message) {
+            DatabaseConnection dbConnection = new DatabaseConnection();
+
+            try
+            { 
+                string query = "DELETE FROM Jugadores WHERE IdJugador=@idjugador";
+                using (SqlConnection connection = dbConnection.GetConnection())
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@idjugador", idjugador);
+                    connection.Open();
+                    int result = cmd.ExecuteNonQuery();
+
+                    if (result > 0)
+                    {
+                        message = "Eliminado Exitosamente";
+                        return true;
+                    }
+                    else
+                    {
+                        message = "No se Elimino ningún registro.";
+                        return false;
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                message = $"Error de SQL: {DatabaseValidations.FormatSqlErrorMessage(ex)}";
+                return false;
+            }
+        }
     }
 }

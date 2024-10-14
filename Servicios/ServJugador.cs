@@ -49,5 +49,18 @@ namespace Servicios
                 return false;
             }
         }
+        public static bool EliminarJugador(out string message) {
+            try
+            {
+                return ModeloJugador.EliminarJugador(
+                    CtrJugador._idJugador,
+                    out message);
+            }
+            catch (Exception ex)
+            {
+                message = $"Error al registrar el jugador: {ex.Message}";
+                return false;
+            }
+        }
     }
 }

@@ -82,7 +82,7 @@ CREATE TABLE EstadisticaJugadores (
     Asistencias INT NOT NULL CHECK (Asistencias >= 0),
     TargetasAmarillas INT NOT NULL DEFAULT(0) CHECK (TargetasAmarillas >= 0),
     TargetasRojas INT NOT NULL DEFAULT(0) CHECK (TargetasRojas >= 0),
-    CONSTRAINT FK_Jugador FOREIGN KEY (IdJugador) REFERENCES Jugadores(IdJugador)
+    CONSTRAINT FK_Jugador FOREIGN KEY (IdJugador) REFERENCES Jugadores(IdJugador) ON DELETE CASCADE
 );
 GO
 
@@ -93,7 +93,7 @@ CREATE TABLE Votacion (
     IdJugador INT NOT NULL UNIQUE,
     FechaHoraVoto DATETIME NOT NULL,
     CONSTRAINT FK_Usuario FOREIGN KEY (IdUsuario) REFERENCES Usuarios(IdUsuario),
-    CONSTRAINT FK_Jugador_Votacion FOREIGN KEY (IdJugador) REFERENCES Jugadores(IdJugador)
+    CONSTRAINT FK_Jugador_Votacion FOREIGN KEY (IdJugador) REFERENCES Jugadores(IdJugador) ON DELETE CASCADE
 );
 GO
 

@@ -85,6 +85,7 @@ namespace BEST_PLAYER_2024
                 return;
             }
         }
+        private int id;
         void CargarForm(int id)
         {
             try
@@ -113,6 +114,46 @@ namespace BEST_PLAYER_2024
             catch (Exception ex)
             {
                 MessageBox.Show($"Error al cargar los datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult result = MessageBox.Show("¿ELiminar el jugador?","Confirmar",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    /*CtrJugador jugador = new CtrJugador();
+                    jugador.IdJugador = CtrJugador._idJugador;*/
+                    string message;
+                    bool isSuccess = ServJugador.EliminarJugador(out message);
+                    if (isSuccess)
+                    {
+                        MessageBox.Show("Informacion completa");
+                        FrmTablaJugadores frmtablaj = new FrmTablaJugadores();
+                        this.Controls.Clear();
+                        frmtablaj.TopLevel = false;
+                        frmtablaj.FormBorderStyle = FormBorderStyle.None;
+                        frmtablaj.Dock = DockStyle.Fill;
+                        this.Controls.Add(frmtablaj);
+                        frmtablaj.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show(message, " Error al registrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
         }
     }
