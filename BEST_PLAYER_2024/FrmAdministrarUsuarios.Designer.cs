@@ -149,7 +149,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(27, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 21);
+            this.label1.Size = new System.Drawing.Size(80, 25);
             this.label1.TabIndex = 72;
             this.label1.Text = "label1";
             // 
@@ -161,7 +161,7 @@
             this.cmbBoxOrigianl.FormattingEnabled = true;
             this.cmbBoxOrigianl.Location = new System.Drawing.Point(320, 392);
             this.cmbBoxOrigianl.Name = "cmbBoxOrigianl";
-            this.cmbBoxOrigianl.Size = new System.Drawing.Size(250, 29);
+            this.cmbBoxOrigianl.Size = new System.Drawing.Size(250, 32);
             this.cmbBoxOrigianl.TabIndex = 71;
             // 
             // ChBxVerClaveRepetir
@@ -171,7 +171,7 @@
             this.ChBxVerClaveRepetir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ChBxVerClaveRepetir.Location = new System.Drawing.Point(488, 306);
             this.ChBxVerClaveRepetir.Name = "ChBxVerClaveRepetir";
-            this.ChBxVerClaveRepetir.Size = new System.Drawing.Size(91, 21);
+            this.ChBxVerClaveRepetir.Size = new System.Drawing.Size(117, 25);
             this.ChBxVerClaveRepetir.TabIndex = 69;
             this.ChBxVerClaveRepetir.Text = "Ver Clave";
             this.ChBxVerClaveRepetir.UseVisualStyleBackColor = true;
@@ -184,7 +184,7 @@
             this.ChBxVerClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ChBxVerClave.Location = new System.Drawing.Point(479, 227);
             this.ChBxVerClave.Name = "ChBxVerClave";
-            this.ChBxVerClave.Size = new System.Drawing.Size(91, 21);
+            this.ChBxVerClave.Size = new System.Drawing.Size(117, 25);
             this.ChBxVerClave.TabIndex = 68;
             this.ChBxVerClave.Text = "Ver Clave";
             this.ChBxVerClave.UseVisualStyleBackColor = true;
@@ -207,7 +207,7 @@
             this.TxtId.PasswordChar = false;
             this.TxtId.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.TxtId.PlaceholderText = "";
-            this.TxtId.Size = new System.Drawing.Size(250, 31);
+            this.TxtId.Size = new System.Drawing.Size(250, 35);
             this.TxtId.TabIndex = 67;
             this.TxtId.Texts = "";
             this.TxtId.UnderlinedStyle = false;
@@ -232,7 +232,7 @@
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.label15.Location = new System.Drawing.Point(12, 62);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(152, 21);
+            this.label15.Size = new System.Drawing.Size(197, 25);
             this.label15.TabIndex = 63;
             this.label15.Text = "Seleccionar Nivel";
             // 
@@ -295,7 +295,7 @@
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.label12.Location = new System.Drawing.Point(316, 141);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(61, 21);
+            this.label12.Size = new System.Drawing.Size(78, 25);
             this.label12.TabIndex = 58;
             this.label12.Text = "Clave";
             // 
@@ -316,7 +316,7 @@
             this.TxtRepetirClave.PasswordChar = true;
             this.TxtRepetirClave.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.TxtRepetirClave.PlaceholderText = "";
-            this.TxtRepetirClave.Size = new System.Drawing.Size(250, 36);
+            this.TxtRepetirClave.Size = new System.Drawing.Size(250, 41);
             this.TxtRepetirClave.TabIndex = 57;
             this.TxtRepetirClave.Texts = "Imagen@123";
             this.TxtRepetirClave.UnderlinedStyle = true;
@@ -328,7 +328,7 @@
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.label13.Location = new System.Drawing.Point(316, 240);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(125, 21);
+            this.label13.Size = new System.Drawing.Size(159, 25);
             this.label13.TabIndex = 55;
             this.label13.Text = "Repetir Clave";
             // 
@@ -339,7 +339,7 @@
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.label14.Location = new System.Drawing.Point(316, 62);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(164, 21);
+            this.label14.Size = new System.Drawing.Size(212, 25);
             this.label14.TabIndex = 54;
             this.label14.Text = "Correo Electronico";
             // 
@@ -360,7 +360,7 @@
             this.TxtClave.PasswordChar = true;
             this.TxtClave.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.TxtClave.PlaceholderText = "";
-            this.TxtClave.Size = new System.Drawing.Size(250, 36);
+            this.TxtClave.Size = new System.Drawing.Size(250, 41);
             this.TxtClave.TabIndex = 53;
             this.TxtClave.Texts = "Imagen@123";
             this.TxtClave.UnderlinedStyle = true;
@@ -382,7 +382,7 @@
             this.TxtCorreo.PasswordChar = false;
             this.TxtCorreo.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.TxtCorreo.PlaceholderText = "";
-            this.TxtCorreo.Size = new System.Drawing.Size(250, 36);
+            this.TxtCorreo.Size = new System.Drawing.Size(250, 41);
             this.TxtCorreo.TabIndex = 52;
             this.TxtCorreo.Texts = "correoimagen@gmail.com";
             this.TxtCorreo.UnderlinedStyle = true;
@@ -394,7 +394,7 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.label8.Location = new System.Drawing.Point(12, 326);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(163, 21);
+            this.label8.Size = new System.Drawing.Size(209, 25);
             this.label8.TabIndex = 51;
             this.label8.Text = "Fecha Nacimiento";
             // 
@@ -421,7 +421,7 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.label9.Location = new System.Drawing.Point(316, 326);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(182, 21);
+            this.label9.Size = new System.Drawing.Size(236, 25);
             this.label9.TabIndex = 49;
             this.label9.Text = "Seleccionar Agencia";
             // 
@@ -461,7 +461,7 @@
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.label10.Location = new System.Drawing.Point(12, 235);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(97, 21);
+            this.label10.Size = new System.Drawing.Size(122, 25);
             this.label10.TabIndex = 47;
             this.label10.Text = "Pasaporte";
             // 
@@ -482,7 +482,7 @@
             this.TxtPasaporte.PasswordChar = false;
             this.TxtPasaporte.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.TxtPasaporte.PlaceholderText = "";
-            this.TxtPasaporte.Size = new System.Drawing.Size(250, 36);
+            this.TxtPasaporte.Size = new System.Drawing.Size(250, 41);
             this.TxtPasaporte.TabIndex = 46;
             this.TxtPasaporte.Texts = "123456826";
             this.TxtPasaporte.UnderlinedStyle = true;
@@ -494,7 +494,7 @@
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.label11.Location = new System.Drawing.Point(12, 148);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(170, 21);
+            this.label11.Size = new System.Drawing.Size(218, 25);
             this.label11.TabIndex = 45;
             this.label11.Text = "Nombre de Usuario";
             // 
@@ -515,7 +515,7 @@
             this.TxtNombreUsuario.PasswordChar = false;
             this.TxtNombreUsuario.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.TxtNombreUsuario.PlaceholderText = "";
-            this.TxtNombreUsuario.Size = new System.Drawing.Size(250, 36);
+            this.TxtNombreUsuario.Size = new System.Drawing.Size(250, 41);
             this.TxtNombreUsuario.TabIndex = 44;
             this.TxtNombreUsuario.Texts = "Imagen Usuario";
             this.TxtNombreUsuario.UnderlinedStyle = true;
@@ -564,7 +564,7 @@
             // 
             // FrmAdministrarUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(888, 650);
             this.Controls.Add(this.panel1);

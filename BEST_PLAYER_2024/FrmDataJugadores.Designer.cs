@@ -33,33 +33,33 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblNombreJugador = new System.Windows.Forms.Label();
+            this.lblDescripcion = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.BtnRegresar = new System.Windows.Forms.Label();
+            this.lblPosicion = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label34 = new System.Windows.Forms.Label();
+            this.lblNacional = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
+            this.lblGoles = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
+            this.lblPJugados = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
+            this.txtTRoja = new System.Windows.Forms.Label();
+            this.lblTAmarrillas = new System.Windows.Forms.Label();
+            this.txtTAmarilla = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
+            this.lblAsistencias = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.BtnRegresar = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblNCamisa = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -92,7 +92,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(86, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 23);
+            this.label1.Size = new System.Drawing.Size(134, 30);
             this.label1.TabIndex = 5;
             this.label1.Text = "BARCELONA";
             // 
@@ -125,30 +125,30 @@
             this.rjButton1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(172)))));
             this.rjButton1.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // lblNombreJugador
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(28, 85);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(200, 38);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Lionel Messi";
+            this.lblNombreJugador.AutoSize = true;
+            this.lblNombreJugador.BackColor = System.Drawing.Color.Transparent;
+            this.lblNombreJugador.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreJugador.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblNombreJugador.Location = new System.Drawing.Point(28, 85);
+            this.lblNombreJugador.Name = "lblNombreJugador";
+            this.lblNombreJugador.Size = new System.Drawing.Size(253, 47);
+            this.lblNombreJugador.TabIndex = 3;
+            this.lblNombreJugador.Text = "Lionel Messi";
             // 
-            // label3
+            // lblDescripcion
             // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Location = new System.Drawing.Point(30, 367);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(385, 121);
-            this.label3.TabIndex = 4;
-            this.label3.Text = resources.GetString("label3.Text");
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDescripcion.BackColor = System.Drawing.Color.Transparent;
+            this.lblDescripcion.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblDescripcion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblDescripcion.Location = new System.Drawing.Point(30, 367);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(385, 121);
+            this.lblDescripcion.TabIndex = 4;
+            this.lblDescripcion.Text = resources.GetString("lblDescripcion.Text");
+            this.lblDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
@@ -158,7 +158,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.label4.Location = new System.Drawing.Point(470, 100);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 19);
+            this.label4.Size = new System.Drawing.Size(73, 26);
             this.label4.TabIndex = 3;
             this.label4.Text = "Datos";
             // 
@@ -182,27 +182,27 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.BtnRegresar);
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.lblNCamisa);
+            this.panel4.Controls.Add(this.BtnRegresar);
+            this.panel4.Controls.Add(this.lblPosicion);
+            this.panel4.Controls.Add(this.pictureBox3);
+            this.panel4.Controls.Add(this.lblNombreJugador);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.label34);
+            this.panel4.Controls.Add(this.lblNacional);
             this.panel4.Controls.Add(this.label32);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.label33);
+            this.panel4.Controls.Add(this.lblDescripcion);
+            this.panel4.Controls.Add(this.lblGoles);
             this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Controls.Add(this.label27);
-            this.panel4.Controls.Add(this.label29);
-            this.panel4.Controls.Add(this.label23);
-            this.panel4.Controls.Add(this.label24);
+            this.panel4.Controls.Add(this.lblPJugados);
             this.panel4.Controls.Add(this.label30);
-            this.panel4.Controls.Add(this.label31);
-            this.panel4.Controls.Add(this.label36);
-            this.panel4.Controls.Add(this.label37);
+            this.panel4.Controls.Add(this.txtTRoja);
+            this.panel4.Controls.Add(this.lblTAmarrillas);
+            this.panel4.Controls.Add(this.txtTAmarilla);
             this.panel4.Controls.Add(this.label25);
             this.panel4.Controls.Add(this.label26);
-            this.panel4.Controls.Add(this.label28);
+            this.panel4.Controls.Add(this.lblAsistencias);
             this.panel4.Controls.Add(this.pictureBox9);
             this.panel4.Controls.Add(this.pictureBox10);
             this.panel4.Controls.Add(this.pictureBox11);
@@ -214,17 +214,28 @@
             this.panel4.TabIndex = 17;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // label5
+            // BtnRegresar
             // 
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(26)))), ((int)(((byte)(37)))));
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(722, 328);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 33);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "DEFENSA";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.BtnRegresar.AutoSize = true;
+            this.BtnRegresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.BtnRegresar.Location = new System.Drawing.Point(750, 98);
+            this.BtnRegresar.Name = "BtnRegresar";
+            this.BtnRegresar.Size = new System.Drawing.Size(106, 25);
+            this.BtnRegresar.TabIndex = 41;
+            this.BtnRegresar.Text = "Regresar";
+            this.BtnRegresar.Click += new System.EventHandler(this.BtnRegresar_Click);
+            // 
+            // lblPosicion
+            // 
+            this.lblPosicion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(26)))), ((int)(((byte)(37)))));
+            this.lblPosicion.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPosicion.ForeColor = System.Drawing.Color.White;
+            this.lblPosicion.Location = new System.Drawing.Point(668, 328);
+            this.lblPosicion.Name = "lblPosicion";
+            this.lblPosicion.Size = new System.Drawing.Size(164, 33);
+            this.lblPosicion.TabIndex = 31;
+            this.lblPosicion.Text = "DEFENSA";
+            this.lblPosicion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox3
             // 
@@ -236,17 +247,17 @@
             this.pictureBox3.TabIndex = 30;
             this.pictureBox3.TabStop = false;
             // 
-            // label34
+            // lblNacional
             // 
-            this.label34.AutoSize = true;
-            this.label34.BackColor = System.Drawing.Color.Transparent;
-            this.label34.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(62)))));
-            this.label34.Location = new System.Drawing.Point(32, 337);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(101, 17);
-            this.label34.TabIndex = 8;
-            this.label34.Text = "Nacionalidad";
+            this.lblNacional.AutoSize = true;
+            this.lblNacional.BackColor = System.Drawing.Color.Transparent;
+            this.lblNacional.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNacional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(62)))));
+            this.lblNacional.Location = new System.Drawing.Point(32, 337);
+            this.lblNacional.Name = "lblNacional";
+            this.lblNacional.Size = new System.Drawing.Size(121, 19);
+            this.lblNacional.TabIndex = 8;
+            this.lblNacional.Text = "Nacionalidad";
             // 
             // label32
             // 
@@ -260,17 +271,17 @@
             this.label32.Text = "Número de goles";
             this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label33
+            // lblGoles
             // 
-            this.label33.AutoSize = true;
-            this.label33.BackColor = System.Drawing.Color.Transparent;
-            this.label33.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.SystemColors.Control;
-            this.label33.Location = new System.Drawing.Point(503, 471);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(45, 32);
-            this.label33.TabIndex = 28;
-            this.label33.Text = "08";
+            this.lblGoles.AutoSize = true;
+            this.lblGoles.BackColor = System.Drawing.Color.Transparent;
+            this.lblGoles.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGoles.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblGoles.Location = new System.Drawing.Point(503, 471);
+            this.lblGoles.Name = "lblGoles";
+            this.lblGoles.Size = new System.Drawing.Size(55, 40);
+            this.lblGoles.TabIndex = 28;
+            this.lblGoles.Text = "08";
             // 
             // pictureBox2
             // 
@@ -294,41 +305,17 @@
             this.label27.Text = "Partidos Jugados";
             this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label29
+            // lblPJugados
             // 
-            this.label29.AutoSize = true;
-            this.label29.BackColor = System.Drawing.Color.Transparent;
-            this.label29.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.SystemColors.Control;
-            this.label29.Location = new System.Drawing.Point(503, 367);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(45, 32);
-            this.label29.TabIndex = 26;
-            this.label29.Text = "17";
-            // 
-            // label23
-            // 
-            this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Location = new System.Drawing.Point(113, 510);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(269, 63);
-            this.label23.TabIndex = 25;
-            this.label23.Text = "Número de camiseta";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.SystemColors.Control;
-            this.label24.Location = new System.Drawing.Point(29, 510);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(78, 56);
-            this.label24.TabIndex = 24;
-            this.label24.Text = "10";
+            this.lblPJugados.AutoSize = true;
+            this.lblPJugados.BackColor = System.Drawing.Color.Transparent;
+            this.lblPJugados.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPJugados.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblPJugados.Location = new System.Drawing.Point(503, 367);
+            this.lblPJugados.Name = "lblPJugados";
+            this.lblPJugados.Size = new System.Drawing.Size(55, 40);
+            this.lblPJugados.TabIndex = 26;
+            this.lblPJugados.Text = "17";
             // 
             // label30
             // 
@@ -342,41 +329,41 @@
             this.label30.Text = "Tarjetas Rojas";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label31
+            // txtTRoja
             // 
-            this.label31.AutoSize = true;
-            this.label31.BackColor = System.Drawing.Color.Transparent;
-            this.label31.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.SystemColors.Control;
-            this.label31.Location = new System.Drawing.Point(773, 211);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(45, 32);
-            this.label31.TabIndex = 22;
-            this.label31.Text = "02";
+            this.txtTRoja.AutoSize = true;
+            this.txtTRoja.BackColor = System.Drawing.Color.Transparent;
+            this.txtTRoja.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTRoja.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtTRoja.Location = new System.Drawing.Point(773, 211);
+            this.txtTRoja.Name = "txtTRoja";
+            this.txtTRoja.Size = new System.Drawing.Size(55, 40);
+            this.txtTRoja.TabIndex = 22;
+            this.txtTRoja.Text = "02";
             // 
-            // label36
+            // lblTAmarrillas
             // 
-            this.label36.BackColor = System.Drawing.Color.Transparent;
-            this.label36.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
-            this.label36.Location = new System.Drawing.Point(606, 243);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(114, 63);
-            this.label36.TabIndex = 21;
-            this.label36.Text = "Tarjetas Amarillas";
-            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTAmarrillas.BackColor = System.Drawing.Color.Transparent;
+            this.lblTAmarrillas.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTAmarrillas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
+            this.lblTAmarrillas.Location = new System.Drawing.Point(606, 243);
+            this.lblTAmarrillas.Name = "lblTAmarrillas";
+            this.lblTAmarrillas.Size = new System.Drawing.Size(114, 63);
+            this.lblTAmarrillas.TabIndex = 21;
+            this.lblTAmarrillas.Text = "Tarjetas Amarillas";
+            this.lblTAmarrillas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label37
+            // txtTAmarilla
             // 
-            this.label37.AutoSize = true;
-            this.label37.BackColor = System.Drawing.Color.Transparent;
-            this.label37.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.ForeColor = System.Drawing.SystemColors.Control;
-            this.label37.Location = new System.Drawing.Point(640, 211);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(45, 32);
-            this.label37.TabIndex = 20;
-            this.label37.Text = "05";
+            this.txtTAmarilla.AutoSize = true;
+            this.txtTAmarilla.BackColor = System.Drawing.Color.Transparent;
+            this.txtTAmarilla.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTAmarilla.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtTAmarilla.Location = new System.Drawing.Point(640, 211);
+            this.txtTAmarilla.Name = "txtTAmarilla";
+            this.txtTAmarilla.Size = new System.Drawing.Size(55, 40);
+            this.txtTAmarilla.TabIndex = 20;
+            this.txtTAmarilla.Text = "05";
             // 
             // label25
             // 
@@ -386,7 +373,7 @@
             this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.label25.Location = new System.Drawing.Point(470, 335);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(73, 19);
+            this.label25.Size = new System.Drawing.Size(97, 26);
             this.label25.TabIndex = 8;
             this.label25.Text = "Partidos";
             // 
@@ -402,17 +389,17 @@
             this.label26.Text = "Asistencias registradas";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label28
+            // lblAsistencias
             // 
-            this.label28.AutoSize = true;
-            this.label28.BackColor = System.Drawing.Color.Transparent;
-            this.label28.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.SystemColors.Control;
-            this.label28.Location = new System.Drawing.Point(507, 211);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(45, 32);
-            this.label28.TabIndex = 5;
-            this.label28.Text = "30";
+            this.lblAsistencias.AutoSize = true;
+            this.lblAsistencias.BackColor = System.Drawing.Color.Transparent;
+            this.lblAsistencias.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsistencias.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblAsistencias.Location = new System.Drawing.Point(507, 211);
+            this.lblAsistencias.Name = "lblAsistencias";
+            this.lblAsistencias.Size = new System.Drawing.Size(55, 40);
+            this.lblAsistencias.TabIndex = 5;
+            this.lblAsistencias.Text = "30";
             // 
             // pictureBox9
             // 
@@ -444,20 +431,33 @@
             this.pictureBox11.TabIndex = 8;
             this.pictureBox11.TabStop = false;
             // 
-            // BtnRegresar
+            // label2
             // 
-            this.BtnRegresar.AutoSize = true;
-            this.BtnRegresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.BtnRegresar.Location = new System.Drawing.Point(750, 98);
-            this.BtnRegresar.Name = "BtnRegresar";
-            this.BtnRegresar.Size = new System.Drawing.Size(82, 21);
-            this.BtnRegresar.TabIndex = 41;
-            this.BtnRegresar.Text = "Regresar";
-            this.BtnRegresar.Click += new System.EventHandler(this.BtnRegresar_Click);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
+            this.label2.Location = new System.Drawing.Point(112, 488);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(229, 63);
+            this.label2.TabIndex = 43;
+            this.label2.Text = "Número de camiseta";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblNCamisa
+            // 
+            this.lblNCamisa.AutoSize = true;
+            this.lblNCamisa.BackColor = System.Drawing.Color.Transparent;
+            this.lblNCamisa.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNCamisa.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblNCamisa.Location = new System.Drawing.Point(197, 561);
+            this.lblNCamisa.Name = "lblNCamisa";
+            this.lblNCamisa.Size = new System.Drawing.Size(55, 40);
+            this.lblNCamisa.TabIndex = 42;
+            this.lblNCamisa.Text = "08";
             // 
             // FrmDataJugadores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.ClientSize = new System.Drawing.Size(888, 650);
@@ -488,35 +488,35 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblNombreJugador;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label lblAsistencias;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label lblGoles;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label lblPJugados;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label txtTRoja;
+        private System.Windows.Forms.Label lblTAmarrillas;
+        private System.Windows.Forms.Label txtTAmarilla;
         private RJCodeAdvance.RJControls.RJButton rjButton1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label lblNacional;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label BtnRegresar;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblNCamisa;
+        private System.Windows.Forms.Label lblPosicion;
     }
 }
