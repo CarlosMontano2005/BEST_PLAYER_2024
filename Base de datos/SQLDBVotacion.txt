@@ -59,6 +59,7 @@ CREATE TABLE Jugadores (
     IdJugador INT IDENTITY(1,1) PRIMARY KEY,
     Nombre VARCHAR(40) NOT NULL,
     Apellido VARCHAR(40) NOT NULL,
+    DescripcionJugador VARCHAR(MAX) NOT NULL,
     IdEquipo INT NOT NULL,
     IdPais INT NOT NULL,
     Edad DATE NOT NULL CHECK (DATEDIFF(YEAR, Edad, GETDATE()) >= 0),  -- Verifica que la edad sea una fecha válida
@@ -182,76 +183,76 @@ VALUES
 GO
 
 -- Manchester United
-INSERT INTO Jugadores (Nombre, Apellido, IdEquipo, IdPais, Edad, Altura, Foto)
+INSERT INTO Jugadores (Nombre, Apellido, DescripcionJugador, IdEquipo, IdPais, Edad, Altura, Foto)
 VALUES
-    ('David', 'De Gea', 1, 15, '1990-11-07', 1.92, NULL),
-    ('Bruno', 'Fernandes', 1, 15, '1994-09-08', 1.79, NULL),
-    ('Marcus', 'Rashford', 1, 15, '1997-10-31', 1.83, NULL),
-    ('Harry', 'Maguire', 1, 15, '1993-03-05', 1.94, NULL),
-    ('Paul', 'Pogba', 1, 15, '1993-03-15', 1.91, NULL),
+    ('David', 'De Gea', 'David De Gea es un portero español nacido en 1990. Destacó en el Atlético de Madrid antes de unirse al Manchester United en 2011, donde se consolidó como uno de los mejores porteros del mundo. Es conocido por sus reflejos, agilidad y capacidad para hacer paradas espectaculares. Ha ganado varios títulos con el United y ha representado a España en torneos importantes.', 1, 15, '1990-11-07', 1.92, NULL),
+    ('Bruno', 'Fernandes', 'Bruno Fernandes es un futbolista portugués nacido en 1994. Juega como centrocampista y es conocido por su creatividad, visión de juego y capacidad goleadora. Después de destacar en el Sporting de Lisboa, fichó por el Manchester United en 2020, donde rápidamente se convirtió en una pieza clave del equipo. Fernandes es experto en lanzamientos de penalti y tiros libres, además de ser un gran asistidor. También ha representado a la selección de Portugal en torneos importantes, como la Eurocopa y la Copa del Mundo.', 1, 15, '1994-09-08', 1.79, NULL),
+    ('Marcus', 'Rashford', 'Marcus Rashford es un futbolista inglés nacido en 1997. Juega como delantero en el Manchester United, donde debutó en 2016, y también representa a la selección de Inglaterra. Rashford es conocido por su velocidad, regate y capacidad goleadora. Además de su éxito en el campo, ha sido elogiado por su activismo social, especialmente en la lucha contra la pobreza infantil en el Reino Unido.', 1, 15, '1997-10-31', 1.83, NULL),
+    ('Harry', 'Maguire', 'Harry Maguire es un futbolista inglés nacido en 1993. Juega como defensor central y es conocido por su fuerza física, liderazgo y capacidad en el juego aéreo. Tras destacar en el Leicester City, fichó por el Manchester United en 2019, convirtiéndose en el defensa más caro de la historia en ese momento. Maguire ha sido capitán del United y ha jugado un papel clave en la selección de Inglaterra, participando en torneos como la Eurocopa y la Copa del Mundo.', 1, 15, '1993-03-05', 1.94, NULL),
+    ('Paul', 'Pogba', 'Paul Pogba es un centrocampista francés nacido en 1993, conocido por su técnica y físico. Tras destacar en la Juventus, regresó al Manchester United en 2016. Ha sido clave tanto en el club como en la selección francesa, con la que ganó la Copa del Mundo en 2018. Pogba se destaca por su creatividad y capacidad para anotar goles desde media distancia.', 1, 15, '1993-03-15', 1.91, NULL),
 
 -- Real Madrid
-    ('Karim', 'Benzema', 2, 18, '1987-12-19', 1.85, NULL),
-    ('Luka', 'Modrić', 2, 18, '1985-09-09', 1.72, NULL),
-    ('Vinícius', 'Júnior', 2, 18, '2000-07-12', 1.76, NULL),
-    ('Toni', 'Kroos', 2, 18, '1990-01-04', 1.83, NULL),
-    ('Eder', 'Militão', 2, 18, '1998-01-18', 1.86, NULL),
+    ('Karim', 'Benzema', 'Karim Benzema es un futbolista francés nacido en 1987. Juega como delantero y es conocido por su capacidad goleadora, técnica y visión de juego. Tras brillar en el Lyon, fichó por el Real Madrid en 2009, donde se convirtió en uno de los máximos goleadores de la historia del club. Con el Madrid, ha ganado múltiples títulos, incluidos la Champions League y La Liga. También ha sido una figura importante en la selección de Francia, con la que ganó la Nations League en 2021.', 2, 18, '1987-12-19', 1.85, NULL),
+    ('Luka', 'Modrić', 'Luka Modrić es un centrocampista croata nacido en 1985, conocido por su visión de juego y precisión en los pases. Fichó por el Real Madrid en 2012, donde ha ganado varias Champions League. En 2018, lideró a Croacia a la final del Mundial y ganó el Balón de Oro por su rendimiento', 2, 18, '1985-09-09', 1.72, NULL),
+    ('Vinícius', 'Júnior', 'Vinícius Júnior es un futbolista brasileño nacido en 2000. Juega como extremo y es conocido por su velocidad, regate y habilidad para anotar. Fichó por el Real Madrid en 2018, donde ha emergido como una de las jóvenes estrellas del fútbol mundial. Su habilidad para crear jugadas y su impacto en el ataque han sido clave en el éxito del equipo.', 2, 18, '2000-07-12', 1.76, NULL),
+    ('Toni', 'Kroos', 'Toni Kroos es un centrocampista alemán nacido en 1990, conocido por su precisión en los pases y control del juego. Fichó por el Real Madrid en 2014, donde ha ganado múltiples Champions League. También fue parte del equipo alemán que ganó la Copa del Mundo en 2014.', 2, 18, '1990-01-04', 1.83, NULL),
+    ('Eder', 'Militão', 'Éder Militão es un futbolista brasileño nacido en 1998. Juega como defensor central y es conocido por su rapidez, fuerza física y habilidades defensivas. Fichó por el Real Madrid en 2019, donde ha sido clave en la defensa del equipo, contribuyendo a varios títulos, incluyendo la Champions League. También ha representado a la selección brasileña en competiciones internacionales.', 2, 18, '1998-01-18', 1.86, NULL),
 
 -- Barcelona
-    ('Robert', 'Lewandowski', 3, 18, '1988-08-21', 1.85, NULL),
-    ('Sergio', 'Busquets', 3, 18, '1988-07-16', 1.89, NULL),
-    ('Ansu', 'Fati', 3, 18, '2002-10-31', 1.80, NULL),
-    ('Pedri', 'González', 3, 18, '2002-11-25', 1.74, NULL),
-    ('Jules', 'Koundé', 3, 18, '1998-11-12', 1.78, NULL),
+    ('Robert', 'Lewandowski','Delantero polaco (n. 1988) conocido por su capacidad goleadora. Fichó por el FC Barcelona en 2022, tras brillar en el Bayern Múnich y ganar múltiples títulos, incluido el Balón de Oro.', 3, 18, '1988-08-21', 1.85, NULL),
+    ('Sergio', 'Busquets','Mediocampista defensivo español (n. 1988) conocido por su inteligencia táctica. Ha jugado en el FC Barcelona desde 2008, ganando múltiples títulos, incluida la Champions League, y fue parte de la selección que ganó la Copa del Mundo en 2010.', 3, 18, '1988-07-16', 1.89, NULL),
+    ('Ansu', 'Fati','Delantero español (n. 2002) de gran talento y velocidad. Debutó en el FC Barcelona a temprana edad y es una de las promesas más destacadas del club.', 3, 18, '2002-10-31', 1.80, NULL),
+    ('Pedri', 'González','Centrocampista español (n. 2002) conocido por su visión de juego y técnica. Se ha consolidado como titular en el FC Barcelona y en la selección española.', 3, 18, '2002-11-25', 1.74, NULL),
+    ('Jules', 'Koundé',' Defensa francés (n. 1998) reconocido por su rapidez y solidez defensiva. Juega en el FC Barcelona desde 2022 tras destacar en el Sevilla.', 3, 18, '1998-11-12', 1.78, NULL),
 
 -- Boca Juniors
-    ('Carlos', 'Tevez', 4, 7, '1984-02-05', 1.73, NULL),
-    ('Juan', 'Román Riquelme', 4, 7, '1978-06-24', 1.82, NULL),
-    ('Edwin', 'Cardona', 4, 7, '1993-12-08', 1.77, NULL),
-    ('Darío', 'Benedetto', 4, 7, '1985-11-17', 1.81, NULL),
-    ('Ábila', 'Wanchope', 4, 7, '1989-10-14', 1.80, NULL),
+    ('Carlos', 'Tevez','Exdelantero argentino (n. 1984) conocido por su garra y capacidad goleadora. Jugó en grandes clubes como Boca Juniors, Manchester United y Juventus.', 4, 7, '1984-02-05', 1.73, NULL),
+    ('Juan', 'Román Riquelme','Exmediocampista argentino (n. 1978), famoso por su técnica y visión de juego. Brilló en Boca Juniors y Villarreal, siendo ídolo en su país.', 4, 7, '1978-06-24', 1.82, NULL),
+    ('Edwin', 'Cardona','Centrocampista colombiano (n. 1992), conocido por su habilidad y potencia en el disparo. Ha jugado en equipos como Boca Juniors y Rayados de Monterrey.', 4, 7, '1993-12-08', 1.77, NULL),
+    ('Darío', 'Benedetto',' Delantero argentino (n. 1990) destacado por su capacidad goleadora. Brilló en Boca Juniors y también jugó en el Olympique de Marsella.', 4, 7, '1985-11-17', 1.81, NULL),
+    ('Ábila', 'Wanchope','Delantero argentino (n. 1989) conocido por su fuerza y capacidad para definir. Tuvo éxito en Boca Juniors y Huracán.', 4, 7, '1989-10-14', 1.80, NULL),
 
 -- River Plate
-    ('Ezequiel', 'Palacios', 5, 7, '1998-10-05', 1.78, NULL),
-    ('Enzo', 'Fernández', 5, 7, '2001-01-17', 1.79, NULL),
-    ('Martín', 'Gómez', 5, 7, '1998-07-01', 1.82, NULL),
-    ('Lucas', 'Pratto', 5, 7, '1988-06-04', 1.85, NULL),
-    ('Nicolás', 'De La Cruz', 5, 7, '1997-06-01', 1.74, NULL),
+    ('Ezequiel', 'Palacios','Centrocampista argentino (n. 1998) reconocido por su capacidad técnica y visión. Brilló en River Plate antes de fichar por el Bayer Leverkusen.', 5, 7, '1998-10-05', 1.78, NULL),
+    ('Enzo', 'Fernández',' Centrocampista argentino (n. 2001) conocido por su técnica y visión. Brilló en el Benfica tras destacar en el Mundial de 2022 con Argentina.', 5, 7, '2001-01-17', 1.79, NULL),
+    ('Martín', 'Gómez','Delantero argentino (n. 1997) reconocido por su velocidad y habilidad. Ha jugado en clubes de la Primera División argentina y es una promesa en el fútbol.', 5, 7, '1998-07-01', 1.82, NULL),
+    ('Lucas', 'Pratto','Delantero argentino (n. 1988) conocido por su capacidad goleadora y juego aéreo. Brilló en River Plate y ha tenido éxito en varios clubes, incluyendo el Atlético Mineiro.', 5, 7, '1988-06-04', 1.85, NULL),
+    ('Nicolás', 'De La Cruz','Centrocampista uruguayo (n. 1997) destacado por su técnica y despliegue físico. Juega en River Plate y ha sido clave en la selección uruguaya.', 5, 7, '1997-06-01', 1.74, NULL),
 
 -- Paris Saint-Germain
-    ('Kylian', 'Mbappé', 6, 10, '1998-12-20', 1.78, NULL),
-    ('Neymar', 'Júnior', 6, 10, '1992-02-05', 1.75, NULL),
-    ('Lionel', 'Messi', 6, 10, '1987-06-24', 1.70, NULL),
-    ('Marco', 'Verratti', 6, 10, '1992-11-05', 1.65, NULL),
-    ('Achraf', 'Hakimi', 6, 10, '1998-11-04', 1.82, NULL),
+    ('Kylian', 'Mbappé',' Delantero francés (n. 1998) famoso por su velocidad y habilidad técnica. Juega en el Paris Saint-Germain y es considerado uno de los mejores del mundo.', 6, 10, '1998-12-20', 1.78, NULL),
+    ('Neymar', 'Júnior','Delantero brasileño (n. 1992) conocido por su habilidad, regate y capacidad goleadora. Ha jugado en el Barcelona y el Paris Saint-Germain, siendo un ícono del fútbol.', 6, 10, '1992-02-05', 1.75, NULL),
+    ('Lionel', 'Messi',' Delantero argentino (n. 1987) considerado uno de los mejores futbolistas de la historia. Ha ganado múltiples Balones de Oro y ha brillado en el FC Barcelona y el PSG.', 6, 10, '1987-06-24', 1.70, NULL),
+    ('Marco', 'Verratti','Centrocampista italiano (n. 1992) conocido por su técnica y control del juego. Juega en el Paris Saint-Germain y ha sido clave en la selección italiana.', 6, 10, '1992-11-05', 1.65, NULL),
+    ('Achraf', 'Hakimi','Defensa marroquí (n. 1998) destacado por su velocidad y capacidad ofensiva. Juega en el Paris Saint-Germain y ha tenido éxito en el Inter de Milán.', 6, 10, '1998-11-04', 1.82, NULL),
 
 -- Juventus
-    ('Paul', 'Pogba', 7, 12, '1993-03-15', 1.91, NULL),
-    ('Dusan', 'Vlahović', 7, 12, '2000-01-28', 1.90, NULL),
-    ('Federico', 'Chiesa', 7, 12, '1997-10-25', 1.77, NULL),
-    ('Leonardo', 'Bonucci', 7, 12, '1987-05-01', 1.90, NULL),
-    ('Ángel', 'Di María', 7, 12, '1988-02-14', 1.80, NULL),
+    ('Paul', 'Pogba','Centrocampista francés (n. 1993) famoso por su técnica y potencia. Regresó al Manchester United en 2016 y ganó la Copa del Mundo en 2018.', 7, 12, '1993-03-15', 1.91, NULL),
+    ('Dusan', 'Vlahović',' Delantero serbio (n. 2000) conocido por su capacidad goleadora y físico. Juega en la Juventus tras destacar en la Fiorentina.', 7, 12, '2000-01-28', 1.90, NULL),
+    ('Federico', 'Chiesa','Delantero italiano (n. 1997) reconocido por su velocidad y habilidad. Juega en la Juventus y ha sido clave en la selección italiana.', 7, 12, '1997-10-25', 1.77, NULL),
+    ('Leonardo', 'Bonucci','Defensa italiano (n. 1987) famoso por su liderazgo y solidez defensiva. Ha jugado en la Juventus y ha sido parte de la selección que ganó la Eurocopa en 2021.', 7, 12, '1987-05-01', 1.90, NULL),
+    ('Ángel', 'Di María','Delantero argentino (n. 1988) conocido por su habilidad y capacidad para asistir. Ha brillado en clubes como el Real Madrid, Manchester United y PSG.', 7, 12, '1988-02-14', 1.80, NULL),
 
 -- Bayern Munich
-    ('Leroy', 'Sané', 8, 13, '1996-01-11', 1.84, NULL),
-    ('Joshua', 'Kimmich', 8, 13, '1995-02-08', 1.76, NULL),
-    ('Robert', 'Lewandowski', 8, 13, '1988-08-21', 1.85, NULL),
-    ('Manuel', 'Neuer', 8, 13, '1986-03-27', 1.93, NULL),
-    ('Thomas', 'Müller', 8, 13, '1989-09-13', 1.86, NULL),
+    ('Leroy', 'Sané',' Extremo alemán (n. 1996) conocido por su velocidad y habilidad para driblar. Juega en el Bayern Múnich tras destacar en el Manchester City.', 8, 13, '1996-01-11', 1.84, NULL),
+    ('Joshua', 'Kimmich','Centrocampista alemán (n. 1995) destacado por su versatilidad y visión de juego. Juega en el Bayern Múnich y ha sido clave en la selección alemana.', 8, 13, '1995-02-08', 1.76, NULL),
+    ('Robert', 'Lewandowski','Delantero polaco (n. 1988) conocido por su capacidad goleadora. Fichó por el FC Barcelona en 2022, tras brillar en el Bayern Múnich y ganar múltiples títulos, incluido el Balón de Oro.', 8, 13, '1988-08-21', 1.85, NULL),
+    ('Manuel', 'Neuer','Portero alemán (n. 1986) conocido por su agilidad y habilidad con los pies. Juega en el Bayern Múnich y es considerado uno de los mejores porteros de la historia.', 8, 13, '1986-03-27', 1.93, NULL),
+    ('Thomas', 'Müller','Delantero alemán (n. 1989) famoso por su capacidad goleadora y posicionamiento. Juega en el Bayern Múnich y ha sido parte de la selección que ganó la Copa del Mundo en 2014.', 8, 13, '1989-09-13', 1.86, NULL),
 
 -- AC Milan
-    ('Olivier', 'Giroud', 9, 12, '1986-09-30', 1.92, NULL),
-    ('Theo', 'Hernández', 9, 12, '1997-10-06', 1.84, NULL),
-    ('Brahim', 'Díaz', 9, 12, '1999-08-03', 1.71, NULL),
-    ('Sandro', 'Tonali', 9, 12, '2000-05-08', 1.81, NULL),
-    ('Simon', 'Kjaer', 9, 12, '1989-03-26', 1.92, NULL),
+    ('Olivier', 'Giroud','Delantero francés (n. 1986) conocido por su juego aéreo y capacidad goleadora. Ha jugado en clubes como el Arsenal, Chelsea y AC Milan, siendo clave en la selección.', 9, 12, '1986-09-30', 1.92, NULL),
+    ('Theo', 'Hernández','Defensa francés (n. 1997) reconocido por su velocidad y capacidad ofensiva. Juega en el AC Milan y ha destacado en la selección francesa.', 9, 12, '1997-10-06', 1.84, NULL),
+    ('Brahim', 'Díaz','Centrocampista español (n. 1999) conocido por su técnica y regate. Juega en el AC Milan, tras pasar por el Manchester City y el Real Madrid.', 9, 12, '1999-08-03', 1.71, NULL),
+    ('Sandro', 'Tonali','Centrocampista italiano (n. 2000) destacado por su visión y juego físico. Juega en el AC Milan y ha sido considerado una de las promesas del fútbol italiano.', 9, 12, '2000-05-08', 1.81, NULL),
+    ('Simon', 'Kjaer',' Defensa danés (n. 1989) conocido por su liderazgo y solidez defensiva. Juega en el AC Milan y ha representado a Dinamarca en varias competiciones.', 9, 12, '1989-03-26', 1.92, NULL),
 
 -- Chelsea
-    ('Raheem', 'Sterling', 10, 15, '1994-12-08', 1.70, NULL),
-    ('Kai', 'Havertz', 10, 15, '1999-06-11', 1.89, NULL),
-    ('Reece', 'James', 10, 15, '1999-12-08', 1.82, NULL),
-    ('Enzo', 'Fernández', 10, 15, '2001-01-17', 1.79, NULL),
-    ('Thiago', 'Silva', 10, 15, '1984-09-22', 1.87, NULL);
+    ('Raheem', 'Sterling','Delantero inglés (n. 1994) famoso por su velocidad y habilidad de regate. Juega en el Chelsea tras destacar en el Manchester City.', 10, 15, '1994-12-08', 1.70, NULL),
+    ('Kai', 'Havertz',' Centrocampista alemán (n. 1999) reconocido por su técnica y versatilidad. Juega en el Arsenal tras brillar en el Bayer Leverkusen y el Chelsea.', 10, 15, '1999-06-11', 1.89, NULL),
+    ('Reece', 'James',' Defensa inglés (n. 1999) destacado por su capacidad ofensiva y solidez defensiva. Juega en el Chelsea y ha sido parte de la selección inglesa.', 10, 15, '1999-12-08', 1.82, NULL),
+    ('Enzo', 'Fernández','Centrocampista argentino (n. 2001) conocido por su técnica y visión. Brilló en el Benfica tras destacar en el Mundial de 2022 con Argentina.', 10, 15, '2001-01-17', 1.79, NULL),
+    ('Thiago', 'Silva','Defensa brasileño (n. 1984) conocido por su experiencia y liderazgo. Juega en el Chelsea y ha tenido una exitosa carrera en clubes como el PSG.', 10, 15, '1984-09-22', 1.87, NULL);
 GO
 /*
 ALTER TABLE EstadisticaJugadores

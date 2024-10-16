@@ -65,7 +65,7 @@ namespace Configuracion
                 return false;
             }
         }
-
+       
         public static bool ValidatePassword(string password, out string errorMessage)
         {
             if (string.IsNullOrWhiteSpace(password))
@@ -128,6 +128,18 @@ namespace Configuracion
                 return false;
             }
         }
+        public static bool validateFloatNumber(float value, out string errorMessage) {
+            if (value >= 0.5)
+            {
+                errorMessage = null;
+                return true;
+            }
+            else
+            {
+                errorMessage = "ERR009: El valor debe ser un número entero mayor o igual a uno.";
+                return false;
+            }
+        }
 
         public static bool ValidateNivelUsuario(string nivelUsuario, out string errorMessage)
         {
@@ -164,15 +176,30 @@ namespace Configuracion
             }
 
             // Validar el tamaño en bytes (máximo 1 MB)
-            const int maxSizeInBytes = 1 * 1024 * 1024; // 1 MB
+            const int maxSizeInBytes = 10 * 1024 * 1024; // 1 MB
             if (value.Length > maxSizeInBytes)
             {
-                errorMessage = "ERR013: La imagen es demasiado grande. El tamaño máximo permitido es 1 MB.";
+                errorMessage = "ERR013: La imagen es demasiado grande. El tamaño máximo permitido es 10 MB.";
                 return false; 
             }
 
             return true; 
         }
+        public static bool ValidateDateTime(string value, out string errorMessage)
+        {
+            errorMessage = null;
+
+            if (DateTime.TryParseExact(value, "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.None, out _))
+            {
+                return true;
+            }
+            else
+            {
+                errorMessage = "ERR014: La fecha debe estar en el formato yyyy-MM-dd HH:mm:ss.";
+                return false;
+            }
+        }
+
 
     }
 }

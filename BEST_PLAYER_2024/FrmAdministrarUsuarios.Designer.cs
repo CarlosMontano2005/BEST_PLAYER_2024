@@ -35,7 +35,6 @@
             this.btnEnviarDatosOtraTabla = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.cmbBoxOrigianl = new System.Windows.Forms.ComboBox();
             this.ChBxVerClaveRepetir = new System.Windows.Forms.CheckBox();
             this.ChBxVerClave = new System.Windows.Forms.CheckBox();
@@ -73,7 +72,6 @@
             this.panel1.Controls.Add(this.btnEnviarDatosOtraTabla);
             this.panel1.Controls.Add(this.btnEliminar);
             this.panel1.Controls.Add(this.btnActualizar);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.cmbBoxOrigianl);
             this.panel1.Controls.Add(this.ChBxVerClaveRepetir);
             this.panel1.Controls.Add(this.ChBxVerClave);
@@ -143,15 +141,6 @@
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 21);
-            this.label1.TabIndex = 72;
-            this.label1.Text = "label1";
             // 
             // cmbBoxOrigianl
             // 
@@ -611,7 +600,6 @@
         private System.Windows.Forms.CheckBox ChBxVerClave;
         private System.Windows.Forms.CheckBox ChBxVerClaveRepetir;
         private System.Windows.Forms.ComboBox cmbBoxOrigianl;
-        private System.Windows.Forms.Label label1;
         private RJCodeAdvance.RJControls.RJTextBox TxtId;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button btnEnviarDatosOtraTabla;
