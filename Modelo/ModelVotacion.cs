@@ -103,20 +103,19 @@ namespace Modelo
             return data;
         }
 
-        public static bool InsertarVoto(int idJugadore, string fechaHoraVoto, out string message)
+        public static bool InsertarVoto(int idJugadore, out string message)
         {
 
             DatabaseConnection dbConnection = new DatabaseConnection();
             try
             {
-                string query = "INSERT INTO Votacion(IdUsuario, IdJugador, FechaHoraVoto) " + 
-                    "VALUES(@IdUsuario, @IdJugador, @FechaHoraVoto)";
+                string query = "INSERT INTO Votacion(IdUsuario, IdJugador, FechaHoraVoto) " +
+                    "VALUES(@IdUsuario, @IdJugador, GETDATE())";
                 using (SqlConnection connection = dbConnection.GetConnection())
                 using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
                     cmd.Parameters.AddWithValue("@IdUsuario", SesionUsuario.IdUsuario);
                     cmd.Parameters.AddWithValue("@IdJugador", idJugadore);
-                    cmd.Parameters.AddWithValue("@FechaHoraVoto", fechaHoraVoto);
                     connection.Open();
                     int result = cmd.ExecuteNonQuery();
                     if (result > 0)

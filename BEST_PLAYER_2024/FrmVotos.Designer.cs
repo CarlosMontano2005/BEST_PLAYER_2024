@@ -508,7 +508,7 @@
             // 
             // PicJugador_1
             // 
-            this.PicJugador_1.Image = global::BEST_PLAYER_2024.Properties.Resources.targeta_fifa_plantila;
+            this.PicJugador_1.Image = global::BEST_PLAYER_2024.Properties.Resources.Cristiano_Ronaldo;
             this.PicJugador_1.Location = new System.Drawing.Point(45, 85);
             this.PicJugador_1.Name = "PicJugador_1";
             this.PicJugador_1.Size = new System.Drawing.Size(142, 163);

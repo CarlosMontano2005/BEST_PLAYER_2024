@@ -38,7 +38,7 @@ namespace Servicios
                 // Enviar los datos del usuario, jugador y la fecha y hora de hoy
                 return ModelVotacion.InsertarVoto(
                     crtVotacion.IdJugadore,
-                    crtVotacion.FechaHoraVoto = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff")),
+                   // crtVotacion.FechaHoraVoto = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")),
                      out message
                 );
             }
