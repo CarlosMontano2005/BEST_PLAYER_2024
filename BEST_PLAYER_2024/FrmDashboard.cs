@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Controlador;
+using System.IO;
 
 namespace BEST_PLAYER_2024
 {
@@ -353,12 +355,13 @@ namespace BEST_PLAYER_2024
         #region BtnCerrarSesion
         private void BtnCerrarSecion_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("¿Está seguro que desea salir del sistema?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("¿Está seguro que desea cerrar sesion?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 FrmLogin frmlogin = new FrmLogin();
                 frmlogin.Show();
-                this.Close();// Cierra la aplicación
+                SesionUsuario.SesionActiva = false;
+                this.Close();
             }
         }
 
@@ -366,14 +369,13 @@ namespace BEST_PLAYER_2024
 
         private void PtbClose_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("¿Está seguro que desea salir del sistema?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("¿Está seguro que desea cerrar sesion?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 FrmLogin frmlogin = new FrmLogin();
                 frmlogin.Show();
-                this.Close();// Cierra la aplicación
-                             //Application.Exit();
-
+                SesionUsuario.SesionActiva = false;
+                this.Close();
             }
         }
 
@@ -429,6 +431,41 @@ namespace BEST_PLAYER_2024
             {
                 isDragging = false;
             }
+        }
+
+        private void FrmDashboard_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                // Obtener datos del usuario desde la sesión
+                string correo = SesionUsuario.CorreoUsuario;
+                string nombre = SesionUsuario.NombreUsuario;
+                string nivel = SesionUsuario.NivelUsuario;
+                int id = SesionUsuario.IdUsuario;
+
+                LblCorreo.Text = correo;
+                LblNivelUsuario.Text = nivel;
+
+                if (SesionUsuario.FotoUsuario != null && SesionUsuario.FotoUsuario.Length > 0)
+                {
+                    byte[] imageBytes = SesionUsuario.FotoUsuario;
+                    using (MemoryStream ms = new MemoryStream(imageBytes))
+                    {
+                        CpFotoUsuario.Image = new Bitmap(ms); // Asignar la imagen al PictureBox
+                    }
+                }
+                else
+                {
+                    // Si no hay imagen, limpiar el PictureBox
+                    CpFotoUsuario.Image = Properties.Resources._default;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejo de excepciones general
+                MessageBox.Show($"Se produjo un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
         }
     }
 }

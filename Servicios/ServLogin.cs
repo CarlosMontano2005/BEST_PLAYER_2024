@@ -13,6 +13,8 @@ namespace Servicios
 
             string nombreUsuario;
             string nivelUsuario;
+            byte[] fotoUsuario;
+            int idUsuario;
 
             try
             {
@@ -20,16 +22,21 @@ namespace Servicios
                 bool resultado = ModelLogin.ValidarLogin(
                     usuario.Correo,
                     usuario.Clave,
+                    out idUsuario,
                     out nombreUsuario,
                     out nivelUsuario,
+                    out fotoUsuario,
                     out message
                 );
 
                 if (resultado)
                 {
                     // Almacenar el nombre y nivel de usuario si es necesario
-                    usuario.NombreUsuario = nombreUsuario; 
-                    usuario.NivelUsuario = nivelUsuario;  
+                    SesionUsuario.IdUsuario = idUsuario;
+                    SesionUsuario.NombreUsuario = nombreUsuario;
+                    SesionUsuario.NivelUsuario = nivelUsuario;
+                    SesionUsuario.FotoUsuario = fotoUsuario;
+                    SesionUsuario.CorreoUsuario = usuario.Correo;
                 }
 
                 return resultado;

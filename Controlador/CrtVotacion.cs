@@ -66,7 +66,7 @@ namespace Controlador
             get { return _fechaHoraVoto; }
             set
             {
-                if (Validaciones.ValidateDatetTime(value, out string errorMessage))
+                if (Validaciones.ValidateDateTime(value, out string errorMessage))
                 {
                     _fechaHoraVoto = value;
                 }
