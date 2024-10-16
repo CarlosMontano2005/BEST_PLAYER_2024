@@ -28,41 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rjTextBox1 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.TxtCorreo = new RJCodeAdvance.RJControls.RJTextBox();
             this.rjCircularPictureBox1 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
-            this.rjTextBox2 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.TxtClave = new RJCodeAdvance.RJControls.RJTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.rjRadioButton1 = new RJCodeAdvance.RJControls.RJRadioButton();
+            this.ChBxVerClave = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // rjTextBox1
+            // TxtCorreo
             // 
-            this.rjTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.rjTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.rjTextBox1.BorderRadius = 0;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox1.ForeColor = System.Drawing.Color.White;
-            this.rjTextBox1.Location = new System.Drawing.Point(406, 272);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.rjTextBox1.PlaceholderText = "Correo@example.com";
-            this.rjTextBox1.Size = new System.Drawing.Size(250, 36);
-            this.rjTextBox1.TabIndex = 0;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = true;
+            this.TxtCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.TxtCorreo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
+            this.TxtCorreo.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.TxtCorreo.BorderRadius = 0;
+            this.TxtCorreo.BorderSize = 2;
+            this.TxtCorreo.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCorreo.ForeColor = System.Drawing.Color.White;
+            this.TxtCorreo.Location = new System.Drawing.Point(406, 272);
+            this.TxtCorreo.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtCorreo.Multiline = false;
+            this.TxtCorreo.Name = "TxtCorreo";
+            this.TxtCorreo.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.TxtCorreo.PasswordChar = false;
+            this.TxtCorreo.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.TxtCorreo.PlaceholderText = "Correo@example.com";
+            this.TxtCorreo.Size = new System.Drawing.Size(250, 36);
+            this.TxtCorreo.TabIndex = 0;
+            this.TxtCorreo.Texts = "";
+            this.TxtCorreo.UnderlinedStyle = true;
             // 
             // rjCircularPictureBox1
             // 
@@ -82,27 +82,27 @@
             this.rjCircularPictureBox1.TabIndex = 1;
             this.rjCircularPictureBox1.TabStop = false;
             // 
-            // rjTextBox2
+            // TxtClave
             // 
-            this.rjTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.rjTextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
-            this.rjTextBox2.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.rjTextBox2.BorderRadius = 0;
-            this.rjTextBox2.BorderSize = 2;
-            this.rjTextBox2.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox2.ForeColor = System.Drawing.Color.White;
-            this.rjTextBox2.Location = new System.Drawing.Point(406, 358);
-            this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox2.Multiline = false;
-            this.rjTextBox2.Name = "rjTextBox2";
-            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox2.PasswordChar = true;
-            this.rjTextBox2.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.rjTextBox2.PlaceholderText = "Clave";
-            this.rjTextBox2.Size = new System.Drawing.Size(250, 36);
-            this.rjTextBox2.TabIndex = 2;
-            this.rjTextBox2.Texts = "";
-            this.rjTextBox2.UnderlinedStyle = true;
+            this.TxtClave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.TxtClave.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
+            this.TxtClave.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.TxtClave.BorderRadius = 0;
+            this.TxtClave.BorderSize = 2;
+            this.TxtClave.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtClave.ForeColor = System.Drawing.Color.White;
+            this.TxtClave.Location = new System.Drawing.Point(406, 358);
+            this.TxtClave.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtClave.Multiline = false;
+            this.TxtClave.Name = "TxtClave";
+            this.TxtClave.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.TxtClave.PasswordChar = true;
+            this.TxtClave.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.TxtClave.PlaceholderText = "Clave";
+            this.TxtClave.Size = new System.Drawing.Size(250, 36);
+            this.TxtClave.TabIndex = 2;
+            this.TxtClave.Texts = "";
+            this.TxtClave.UnderlinedStyle = true;
             // 
             // label1
             // 
@@ -126,18 +126,18 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Clave";
             // 
-            // button1
+            // btnLogin
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
-            this.button1.Location = new System.Drawing.Point(406, 448);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(250, 50);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Iniciar Sesion";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
+            this.btnLogin.Location = new System.Drawing.Point(406, 448);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(250, 50);
+            this.btnLogin.TabIndex = 5;
+            this.btnLogin.Text = "Iniciar Sesion";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // linkLabel1
             // 
@@ -176,22 +176,18 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "LOGIN";
             // 
-            // rjRadioButton1
+            // ChBxVerClave
             // 
-            this.rjRadioButton1.AutoSize = true;
-            this.rjRadioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.rjRadioButton1.CheckedColor = System.Drawing.Color.MediumSeaGreen;
-            this.rjRadioButton1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjRadioButton1.Location = new System.Drawing.Point(406, 401);
-            this.rjRadioButton1.MinimumSize = new System.Drawing.Size(0, 21);
-            this.rjRadioButton1.Name = "rjRadioButton1";
-            this.rjRadioButton1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rjRadioButton1.Size = new System.Drawing.Size(100, 21);
-            this.rjRadioButton1.TabIndex = 10;
-            this.rjRadioButton1.TabStop = true;
-            this.rjRadioButton1.Text = "Ver Clave";
-            this.rjRadioButton1.UnCheckedColor = System.Drawing.Color.Gray;
-            this.rjRadioButton1.UseVisualStyleBackColor = false;
+            this.ChBxVerClave.AutoSize = true;
+            this.ChBxVerClave.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChBxVerClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ChBxVerClave.Location = new System.Drawing.Point(406, 411);
+            this.ChBxVerClave.Name = "ChBxVerClave";
+            this.ChBxVerClave.Size = new System.Drawing.Size(91, 21);
+            this.ChBxVerClave.TabIndex = 69;
+            this.ChBxVerClave.Text = "Ver Clave";
+            this.ChBxVerClave.UseVisualStyleBackColor = true;
+            this.ChBxVerClave.CheckedChanged += new System.EventHandler(this.ChBxVerClave_CheckedChanged);
             // 
             // FrmLogin
             // 
@@ -201,16 +197,16 @@
             this.BackgroundImage = global::BEST_PLAYER_2024.Properties.Resources.SL_030822_49070_19;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1000, 650);
-            this.Controls.Add(this.rjRadioButton1);
+            this.Controls.Add(this.ChBxVerClave);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.rjTextBox2);
+            this.Controls.Add(this.TxtClave);
             this.Controls.Add(this.rjCircularPictureBox1);
-            this.Controls.Add(this.rjTextBox1);
+            this.Controls.Add(this.TxtCorreo);
             this.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -232,15 +228,15 @@
 
         #endregion
 
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox1;
+        private RJCodeAdvance.RJControls.RJTextBox TxtCorreo;
         private RJCodeAdvance.RJControls.RJCircularPictureBox rjCircularPictureBox1;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox2;
+        private RJCodeAdvance.RJControls.RJTextBox TxtClave;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
-        private RJCodeAdvance.RJControls.RJRadioButton rjRadioButton1;
+        private System.Windows.Forms.CheckBox ChBxVerClave;
     }
 }
