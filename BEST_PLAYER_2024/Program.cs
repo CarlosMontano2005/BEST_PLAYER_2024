@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Controlador;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,17 @@ namespace BEST_PLAYER_2024
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmDashboard()); //FrmInicio
+            if (SesionUsuario.SesionActiva)
+            {
+                //MessageBox.Show("La sesión está activa");
+                Application.Run(new FrmDashboard()); //FrmInicio
+            }
+            else
+            {
+                //MessageBox.Show("La sesión ha expirado o no está activa. Inicia sesión nuevamente.");
+                Application.Run(new FrmInicio()); //FrmInicio
+            }
+           
         }
     }
 }
