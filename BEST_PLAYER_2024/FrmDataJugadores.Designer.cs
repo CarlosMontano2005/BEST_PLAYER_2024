@@ -39,6 +39,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnDelete = new RJCodeAdvance.RJControls.RJButton();
             this.BtnActualizar = new RJCodeAdvance.RJControls.RJButton();
             this.label2 = new System.Windows.Forms.Label();
             this.lblNCamisa = new System.Windows.Forms.Label();
@@ -48,7 +49,7 @@
             this.lblNacional = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.lblGoles = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.PtDataJ = new System.Windows.Forms.PictureBox();
             this.label27 = new System.Windows.Forms.Label();
             this.lblPJugados = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
@@ -62,14 +63,13 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.BtnEliminar = new RJCodeAdvance.RJControls.RJButton();
-            this.btnDelete = new RJCodeAdvance.RJControls.RJButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PtDataJ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -198,7 +198,7 @@
             this.panel4.Controls.Add(this.label32);
             this.panel4.Controls.Add(this.lblDescripcion);
             this.panel4.Controls.Add(this.lblGoles);
-            this.panel4.Controls.Add(this.pictureBox2);
+            this.panel4.Controls.Add(this.PtDataJ);
             this.panel4.Controls.Add(this.label27);
             this.panel4.Controls.Add(this.lblPJugados);
             this.panel4.Controls.Add(this.label30);
@@ -218,6 +218,26 @@
             this.panel4.Size = new System.Drawing.Size(888, 650);
             this.panel4.TabIndex = 17;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.btnDelete.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.btnDelete.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnDelete.BorderRadius = 0;
+            this.btnDelete.BorderSize = 0;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(62, 572);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnDelete.Size = new System.Drawing.Size(134, 37);
+            this.btnDelete.TabIndex = 45;
+            this.btnDelete.Text = "Eliminar";
+            this.btnDelete.TextColor = System.Drawing.Color.White;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // BtnActualizar
             // 
@@ -331,15 +351,15 @@
             this.lblGoles.TabIndex = 28;
             this.lblGoles.Text = "08";
             // 
-            // pictureBox2
+            // PtDataJ
             // 
-            this.pictureBox2.Image = global::BEST_PLAYER_2024.Properties.Resources.mesi_680x375;
-            this.pictureBox2.Location = new System.Drawing.Point(35, 137);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(380, 190);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            this.PtDataJ.Image = global::BEST_PLAYER_2024.Properties.Resources.mesi_680x375;
+            this.PtDataJ.Location = new System.Drawing.Point(35, 137);
+            this.PtDataJ.Name = "PtDataJ";
+            this.PtDataJ.Size = new System.Drawing.Size(380, 190);
+            this.PtDataJ.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PtDataJ.TabIndex = 3;
+            this.PtDataJ.TabStop = false;
             // 
             // label27
             // 
@@ -498,26 +518,6 @@
             this.BtnEliminar.UseVisualStyleBackColor = false;
             this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
-            this.btnDelete.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
-            this.btnDelete.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnDelete.BorderRadius = 0;
-            this.btnDelete.BorderSize = 0;
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(62, 572);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnDelete.Size = new System.Drawing.Size(134, 37);
-            this.btnDelete.TabIndex = 45;
-            this.btnDelete.Text = "Eliminar";
-            this.btnDelete.TextColor = System.Drawing.Color.White;
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
             // FrmDataJugadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
@@ -540,7 +540,7 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PtDataJ)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
@@ -552,7 +552,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblNombreJugador;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox PtDataJ;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel2;

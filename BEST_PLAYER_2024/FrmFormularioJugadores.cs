@@ -39,8 +39,8 @@ namespace BEST_PLAYER_2024
                 CmbNacionalidad.Texts = row["Nacionalidad"].ToString();
                 CmbEquipoO.Text= row["Equipo"].ToString();
                 CmbNacionalidadO.Text = row["Nacionalidad"].ToString();
-                CmbEquipoO.Visible = true;
-                CmbNacionalidadO.Visible = true;
+                CmbEquipoO.Visible = false;
+                CmbNacionalidadO.Visible = false;
                 if (row["Foto"]!=DBNull.Value) {
                     byte[] imageBytes = (byte[])row["Foto"];
                     using (MemoryStream ms = new MemoryStream(imageBytes))

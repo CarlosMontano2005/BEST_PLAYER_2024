@@ -6,6 +6,7 @@ using System.Drawing;
 using Servicios;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 using Controlador;
 using System.Windows.Forms;
@@ -108,6 +109,19 @@ namespace BEST_PLAYER_2024
                     else if (lblPosicion.Text.Equals("Delantero")) {
                         lblPosicion.ForeColor = Color.Black;
                         lblPosicion.BackColor = Color.FromArgb(233, 229, 22);
+                    }
+                    if (row["Foto"] != DBNull.Value)
+                    {
+                        byte[] imageBytes = (byte[])row["Foto"];
+                        using (MemoryStream ms = new MemoryStream(imageBytes))
+                        {
+                            Bitmap bm = new Bitmap(ms);
+                            PtDataJ.Image = bm;
+                        }
+                    }
+                    else
+                    {
+                        PtDataJ.Image = null;
                     }
                 }
             }
