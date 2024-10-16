@@ -42,10 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ServDetalleJugador.cs" />
+    <Compile Include="ServLogin.cs" />
     <Compile Include="ServTopJugadores.cs" />
     <Compile Include="ServJugador.cs" />
     <Compile Include="ServUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServVotacion.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Controlador\Controlador.csproj">

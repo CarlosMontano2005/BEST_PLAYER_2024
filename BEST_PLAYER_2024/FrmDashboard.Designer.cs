@@ -30,7 +30,7 @@
         {
             System.Windows.Forms.Label label1;
             this.PnlNav = new System.Windows.Forms.Panel();
-            this.rjCircularPictureBox1 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
+            this.CpFotoUsuario = new RJCodeAdvance.RJControls.RJCircularPictureBox();
             this.LblJugadores = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnCerrarSecion = new System.Windows.Forms.Button();
@@ -52,7 +52,7 @@
             this.CirBoxPictorLogo = new RJCodeAdvance.RJControls.RJCircularPictureBox();
             label1 = new System.Windows.Forms.Label();
             this.PnlNav.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CpFotoUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PnlImagenFondo.SuspendLayout();
             this.PanelOpciones.SuspendLayout();
@@ -78,7 +78,7 @@
             // PnlNav
             // 
             this.PnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.PnlNav.Controls.Add(this.rjCircularPictureBox1);
+            this.PnlNav.Controls.Add(this.CpFotoUsuario);
             this.PnlNav.Controls.Add(this.LblJugadores);
             this.PnlNav.Controls.Add(this.pictureBox1);
             this.PnlNav.Controls.Add(this.BtnCerrarSecion);
@@ -103,21 +103,21 @@
             this.PnlNav.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PnlNav_MouseMove);
             this.PnlNav.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PnlNav_MouseUp);
             // 
-            // rjCircularPictureBox1
+            // CpFotoUsuario
             // 
-            this.rjCircularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.rjCircularPictureBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(35)))), ((int)(((byte)(95)))));
-            this.rjCircularPictureBox1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.rjCircularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.rjCircularPictureBox1.BorderSize = 2;
-            this.rjCircularPictureBox1.GradientAngle = 50F;
-            this.rjCircularPictureBox1.Image = global::BEST_PLAYER_2024.Properties.Resources._default;
-            this.rjCircularPictureBox1.Location = new System.Drawing.Point(55, 42);
-            this.rjCircularPictureBox1.Name = "rjCircularPictureBox1";
-            this.rjCircularPictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.rjCircularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.rjCircularPictureBox1.TabIndex = 15;
-            this.rjCircularPictureBox1.TabStop = false;
+            this.CpFotoUsuario.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.CpFotoUsuario.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(35)))), ((int)(((byte)(95)))));
+            this.CpFotoUsuario.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.CpFotoUsuario.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.CpFotoUsuario.BorderSize = 2;
+            this.CpFotoUsuario.GradientAngle = 50F;
+            this.CpFotoUsuario.Image = global::BEST_PLAYER_2024.Properties.Resources._default;
+            this.CpFotoUsuario.Location = new System.Drawing.Point(55, 42);
+            this.CpFotoUsuario.Name = "CpFotoUsuario";
+            this.CpFotoUsuario.Size = new System.Drawing.Size(100, 100);
+            this.CpFotoUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.CpFotoUsuario.TabIndex = 15;
+            this.CpFotoUsuario.TabStop = false;
             // 
             // LblJugadores
             // 
@@ -311,6 +311,7 @@
             this.LblNivelUsuario.Size = new System.Drawing.Size(98, 17);
             this.LblNivelUsuario.TabIndex = 3;
             this.LblNivelUsuario.Text = "Administrador";
+            this.LblNivelUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LblCorreo
             // 
@@ -321,6 +322,7 @@
             this.LblCorreo.Size = new System.Drawing.Size(161, 20);
             this.LblCorreo.TabIndex = 2;
             this.LblCorreo.Text = "correo@example.com";
+            this.LblCorreo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PnlImagenFondo
             // 
@@ -436,12 +438,13 @@
             this.Name = "FrmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDashboard";
+            this.Load += new System.EventHandler(this.FrmDashboard_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmDashboard_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmDashboard_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FrmDashboard_MouseUp);
             this.PnlNav.ResumeLayout(false);
             this.PnlNav.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CpFotoUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.PnlImagenFondo.ResumeLayout(false);
             this.PanelOpciones.ResumeLayout(false);
@@ -475,6 +478,6 @@
         private System.Windows.Forms.Label lblFiFaContendor;
         private System.Windows.Forms.Panel PanelOpciones;
         private System.Windows.Forms.PictureBox PtbClose;
-        private RJCodeAdvance.RJControls.RJCircularPictureBox rjCircularPictureBox1;
+        private RJCodeAdvance.RJControls.RJCircularPictureBox CpFotoUsuario;
     }
 }

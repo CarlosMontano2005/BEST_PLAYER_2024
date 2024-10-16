@@ -513,6 +513,26 @@ namespace BEST_PLAYER_2024.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap targeta_fifa_plantila {
+            get {
+                object obj = ResourceManager.GetObject("targeta-fifa-plantila", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap targeta_fifa_plantila_tamallo_124x200 {
+            get {
+                object obj = ResourceManager.GetObject("targeta-fifa-plantila-tamallo-124x200", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tarjeta_amarilla {
             get {
                 object obj = ResourceManager.GetObject("tarjeta-amarilla", resourceCulture);

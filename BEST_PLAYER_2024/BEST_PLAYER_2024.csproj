@@ -424,6 +424,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Shirt.jpeg" />
+    <None Include="Resources\targeta-fifa-plantila.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\targeta-fifa-plantila-tamallo-124x200.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

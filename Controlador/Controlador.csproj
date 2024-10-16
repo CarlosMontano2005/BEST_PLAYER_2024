@@ -43,10 +43,13 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="CtrDetalleJugador.cs" />
+    <Compile Include="CtrLogin.cs" />
+    <Compile Include="CrtVotacion.cs" />
     <Compile Include="CtrTopJugadores.cs" />
     <Compile Include="CtrJugador.cs" />
     <Compile Include="CtrUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SesionUsuario.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Configuracion\Configuracion.csproj">
