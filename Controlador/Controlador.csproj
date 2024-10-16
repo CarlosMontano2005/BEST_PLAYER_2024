@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="CtrLogin.cs" />
+    <Compile Include="CrtVotacion.cs" />
     <Compile Include="CtrTopJugadores.cs" />
     <Compile Include="CtrJugador.cs" />
     <Compile Include="CtrUsuario.cs" />

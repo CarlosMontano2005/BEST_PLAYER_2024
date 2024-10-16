@@ -45,6 +45,7 @@
     <Compile Include="ModeloJugador.cs" />
     <Compile Include="ModelTopJugadores.cs" />
     <Compile Include="ModelUsuario.cs" />
+    <Compile Include="ModelVotacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
