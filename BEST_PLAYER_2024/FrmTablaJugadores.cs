@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using Servicios;
+using Controlador;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,10 +17,12 @@ namespace BEST_PLAYER_2024
         public FrmTablaJugadores()
         {
             InitializeComponent();
+            CargarGridDatos();
         }
 
         private void BtnRegresar_Click(object sender, EventArgs e)
         {
+            /*
             FrmDataJugadores child2 = new FrmDataJugadores();
 
             DialogResult result = MessageBox.Show(
@@ -43,6 +47,57 @@ namespace BEST_PLAYER_2024
             {
                 return;
             }
+            */
+            //
+            Form existingForm = Application.OpenForms.OfType<FrmFormularioJugadores>().FirstOrDefault();
+
+           
+            if (existingForm==null) {
+                FrmFormularioJugadores frmjugadorfuncion = new FrmFormularioJugadores(1);
+                frmjugadorfuncion.Show();
+
+            }
+            else MessageBox.Show("El formulario ya esta abierto","Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            
+        }
+        public void ActualizarTabla()
+        {
+            // Aquí va tu lógica para recargar los datos de la tabla
+            DgvJugador.DataSource = null;
+            DgvJugador.DataSource = ServJugador.CargarJugadores(); // O el método que uses para cargar datos
+        }
+        public void CargarGridDatos()
+        {
+            try
+            {
+                DataTable datos = ServJugador.CargarJugadores();
+                DgvJugador.DataSource = datos;
+                // Renombrar las columnas en el DataGridView
+                DgvJugador.Columns["IdJugador"].HeaderText = "#";
+                DgvJugador.Columns["Nombre"].HeaderText = "Nombre";
+                DgvJugador.Columns["Altura"].HeaderText = "Altura";
+                DgvJugador.Columns["Nacionalidad"].HeaderText = "Nacionalidad";
+                //
+                DgvJugador.Columns["NombreEquipo"].HeaderText = "Equipo";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar los datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void DgvJugador_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = DgvJugador.Rows[e.RowIndex];
+            CtrJugador._idJugador = int.Parse(row.Cells[0].Value.ToString());
+
+            FrmDataJugadores frmjugador = new FrmDataJugadores();
+            this.Controls.Clear();
+            frmjugador.TopLevel = false;
+            frmjugador.FormBorderStyle = FormBorderStyle.None;
+            frmjugador.Dock = DockStyle.Fill;
+            this.Controls.Add(frmjugador);
+            frmjugador.Show();
         }
     }
 }

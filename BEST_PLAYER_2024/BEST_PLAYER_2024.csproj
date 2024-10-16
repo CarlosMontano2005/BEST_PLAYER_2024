@@ -61,6 +61,18 @@
     <Compile Include="FrmDataJugadores.Designer.cs">
       <DependentUpon>FrmDataJugadores.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmFormularioDetalleJugador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFormularioDetalleJugador.Designer.cs">
+      <DependentUpon>FrmFormularioDetalleJugador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFormularioJugadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFormularioJugadores.Designer.cs">
+      <DependentUpon>FrmFormularioJugadores.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInfoEquipo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +176,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDataJugadores.resx">
       <DependentUpon>FrmDataJugadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFormularioDetalleJugador.resx">
+      <DependentUpon>FrmFormularioDetalleJugador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFormularioJugadores.resx">
+      <DependentUpon>FrmFormularioJugadores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInfoEquipo.resx">
       <DependentUpon>FrmInfoEquipo.cs</DependentUpon>
@@ -403,6 +421,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Anderson.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shirt.jpeg" />
+    <None Include="Resources\targeta-fifa-plantila.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\targeta-fifa-plantila-tamallo-124x200.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

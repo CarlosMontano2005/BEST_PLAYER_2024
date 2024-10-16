@@ -473,6 +473,16 @@ namespace BEST_PLAYER_2024.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Shirt {
+            get {
+                object obj = ResourceManager.GetObject("Shirt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SL_030822_49070_19 {
             get {
                 object obj = ResourceManager.GetObject("SL-030822-49070-19", resourceCulture);
@@ -496,6 +506,26 @@ namespace BEST_PLAYER_2024.Properties {
         internal static System.Drawing.Bitmap star_fill_green {
             get {
                 object obj = ResourceManager.GetObject("star_fill_green", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap targeta_fifa_plantila {
+            get {
+                object obj = ResourceManager.GetObject("targeta-fifa-plantila", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap targeta_fifa_plantila_tamallo_124x200 {
+            get {
+                object obj = ResourceManager.GetObject("targeta-fifa-plantila-tamallo-124x200", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

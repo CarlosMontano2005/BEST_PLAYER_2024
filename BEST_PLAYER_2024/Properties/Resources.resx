@@ -121,6 +121,9 @@
   <data name="Kaka" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Kaka.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="person-fill" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\person-fill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Cristiano-Ronaldo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cristiano-Ronaldo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -163,8 +166,8 @@
   <data name="tarjeta-amarilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tarjeta-amarilla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="person_bounding_box_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\person-bounding-box-green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Anderson" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Anderson.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Kat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Kat.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,8 +241,8 @@
   <data name="globe-americas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\globe-americas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="person-fill" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\person-fill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="person_bounding_box_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\person-bounding-box-green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gear_fill_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gear-fill-green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -277,7 +280,13 @@
   <data name="default" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Anderson" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Anderson.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Shirt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Shirt.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+   </data>
+  <data name="targeta-fifa-plantila" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\targeta-fifa-plantila.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="targeta-fifa-plantila-tamallo-124x200" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\targeta-fifa-plantila-tamallo-124x200.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

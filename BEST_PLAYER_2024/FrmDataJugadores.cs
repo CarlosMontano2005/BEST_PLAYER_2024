@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using Servicios;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
+using Controlador;
 using System.Windows.Forms;
 
 namespace BEST_PLAYER_2024
@@ -15,6 +18,7 @@ namespace BEST_PLAYER_2024
         public FrmDataJugadores()
         {
             InitializeComponent();
+            CargarForm(CtrJugador._idJugador);
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -81,6 +85,96 @@ namespace BEST_PLAYER_2024
             {
                 return;
             }
+        }
+        private int id;
+        void CargarForm(int id)
+        {
+            try
+            {
+                DataTable datos = ServJugador.cargarDatos(id);
+                if (datos.Rows.Count > 0) {
+                    DataRow row = datos.Rows[0];
+                    lblAsistencias.Text = row["Asistencias"].ToString();
+                    lblDescripcion.Text = row["DescripcionJugador"].ToString();
+                    lblGoles.Text = row["Goles"].ToString();
+                    txtTAmarilla.Text = row["TargetasAmarillas"].ToString();
+                    txtTRoja.Text = row["TargetasRojas"].ToString();
+                    lblNacional.Text = row["Nacionalidad"].ToString();
+                    lblNCamisa.Text = row["NumeroCamisa"].ToString();
+                    lblNombreJugador.Text = row["Nombre"].ToString()+" "+row["Apellido"].ToString();
+                    lblPosicion.Text = row["Posicion"].ToString();
+                    lblPJugados.Text = row["PartidosJugados"].ToString();
+                    if (lblPosicion.Text.Equals("Centrocampista")) lblPosicion.BackColor = Color.FromArgb(226, 127, 43);
+                    else if (lblPosicion.Text.Equals("Portero")) lblPosicion.BackColor = Color.FromArgb(61, 76, 165);
+                    else if (lblPosicion.Text.Equals("Delantero")) {
+                        lblPosicion.ForeColor = Color.Black;
+                        lblPosicion.BackColor = Color.FromArgb(233, 229, 22);
+                    }
+                    if (row["Foto"] != DBNull.Value)
+                    {
+                        byte[] imageBytes = (byte[])row["Foto"];
+                        using (MemoryStream ms = new MemoryStream(imageBytes))
+                        {
+                            Bitmap bm = new Bitmap(ms);
+                            PtDataJ.Image = bm;
+                        }
+                    }
+                    else
+                    {
+                        PtDataJ.Image = null;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar los datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult result = MessageBox.Show("¿ELiminar el jugador?","Confirmar",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    /*CtrJugador jugador = new CtrJugador();
+                    jugador.IdJugador = CtrJugador._idJugador;*/
+                    string message;
+                    bool isSuccess = ServJugador.EliminarJugador(out message);
+                    if (isSuccess)
+                    {
+                        MessageBox.Show("Informacion completa");
+                        FrmTablaJugadores frmtablaj = new FrmTablaJugadores();
+                        this.Controls.Clear();
+                        frmtablaj.TopLevel = false;
+                        frmtablaj.FormBorderStyle = FormBorderStyle.None;
+                        frmtablaj.Dock = DockStyle.Fill;
+                        this.Controls.Add(frmtablaj);
+                        frmtablaj.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show(message, " Error al registrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void BtnActualizar_Click(object sender, EventArgs e)
+        {
+            FrmFormularioJugadores frmjugador = new FrmFormularioJugadores(0);
+            frmjugador.Show();
         }
     }
 }
