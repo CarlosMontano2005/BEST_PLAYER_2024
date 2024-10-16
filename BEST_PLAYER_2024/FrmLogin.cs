@@ -1,11 +1,19 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using Controlador;
+using Servicios;
 
 namespace BEST_PLAYER_2024.Resources
 {
     public partial class FrmLogin : Form
     {
+
+        public void guardarDatosLogin() {
+
+
+
+        }
         // Declarar variables para el movimiento del formulario
         private bool isDragging = false;
         private Point lastCursor;
@@ -25,17 +33,6 @@ namespace BEST_PLAYER_2024.Resources
             Application.Exit();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            // Crear una instancia de FrmDashboard
-            FrmDashboard frmDashboard = new FrmDashboard();
-
-            // Mostrar FrmDashboard
-            frmDashboard.Show();
-
-            // Ocultar el formulario actual
-            this.Hide();
-        }
 
         private void FrmLogin_MouseDown(object sender, MouseEventArgs e)
         {
@@ -72,6 +69,59 @@ namespace BEST_PLAYER_2024.Resources
             FrmCrearCuentaUsuario frmCrearCuenta = new FrmCrearCuentaUsuario();
             frmCrearCuenta.Show();
             this.Hide();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Crear una instancia usando el constructor vacío
+                CtrLogin ctrLogin = new CtrLogin();
+                ctrLogin.Correo = TxtCorreo.Texts;
+                ctrLogin.Clave = TxtClave.Texts;
+
+
+                string message;
+                bool isSuccess = ServLogin.LoginUsuario(ctrLogin, out message);
+                if (isSuccess)
+                {
+                    MessageBox.Show("Inicio de sesion con exito");
+                    // Crear una instancia de FrmDashboard
+                    FrmDashboard frmDashboard = new FrmDashboard();
+
+                    // Mostrar FrmDashboard
+                    frmDashboard.Show();
+
+                    // Ocultar el formulario actual
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show(message, " Error de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejo de excepciones general
+                MessageBox.Show($"Se produjo un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+            
+        }
+
+
+        private void ChBxVerClave_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ChBxVerClave.Checked)
+            {
+                TxtClave.PasswordChar = false; //ver contraseña
+            }
+            else
+            {
+                TxtClave.PasswordChar = true; //Ocultar contraseña
+
+            }
         }
     }
 }
