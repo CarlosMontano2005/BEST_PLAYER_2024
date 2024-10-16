@@ -49,5 +49,41 @@ namespace Servicios
                 return false;
             }
         }
+
+        public static bool ActualizarJugador(CtrJugador jugador ,out string message) {
+            try
+            {
+                return ModeloJugador.ActualizarJugador(
+                    jugador.IdJugador,
+                    jugador.NombreJugador,
+                    jugador.ApellidoJugador,
+                    jugador.DescripcionJugador,
+                    jugador.IdEquipo,
+                    jugador.IdPais,
+                    jugador.FechaNacimiento,
+                    jugador.Altura,
+                    jugador.Foto,
+                    out message);
+            }
+            catch (Exception ex)
+            {
+                message = $"Error al registrar el jugador: {ex.Message}";
+                return false;
+            }
+        }
+
+        public static bool EliminarJugador(out string message) {
+            try
+            {
+                return ModeloJugador.EliminarJugador(
+                    CtrJugador._idJugador,
+                    out message);
+            }
+            catch (Exception ex)
+            {
+                message = $"Error al registrar el jugador: {ex.Message}";
+                return false;
+            }
+        }
     }
 }

@@ -60,7 +60,13 @@ namespace BEST_PLAYER_2024
             else MessageBox.Show("El formulario ya esta abierto","Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
             
         }
-        void CargarGridDatos()
+        public void ActualizarTabla()
+        {
+            // Aquí va tu lógica para recargar los datos de la tabla
+            DgvJugador.DataSource = null;
+            DgvJugador.DataSource = ServJugador.CargarJugadores(); // O el método que uses para cargar datos
+        }
+        public void CargarGridDatos()
         {
             try
             {

@@ -473,6 +473,16 @@ namespace BEST_PLAYER_2024.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Shirt {
+            get {
+                object obj = ResourceManager.GetObject("Shirt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SL_030822_49070_19 {
             get {
                 object obj = ResourceManager.GetObject("SL-030822-49070-19", resourceCulture);
