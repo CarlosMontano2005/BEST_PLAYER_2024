@@ -11,6 +11,13 @@ namespace Controlador
 {
     public class CtrLogin
     {
+        public static class SesionUsuario
+        {
+            public static int IdUsuario { get; set; }
+            public static string NombreUsuario { get; set; }
+            public static string NivelUsuario { get; set; }
+        }
+
         private string _nombreUsuario;
         public string NombreUsuario
         {

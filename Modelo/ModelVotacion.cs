@@ -1,4 +1,5 @@
 ﻿using Configuracion;
+using Controlador;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -18,7 +19,7 @@ namespace Modelo
             DataTable data = new DataTable();
             try
             {
-                string query = "SELECT TOP 10 J.IdJugador, CONCAT(J.Nombre,' ',J.Apellido)AS nomJugador,E.Nombre " +
+                string query = "SELECT TOP 10 J.IdJugador, CONCAT(J.Nombre,' ',J.Apellido)AS nomJugador,E.Nombre, J.Foto " +
                     "  FROM Jugadores J " +
                     " INNER JOIN Equipos E ON J.IdEquipo = E.IdEquipo " +
                     " ORDER BY NEWID();";
@@ -47,7 +48,7 @@ namespace Modelo
             DataTable data = new DataTable();
             try
             {
-                string query = "SELECT TOP 10 J.IdJugador, CONCAT(J.Nombre,' ',J.Apellido)AS nomJugador,E.Nombre " +
+                string query = "SELECT TOP 10 J.IdJugador, CONCAT(J.Nombre,' ',J.Apellido)AS nomJugador,E.Nombre, J.Foto  " +
                     "  FROM Jugadores J "+
                     " INNER JOIN Equipos E ON J.IdEquipo = E.IdEquipo  "+
                     " WHERE E.Nombre = @NombreEquipo "+
@@ -72,7 +73,7 @@ namespace Modelo
             return data;
         }
 
-        public static DataTable VerificarVotoUsuario(out string message, int IdUsuario)
+        public static DataTable VerificarVotoUsuario(out string message)
         {
             DatabaseConnection dbConnection = new DatabaseConnection();
             DataTable data = new DataTable();
@@ -88,7 +89,7 @@ namespace Modelo
                 using (SqlCommand cmdselect = new SqlCommand(query, connection))
                 using (SqlDataAdapter adp = new SqlDataAdapter(cmdselect))
                 {
-                    cmdselect.Parameters.AddWithValue("@idUsuario", IdUsuario);
+                    cmdselect.Parameters.AddWithValue("@idUsuario", SesionUsuario.IdUsuario);
                     connection.Open();
                     adp.Fill(data);
                 }
@@ -102,7 +103,7 @@ namespace Modelo
             return data;
         }
 
-        public static bool InsertarVoto(int idUsuario, int idJugadore, string fechaHoraVoto, out string message)
+        public static bool InsertarVoto(int idJugadore, string fechaHoraVoto, out string message)
         {
 
             DatabaseConnection dbConnection = new DatabaseConnection();
@@ -113,7 +114,7 @@ namespace Modelo
                 using (SqlConnection connection = dbConnection.GetConnection())
                 using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
-                    cmd.Parameters.AddWithValue("@IdUsuario", idUsuario);
+                    cmd.Parameters.AddWithValue("@IdUsuario", SesionUsuario.IdUsuario);
                     cmd.Parameters.AddWithValue("@IdJugador", idJugadore);
                     cmd.Parameters.AddWithValue("@FechaHoraVoto", fechaHoraVoto);
                     connection.Open();

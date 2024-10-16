@@ -24,8 +24,8 @@ namespace Servicios
             return datos;
         }
         //Verificar Voto del usuario para ver si ya voto
-        public static DataTable VerificarUsuarioVoto(int IdUsuario) {
-            DataTable datos = ModelVotacion.VerificarVotoUsuario(out string message, IdUsuario);
+        public static DataTable VerificarUsuarioVoto() {
+            DataTable datos = ModelVotacion.VerificarVotoUsuario(out string message);
             return datos;
         }
         // Insertar Voto del Usuario
@@ -37,7 +37,6 @@ namespace Servicios
                 //crtVotacion.FechaHoraVoto = Convert.ToString(DateTime.Now);
                 // Enviar los datos del usuario, jugador y la fecha y hora de hoy
                 return ModelVotacion.InsertarVoto(
-                    crtVotacion.IdUsuario,  // Cuando ya se tenga el login igualar al usuario con el usuario que se logeo
                     crtVotacion.IdJugadore,
                     crtVotacion.FechaHoraVoto = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff")),
                      out message
