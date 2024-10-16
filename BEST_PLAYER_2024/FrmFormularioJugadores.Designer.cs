@@ -327,7 +327,7 @@
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(166, 40);
             this.BtnGuardar.TabIndex = 18;
-            this.BtnGuardar.Text = "Guardar";
+            this.BtnGuardar.Text = "Siguiente";
             this.BtnGuardar.TextColor = System.Drawing.Color.White;
             this.BtnGuardar.UseVisualStyleBackColor = false;
             this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);

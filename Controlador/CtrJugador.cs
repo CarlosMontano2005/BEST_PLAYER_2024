@@ -72,7 +72,7 @@ namespace Controlador
             get { return descripcionjugador; }
             set
             {
-                if (Validaciones.ValidateString(value, 2, 400, out string errorMessage))
+                if (Validaciones.ValidateString(value, 2, 8000, out string errorMessage))
                 {
                     descripcionjugador = value;
                 }
@@ -163,6 +163,5 @@ namespace Controlador
 
             }
         }
-
     }
 }

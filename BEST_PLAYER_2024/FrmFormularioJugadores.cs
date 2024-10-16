@@ -18,12 +18,42 @@ namespace BEST_PLAYER_2024
     public partial class FrmFormularioJugadores : Form
     {
         private int codigo_accion;
+        private int id_jugador;
         public FrmFormularioJugadores(int codigo)
         {
             InitializeComponent();
             codigo_accion = codigo;
             LlenarEquipo();
             LlenarNacionalida();
+            if (codigo == 0)
+            {
+                DataTable datos = ServJugador.cargarDatos(CtrJugador._idJugador);
+                DataRow row = datos.Rows[0];
+                TxtNombre.Texts = row["Nombre"].ToString();
+                TxtApellido.Texts = row["Apellido"].ToString();
+                id_jugador = Convert.ToInt32(row["IdJugador"].ToString());
+                TxtAltura.Texts = row["Altura"].ToString();
+                DtNacimiento.Text = row["Edad"].ToString();
+                TxtDescripcion.Texts = row["DescripcionJugador"].ToString();
+                CmbEquipo.Texts = row["Equipo"].ToString();
+                CmbNacionalidad.Texts = row["Nacionalidad"].ToString();
+                CmbEquipoO.Text= row["Equipo"].ToString();
+                CmbNacionalidadO.Text = row["Nacionalidad"].ToString();
+                CmbEquipoO.Visible = false;
+                CmbNacionalidadO.Visible = false;
+                if (row["Foto"]!=DBNull.Value) {
+                    byte[] imageBytes = (byte[])row["Foto"];
+                    using (MemoryStream ms = new MemoryStream(imageBytes))
+                    {
+                        Bitmap bm = new Bitmap(ms);
+                        PtJugador.Image = bm;
+                    }
+                }
+                else
+                {
+                    PtJugador.Image = null;
+                }
+            }
         }
 
         private void BtnClose_Click(object sender, EventArgs e)
@@ -52,7 +82,7 @@ namespace BEST_PLAYER_2024
                 // Asigna el DataTable al ComboBox de la libreria
                 CmbEquipo.DataSource = equipos;
                 CmbEquipo.DisplayMember = "Nombre";
-                CmbEquipo.ValueMember = "IdEquipo";
+                CmbEquipo.ValueMember = "Nombre";
                 CmbEquipo.SelectedIndex = 0;
                 //Asignamos el DataTable al ComboBox normal, para hacer un tipo de efecto espejo
                 CmbEquipoO.DataSource = equipos;
@@ -99,7 +129,7 @@ namespace BEST_PLAYER_2024
                 try
                 {
                     CtrJugador ctrJugador = new CtrJugador();
-
+                    //ctrJugador.IdJugador = id_jugador;
                     ctrJugador.NombreJugador = TxtNombre.Texts;
                     ctrJugador.ApellidoJugador = TxtApellido.Texts;
                     ctrJugador.DescripcionJugador = TxtDescripcion.Texts;
@@ -108,14 +138,19 @@ namespace BEST_PLAYER_2024
                     ctrJugador.FechaNacimiento = DtNacimiento.Text;
                     ctrJugador.Altura = float.Parse(TxtAltura.Texts);
                     //Aun no funciona con la imagen, da un pequeño problema
-                        //ctrJugador.Foto = imageBytes;
-                    
+                    if (imageBytes != null)
+                    {
+                        ctrJugador.Foto = imageBytes;
+                    }
+
                     string message;
                     bool isSuccess = ServJugador.RegistrarJugador(ctrJugador, out message);
-
                     if (isSuccess)
                     {
-                        MessageBox.Show("Jugador registrado exitosamente.");
+                        MessageBox.Show("Jugador ingresado exitosamente.");
+                        FrmFormularioDetalleJugador frmdetalle = new FrmFormularioDetalleJugador(TxtNombre.Texts,TxtApellido.Texts);
+                        frmdetalle.Show();
+                        this.Close();
                     }
                     else
                     {
@@ -126,10 +161,44 @@ namespace BEST_PLAYER_2024
                     MessageBox.Show(ex.ToString());
                 }
 
-
             }
             else if (codigo_accion == 0) {
+                try
+                {
+                    int id=id_jugador;
+                    CtrJugador ctrJugador = new CtrJugador();
+                    ctrJugador.IdJugador = id_jugador;
+                    ctrJugador.NombreJugador = TxtNombre.Texts;
+                    ctrJugador.ApellidoJugador = TxtApellido.Texts;
+                    ctrJugador.DescripcionJugador = TxtDescripcion.Texts;
+                    ctrJugador.IdEquipo = Convert.ToInt32(CmbEquipoO.SelectedValue);
+                    ctrJugador.IdPais = Convert.ToInt32(CmbNacionalidadO.SelectedValue);
+                    ctrJugador.FechaNacimiento = DtNacimiento.Text;
+                    ctrJugador.Altura = float.Parse(TxtAltura.Texts);
+                    //Aun no funciona con la imagen, da un pequeño problema
+                    if (imageBytes != null)
+                    {
+                        ctrJugador.Foto = imageBytes;
+                    }
 
+                    string message;
+                    bool isSuccess = ServJugador.ActualizarJugador(ctrJugador, out message);
+                    FrmFormularioDetalleJugador frmdetalle = new FrmFormularioDetalleJugador(id);
+                    if (isSuccess)
+                    {
+                        MessageBox.Show("Jugador Actualizado exitosamente.");
+                        frmdetalle.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show(message, " Error al Actualizar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
             }
         }
         public byte[] imageBytes;
@@ -151,7 +220,7 @@ namespace BEST_PLAYER_2024
                     {
                         using (var img = Image.FromStream(stream))
                         {
-                            if (img.Width > 250 || img.Height > 250)
+                            if (img.Width > 500 || img.Height > 500)
                             {
                                 MessageBox.Show("La imagen es demasiado grande. Las dimensiones máximas permitidas son 250x250 píxeles.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 return;
