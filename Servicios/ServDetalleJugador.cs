@@ -33,9 +33,35 @@ namespace Servicios
                 return false;
             }
         }
+        public static bool ActualizarDetalle(CtrDetalleJugador detallejugador, out string message) {
+            try
+            {
+                return ModeloDetalleJugador.ActualizarDetalleJugador(
+                    detallejugador.idDetalle,
+                    detallejugador.IdJugador,
+                    detallejugador.Posicion,
+                    detallejugador.NumeroCamisa,
+                    detallejugador.PartidosJugados,
+                    detallejugador.Goles,
+                    detallejugador.PorcentajeGoles,
+                    detallejugador.Aistencias,
+                    detallejugador.TarjetasAmarrilas,
+                    detallejugador.TarjetasRojas,
+                    out message);
+            }
+            catch (Exception ex)
+            {
+                message = $"Error al actualizar el jugador: {ex.Message}";
+                return false;
+            }
+        }
         public static DataTable searchId(string nombre,string apellido) {
             DataTable dato = ModeloDetalleJugador.searchIdJugador(out string message, nombre,apellido);
             return dato;
+        }
+        public static DataTable buscarDetalle(int id) {
+            DataTable datos = ModeloDetalleJugador.buscarDetalle(out string message, id);
+            return datos;
         }
     }
 }

@@ -100,7 +100,7 @@ namespace BEST_PLAYER_2024
                     txtTRoja.Text = row["TargetasRojas"].ToString();
                     lblNacional.Text = row["Nacionalidad"].ToString();
                     lblNCamisa.Text = row["NumeroCamisa"].ToString();
-                    lblNombreJugador.Text = row["NombreJugador"].ToString();
+                    lblNombreJugador.Text = row["Nombre"].ToString()+" "+row["Apellido"].ToString();
                     lblPosicion.Text = row["Posicion"].ToString();
                     lblPJugados.Text = row["PartidosJugados"].ToString();
                     if (lblPosicion.Text.Equals("Centrocampista")) lblPosicion.BackColor = Color.FromArgb(226, 127, 43);
@@ -155,6 +155,12 @@ namespace BEST_PLAYER_2024
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void BtnActualizar_Click(object sender, EventArgs e)
+        {
+            FrmFormularioJugadores frmjugador = new FrmFormularioJugadores(0);
+            frmjugador.Show();
         }
     }
 }

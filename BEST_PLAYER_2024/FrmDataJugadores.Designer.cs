@@ -236,6 +236,7 @@
             this.BtnActualizar.Text = "Actualizar";
             this.BtnActualizar.TextColor = System.Drawing.SystemColors.ControlText;
             this.BtnActualizar.UseVisualStyleBackColor = false;
+            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
             // label2
             // 

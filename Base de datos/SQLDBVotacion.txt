@@ -33,7 +33,7 @@ CREATE TABLE Equipos (
     IdPais INT NOT NULL,
     CantidadJugadores INT NOT NULL DEFAULT(0),
     NombreDirectorTecnico VARCHAR(50) NOT NULL,
-    Foto_DT VARCHAR(200) NULL,
+    Foto_DT VARBINARY(MAX) NULL,
     FotoLogoEquipo VARCHAR(200) NULL,
     CONSTRAINT FK_Pais FOREIGN KEY (IdPais) REFERENCES Paises(IdPais)
 );
@@ -46,7 +46,7 @@ CREATE TABLE Usuarios (
     Correo VARCHAR(50) NOT NULL CHECK (Correo LIKE '%@%.%'),  -- Validación básica del formato del correo
     FechaNacimiento DATE NOT NULL CHECK (DATEDIFF(YEAR, FechaNacimiento, GETDATE()) >= 18),  -- Mayor de edad
     Clave VARCHAR(100) NOT NULL CHECK (LEN(Clave) >= 8),  -- Al menos 8 caracteres
-    Foto VARCHAR(200) NULL,
+    Foto VARBINARY(MAX) NULL,
     Pasaporte VARCHAR(20) NOT NULL CHECK (Pasaporte LIKE '[A-Za-z0-9]%'),  -- Asegura caracteres alfanuméricos en el pasaporte
     Nivel_Usuario VARCHAR(20) NOT NULL CHECK (Nivel_Usuario IN ('Administrador', 'Comentarista')),  -- Restricción de niveles válidos
     IdAgencia INT NOT NULL,
@@ -64,7 +64,7 @@ CREATE TABLE Jugadores (
     IdPais INT NOT NULL,
     Edad DATE NOT NULL CHECK (DATEDIFF(YEAR, Edad, GETDATE()) >= 0),  -- Verifica que la edad sea una fecha válida
     Altura FLOAT NOT NULL CHECK (Altura > 0),  -- Usa FLOAT en lugar de DOUBLE
-    Foto VARCHAR(200) NULL,
+    Foto VARBINARY(MAX) NULL,
     CONSTRAINT FK_Equipo FOREIGN KEY (IdEquipo) REFERENCES Equipos(IdEquipo),
     CONSTRAINT FK_Pais_Jugador FOREIGN KEY (IdPais) REFERENCES Paises(IdPais)
 );

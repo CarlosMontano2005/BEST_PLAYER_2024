@@ -56,7 +56,7 @@
             this.label1.Location = new System.Drawing.Point(332, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(348, 39);
+            this.label1.Size = new System.Drawing.Size(334, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "Detalles del Jugador";
             // 
@@ -68,7 +68,7 @@
             this.TxtPosicion.BorderRadius = 0;
             this.TxtPosicion.BorderSize = 2;
             this.TxtPosicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPosicion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TxtPosicion.ForeColor = System.Drawing.Color.White;
             this.TxtPosicion.Location = new System.Drawing.Point(56, 154);
             this.TxtPosicion.Margin = new System.Windows.Forms.Padding(4);
             this.TxtPosicion.Multiline = false;
@@ -122,7 +122,7 @@
             this.TxtNumCamisa.BorderRadius = 0;
             this.TxtNumCamisa.BorderSize = 2;
             this.TxtNumCamisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNumCamisa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TxtNumCamisa.ForeColor = System.Drawing.Color.White;
             this.TxtNumCamisa.Location = new System.Drawing.Point(367, 154);
             this.TxtNumCamisa.Margin = new System.Windows.Forms.Padding(4);
             this.TxtNumCamisa.Multiline = false;
@@ -155,7 +155,7 @@
             this.TxtPartidos.BorderRadius = 0;
             this.TxtPartidos.BorderSize = 2;
             this.TxtPartidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPartidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TxtPartidos.ForeColor = System.Drawing.Color.White;
             this.TxtPartidos.Location = new System.Drawing.Point(56, 260);
             this.TxtPartidos.Margin = new System.Windows.Forms.Padding(4);
             this.TxtPartidos.Multiline = false;
@@ -188,7 +188,7 @@
             this.TxtGoles.BorderRadius = 0;
             this.TxtGoles.BorderSize = 2;
             this.TxtGoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtGoles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TxtGoles.ForeColor = System.Drawing.Color.White;
             this.TxtGoles.Location = new System.Drawing.Point(367, 260);
             this.TxtGoles.Margin = new System.Windows.Forms.Padding(4);
             this.TxtGoles.Multiline = false;
@@ -221,7 +221,7 @@
             this.TxtAmarillas.BorderRadius = 0;
             this.TxtAmarillas.BorderSize = 2;
             this.TxtAmarillas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtAmarillas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TxtAmarillas.ForeColor = System.Drawing.Color.White;
             this.TxtAmarillas.Location = new System.Drawing.Point(56, 362);
             this.TxtAmarillas.Margin = new System.Windows.Forms.Padding(4);
             this.TxtAmarillas.Multiline = false;
@@ -254,7 +254,7 @@
             this.TxtRojas.BorderRadius = 0;
             this.TxtRojas.BorderSize = 2;
             this.TxtRojas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtRojas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TxtRojas.ForeColor = System.Drawing.Color.White;
             this.TxtRojas.Location = new System.Drawing.Point(56, 460);
             this.TxtRojas.Margin = new System.Windows.Forms.Padding(4);
             this.TxtRojas.Multiline = false;
@@ -306,7 +306,7 @@
             this.txtAsistencia.BorderRadius = 0;
             this.txtAsistencia.BorderSize = 2;
             this.txtAsistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAsistencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtAsistencia.ForeColor = System.Drawing.Color.White;
             this.txtAsistencia.Location = new System.Drawing.Point(367, 362);
             this.txtAsistencia.Margin = new System.Windows.Forms.Padding(4);
             this.txtAsistencia.Multiline = false;
@@ -345,7 +345,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmFormularioDetalleJugador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detalles Jugador";
