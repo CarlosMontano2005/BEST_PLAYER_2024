@@ -14,5 +14,11 @@ namespace Servicios
             DataTable datos = ModelTopJugadores.CargarTop5Jugadore(out string mensage);
             return datos;
         }
+
+        public static DataTable CargarJugadoresVotados()
+        {
+            DataTable datos = ModelTopJugadores.CargarJugadoresVotadosLista(out string mensage);
+            return datos;
+        }
     }
 }
