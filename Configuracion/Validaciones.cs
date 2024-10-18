@@ -6,7 +6,6 @@ using System.Security.Cryptography;
 using System.Globalization;
 using System.IO;
 using System.Drawing;
-using System.IO;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace Configuracion

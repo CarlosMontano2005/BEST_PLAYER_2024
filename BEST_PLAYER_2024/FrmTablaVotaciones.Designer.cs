@@ -28,19 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DgvVotaciones = new System.Windows.Forms.DataGridView();
-            this.ColTop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColEquipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColVotos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BtnRegresar = new System.Windows.Forms.Label();
             this.BtnDescargar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnBuscar = new System.Windows.Forms.Button();
             this.rjTextBox1 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.BtnGrafica = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvVotaciones)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,66 +48,37 @@
             this.DgvVotaciones.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.DgvVotaciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DgvVotaciones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvVotaciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvVotaciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DgvVotaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvVotaciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColTop,
-            this.ColNombre,
-            this.ColEquipo,
-            this.ColVotos});
             this.DgvVotaciones.EnableHeadersVisualStyles = false;
             this.DgvVotaciones.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(62)))));
             this.DgvVotaciones.Location = new System.Drawing.Point(24, 135);
             this.DgvVotaciones.Margin = new System.Windows.Forms.Padding(8);
             this.DgvVotaciones.Name = "DgvVotaciones";
             this.DgvVotaciones.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvVotaciones.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.DgvVotaciones.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvVotaciones.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.DgvVotaciones.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.DgvVotaciones.Size = new System.Drawing.Size(831, 489);
             this.DgvVotaciones.TabIndex = 37;
-            // 
-            // ColTop
-            // 
-            this.ColTop.FillWeight = 18.27411F;
-            this.ColTop.HeaderText = "Top";
-            this.ColTop.Name = "ColTop";
-            // 
-            // ColNombre
-            // 
-            this.ColNombre.FillWeight = 18.27411F;
-            this.ColNombre.HeaderText = "Nombre";
-            this.ColNombre.Name = "ColNombre";
-            // 
-            // ColEquipo
-            // 
-            this.ColEquipo.FillWeight = 18.27411F;
-            this.ColEquipo.HeaderText = "Equipo";
-            this.ColEquipo.Name = "ColEquipo";
-            // 
-            // ColVotos
-            // 
-            this.ColVotos.FillWeight = 18.27411F;
-            this.ColVotos.HeaderText = "Votos";
-            this.ColVotos.Name = "ColVotos";
             // 
             // BtnRegresar
             // 
@@ -138,6 +106,7 @@
             this.BtnDescargar.TabIndex = 42;
             this.BtnDescargar.Text = "Descargar tabla";
             this.BtnDescargar.UseVisualStyleBackColor = false;
+            this.BtnDescargar.Click += new System.EventHandler(this.BtnDescargar_Click);
             // 
             // label1
             // 
@@ -185,12 +154,29 @@
             this.rjTextBox1.Texts = "";
             this.rjTextBox1.UnderlinedStyle = true;
             // 
+            // BtnGrafica
+            // 
+            this.BtnGrafica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.BtnGrafica.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnGrafica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGrafica.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGrafica.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
+            this.BtnGrafica.Location = new System.Drawing.Point(24, 86);
+            this.BtnGrafica.Margin = new System.Windows.Forms.Padding(5);
+            this.BtnGrafica.Name = "BtnGrafica";
+            this.BtnGrafica.Size = new System.Drawing.Size(173, 36);
+            this.BtnGrafica.TabIndex = 46;
+            this.BtnGrafica.Text = "Descargar Grafica";
+            this.BtnGrafica.UseVisualStyleBackColor = false;
+            this.BtnGrafica.Click += new System.EventHandler(this.BtnGrafica_Click);
+            // 
             // FrmTablaVotaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.ClientSize = new System.Drawing.Size(888, 650);
+            this.Controls.Add(this.BtnGrafica);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnBuscar);
             this.Controls.Add(this.rjTextBox1);
@@ -202,6 +188,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmTablaVotaciones";
             this.Text = "FrmTablaVotaciones";
+            this.Load += new System.EventHandler(this.FrmTablaVotaciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvVotaciones)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -213,12 +200,9 @@
         private System.Windows.Forms.DataGridView DgvVotaciones;
         private System.Windows.Forms.Label BtnRegresar;
         private System.Windows.Forms.Button BtnDescargar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColTop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColEquipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColVotos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnBuscar;
         private RJCodeAdvance.RJControls.RJTextBox rjTextBox1;
+        private System.Windows.Forms.Button BtnGrafica;
     }
 }
