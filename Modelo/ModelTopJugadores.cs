@@ -46,5 +46,41 @@ namespace Modelo
             mensage = null;
             return data;
         }
+        public static DataTable CargarJugadoresVotadosLista(out string mensage)
+        {
+            DatabaseConnection dbConection = new DatabaseConnection();
+            DataTable data = new DataTable();
+            try
+            {
+                string query = "SELECT COUNT(A.IdJugador) AS cantidadVotos, " +
+                "B.Nombre, " +
+                "B.Apellido, " +
+                "B.Foto, " +
+                "D.Nombre AS NombreEquipo, " +
+                "C.Nombre AS NombrePais " +
+                "FROM Votacion A " +
+                "JOIN Jugadores B ON A.IdJugador = B.IdJugador " +
+                "JOIN Paises C ON B.IdPais = C.IdPais " +
+                "JOIN Equipos D ON D.IdEquipo = B.IdEquipo " +
+                "GROUP BY B.Nombre, B.Apellido, B.IdEquipo, D.Nombre, C.Nombre, B.Foto " +
+                "ORDER BY cantidadVotos DESC, NombreEquipo ASC;";
+
+                using (SqlConnection connection = dbConection.GetConnection())
+                using (SqlCommand cmdslect = new SqlCommand(query, connection))
+                using (SqlDataAdapter adapter = new SqlDataAdapter(cmdslect))
+                {
+                    connection.Open();
+                    adapter.Fill(data);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                mensage = $"Error al cargar los datos de Top Votaciones {ex.Message}";
+                data = null;
+            }
+            mensage = null;
+            return data;
+        }
     }
 }

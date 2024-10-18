@@ -1,16 +1,11 @@
 ﻿using Controlador;
 using Servicios;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BEST_PLAYER_2024
@@ -193,7 +188,7 @@ namespace BEST_PLAYER_2024
                 ctrUsuario.NombreUsuario = TxtNombreUsuario.Texts;
                 ctrUsuario.Correo = TxtCorreo.Texts;
                 ctrUsuario.Clave = TxtClave.Texts;
-                ctrUsuario.FechaNacimiento = dtNacimiento.Value.ToString("yyyy-MM-dd"); 
+                ctrUsuario.FechaNacimiento = dtNacimiento.Value.ToString("yyyy-MM-dd");
                 ctrUsuario.Pasaporte = TxtPasaporte.Texts;
                 //ctrUsuario.IdAgencia = Convert.ToInt32(CmbAgencias.SelectedValue);
                 ctrUsuario.IdAgencia = Convert.ToInt32(cmbBoxOrigianl.SelectedValue);
@@ -201,7 +196,7 @@ namespace BEST_PLAYER_2024
                 //ctrUsuario.IdAgencia = Convert.ToInt32(CmbAgencias.SelectedValue);
                 //ctrUsuario.IdAgencia = Convert.ToInt32(CmbAgencias.SelectedItem);
                 ctrUsuario.NivelUsuario = CmbNiveles.SelectedItem.ToString();
-             
+
                 if (imageBytes != null)
                 {
                     ctrUsuario.Foto = imageBytes;
@@ -357,7 +352,7 @@ namespace BEST_PLAYER_2024
             //verificar si existe un id seleccionado  para eliminar verificando si hay espacion en blanco o esta vacia
             if (string.IsNullOrWhiteSpace(TxtId.Texts))
             {
-                MessageBox.Show("Seleccionar un usuario antes de eliminar","CAMPO VACIO",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Seleccionar un usuario antes de eliminar", "CAMPO VACIO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -379,20 +374,20 @@ namespace BEST_PLAYER_2024
                         {
                             MessageBox.Show("Usuario eliminado exitosamente.");
                             CargarGridDatos();
-                            
+
                         }
                         else
                         {
                             MessageBox.Show(message, " Error al eliminar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
-                    
-                 
+
+
                 }
                 catch (Exception ex)
                 {
 
-                    MessageBox.Show("Error al eliminar: "+ex, "ERROR DE ELIMINACION", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                    MessageBox.Show("Error al eliminar: " + ex, "ERROR DE ELIMINACION", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 }
             }
         }
@@ -455,6 +450,28 @@ namespace BEST_PLAYER_2024
             DataTable datosExportados = (DataTable)DgvUsuarios.DataSource;
             destino.CargarDatos(datosExportados);
             destino.Show();
+        }
+
+        private void BtnExel_Click(object sender, EventArgs e)
+        {
+            // Llamar al método para exportar y aplicar diseño
+            try
+            {
+                string mess;
+                ExcelUtilities excel = new ExcelUtilities();
+                excel.ExportDataGridViewToExcel(DgvUsuarios, "Tabla de Usuarios", out mess);
+                // Mostrar mensaje de éxito o error
+                MessageBox.Show(mess);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al exportar los datos: " + ex.Message);
+            }
+        }
+
+        private void BtnGrafica_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
