@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Controlador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -42,6 +43,22 @@ namespace BEST_PLAYER_2024
             else
             {
                 return;
+            }
+        }
+
+        private void BtnExel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string mess;
+                ExcelUtilities excel = new ExcelUtilities();
+                excel.ExportDataGridViewToExcel(DgvTabla, "Tabla de Equipo", out mess);
+                // Mostrar mensaje de éxito o error
+                MessageBox.Show(mess);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex, "ERROR ARCHIVO", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
         }
     }

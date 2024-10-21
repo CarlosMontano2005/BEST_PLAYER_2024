@@ -48,6 +48,27 @@ namespace BEST_PLAYER_2024
                 MessageBox.Show($"Error al cargar los datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void BtnExel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string mess;
+                ExcelUtilities excel = new ExcelUtilities();
+                excel.ExportDataGridViewToExcel(DgvAgencia, "Tabla de Agencias", out mess);
+                // Mostrar mensaje de éxito o error
+                MessageBox.Show(mess);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex, "ERROR ARCHIVO", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+        }
+
+        private void TxtBuscarEnGriw__TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
 

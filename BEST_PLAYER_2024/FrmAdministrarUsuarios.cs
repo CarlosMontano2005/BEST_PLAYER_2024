@@ -17,6 +17,7 @@ namespace BEST_PLAYER_2024
         {
             InitializeComponent();
             TxtId.Visible = false;
+            CmbAgencias.Visible = false;
         }
         private void FrmPrueba_Load(object sender, EventArgs e)
         {
@@ -465,7 +466,7 @@ namespace BEST_PLAYER_2024
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocurrió un error al exportar los datos: " + ex.Message);
+                MessageBox.Show("Error: " + ex, "ERROR ARCHIVO", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
         }
 

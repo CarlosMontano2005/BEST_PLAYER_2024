@@ -42,6 +42,7 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnExel = new RJCodeAdvance.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.DgvTabla)).BeginInit();
             this.SuspendLayout();
             // 
@@ -190,12 +191,34 @@
             this.Column6.HeaderText = "Foto DT";
             this.Column6.Name = "Column6";
             // 
+            // BtnExel
+            // 
+            this.BtnExel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(111)))), ((int)(((byte)(66)))));
+            this.BtnExel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(111)))), ((int)(((byte)(66)))));
+            this.BtnExel.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.BtnExel.BorderRadius = 0;
+            this.BtnExel.BorderSize = 0;
+            this.BtnExel.FlatAppearance.BorderSize = 0;
+            this.BtnExel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnExel.ForeColor = System.Drawing.Color.White;
+            this.BtnExel.Image = global::BEST_PLAYER_2024.Properties.Resources.icons8_ms_excel_24;
+            this.BtnExel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnExel.Location = new System.Drawing.Point(743, 77);
+            this.BtnExel.Name = "BtnExel";
+            this.BtnExel.Size = new System.Drawing.Size(115, 33);
+            this.BtnExel.TabIndex = 76;
+            this.BtnExel.Text = "Excel";
+            this.BtnExel.TextColor = System.Drawing.Color.White;
+            this.BtnExel.UseVisualStyleBackColor = false;
+            this.BtnExel.Click += new System.EventHandler(this.BtnExel_Click);
+            // 
             // FrmTablaEquipos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.ClientSize = new System.Drawing.Size(888, 650);
+            this.Controls.Add(this.BtnExel);
             this.Controls.Add(this.BtnRegresar);
             this.Controls.Add(this.BtnBuscar);
             this.Controls.Add(this.rjTextBox1);
@@ -225,5 +248,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private RJCodeAdvance.RJControls.RJButton BtnExel;
     }
 }

@@ -303,6 +303,36 @@ namespace BEST_PLAYER_2024.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_gráfico_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-gráfico-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_ms_excel_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-ms-excel-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_ms_excel_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-ms-excel-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap images {
             get {
                 object obj = ResourceManager.GetObject("images", resourceCulture);
@@ -346,6 +376,16 @@ namespace BEST_PLAYER_2024.Properties {
         internal static System.Drawing.Bitmap Logo_Real_Madrid_svg {
             get {
                 object obj = ResourceManager.GetObject("Logo_Real_Madrid.svg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_sistema {
+            get {
+                object obj = ResourceManager.GetObject("logo_sistema", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
