@@ -23,12 +23,7 @@ namespace Servicios
             DataTable datos = ModelUsuario.CargarAgencias(out string message);
             return datos;
         }
-        //cargar niveles usuarios SERVIOS ServUsuario InnerJoin
-        public static DataTable CargarAgenciasInnerJoin(string nombre)
-        {
-            DataTable datos = ModelUsuario.CargarAgenciasInnerJoin(out string message, nombre);
-            return datos;
-        }
+     
         public static bool ActualizarUsuario(CtrUsuario usuario, out string message)
         {
             try

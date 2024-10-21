@@ -36,34 +36,7 @@ namespace Modelo
             return data;
         }
 
-        public static DataTable CargarAgenciasInnerJoin(out string message, string nombre)
-        {
-            DatabaseConnection dbConnection = new DatabaseConnection();
-            DataTable data = new DataTable();
-
-            try
-            {
-                string query = "SELECT IdAgencia, NombreAgencia FROM Agencias WHERE NombreAgencia = @NombreAgencia";
-
-                // Obtén la conexión SQL Server usando la instancia de DatabaseConnection
-                using (SqlConnection connection = dbConnection.GetConnection())
-                using (SqlCommand cmdselect = new SqlCommand(query, connection))
-                using (SqlDataAdapter adp = new SqlDataAdapter(cmdselect))
-                {
-                    // Asigna el valor del parámetro
-                    cmdselect.Parameters.AddWithValue("@NombreAgencia", nombre);
-                    connection.Open();
-                    adp.Fill(data);
-                }
-            }
-            catch (Exception ex)
-            {
-                message = $"Error al cargar datos: {ex.Message}";
-                data = null;
-            }
-            message = null;
-            return data;
-        }
+      
 
         public static bool EliminarUsuario(int idUsuario, out string message)
         {
@@ -114,7 +87,7 @@ namespace Modelo
 
             try
             {
-                string query = "SELECT IdAgencia, NombreAgencia FROM Agencias";
+                string query = "SELECT * FROM Agencias";
 
                 // Obtén la conexión SQL Server usando la instancia de DatabaseConnection
                 using (SqlConnection connection = dbConnection.GetConnection())
