@@ -18,6 +18,7 @@ namespace BEST_PLAYER_2024
         {
             InitializeComponent();
             CargarGridDatos();
+            CargarPaisEnComboBox();
         }
         public void ActualizarTabla()
         {
@@ -124,6 +125,65 @@ namespace BEST_PLAYER_2024
                 MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void FiltrarDeBusqueda(string buscador)
+        {
+            // Llamar al método cargar tabla 
+            CargarGridDatos();
+            DataTable datos = ServJugador.CargarDatosEquipos();
 
+            // Crear un nuevo DataTable para almacenar las filas filtradas
+            DataTable datosFiltrados = datos.Clone();
+            // Recorrer todas las filas de datos
+            foreach (DataRow fila in datos.Rows)
+            {
+                if (fila["Pais"].ToString().IndexOf(buscador, StringComparison.OrdinalIgnoreCase) >= 0 ||
+                    fila["DT"].ToString().IndexOf(buscador, StringComparison.OrdinalIgnoreCase) >= 0 ||
+                    fila["Nombre"].ToString().IndexOf(buscador, StringComparison.OrdinalIgnoreCase) >= 0)
+                {
+                    datosFiltrados.ImportRow(fila);
+                }
+            }
+            DgvEquipo.DataSource = datosFiltrados;
+            ConfigurarColumnasDgv();
+        }
+        void CargarPaisEnComboBox()
+        {
+            try
+            {
+                DataTable datos = ServJugador.CargarDatosEquipos();
+                var equipos = datos.AsEnumerable()
+                                   .Select(fila => fila.Field<string>("Pais"))
+                                   .Distinct()
+                                   .ToList();
+                CmbPaisFiltro.Items.Clear();
+                CmbPaisFiltro.Items.Add("Todos los paises");
+                // Agregar los equipos al ComboBox
+                foreach (var equipo in equipos)
+                {
+                    CmbPaisFiltro.Items.Add(equipo);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar los equipos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void CmbPaisFiltro_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CmbPaisFiltro.SelectedItem != "Todos los paises")
+            {
+                string equipoSeleccionado = CmbPaisFiltro.SelectedItem.ToString();
+                FiltrarDeBusqueda(equipoSeleccionado);
+            }
+            else
+            {
+                CargarGridDatos();
+            }
+        }
+
+        private void rjTextBox1__TextChanged(object sender, EventArgs e)
+        {
+            FiltrarDeBusqueda(rjTextBox1.Texts);
+        }
     }
 }
