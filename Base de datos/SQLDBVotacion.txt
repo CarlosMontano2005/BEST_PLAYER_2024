@@ -385,3 +385,11 @@ SELECT V.IdVotacion, U.NombreUsuario, J.Nombre AS NombreJugador, V.FechaHoraVoto
 FROM Votacion V
 INNER JOIN Usuarios U ON V.IdUsuario = U.IdUsuario
 INNER JOIN Jugadores J ON V.IdJugador = J.IdJugador;
+
+-- Eliminar las columnas actuales
+ALTER TABLE Equipos
+DROP COLUMN Foto_DT, FotoLogoEquipo;
+-- Volver a crear las columnas como VARBINARY(MAX)
+ALTER TABLE Equipos
+ADD Foto_DT VARBINARY(MAX),
+    FotoLogoEquipo VARBINARY(MAX);
