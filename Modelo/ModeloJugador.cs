@@ -58,6 +58,30 @@ namespace Modelo
             message = null;
             return data;
         }
+        public static DataTable cargarEquiposDatos(out string message)
+        {
+            DatabaseConnection dbConnection = new DatabaseConnection();
+            DataTable data = new DataTable();
+            try
+            {
+                string query = "SELECT e.IdEquipo, e.Nombre, p.Nombre as Pais, e.CantidadJugadores, e.NombreDirectorTecnico as DT, e.Foto_DT, e.FotoLogoEquipo FROM Equipos e, Paises P WHERE e.IdPais = p.IdPais";
+                // Obtén la conexión SQL Server usando la instancia de DatabaseConnection
+                using (SqlConnection connection = dbConnection.GetConnection())
+                using (SqlCommand cmdselect = new SqlCommand(query, connection))
+                using (SqlDataAdapter adp = new SqlDataAdapter(cmdselect))
+                {
+                    connection.Open();
+                    adp.Fill(data);
+                }
+            }
+            catch (Exception ex)
+            {
+                message = $"Error al cargar datos: {ex.Message}";
+                data = null;
+            }
+            message = null;
+            return data;
+        }
         public static DataTable cargarEquipo(out string message) {
             DatabaseConnection dbConnection = new DatabaseConnection();
             DataTable data = new DataTable();

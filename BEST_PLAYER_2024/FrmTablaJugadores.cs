@@ -18,6 +18,7 @@ namespace BEST_PLAYER_2024
         {
             InitializeComponent();
             CargarGridDatos();
+            CargarEquiposEnComboBox();
         }
 
         private void BtnRegresar_Click(object sender, EventArgs e)
@@ -60,31 +61,87 @@ namespace BEST_PLAYER_2024
             else MessageBox.Show("El formulario ya esta abierto","Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
             
         }
+        void CargarEquiposEnComboBox()
+        {
+            try
+            {
+                DataTable datos = ServJugador.CargarJugadores();
+                var equipos = datos.AsEnumerable()
+                                   .Select(fila => fila.Field<string>("NombreEquipo"))
+                                   .Distinct()
+                                   .ToList();
+                cmbEquipos.Items.Clear();
+                cmbEquipos.Items.Add("Todos los equipos");
+                // Agregar los equipos al ComboBox
+                foreach (var equipo in equipos)
+                {
+                    cmbEquipos.Items.Add(equipo);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar los equipos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public void ActualizarTabla()
         {
-            // Aquí va tu lógica para recargar los datos de la tabla
+            //recargar los datos de la tabla
             DgvJugador.DataSource = null;
-            DgvJugador.DataSource = ServJugador.CargarJugadores(); // O el método que uses para cargar datos
+            DgvJugador.DataSource = ServJugador.CargarJugadores();
         }
-        public void CargarGridDatos()
+
+        private void CargarGridDatos()
         {
             try
             {
                 DataTable datos = ServJugador.CargarJugadores();
                 DgvJugador.DataSource = datos;
-                // Renombrar las columnas en el DataGridView
-                DgvJugador.Columns["IdJugador"].HeaderText = "#";
-                DgvJugador.Columns["Nombre"].HeaderText = "Nombre";
-                DgvJugador.Columns["Altura"].HeaderText = "Altura";
-                DgvJugador.Columns["Nacionalidad"].HeaderText = "Nacionalidad";
-                //
-                DgvJugador.Columns["NombreEquipo"].HeaderText = "Equipo";
+                ConfigurarColumnasDgv();
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error al cargar los datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void ConfigurarColumnasDgv()
+        {
+            // Renombrar las columnas en el DataGridView
+            DgvJugador.Columns["IdJugador"].HeaderText = "#";
+            DgvJugador.Columns["Nombre"].HeaderText = "Nombre";
+            DgvJugador.Columns["Altura"].HeaderText = "Altura";
+            DgvJugador.Columns["Nacionalidad"].HeaderText = "Nacionalidad";
+            DgvJugador.Columns["NombreEquipo"].HeaderText = "Equipo";
+        }
+ 
+        private void FiltrarDeBusqueda(string buscador)
+        {
+            // Llamar al método cargar tabla 
+            CargarGridDatos();
+            DataTable datos = ServJugador.CargarJugadores();
+
+            // Crear un nuevo DataTable para almacenar las filas filtradas
+            DataTable datosFiltrados = datos.Clone(); // Clonar la estructura de datos
+
+            // Recorrer todas las filas de datos
+            foreach (DataRow fila in datos.Rows)
+            {
+                // Verificar si el nombre o la nacionalidad o cualquier otro dato que busca contienen el texto buscado (sin importar mayúsculas/minúsculas)
+                if (fila["Nombre"].ToString().IndexOf(buscador, StringComparison.OrdinalIgnoreCase) >= 0 ||
+                    fila["Nacionalidad"].ToString().IndexOf(buscador, StringComparison.OrdinalIgnoreCase) >= 0 ||
+                    fila["NombreEquipo"].ToString().IndexOf(buscador, StringComparison.OrdinalIgnoreCase) >= 0)
+                {
+                    datosFiltrados.ImportRow(fila);
+                }
+            }
+
+            // Asignar el DataTable filtrado al DataGridView
+            DgvJugador.DataSource = datosFiltrados;
+            // Configurar columnas del DataGridView
+            ConfigurarColumnasDgv();
+        }
+
 
         private void DgvJugador_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -118,7 +175,25 @@ namespace BEST_PLAYER_2024
 
         private void TxtBuscarEnGriw__TextChanged(object sender, EventArgs e)
         {
-           
+            FiltrarDeBusqueda(txtBuscar.Texts);
+        }
+       
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cmbEquipos_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbEquipos.SelectedItem != "Todos los equipos")
+            {
+                string equipoSeleccionado = cmbEquipos.SelectedItem.ToString();
+                FiltrarDeBusqueda(equipoSeleccionado);
+            }
+            else
+            {
+                CargarGridDatos();
+            }
         }
     }
 }

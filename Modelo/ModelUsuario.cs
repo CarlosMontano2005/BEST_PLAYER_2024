@@ -87,7 +87,7 @@ namespace Modelo
 
             try
             {
-                string query = "SELECT * FROM Agencias";
+                string query = "SELECT * FROM Agencias ORDER BY TipoAgencia";
 
                 // Obtén la conexión SQL Server usando la instancia de DatabaseConnection
                 using (SqlConnection connection = dbConnection.GetConnection())

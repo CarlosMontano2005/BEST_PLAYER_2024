@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.BtnRegresar = new System.Windows.Forms.Label();
+            this.lblNombreDT = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.rjCircularPictureBox1 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PxbFotoDT = new RJCodeAdvance.RJControls.RJCircularPictureBox();
+            this.lblCantidadEquipo = new System.Windows.Forms.Label();
+            this.lblPais = new System.Windows.Forms.Label();
+            this.lblPaisColor = new System.Windows.Forms.Label();
+            this.LblNombreEquipo = new System.Windows.Forms.Label();
+            this.PxbLogoEquipo = new System.Windows.Forms.PictureBox();
             this.rjCircularPictureBox2 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -69,10 +70,9 @@
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.rjCircularPictureBox9 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
-            this.BtnRegresar = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PxbFotoDT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PxbLogoEquipo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox4)).BeginInit();
@@ -87,30 +87,41 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.panel1.Controls.Add(this.BtnRegresar);
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.lblNombreDT);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.rjCircularPictureBox1);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.PxbFotoDT);
+            this.panel1.Controls.Add(this.lblCantidadEquipo);
+            this.panel1.Controls.Add(this.lblPais);
+            this.panel1.Controls.Add(this.lblPaisColor);
+            this.panel1.Controls.Add(this.LblNombreEquipo);
+            this.panel1.Controls.Add(this.PxbLogoEquipo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(888, 170);
             this.panel1.TabIndex = 0;
             // 
-            // label6
+            // BtnRegresar
             // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(176)))), ((int)(((byte)(176)))));
-            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label6.Location = new System.Drawing.Point(678, 85);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(131, 21);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Xavi Hernádez";
+            this.BtnRegresar.AutoSize = true;
+            this.BtnRegresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.BtnRegresar.Location = new System.Drawing.Point(773, 134);
+            this.BtnRegresar.Name = "BtnRegresar";
+            this.BtnRegresar.Size = new System.Drawing.Size(82, 21);
+            this.BtnRegresar.TabIndex = 46;
+            this.BtnRegresar.Text = "Regresar";
+            this.BtnRegresar.Click += new System.EventHandler(this.BtnRegresar_Click);
+            // 
+            // lblNombreDT
+            // 
+            this.lblNombreDT.AutoSize = true;
+            this.lblNombreDT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(176)))), ((int)(((byte)(176)))));
+            this.lblNombreDT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblNombreDT.Location = new System.Drawing.Point(678, 85);
+            this.lblNombreDT.Name = "lblNombreDT";
+            this.lblNombreDT.Size = new System.Drawing.Size(131, 21);
+            this.lblNombreDT.TabIndex = 7;
+            this.lblNombreDT.Text = "Xavi Hernádez";
             // 
             // label5
             // 
@@ -124,76 +135,76 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "DIRECTOR TECNICO";
             // 
-            // rjCircularPictureBox1
+            // PxbFotoDT
             // 
-            this.rjCircularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.rjCircularPictureBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.rjCircularPictureBox1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.rjCircularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.rjCircularPictureBox1.BorderSize = 2;
-            this.rjCircularPictureBox1.GradientAngle = 50F;
-            this.rjCircularPictureBox1.Image = global::BEST_PLAYER_2024.Properties.Resources.images;
-            this.rjCircularPictureBox1.Location = new System.Drawing.Point(596, 49);
-            this.rjCircularPictureBox1.Name = "rjCircularPictureBox1";
-            this.rjCircularPictureBox1.Size = new System.Drawing.Size(75, 75);
-            this.rjCircularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.rjCircularPictureBox1.TabIndex = 5;
-            this.rjCircularPictureBox1.TabStop = false;
+            this.PxbFotoDT.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.PxbFotoDT.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.PxbFotoDT.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.PxbFotoDT.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.PxbFotoDT.BorderSize = 2;
+            this.PxbFotoDT.GradientAngle = 50F;
+            this.PxbFotoDT.Image = global::BEST_PLAYER_2024.Properties.Resources.images;
+            this.PxbFotoDT.Location = new System.Drawing.Point(596, 49);
+            this.PxbFotoDT.Name = "PxbFotoDT";
+            this.PxbFotoDT.Size = new System.Drawing.Size(75, 75);
+            this.PxbFotoDT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PxbFotoDT.TabIndex = 5;
+            this.PxbFotoDT.TabStop = false;
             // 
-            // label4
+            // lblCantidadEquipo
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(176)))), ((int)(((byte)(176)))));
-            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label4.Location = new System.Drawing.Point(323, 112);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 21);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "jugadores: 25";
+            this.lblCantidadEquipo.AutoSize = true;
+            this.lblCantidadEquipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(176)))), ((int)(((byte)(176)))));
+            this.lblCantidadEquipo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCantidadEquipo.Location = new System.Drawing.Point(323, 112);
+            this.lblCantidadEquipo.Name = "lblCantidadEquipo";
+            this.lblCantidadEquipo.Size = new System.Drawing.Size(120, 21);
+            this.lblCantidadEquipo.TabIndex = 4;
+            this.lblCantidadEquipo.Text = "jugadores: 25";
             // 
-            // label3
+            // lblPais
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(176)))), ((int)(((byte)(176)))));
-            this.label3.Image = global::BEST_PLAYER_2024.Properties.Resources.globe_americas;
-            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Location = new System.Drawing.Point(167, 112);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 21);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "    Sudafrica";
+            this.lblPais.AutoSize = true;
+            this.lblPais.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(176)))), ((int)(((byte)(176)))));
+            this.lblPais.Image = global::BEST_PLAYER_2024.Properties.Resources.globe_americas;
+            this.lblPais.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPais.Location = new System.Drawing.Point(157, 116);
+            this.lblPais.Name = "lblPais";
+            this.lblPais.Size = new System.Drawing.Size(108, 21);
+            this.lblPais.TabIndex = 3;
+            this.lblPais.Text = "    Sudafrica";
             // 
-            // label1
+            // lblPaisColor
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(26)))), ((int)(((byte)(37)))));
-            this.label1.Location = new System.Drawing.Point(157, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 21);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "País";
+            this.lblPaisColor.AutoSize = true;
+            this.lblPaisColor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(26)))), ((int)(((byte)(37)))));
+            this.lblPaisColor.Location = new System.Drawing.Point(157, 45);
+            this.lblPaisColor.Name = "lblPaisColor";
+            this.lblPaisColor.Size = new System.Drawing.Size(42, 21);
+            this.lblPaisColor.TabIndex = 1;
+            this.lblPaisColor.Text = "País";
             // 
-            // label2
+            // LblNombreEquipo
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(149, 45);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(322, 71);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "BARCELONA";
+            this.LblNombreEquipo.AutoSize = true;
+            this.LblNombreEquipo.BackColor = System.Drawing.Color.Transparent;
+            this.LblNombreEquipo.Font = new System.Drawing.Font("Segoe UI", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNombreEquipo.ForeColor = System.Drawing.Color.White;
+            this.LblNombreEquipo.Location = new System.Drawing.Point(149, 45);
+            this.LblNombreEquipo.Name = "LblNombreEquipo";
+            this.LblNombreEquipo.Size = new System.Drawing.Size(322, 71);
+            this.LblNombreEquipo.TabIndex = 2;
+            this.LblNombreEquipo.Text = "BARCELONA";
             // 
-            // pictureBox1
+            // PxbLogoEquipo
             // 
-            this.pictureBox1.Image = global::BEST_PLAYER_2024.Properties.Resources.escudo_barquita;
-            this.pictureBox1.Location = new System.Drawing.Point(20, 32);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(123, 123);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.PxbLogoEquipo.Image = global::BEST_PLAYER_2024.Properties.Resources.escudo_barquita;
+            this.PxbLogoEquipo.Location = new System.Drawing.Point(20, 32);
+            this.PxbLogoEquipo.Name = "PxbLogoEquipo";
+            this.PxbLogoEquipo.Size = new System.Drawing.Size(123, 123);
+            this.PxbLogoEquipo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PxbLogoEquipo.TabIndex = 0;
+            this.PxbLogoEquipo.TabStop = false;
             // 
             // rjCircularPictureBox2
             // 
@@ -583,17 +594,6 @@
             this.rjCircularPictureBox9.TabIndex = 24;
             this.rjCircularPictureBox9.TabStop = false;
             // 
-            // BtnRegresar
-            // 
-            this.BtnRegresar.AutoSize = true;
-            this.BtnRegresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.BtnRegresar.Location = new System.Drawing.Point(773, 134);
-            this.BtnRegresar.Name = "BtnRegresar";
-            this.BtnRegresar.Size = new System.Drawing.Size(82, 21);
-            this.BtnRegresar.TabIndex = 46;
-            this.BtnRegresar.Text = "Regresar";
-            this.BtnRegresar.Click += new System.EventHandler(this.BtnRegresar_Click);
-            // 
             // FrmInfoEquipo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -641,8 +641,8 @@
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PxbFotoDT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PxbLogoEquipo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox4)).EndInit();
@@ -659,14 +659,14 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label LblNombreEquipo;
+        private System.Windows.Forms.Label lblPaisColor;
+        private System.Windows.Forms.PictureBox PxbLogoEquipo;
+        private System.Windows.Forms.Label lblNombreDT;
         private System.Windows.Forms.Label label5;
-        private RJCodeAdvance.RJControls.RJCircularPictureBox rjCircularPictureBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private RJCodeAdvance.RJControls.RJCircularPictureBox PxbFotoDT;
+        private System.Windows.Forms.Label lblCantidadEquipo;
+        private System.Windows.Forms.Label lblPais;
         private RJCodeAdvance.RJControls.RJCircularPictureBox rjCircularPictureBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
