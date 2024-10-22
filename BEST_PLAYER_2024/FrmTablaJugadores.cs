@@ -122,7 +122,7 @@ namespace BEST_PLAYER_2024
             DataTable datos = ServJugador.CargarJugadores();
 
             // Crear un nuevo DataTable para almacenar las filas filtradas
-            DataTable datosFiltrados = datos.Clone(); // Clonar la estructura de datos
+            DataTable datosFiltrados = datos.Clone();
 
             // Recorrer todas las filas de datos
             foreach (DataRow fila in datos.Rows)
