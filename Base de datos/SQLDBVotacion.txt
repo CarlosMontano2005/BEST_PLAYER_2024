@@ -393,3 +393,7 @@ DROP COLUMN Foto_DT, FotoLogoEquipo;
 ALTER TABLE Equipos
 ADD Foto_DT VARBINARY(MAX),
     FotoLogoEquipo VARBINARY(MAX);
+
+-- AGREGAR DATO DE DESCRIPCUOIB
+USE DBVotacionJugadores_Nueva;
+ALTER TABLE Jugadores ADD DescripcionJugador varchar(200) NOT NULL DEFAULT 'Sin descripción';
