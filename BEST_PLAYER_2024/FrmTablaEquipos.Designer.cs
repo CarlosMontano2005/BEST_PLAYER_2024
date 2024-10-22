@@ -35,14 +35,9 @@
             this.BtnBuscar = new System.Windows.Forms.Button();
             this.rjTextBox1 = new RJCodeAdvance.RJControls.RJTextBox();
             this.rjComboBox1 = new RJCodeAdvance.RJControls.RJComboBox();
-            this.DgvTabla = new System.Windows.Forms.DataGridView();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvTabla)).BeginInit();
+            this.BtnExel = new RJCodeAdvance.RJControls.RJButton();
+            this.DgvEquipo = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvEquipo)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnRegresar
@@ -114,13 +109,34 @@
             this.rjComboBox1.TabIndex = 42;
             this.rjComboBox1.Texts = "Filtrar por Pais";
             // 
-            // DgvTabla
+            // BtnExel
             // 
-            this.DgvTabla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DgvTabla.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
-            this.DgvTabla.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.DgvTabla.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.DgvTabla.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.BtnExel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(111)))), ((int)(((byte)(66)))));
+            this.BtnExel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(111)))), ((int)(((byte)(66)))));
+            this.BtnExel.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.BtnExel.BorderRadius = 0;
+            this.BtnExel.BorderSize = 0;
+            this.BtnExel.FlatAppearance.BorderSize = 0;
+            this.BtnExel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnExel.ForeColor = System.Drawing.Color.White;
+            this.BtnExel.Image = global::BEST_PLAYER_2024.Properties.Resources.icons8_ms_excel_24;
+            this.BtnExel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnExel.Location = new System.Drawing.Point(743, 77);
+            this.BtnExel.Name = "BtnExel";
+            this.BtnExel.Size = new System.Drawing.Size(115, 33);
+            this.BtnExel.TabIndex = 76;
+            this.BtnExel.Text = "Excel";
+            this.BtnExel.TextColor = System.Drawing.Color.White;
+            this.BtnExel.UseVisualStyleBackColor = false;
+            this.BtnExel.Click += new System.EventHandler(this.BtnExel_Click);
+            // 
+            // DgvEquipo
+            // 
+            this.DgvEquipo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvEquipo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.DgvEquipo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.DgvEquipo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.DgvEquipo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(62)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -128,21 +144,14 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvTabla.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.DgvTabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvTabla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column7,
-            this.Column6});
-            this.DgvTabla.EnableHeadersVisualStyles = false;
-            this.DgvTabla.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(62)))));
-            this.DgvTabla.Location = new System.Drawing.Point(27, 118);
-            this.DgvTabla.Margin = new System.Windows.Forms.Padding(5);
-            this.DgvTabla.Name = "DgvTabla";
-            this.DgvTabla.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.DgvEquipo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DgvEquipo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvEquipo.EnableHeadersVisualStyles = false;
+            this.DgvEquipo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(62)))));
+            this.DgvEquipo.Location = new System.Drawing.Point(31, 118);
+            this.DgvEquipo.Margin = new System.Windows.Forms.Padding(5);
+            this.DgvEquipo.Name = "DgvEquipo";
+            this.DgvEquipo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -150,45 +159,16 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvTabla.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.DgvEquipo.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.DgvTabla.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.DgvTabla.Size = new System.Drawing.Size(831, 489);
-            this.DgvTabla.TabIndex = 41;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Nombres";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Pais";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Cantidad";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Nombre DT";
-            this.Column5.Name = "Column5";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Logo";
-            this.Column7.Name = "Column7";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Foto DT";
-            this.Column6.Name = "Column6";
+            this.DgvEquipo.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.DgvEquipo.Size = new System.Drawing.Size(831, 489);
+            this.DgvEquipo.TabIndex = 77;
+            this.DgvEquipo.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvEquipo_CellDoubleClick);
             // 
             // FrmTablaEquipos
             // 
@@ -196,17 +176,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.ClientSize = new System.Drawing.Size(888, 650);
+            this.Controls.Add(this.DgvEquipo);
+            this.Controls.Add(this.BtnExel);
             this.Controls.Add(this.BtnRegresar);
             this.Controls.Add(this.BtnBuscar);
             this.Controls.Add(this.rjTextBox1);
             this.Controls.Add(this.rjComboBox1);
-            this.Controls.Add(this.DgvTabla);
             this.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmTablaEquipos";
             this.Text = "FrmTablaEquipos";
-            ((System.ComponentModel.ISupportInitialize)(this.DgvTabla)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvEquipo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,12 +199,7 @@
         private System.Windows.Forms.Button BtnBuscar;
         private RJCodeAdvance.RJControls.RJTextBox rjTextBox1;
         private RJCodeAdvance.RJControls.RJComboBox rjComboBox1;
-        private System.Windows.Forms.DataGridView DgvTabla;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private RJCodeAdvance.RJControls.RJButton BtnExel;
+        private System.Windows.Forms.DataGridView DgvEquipo;
     }
 }

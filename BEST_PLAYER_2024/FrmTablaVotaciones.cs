@@ -73,6 +73,33 @@ namespace BEST_PLAYER_2024
 
         private void BtnGrafica_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void BtnDescargar_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void BtnExel_Click(object sender, EventArgs e)
+        {
+            // Llamar al método para exportar y aplicar diseño
+            try
+            {
+                string mess;
+                ExcelUtilities excel = new ExcelUtilities();
+                excel.ExportDataGridViewToExcel(DgvVotaciones, "Tabla Mejores Jugadores", out mess);
+                // Mostrar mensaje de éxito o error
+                MessageBox.Show(mess);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al exportar los datos: " + ex.Message);
+            }
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
             string mess = string.Empty;
             ExcelUtilities excel = new ExcelUtilities();
 
@@ -90,23 +117,6 @@ namespace BEST_PLAYER_2024
             catch (Exception ex)
             {
                 MessageBox.Show("Ocurrió un error al graficar los datos: " + ex.Message);
-            }
-        }
-
-        private void BtnDescargar_Click(object sender, EventArgs e)
-        {
-            // Llamar al método para exportar y aplicar diseño
-            try
-            {
-                string mess;
-                ExcelUtilities excel = new ExcelUtilities();
-                excel.ExportDataGridViewToExcel(DgvVotaciones, "Tabla Mejores Jugadores", out mess);
-                // Mostrar mensaje de éxito o error
-                MessageBox.Show(mess);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ocurrió un error al exportar los datos: " + ex.Message);
             }
         }
     }

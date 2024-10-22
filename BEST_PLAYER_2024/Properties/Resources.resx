@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="icons8-ms-excel-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-ms-excel-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Kaka" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Kaka.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -133,8 +136,14 @@
   <data name="Logo_Real_Madrid.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo_Real_Madrid.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="person_fill_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\person-fill-green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="futbol" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\futbol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Shirt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Shirt.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Neymar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Neymar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -165,9 +174,6 @@
   </data>
   <data name="tarjeta-amarilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tarjeta-amarilla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Anderson" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Anderson.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Kat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Kat.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,14 +211,17 @@
   <data name="AndresIniesta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AndresIniesta.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="targeta-fifa-plantila-tamallo-124x200" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\targeta-fifa-plantila-tamallo-124x200.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="person-bounding-box" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\person-bounding-box.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Toni Kroos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Toni Kroos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="globe_americas_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\globe-americas-green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Anderson" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Anderson.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="escudo barquita" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\escudo barquita.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,6 +241,9 @@
   <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-ms-excel-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-ms-excel-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Ronaldinho" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ronaldinho.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -241,17 +253,23 @@
   <data name="globe-americas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\globe-americas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="globe_americas_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\globe-americas-green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="person_bounding_box_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\person-bounding-box-green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gear_fill_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gear-fill-green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="logo_sistema" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo-sistema.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Zidane" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Zidane.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="person_fill_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\person-fill-green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="targeta-fifa-plantila" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\targeta-fifa-plantila.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="x-lg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\x-lg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -280,13 +298,7 @@
   <data name="default" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Shirt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Shirt.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-   </data>
-  <data name="targeta-fifa-plantila" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\targeta-fifa-plantila.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="targeta-fifa-plantila-tamallo-124x200" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\targeta-fifa-plantila-tamallo-124x200.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-gráfico-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-gráfico-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

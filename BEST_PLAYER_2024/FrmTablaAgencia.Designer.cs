@@ -37,9 +37,10 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rjComboBox1 = new RJCodeAdvance.RJControls.RJComboBox();
-            this.rjTextBox1 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.cmbTipoAgencia = new RJCodeAdvance.RJControls.RJComboBox();
+            this.TxtBuscarEnGriw = new RJCodeAdvance.RJControls.RJTextBox();
             this.BtnBuscar = new System.Windows.Forms.Button();
+            this.BtnExel = new RJCodeAdvance.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.DgvAgencia)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,51 +114,52 @@
             this.Column5.HeaderText = "Email";
             this.Column5.Name = "Column5";
             // 
-            // rjComboBox1
+            // cmbTipoAgencia
             // 
-            this.rjComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.rjComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(62)))));
-            this.rjComboBox1.BorderSize = 0;
-            this.rjComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.rjComboBox1.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.rjComboBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(62)))));
-            this.rjComboBox1.Items.AddRange(new object[] {
+            this.cmbTipoAgencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.cmbTipoAgencia.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(62)))));
+            this.cmbTipoAgencia.BorderSize = 0;
+            this.cmbTipoAgencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbTipoAgencia.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTipoAgencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.cmbTipoAgencia.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(62)))));
+            this.cmbTipoAgencia.Items.AddRange(new object[] {
             "Filtrar por equipo",
             "Barcelona",
             "Real Madrid",
             "Manchester"});
-            this.rjComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.rjComboBox1.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.rjComboBox1.Location = new System.Drawing.Point(28, 60);
-            this.rjComboBox1.MinimumSize = new System.Drawing.Size(200, 30);
-            this.rjComboBox1.Name = "rjComboBox1";
-            this.rjComboBox1.Size = new System.Drawing.Size(200, 36);
-            this.rjComboBox1.TabIndex = 37;
-            this.rjComboBox1.Texts = "Filtrar por Agencia";
-  
+            this.cmbTipoAgencia.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.cmbTipoAgencia.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.cmbTipoAgencia.Location = new System.Drawing.Point(28, 60);
+            this.cmbTipoAgencia.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbTipoAgencia.Name = "cmbTipoAgencia";
+            this.cmbTipoAgencia.Size = new System.Drawing.Size(200, 36);
+            this.cmbTipoAgencia.TabIndex = 37;
+            this.cmbTipoAgencia.Texts = "Filtrar por Agencia";
+            this.cmbTipoAgencia.OnSelectedIndexChanged += new System.EventHandler(this.cmbTipoAgencia_OnSelectedIndexChanged);
             // 
-            // rjTextBox1
+            // TxtBuscarEnGriw
             // 
-            this.rjTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.rjTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.rjTextBox1.BorderRadius = 0;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox1.ForeColor = System.Drawing.Color.White;
-            this.rjTextBox1.Location = new System.Drawing.Point(250, 60);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.rjTextBox1.PlaceholderText = "Buscar Agencia";
-            this.rjTextBox1.Size = new System.Drawing.Size(313, 36);
-            this.rjTextBox1.TabIndex = 38;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = true;
+            this.TxtBuscarEnGriw.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.TxtBuscarEnGriw.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
+            this.TxtBuscarEnGriw.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.TxtBuscarEnGriw.BorderRadius = 0;
+            this.TxtBuscarEnGriw.BorderSize = 2;
+            this.TxtBuscarEnGriw.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtBuscarEnGriw.ForeColor = System.Drawing.Color.White;
+            this.TxtBuscarEnGriw.Location = new System.Drawing.Point(250, 60);
+            this.TxtBuscarEnGriw.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtBuscarEnGriw.Multiline = false;
+            this.TxtBuscarEnGriw.Name = "TxtBuscarEnGriw";
+            this.TxtBuscarEnGriw.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.TxtBuscarEnGriw.PasswordChar = false;
+            this.TxtBuscarEnGriw.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.TxtBuscarEnGriw.PlaceholderText = "Buscar Agencia";
+            this.TxtBuscarEnGriw.Size = new System.Drawing.Size(313, 36);
+            this.TxtBuscarEnGriw.TabIndex = 38;
+            this.TxtBuscarEnGriw.Texts = "";
+            this.TxtBuscarEnGriw.UnderlinedStyle = true;
+            this.TxtBuscarEnGriw._TextChanged += new System.EventHandler(this.TxtBuscarEnGriw__TextChanged);
             // 
             // BtnBuscar
             // 
@@ -171,7 +173,28 @@
             this.BtnBuscar.TabIndex = 39;
             this.BtnBuscar.Text = "Buscar";
             this.BtnBuscar.UseVisualStyleBackColor = false;
-         
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
+            // 
+            // BtnExel
+            // 
+            this.BtnExel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(111)))), ((int)(((byte)(66)))));
+            this.BtnExel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(111)))), ((int)(((byte)(66)))));
+            this.BtnExel.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.BtnExel.BorderRadius = 0;
+            this.BtnExel.BorderSize = 0;
+            this.BtnExel.FlatAppearance.BorderSize = 0;
+            this.BtnExel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnExel.ForeColor = System.Drawing.Color.White;
+            this.BtnExel.Image = global::BEST_PLAYER_2024.Properties.Resources.icons8_ms_excel_24;
+            this.BtnExel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnExel.Location = new System.Drawing.Point(740, 63);
+            this.BtnExel.Name = "BtnExel";
+            this.BtnExel.Size = new System.Drawing.Size(115, 33);
+            this.BtnExel.TabIndex = 75;
+            this.BtnExel.Text = "Excel";
+            this.BtnExel.TextColor = System.Drawing.Color.White;
+            this.BtnExel.UseVisualStyleBackColor = false;
+            this.BtnExel.Click += new System.EventHandler(this.BtnExel_Click);
             // 
             // FrmTablaAgencia
             // 
@@ -179,9 +202,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.ClientSize = new System.Drawing.Size(888, 650);
+            this.Controls.Add(this.BtnExel);
             this.Controls.Add(this.BtnBuscar);
-            this.Controls.Add(this.rjTextBox1);
-            this.Controls.Add(this.rjComboBox1);
+            this.Controls.Add(this.TxtBuscarEnGriw);
+            this.Controls.Add(this.cmbTipoAgencia);
             this.Controls.Add(this.DgvAgencia);
             this.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
@@ -195,8 +219,8 @@
 
         }
         private System.Windows.Forms.DataGridView DgvAgencia;
-        private RJCodeAdvance.RJControls.RJComboBox rjComboBox1;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox1;
+        private RJCodeAdvance.RJControls.RJComboBox cmbTipoAgencia;
+        private RJCodeAdvance.RJControls.RJTextBox TxtBuscarEnGriw;
         private System.Windows.Forms.Button BtnBuscar;
         #endregion
 
@@ -205,5 +229,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private RJCodeAdvance.RJControls.RJButton BtnExel;
     }
 }

@@ -19,7 +19,7 @@ namespace BEST_PLAYER_2024
             Application.SetCompatibleTextRenderingDefault(false);
             if (SesionUsuario.SesionActiva)
             {
-                //MessageBox.Show("La sesión está activa");
+                MessageBox.Show("La sesión está activa");
                 Application.Run(new FrmDashboard()); //FrmInicio
             }
             else
@@ -27,7 +27,6 @@ namespace BEST_PLAYER_2024
                 //MessageBox.Show("La sesión ha expirado o no está activa. Inicia sesión nuevamente.");
                 Application.Run(new FrmInicio()); //FrmInicio
             }
-           
         }
     }
 }

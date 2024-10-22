@@ -12,9 +12,27 @@ namespace BEST_PLAYER_2024
 {
     public partial class FrmInfoEquipo : Form
     {
-        public FrmInfoEquipo()
+        private string _IdEquipo;
+        public FrmInfoEquipo(string[] DatoEquipo )
         {
             InitializeComponent();
+            try
+            {
+                //string[] DatosEquipo = { idEquipo, nombreEquipo, pais, CantidadJugadores, DT, FotoLogoEquipo, Foto_DT };
+
+                //traigo datos que se enviaron
+                _IdEquipo = DatoEquipo[0];
+                LblNombreEquipo.Text = DatoEquipo[1];
+                lblPais.Text = DatoEquipo[2];
+                lblCantidadEquipo.Text = $"Jugadores: {DatoEquipo[3]}";
+                lblNombreDT.Text = DatoEquipo[4];
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
 
         private void BtnRegresar_Click(object sender, EventArgs e)

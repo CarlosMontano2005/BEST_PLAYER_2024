@@ -28,6 +28,11 @@ namespace Servicios
             DataTable data = ModeloJugador.cargarJugadores(out string message);
             return data;
         }
+        public static DataTable CargarDatosEquipos()
+        {
+            DataTable data = ModeloJugador.cargarEquiposDatos(out string message);
+            return data;
+        }
         public static bool RegistrarJugador(CtrJugador jugador, out string message)
         {
             try
