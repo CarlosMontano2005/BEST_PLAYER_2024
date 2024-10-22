@@ -146,6 +146,119 @@ namespace Modelo
             message = null;
             return data;
         }
+
+        public static DataTable buscarJugadoreEquipo(out string message, int id_Equipo)
+        {
+            DatabaseConnection dbConnection = new DatabaseConnection();
+            DataTable data = new DataTable();
+            try
+            {
+                string query = "SELECT J.Nombre, J.Apellido, Ej.Posicion, J.foto FROM Jugadores J, EstadisticaJugadores Ej WHERE J.IdJugador = Ej.IdJugador AND J.IdEquipo = @idequipo";
+                // Obtén la conexión SQL Server usando la instancia de DatabaseConnection
+                using (SqlConnection connection = dbConnection.GetConnection())
+                using (SqlCommand cmdselect = new SqlCommand(query, connection))
+                using (SqlDataAdapter adp = new SqlDataAdapter(cmdselect))
+                {
+                    cmdselect.Parameters.Add("@idequipo", SqlDbType.Int).Value = id_Equipo;
+                    connection.Open();
+                    adp.Fill(data);
+                }
+            }
+            catch (Exception ex)
+            {
+                message = $"Error al cargar datos: {ex.Message}";
+                data = null;
+            }
+            message = null;
+            return data;
+        }
+        public static bool ActualizarLogoEquipo(byte[] logoEquipo, int IdEquipo, out string message)
+        {
+            DatabaseConnection dbConnection = new DatabaseConnection();
+            try
+            {
+                string query = "UPDATE Equipos SET FotoLogoEquipo = @logoEquipo WHERE IdEquipo = @IdEquipo";
+                using (SqlConnection connection = dbConnection.GetConnection())
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    // Si el logo es obligatorio, verificar que no sea null
+                    if (logoEquipo == null || logoEquipo.Length == 0)
+                    {
+                        message = "El logo del equipo es obligatorio.";
+                        return false;
+                    }
+                    cmd.Parameters.Add("@logoEquipo", SqlDbType.VarBinary).Value = logoEquipo;
+                    cmd.Parameters.Add("@IdEquipo", SqlDbType.Int).Value = IdEquipo;
+                    connection.Open();
+                    int result = cmd.ExecuteNonQuery();
+
+                    if (result > 0)
+                    {
+                        message = "Actualización del logo del equipo exitosa.";
+                        return true;
+                    }
+                    else
+                    {
+                        message = "No se actualizó ningún registro.";
+                        return false;
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                message = DatabaseValidations.FormatSqlErrorMessage(ex);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                message = $"Error al actualizar el logo: {ex.Message}";
+                return false;
+            }
+        }
+        public static bool ActualizarFotoDT(byte[] FotoDT, int IdEquipo, out string message)
+        {
+            DatabaseConnection dbConnection = new DatabaseConnection();
+            try
+            {
+                string query = "UPDATE Equipos SET Foto_DT = @FotoDT WHERE IdEquipo = @IdEquipo";
+                using (SqlConnection connection = dbConnection.GetConnection())
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    // Si el logo es obligatorio, verificar que no sea null
+                    if (FotoDT == null || FotoDT.Length == 0)
+                    {
+                        message = "El logo del equipo es obligatorio.";
+                        return false;
+                    }
+                    cmd.Parameters.Add("@FotoDT", SqlDbType.VarBinary).Value = FotoDT;
+                    cmd.Parameters.Add("@IdEquipo", SqlDbType.Int).Value = IdEquipo;
+                    connection.Open();
+                    int result = cmd.ExecuteNonQuery();
+
+                    if (result > 0)
+                    {
+                        message = "Actualización de la foto del director tecnico del equipo exitosa.";
+                        return true;
+                    }
+                    else
+                    {
+                        message = "No se actualizó ningún registro.";
+                        return false;
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                message = DatabaseValidations.FormatSqlErrorMessage(ex);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                message = $"Error al actualizar el logo: {ex.Message}";
+                return false;
+            }
+        }
+
     }
-   
+
 }

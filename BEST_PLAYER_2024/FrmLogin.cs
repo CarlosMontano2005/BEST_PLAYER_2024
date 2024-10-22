@@ -81,10 +81,8 @@ namespace BEST_PLAYER_2024.Resources
             {
                 // Crear una instancia usando el constructor vacío
                 CtrLogin ctrLogin = new CtrLogin();
-                ctrLogin.Correo = TxtCorreo.Texts;
-                ctrLogin.Clave = TxtClave.Texts;
-
-
+                ctrLogin.Correo = "admin@gmail.com";//TxtCorreo.Texts;
+                ctrLogin.Clave = "Admin@123";//TxtClave.Texts;
                 string message;
                 bool isSuccess = ServLogin.LoginUsuario(ctrLogin, out message);
                 if (isSuccess)

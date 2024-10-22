@@ -55,12 +55,47 @@ namespace Servicios
                 return false;
             }
         }
+        public static bool ActualizarLogoEquipo(CtrDetalleJugador detallejugador, out string message)
+        {
+            try
+            {
+                return ModeloDetalleJugador.ActualizarLogoEquipo(
+                    detallejugador.LogoEquipo,
+                    detallejugador.IdEquipo,
+                    out message);
+            }
+            catch (Exception ex)
+            {
+                message = $"Error al actualizar el logo del equipo: {ex.Message}";
+                return false;
+            }
+        }
+        public static bool ActualizarFotoDT(CtrDetalleJugador detallejugador, out string message)
+        {
+            try
+            {
+                return ModeloDetalleJugador.ActualizarFotoDT(
+                    detallejugador.FotoDT,
+                    detallejugador.IdEquipo,
+                    out message);
+            }
+            catch (Exception ex)
+            {
+                message = $"Error al actualizar el logo del equipo: {ex.Message}";
+                return false;
+            }
+        }
         public static DataTable searchId(string nombre,string apellido) {
             DataTable dato = ModeloDetalleJugador.searchIdJugador(out string message, nombre,apellido);
             return dato;
         }
         public static DataTable buscarDetalle(int id) {
             DataTable datos = ModeloDetalleJugador.buscarDetalle(out string message, id);
+            return datos;
+        }
+        public static DataTable buscarJugadoresEquipo(int id)
+        {
+            DataTable datos = ModeloDetalleJugador.buscarJugadoreEquipo(out string message, id);
             return datos;
         }
     }

@@ -154,6 +154,7 @@
             // 
             // BtnCerrarSecion
             // 
+            this.BtnCerrarSecion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnCerrarSecion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
             this.BtnCerrarSecion.Cursor = System.Windows.Forms.Cursors.Default;
             this.BtnCerrarSecion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -169,8 +170,7 @@
             // 
             // LblAjuste
             // 
-            this.LblAjuste.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.LblAjuste.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LblAjuste.Cursor = System.Windows.Forms.Cursors.Default;
             this.LblAjuste.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

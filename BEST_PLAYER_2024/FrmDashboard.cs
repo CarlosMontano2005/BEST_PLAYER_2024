@@ -432,7 +432,16 @@ namespace BEST_PLAYER_2024
                 isDragging = false;
             }
         }
+        public void verificarNivelYBloquear(string Nivel)
+        {
+            if (Nivel == "Comentarista")
+            {
+                LblEquipos.Enabled = false;
+                LblJugadores.Enabled = false;
+                LblUsuario.Enabled = false;
+            }
 
+        }
         private void FrmDashboard_Load(object sender, EventArgs e)
         {
             try
@@ -445,7 +454,7 @@ namespace BEST_PLAYER_2024
 
                 LblCorreo.Text = correo;
                 LblNivelUsuario.Text = nivel;
-
+                verificarNivelYBloquear(nivel);
                 if (SesionUsuario.FotoUsuario != null && SesionUsuario.FotoUsuario.Length > 0)
                 {
                     byte[] imageBytes = SesionUsuario.FotoUsuario;
