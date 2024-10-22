@@ -84,11 +84,14 @@ namespace BEST_PLAYER_2024
                     string idEquipo = filaSeleccionada.Cells["IdEquipo"].Value.ToString();
                     string nombreEquipo = filaSeleccionada.Cells["Nombre"].Value.ToString();
                     string pais = filaSeleccionada.Cells["Pais"].Value.ToString();
-                    string CantidadJugadores = filaSeleccionada.Cells["CantidadJugadores"].Value.ToString();
-                    string DT = filaSeleccionada.Cells["DT"].Value.ToString();
-                    string FotoLogoEquipo = filaSeleccionada.Cells["FotoLogoEquipo"].Value.ToString();
-                    string Foto_DT = filaSeleccionada.Cells["Foto_DT"].Value.ToString();
-                    string[] DatosEquipo = { idEquipo, nombreEquipo, pais, CantidadJugadores, DT, FotoLogoEquipo, Foto_DT };
+                    string cantidadJugadores = filaSeleccionada.Cells["CantidadJugadores"].Value.ToString();
+                    string Dt = filaSeleccionada.Cells["DT"].Value.ToString();
+                    // Obtener las fotos directamente como byte[]
+                    byte[] fotoLogoEquipo = filaSeleccionada.Cells["FotoLogoEquipo"].Value as byte[]; 
+                    byte[] fotoDT = filaSeleccionada.Cells["Foto_DT"].Value as byte[]; 
+
+                    object[] DatosEquipo = { idEquipo, nombreEquipo, pais, cantidadJugadores, Dt, fotoLogoEquipo, fotoDT };
+
                     // MÉTODO PARA ENVIAR DATOS AL FORMULARIO
                     FrmInfoEquipo child2 = new FrmInfoEquipo(DatosEquipo);
 

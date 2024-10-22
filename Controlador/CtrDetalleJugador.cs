@@ -171,5 +171,58 @@ namespace Controlador
             }
         }
 
+        //Tabla equipo
+        private int _IdEquipo;
+
+        public int IdEquipo
+        {
+            get { return _IdEquipo; }
+            set
+            {
+                if (Validaciones.ValidateNaturalNumber(value, out string errorMessage))
+                {
+                    _IdEquipo = value;
+                }
+                else
+                {
+                    throw new ArgumentException("ID Detalle: " + errorMessage);
+                }
+            }
+        }
+        private static byte[] _LogoEquipo;
+        public byte[] LogoEquipo
+        {
+            get { return _LogoEquipo; }
+            set
+            {
+                if (Validaciones.validateImage(value, out string errorMessage))
+                {
+                    _LogoEquipo = value;
+                }
+                else
+                {
+                    throw new ArgumentException("IMAGEN: " + errorMessage);
+                }
+
+            }
+        }
+        private static byte[] _FotoDT;
+        public byte[] FotoDT
+        {
+            get { return _FotoDT; }
+            set
+            {
+                if (Validaciones.validateImage(value, out string errorMessage))
+                {
+                    _FotoDT = value;
+                }
+                else
+                {
+                    throw new ArgumentException("IMAGEN: " + errorMessage);
+                }
+
+            }
+        }
+
     }
 }
