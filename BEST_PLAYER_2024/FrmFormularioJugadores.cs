@@ -25,6 +25,7 @@ namespace BEST_PLAYER_2024
             codigo_accion = codigo;
             LlenarEquipo();
             LlenarNacionalida();
+            validarMayorEdad();
             if (codigo == 0)
             {
                 DataTable datos = ServJugador.cargarDatos(CtrJugador._idJugador);
@@ -55,7 +56,11 @@ namespace BEST_PLAYER_2024
                 }
             }
         }
-
+        void validarMayorEdad()
+        {
+            DtNacimiento.MaxDate = DateTime.Now.AddYears(-18);
+            DtNacimiento.MinDate = new DateTime(1900, 1, 1);
+        }
         private void BtnClose_Click(object sender, EventArgs e)
         {
             this.Close();

@@ -140,7 +140,7 @@ namespace Modelo
                 {
                     cmd.Parameters.AddWithValue("@NombreJugador", nombre);
                     cmd.Parameters.AddWithValue("@ApellidoJugador", apellido);
-                    cmd.Parameters.AddWithValue("@Descripcion", descripcion);
+                    cmd.Parameters.AddWithValue("@Descripcion", string.IsNullOrEmpty(descripcion) ? "" : descripcion);
                     cmd.Parameters.AddWithValue("@IdEquipo", equipo);
                     cmd.Parameters.AddWithValue("@IdPais", pais);
                     cmd.Parameters.AddWithValue("@FechaNac", fecha_nac);

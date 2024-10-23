@@ -59,7 +59,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
             this.label1.Location = new System.Drawing.Point(179, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(428, 39);
+            this.label1.Size = new System.Drawing.Size(356, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "FORMULARIO JUGADORES";
             // 
@@ -80,7 +80,7 @@
             this.TxtNombre.PasswordChar = false;
             this.TxtNombre.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.TxtNombre.PlaceholderText = "";
-            this.TxtNombre.Size = new System.Drawing.Size(205, 35);
+            this.TxtNombre.Size = new System.Drawing.Size(205, 31);
             this.TxtNombre.TabIndex = 1;
             this.TxtNombre.Texts = "";
             this.TxtNombre.UnderlinedStyle = true;
@@ -92,7 +92,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(40, 89);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 23);
+            this.label2.Size = new System.Drawing.Size(73, 21);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nombre";
             // 
@@ -103,7 +103,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(273, 89);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 23);
+            this.label3.Size = new System.Drawing.Size(74, 21);
             this.label3.TabIndex = 4;
             this.label3.Text = "Apellido";
             // 
@@ -124,7 +124,7 @@
             this.TxtApellido.PasswordChar = false;
             this.TxtApellido.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.TxtApellido.PlaceholderText = "";
-            this.TxtApellido.Size = new System.Drawing.Size(208, 35);
+            this.TxtApellido.Size = new System.Drawing.Size(208, 31);
             this.TxtApellido.TabIndex = 3;
             this.TxtApellido.Texts = "";
             this.TxtApellido.UnderlinedStyle = true;
@@ -136,7 +136,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
             this.label4.Location = new System.Drawing.Point(40, 400);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 23);
+            this.label4.Size = new System.Drawing.Size(100, 21);
             this.label4.TabIndex = 6;
             this.label4.Text = "Descripción";
             // 
@@ -157,7 +157,7 @@
             this.TxtDescripcion.PasswordChar = false;
             this.TxtDescripcion.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.TxtDescripcion.PlaceholderText = "";
-            this.TxtDescripcion.Size = new System.Drawing.Size(441, 35);
+            this.TxtDescripcion.Size = new System.Drawing.Size(441, 31);
             this.TxtDescripcion.TabIndex = 5;
             this.TxtDescripcion.Texts = "";
             this.TxtDescripcion.UnderlinedStyle = true;
@@ -169,9 +169,9 @@
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
             this.label5.Location = new System.Drawing.Point(40, 187);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 23);
+            this.label5.Size = new System.Drawing.Size(154, 21);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Altura";
+            this.label5.Text = "Altura Metros (0,0)";
             // 
             // TxtAltura
             // 
@@ -190,7 +190,7 @@
             this.TxtAltura.PasswordChar = false;
             this.TxtAltura.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.TxtAltura.PlaceholderText = "";
-            this.TxtAltura.Size = new System.Drawing.Size(205, 35);
+            this.TxtAltura.Size = new System.Drawing.Size(205, 31);
             this.TxtAltura.TabIndex = 7;
             this.TxtAltura.Texts = "";
             this.TxtAltura.UnderlinedStyle = true;
@@ -202,7 +202,7 @@
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
             this.label6.Location = new System.Drawing.Point(278, 192);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(190, 23);
+            this.label6.Size = new System.Drawing.Size(154, 21);
             this.label6.TabIndex = 10;
             this.label6.Text = "Fecha Nacimiento";
             // 
@@ -277,7 +277,7 @@
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
             this.label7.Location = new System.Drawing.Point(40, 288);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 23);
+            this.label7.Size = new System.Drawing.Size(64, 21);
             this.label7.TabIndex = 15;
             this.label7.Text = "Equipo";
             // 
@@ -288,7 +288,7 @@
             this.label8.ForeColor = System.Drawing.SystemColors.Control;
             this.label8.Location = new System.Drawing.Point(278, 288);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(144, 23);
+            this.label8.Size = new System.Drawing.Size(116, 21);
             this.label8.TabIndex = 16;
             this.label8.Text = "Nacionalidad";
             // 
@@ -356,7 +356,7 @@
             this.CmbEquipoO.FormattingEnabled = true;
             this.CmbEquipoO.Location = new System.Drawing.Point(347, 367);
             this.CmbEquipoO.Name = "CmbEquipoO";
-            this.CmbEquipoO.Size = new System.Drawing.Size(121, 25);
+            this.CmbEquipoO.Size = new System.Drawing.Size(121, 23);
             this.CmbEquipoO.TabIndex = 20;
             this.CmbEquipoO.Visible = false;
             // 
@@ -365,13 +365,13 @@
             this.CmbNacionalidadO.FormattingEnabled = true;
             this.CmbNacionalidadO.Location = new System.Drawing.Point(502, 367);
             this.CmbNacionalidadO.Name = "CmbNacionalidadO";
-            this.CmbNacionalidadO.Size = new System.Drawing.Size(121, 25);
+            this.CmbNacionalidadO.Size = new System.Drawing.Size(121, 23);
             this.CmbNacionalidadO.TabIndex = 21;
             this.CmbNacionalidadO.Visible = false;
             // 
             // FrmFormularioJugadores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.ClientSize = new System.Drawing.Size(890, 525);

@@ -45,6 +45,7 @@
             this.BtnGuardar = new RJCodeAdvance.RJControls.RJButton();
             this.label8 = new System.Windows.Forms.Label();
             this.txtAsistencia = new RJCodeAdvance.RJControls.RJTextBox();
+            this.CmbPosicion = new RJCodeAdvance.RJControls.RJComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +57,7 @@
             this.label1.Location = new System.Drawing.Point(332, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(334, 38);
+            this.label1.Size = new System.Drawing.Size(281, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Detalles del Jugador";
             // 
@@ -77,7 +78,7 @@
             this.TxtPosicion.PasswordChar = false;
             this.TxtPosicion.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.TxtPosicion.PlaceholderText = "";
-            this.TxtPosicion.Size = new System.Drawing.Size(250, 35);
+            this.TxtPosicion.Size = new System.Drawing.Size(250, 31);
             this.TxtPosicion.TabIndex = 1;
             this.TxtPosicion.Texts = "";
             this.TxtPosicion.UnderlinedStyle = true;
@@ -99,7 +100,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(52, 127);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 23);
+            this.label2.Size = new System.Drawing.Size(71, 21);
             this.label2.TabIndex = 10;
             this.label2.Text = "Posición";
             // 
@@ -110,7 +111,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(363, 127);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(168, 23);
+            this.label3.Size = new System.Drawing.Size(135, 21);
             this.label3.TabIndex = 12;
             this.label3.Text = "Número Camisa";
             // 
@@ -131,7 +132,7 @@
             this.TxtNumCamisa.PasswordChar = false;
             this.TxtNumCamisa.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.TxtNumCamisa.PlaceholderText = "";
-            this.TxtNumCamisa.Size = new System.Drawing.Size(250, 35);
+            this.TxtNumCamisa.Size = new System.Drawing.Size(250, 31);
             this.TxtNumCamisa.TabIndex = 11;
             this.TxtNumCamisa.Texts = "";
             this.TxtNumCamisa.UnderlinedStyle = true;
@@ -143,7 +144,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
             this.label4.Location = new System.Drawing.Point(52, 233);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(177, 23);
+            this.label4.Size = new System.Drawing.Size(143, 21);
             this.label4.TabIndex = 14;
             this.label4.Text = "Partidos Jugados";
             // 
@@ -164,7 +165,7 @@
             this.TxtPartidos.PasswordChar = false;
             this.TxtPartidos.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.TxtPartidos.PlaceholderText = "";
-            this.TxtPartidos.Size = new System.Drawing.Size(250, 35);
+            this.TxtPartidos.Size = new System.Drawing.Size(250, 31);
             this.TxtPartidos.TabIndex = 13;
             this.TxtPartidos.Texts = "";
             this.TxtPartidos.UnderlinedStyle = true;
@@ -176,7 +177,7 @@
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
             this.label5.Location = new System.Drawing.Point(363, 233);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 23);
+            this.label5.Size = new System.Drawing.Size(53, 21);
             this.label5.TabIndex = 16;
             this.label5.Text = "Goles";
             // 
@@ -197,7 +198,7 @@
             this.TxtGoles.PasswordChar = false;
             this.TxtGoles.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.TxtGoles.PlaceholderText = "";
-            this.TxtGoles.Size = new System.Drawing.Size(250, 35);
+            this.TxtGoles.Size = new System.Drawing.Size(250, 31);
             this.TxtGoles.TabIndex = 15;
             this.TxtGoles.Texts = "";
             this.TxtGoles.UnderlinedStyle = true;
@@ -209,7 +210,7 @@
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
             this.label6.Location = new System.Drawing.Point(52, 335);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(188, 23);
+            this.label6.Size = new System.Drawing.Size(153, 21);
             this.label6.TabIndex = 18;
             this.label6.Text = "Targetas Amarillas";
             // 
@@ -230,7 +231,7 @@
             this.TxtAmarillas.PasswordChar = false;
             this.TxtAmarillas.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.TxtAmarillas.PlaceholderText = "";
-            this.TxtAmarillas.Size = new System.Drawing.Size(250, 35);
+            this.TxtAmarillas.Size = new System.Drawing.Size(250, 31);
             this.TxtAmarillas.TabIndex = 17;
             this.TxtAmarillas.Texts = "";
             this.TxtAmarillas.UnderlinedStyle = true;
@@ -242,7 +243,7 @@
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
             this.label7.Location = new System.Drawing.Point(52, 433);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(149, 23);
+            this.label7.Size = new System.Drawing.Size(123, 21);
             this.label7.TabIndex = 20;
             this.label7.Text = "Targetas Rojas";
             // 
@@ -263,7 +264,7 @@
             this.TxtRojas.PasswordChar = false;
             this.TxtRojas.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.TxtRojas.PlaceholderText = "";
-            this.TxtRojas.Size = new System.Drawing.Size(250, 35);
+            this.TxtRojas.Size = new System.Drawing.Size(250, 31);
             this.TxtRojas.TabIndex = 19;
             this.TxtRojas.Texts = "";
             this.TxtRojas.UnderlinedStyle = true;
@@ -294,7 +295,7 @@
             this.label8.ForeColor = System.Drawing.SystemColors.Control;
             this.label8.Location = new System.Drawing.Point(363, 335);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(114, 23);
+            this.label8.Size = new System.Drawing.Size(95, 21);
             this.label8.TabIndex = 23;
             this.label8.Text = "Asistencias";
             // 
@@ -315,17 +316,37 @@
             this.txtAsistencia.PasswordChar = false;
             this.txtAsistencia.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtAsistencia.PlaceholderText = "";
-            this.txtAsistencia.Size = new System.Drawing.Size(250, 35);
+            this.txtAsistencia.Size = new System.Drawing.Size(250, 31);
             this.txtAsistencia.TabIndex = 22;
             this.txtAsistencia.Texts = "";
             this.txtAsistencia.UnderlinedStyle = true;
             // 
+            // CmbPosicion
+            // 
+            this.CmbPosicion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.CmbPosicion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(52)))), ((int)(((byte)(28)))));
+            this.CmbPosicion.BorderSize = 2;
+            this.CmbPosicion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.CmbPosicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.CmbPosicion.ForeColor = System.Drawing.Color.White;
+            this.CmbPosicion.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(113)))), ((int)(((byte)(62)))));
+            this.CmbPosicion.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.CmbPosicion.ListTextColor = System.Drawing.Color.DimGray;
+            this.CmbPosicion.Location = new System.Drawing.Point(56, 151);
+            this.CmbPosicion.MinimumSize = new System.Drawing.Size(200, 30);
+            this.CmbPosicion.Name = "CmbPosicion";
+            this.CmbPosicion.Padding = new System.Windows.Forms.Padding(2);
+            this.CmbPosicion.Size = new System.Drawing.Size(250, 45);
+            this.CmbPosicion.TabIndex = 24;
+            this.CmbPosicion.Texts = "Seleccionar";
+            // 
             // FrmFormularioDetalleJugador
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.ClientSize = new System.Drawing.Size(1078, 535);
+            this.Controls.Add(this.CmbPosicion);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtAsistencia);
             this.Controls.Add(this.BtnGuardar);
@@ -374,5 +395,6 @@
         private RJCodeAdvance.RJControls.RJButton BtnGuardar;
         private System.Windows.Forms.Label label8;
         private RJCodeAdvance.RJControls.RJTextBox txtAsistencia;
+        private RJCodeAdvance.RJControls.RJComboBox CmbPosicion;
     }
 }
