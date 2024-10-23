@@ -32,7 +32,7 @@ namespace BEST_PLAYER_2024
                 DgvVotaciones.Columns["NombreEquipo"].HeaderText = "Equipo";
                 DgvVotaciones.Columns["NombrePais"].HeaderText = "Pais";
                 // Ajustar el ancho de la columna que contiene la foto
-                DgvVotaciones.Columns["Foto"].Width = 100;
+                //DgvVotaciones.Columns["Foto"].Width = 100;
                 DgvVotaciones.Columns["Foto"].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             }
             catch (Exception ex)

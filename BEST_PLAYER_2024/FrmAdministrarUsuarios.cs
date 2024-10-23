@@ -474,5 +474,49 @@ namespace BEST_PLAYER_2024
         {
 
         }
+
+        private FrmCambiarClave frmCambiarClave; // Variable para almacenar la instancia del formulario
+
+        private void DgvUsuarios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+                {
+                    DataGridViewRow filaSeleccionada = DgvUsuarios.Rows[e.RowIndex];
+
+                    string idUsuario = filaSeleccionada.Cells["IdUsuario"].Value.ToString();
+                    string nombreUsuario = filaSeleccionada.Cells["NombreUsuario"].Value.ToString();
+
+                    DialogResult result = MessageBox.Show(
+                        "¿Desea cambiar la contraseña del usuario " + nombreUsuario + "?",
+                        "Confirmar",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question
+                    );
+
+                    if (result == DialogResult.Yes)
+                    {
+                        // Verificar si el formulario ya está abierto
+                        if (frmCambiarClave == null || frmCambiarClave.IsDisposed)
+                        {
+                            frmCambiarClave = new FrmCambiarClave(idUsuario); // Crear nueva instancia si no está abierta
+                            frmCambiarClave.Show(); // Pasar el idUsuario
+                        }
+                        else
+                        {
+                            MessageBox.Show("El formulario para cambiar la contraseña ya está abierto.",
+                                "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            frmCambiarClave.BringToFront(); 
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }

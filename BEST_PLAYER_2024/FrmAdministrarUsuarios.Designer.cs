@@ -330,7 +330,7 @@
             this.TxtRepetirClave.PlaceholderText = "";
             this.TxtRepetirClave.Size = new System.Drawing.Size(250, 36);
             this.TxtRepetirClave.TabIndex = 57;
-            this.TxtRepetirClave.Texts = "Imagen@123";
+            this.TxtRepetirClave.Texts = "";
             this.TxtRepetirClave.UnderlinedStyle = true;
             // 
             // label13
@@ -374,7 +374,7 @@
             this.TxtClave.PlaceholderText = "";
             this.TxtClave.Size = new System.Drawing.Size(250, 36);
             this.TxtClave.TabIndex = 53;
-            this.TxtClave.Texts = "Imagen@123";
+            this.TxtClave.Texts = "";
             this.TxtClave.UnderlinedStyle = true;
             // 
             // TxtCorreo
@@ -396,7 +396,7 @@
             this.TxtCorreo.PlaceholderText = "";
             this.TxtCorreo.Size = new System.Drawing.Size(250, 36);
             this.TxtCorreo.TabIndex = 52;
-            this.TxtCorreo.Texts = "correoimagen@gmail.com";
+            this.TxtCorreo.Texts = "";
             this.TxtCorreo.UnderlinedStyle = true;
             // 
             // label8
@@ -496,7 +496,7 @@
             this.TxtPasaporte.PlaceholderText = "";
             this.TxtPasaporte.Size = new System.Drawing.Size(250, 36);
             this.TxtPasaporte.TabIndex = 46;
-            this.TxtPasaporte.Texts = "123456826";
+            this.TxtPasaporte.Texts = "";
             this.TxtPasaporte.UnderlinedStyle = true;
             // 
             // label11
@@ -529,7 +529,7 @@
             this.TxtNombreUsuario.PlaceholderText = "";
             this.TxtNombreUsuario.Size = new System.Drawing.Size(250, 36);
             this.TxtNombreUsuario.TabIndex = 44;
-            this.TxtNombreUsuario.Texts = "Imagen Usuario";
+            this.TxtNombreUsuario.Texts = "";
             this.TxtNombreUsuario.UnderlinedStyle = true;
             // 
             // DgvUsuarios
@@ -569,6 +569,7 @@
             this.DgvUsuarios.Size = new System.Drawing.Size(850, 175);
             this.DgvUsuarios.TabIndex = 35;
             this.DgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvUsuarios_CellClick);
+            this.DgvUsuarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvUsuarios_CellDoubleClick);
             // 
             // openFileDialog1
             // 
