@@ -40,16 +40,23 @@ namespace BEST_PLAYER_2024
             try
             {
                 DataTable datos = ServUsuario.CargarUsuarios();
-                DgvUsuarios.DataSource = datos;
-                // Renombrar las columnas en el DataGridView
+                int idSesion = SesionUsuario.IdUsuario;
+                // Filtrar las filas para que no se incluya la del usuario que inició sesión
+                DataRow[] filasFiltradas = datos.Select($"IdUsuario <> {idSesion}");
+                // Crear un nuevo DataTable para los usuarios filtrados
+                DataTable datosFiltrados = datos.Clone();  // Clona la estructura del DataTable original
+                // Añadir las filas filtradas al nuevo DataTable
+                foreach (DataRow fila in filasFiltradas)
+                {
+                    datosFiltrados.ImportRow(fila);
+                }
+                DgvUsuarios.DataSource = datosFiltrados;
                 DgvUsuarios.Columns["IdUsuario"].HeaderText = "ID";
                 DgvUsuarios.Columns["NombreUsuario"].HeaderText = "Nombre de Usuario";
                 DgvUsuarios.Columns["Correo"].HeaderText = "Correo Electrónico";
                 DgvUsuarios.Columns["FechaNacimiento"].HeaderText = "Fecha de Nacimiento";
-                // Ajustar el ancho de la columna que contiene la foto
                 DgvUsuarios.Columns["Foto"].Width = 100;
                 DgvUsuarios.Columns["Foto"].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-                //
                 DgvUsuarios.Columns["Pasaporte"].HeaderText = "Número de Pasaporte";
                 DgvUsuarios.Columns["Nivel_Usuario"].HeaderText = "Nivel de Usuario";
                 DgvUsuarios.Columns["NombreAgencia"].HeaderText = "Agencia";
@@ -59,6 +66,7 @@ namespace BEST_PLAYER_2024
                 MessageBox.Show($"Error al cargar los datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         //Metodos Llenar CMB
         void LlenarNiveles()
         {
