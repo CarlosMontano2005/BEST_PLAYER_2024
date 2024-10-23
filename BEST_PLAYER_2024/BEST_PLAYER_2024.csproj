@@ -520,6 +520,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo-sistema.ico" />
+    <None Include="Resources\Katia.jpg" />
     <None Include="Resources\logo_default.png" />
     <None Include="Resources\icons8-gráfico-30.png" />
     <None Include="Resources\icons8-ms-excel-24.png" />
