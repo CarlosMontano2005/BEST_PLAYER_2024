@@ -23,8 +23,20 @@ namespace BEST_PLAYER_2024
             DataTable cargarId = ServDetalleJugador.searchId(nombre_jugador,apellido_jugador);
             idJugador = Convert.ToInt32(cargarId.Rows[0]["IdJugador"].ToString());
             codigop = 0;
+            TxtPosicion.Visible = false;
+            llenarPosicionJugador();
         }
 
+        void llenarPosicionJugador()
+        {
+            // Limpiar los elementos del ComboBox antes de agregar nuevos
+            CmbPosicion.Items.Clear();
+            // Agregar las posiciones de los jugadores
+            CmbPosicion.Items.Add("Portero");
+            CmbPosicion.Items.Add("Centrocampista");
+            CmbPosicion.Items.Add("Delantero");
+            CmbPosicion.Items.Add("Defensa");
+        }
 
         public FrmFormularioDetalleJugador(int id_jugador) {
             InitializeComponent();
@@ -53,11 +65,12 @@ namespace BEST_PLAYER_2024
             {
                 if (codigop == 0)
                 {
-                    if (TxtAmarillas.Texts != "" || txtAsistencia.Texts != "" || TxtGoles.Texts != "" || TxtNumCamisa.Texts != "" || TxtPartidos.Texts != "" || TxtPosicion.Texts != "" || TxtRojas.Texts != "")
+                    if (TxtAmarillas.Texts != "" || txtAsistencia.Texts != "" || TxtGoles.Texts != "" || TxtNumCamisa.Texts != "" || TxtPartidos.Texts != "" || TxtRojas.Texts != "")//TxtPosicion.Texts != "" ||
                     {
                         CtrDetalleJugador detallejugador = new CtrDetalleJugador();
                         detallejugador.IdJugador = idJugador;
-                        detallejugador.Posicion = TxtPosicion.Texts;
+                        // detallejugador.Posicion = TxtPosicion.Texts;
+                        detallejugador.Posicion = CmbPosicion.SelectedItem.ToString();
                         detallejugador.NumeroCamisa = Convert.ToInt32(TxtNumCamisa.Texts);
                         detallejugador.PartidosJugados = Convert.ToInt32(TxtPartidos.Texts);
                         detallejugador.Goles = Convert.ToInt32(TxtGoles.Texts);
@@ -82,12 +95,13 @@ namespace BEST_PLAYER_2024
                     }
                 }
                 else if (codigop == 1) {
-                    if (TxtAmarillas.Texts != "" || txtAsistencia.Texts != "" || TxtGoles.Texts != "" || TxtNumCamisa.Texts != "" || TxtPartidos.Texts != "" || TxtPosicion.Texts != "" || TxtRojas.Texts != "")
+                    if (TxtAmarillas.Texts != "" || txtAsistencia.Texts != "" || TxtGoles.Texts != "" || TxtNumCamisa.Texts != "" || TxtPartidos.Texts != "" || TxtRojas.Texts != "")//TxtPosicion.Texts != "" || 
                     {
                         CtrDetalleJugador detallejugador = new CtrDetalleJugador();
                         detallejugador.idDetalle = idDetalle;
                         detallejugador.IdJugador = idJugador;
-                        detallejugador.Posicion = TxtPosicion.Texts;
+                        //detallejugador.Posicion = TxtPosicion.Texts;
+                        detallejugador.Posicion = CmbPosicion.SelectedItem.ToString();
                         detallejugador.NumeroCamisa = Convert.ToInt32(TxtNumCamisa.Texts);
                         detallejugador.PartidosJugados = Convert.ToInt32(TxtPartidos.Texts);
                         detallejugador.Goles = Convert.ToInt32(TxtGoles.Texts);
