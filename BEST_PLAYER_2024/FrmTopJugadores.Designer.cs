@@ -28,48 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTopJugadores));
             this.label1 = new System.Windows.Forms.Label();
             this.LblBestPlayerContenedor = new System.Windows.Forms.Label();
             this.lblNombreTop1 = new System.Windows.Forms.Label();
             this.lblEquipoTop1 = new System.Windows.Forms.Label();
             this.lblCantVotos_1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.rjCircularPictureBox1 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
+            this.PxbLogoEq_1 = new System.Windows.Forms.PictureBox();
+            this.PxFotoJugador_1 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.rjCircularPictureBox2 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.PxFotoJugador_2 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
+            this.PxbLogoEq_2 = new System.Windows.Forms.PictureBox();
             this.lblCantVotos_2 = new System.Windows.Forms.Label();
             this.lblEquipoTop2 = new System.Windows.Forms.Label();
             this.lblNombreTop2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.PxbLogoEq_3 = new System.Windows.Forms.PictureBox();
             this.lblCantVotos_3 = new System.Windows.Forms.Label();
             this.lblEquipoTop3 = new System.Windows.Forms.Label();
             this.lblNombreTop3 = new System.Windows.Forms.Label();
-            this.rjCircularPictureBox3 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
+            this.PxFotoJugador_3 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.PxbLogoEq_4 = new System.Windows.Forms.PictureBox();
             this.lblCantVotos_4 = new System.Windows.Forms.Label();
             this.lblEquipoTop4 = new System.Windows.Forms.Label();
             this.lblNombreTop4 = new System.Windows.Forms.Label();
-            this.rjCircularPictureBox4 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
+            this.PxFotoJugador_4 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
             this.label16 = new System.Windows.Forms.Label();
             this.BtnBuscar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PxbLogoEq_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PxFotoJugador_1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PxFotoJugador_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PxbLogoEq_2)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PxbLogoEq_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PxFotoJugador_3)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PxbLogoEq_4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PxFotoJugador_4)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -133,49 +134,49 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.PxbLogoEq_1);
             this.panel1.Controls.Add(this.lblCantVotos_1);
             this.panel1.Controls.Add(this.lblEquipoTop1);
             this.panel1.Controls.Add(this.lblNombreTop1);
-            this.panel1.Controls.Add(this.rjCircularPictureBox1);
+            this.panel1.Controls.Add(this.PxFotoJugador_1);
             this.panel1.Controls.Add(this.LblBestPlayerContenedor);
             this.panel1.Location = new System.Drawing.Point(24, 101);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(837, 123);
             this.panel1.TabIndex = 43;
             // 
-            // pictureBox1
+            // PxbLogoEq_1
             // 
-            this.pictureBox1.Image = global::BEST_PLAYER_2024.Properties.Resources.FC_Barcelona__crest__svg;
-            this.pictureBox1.Location = new System.Drawing.Point(529, 25);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 65);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 46;
-            this.pictureBox1.TabStop = false;
+            this.PxbLogoEq_1.Image = ((System.Drawing.Image)(resources.GetObject("PxbLogoEq_1.Image")));
+            this.PxbLogoEq_1.Location = new System.Drawing.Point(529, 25);
+            this.PxbLogoEq_1.Name = "PxbLogoEq_1";
+            this.PxbLogoEq_1.Size = new System.Drawing.Size(60, 65);
+            this.PxbLogoEq_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PxbLogoEq_1.TabIndex = 46;
+            this.PxbLogoEq_1.TabStop = false;
             // 
-            // rjCircularPictureBox1
+            // PxFotoJugador_1
             // 
-            this.rjCircularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.rjCircularPictureBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.rjCircularPictureBox1.BorderColor2 = System.Drawing.Color.White;
-            this.rjCircularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.rjCircularPictureBox1.BorderSize = 4;
-            this.rjCircularPictureBox1.GradientAngle = 50F;
-            this.rjCircularPictureBox1.Image = global::BEST_PLAYER_2024.Properties.Resources.mesi_680x375;
-            this.rjCircularPictureBox1.Location = new System.Drawing.Point(87, 6);
-            this.rjCircularPictureBox1.Name = "rjCircularPictureBox1";
-            this.rjCircularPictureBox1.Size = new System.Drawing.Size(108, 108);
-            this.rjCircularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.rjCircularPictureBox1.TabIndex = 13;
-            this.rjCircularPictureBox1.TabStop = false;
+            this.PxFotoJugador_1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.PxFotoJugador_1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.PxFotoJugador_1.BorderColor2 = System.Drawing.Color.White;
+            this.PxFotoJugador_1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.PxFotoJugador_1.BorderSize = 4;
+            this.PxFotoJugador_1.GradientAngle = 50F;
+            this.PxFotoJugador_1.Image = ((System.Drawing.Image)(resources.GetObject("PxFotoJugador_1.Image")));
+            this.PxFotoJugador_1.Location = new System.Drawing.Point(87, 6);
+            this.PxFotoJugador_1.Name = "PxFotoJugador_1";
+            this.PxFotoJugador_1.Size = new System.Drawing.Size(108, 108);
+            this.PxFotoJugador_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PxFotoJugador_1.TabIndex = 13;
+            this.PxFotoJugador_1.TabStop = false;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.rjCircularPictureBox2);
-            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.PxFotoJugador_2);
+            this.panel2.Controls.Add(this.PxbLogoEq_2);
             this.panel2.Controls.Add(this.lblCantVotos_2);
             this.panel2.Controls.Add(this.lblEquipoTop2);
             this.panel2.Controls.Add(this.lblNombreTop2);
@@ -185,31 +186,31 @@
             this.panel2.Size = new System.Drawing.Size(837, 123);
             this.panel2.TabIndex = 47;
             // 
-            // rjCircularPictureBox2
+            // PxFotoJugador_2
             // 
-            this.rjCircularPictureBox2.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.rjCircularPictureBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.rjCircularPictureBox2.BorderColor2 = System.Drawing.Color.White;
-            this.rjCircularPictureBox2.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.rjCircularPictureBox2.BorderSize = 4;
-            this.rjCircularPictureBox2.GradientAngle = 50F;
-            this.rjCircularPictureBox2.Image = global::BEST_PLAYER_2024.Properties.Resources.Cristiano_Ronaldo;
-            this.rjCircularPictureBox2.Location = new System.Drawing.Point(87, 8);
-            this.rjCircularPictureBox2.Name = "rjCircularPictureBox2";
-            this.rjCircularPictureBox2.Size = new System.Drawing.Size(108, 108);
-            this.rjCircularPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.rjCircularPictureBox2.TabIndex = 48;
-            this.rjCircularPictureBox2.TabStop = false;
+            this.PxFotoJugador_2.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.PxFotoJugador_2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.PxFotoJugador_2.BorderColor2 = System.Drawing.Color.White;
+            this.PxFotoJugador_2.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.PxFotoJugador_2.BorderSize = 4;
+            this.PxFotoJugador_2.GradientAngle = 50F;
+            this.PxFotoJugador_2.Image = ((System.Drawing.Image)(resources.GetObject("PxFotoJugador_2.Image")));
+            this.PxFotoJugador_2.Location = new System.Drawing.Point(87, 8);
+            this.PxFotoJugador_2.Name = "PxFotoJugador_2";
+            this.PxFotoJugador_2.Size = new System.Drawing.Size(108, 108);
+            this.PxFotoJugador_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PxFotoJugador_2.TabIndex = 48;
+            this.PxFotoJugador_2.TabStop = false;
             // 
-            // pictureBox2
+            // PxbLogoEq_2
             // 
-            this.pictureBox2.Image = global::BEST_PLAYER_2024.Properties.Resources.Logo_Real_Madrid_svg;
-            this.pictureBox2.Location = new System.Drawing.Point(529, 25);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(60, 65);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 47;
-            this.pictureBox2.TabStop = false;
+            this.PxbLogoEq_2.Image = ((System.Drawing.Image)(resources.GetObject("PxbLogoEq_2.Image")));
+            this.PxbLogoEq_2.Location = new System.Drawing.Point(529, 25);
+            this.PxbLogoEq_2.Name = "PxbLogoEq_2";
+            this.PxbLogoEq_2.Size = new System.Drawing.Size(60, 65);
+            this.PxbLogoEq_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PxbLogoEq_2.TabIndex = 47;
+            this.PxbLogoEq_2.TabStop = false;
             // 
             // lblCantVotos_2
             // 
@@ -261,26 +262,26 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.pictureBox3);
+            this.panel3.Controls.Add(this.PxbLogoEq_3);
             this.panel3.Controls.Add(this.lblCantVotos_3);
             this.panel3.Controls.Add(this.lblEquipoTop3);
             this.panel3.Controls.Add(this.lblNombreTop3);
-            this.panel3.Controls.Add(this.rjCircularPictureBox3);
+            this.panel3.Controls.Add(this.PxFotoJugador_3);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Location = new System.Drawing.Point(24, 365);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(837, 123);
             this.panel3.TabIndex = 48;
             // 
-            // pictureBox3
+            // PxbLogoEq_3
             // 
-            this.pictureBox3.Image = global::BEST_PLAYER_2024.Properties.Resources.FC_Barcelona__crest__svg;
-            this.pictureBox3.Location = new System.Drawing.Point(529, 25);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(60, 65);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 47;
-            this.pictureBox3.TabStop = false;
+            this.PxbLogoEq_3.Image = ((System.Drawing.Image)(resources.GetObject("PxbLogoEq_3.Image")));
+            this.PxbLogoEq_3.Location = new System.Drawing.Point(529, 25);
+            this.PxbLogoEq_3.Name = "PxbLogoEq_3";
+            this.PxbLogoEq_3.Size = new System.Drawing.Size(60, 65);
+            this.PxbLogoEq_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PxbLogoEq_3.TabIndex = 47;
+            this.PxbLogoEq_3.TabStop = false;
             // 
             // lblCantVotos_3
             // 
@@ -315,21 +316,21 @@
             this.lblNombreTop3.TabIndex = 43;
             this.lblNombreTop3.Text = "Luka Modric";
             // 
-            // rjCircularPictureBox3
+            // PxFotoJugador_3
             // 
-            this.rjCircularPictureBox3.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.rjCircularPictureBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.rjCircularPictureBox3.BorderColor2 = System.Drawing.Color.White;
-            this.rjCircularPictureBox3.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.rjCircularPictureBox3.BorderSize = 4;
-            this.rjCircularPictureBox3.GradientAngle = 50F;
-            this.rjCircularPictureBox3.Image = global::BEST_PLAYER_2024.Properties.Resources.Luka_modric;
-            this.rjCircularPictureBox3.Location = new System.Drawing.Point(87, 6);
-            this.rjCircularPictureBox3.Name = "rjCircularPictureBox3";
-            this.rjCircularPictureBox3.Size = new System.Drawing.Size(108, 108);
-            this.rjCircularPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.rjCircularPictureBox3.TabIndex = 13;
-            this.rjCircularPictureBox3.TabStop = false;
+            this.PxFotoJugador_3.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.PxFotoJugador_3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.PxFotoJugador_3.BorderColor2 = System.Drawing.Color.White;
+            this.PxFotoJugador_3.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.PxFotoJugador_3.BorderSize = 4;
+            this.PxFotoJugador_3.GradientAngle = 50F;
+            this.PxFotoJugador_3.Image = ((System.Drawing.Image)(resources.GetObject("PxFotoJugador_3.Image")));
+            this.PxFotoJugador_3.Location = new System.Drawing.Point(87, 6);
+            this.PxFotoJugador_3.Name = "PxFotoJugador_3";
+            this.PxFotoJugador_3.Size = new System.Drawing.Size(108, 108);
+            this.PxFotoJugador_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PxFotoJugador_3.TabIndex = 13;
+            this.PxFotoJugador_3.TabStop = false;
             // 
             // label12
             // 
@@ -348,26 +349,26 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Controls.Add(this.pictureBox4);
+            this.panel4.Controls.Add(this.PxbLogoEq_4);
             this.panel4.Controls.Add(this.lblCantVotos_4);
             this.panel4.Controls.Add(this.lblEquipoTop4);
             this.panel4.Controls.Add(this.lblNombreTop4);
-            this.panel4.Controls.Add(this.rjCircularPictureBox4);
+            this.panel4.Controls.Add(this.PxFotoJugador_4);
             this.panel4.Controls.Add(this.label16);
             this.panel4.Location = new System.Drawing.Point(24, 497);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(837, 123);
             this.panel4.TabIndex = 49;
             // 
-            // pictureBox4
+            // PxbLogoEq_4
             // 
-            this.pictureBox4.Image = global::BEST_PLAYER_2024.Properties.Resources.FC_Barcelona__crest__svg;
-            this.pictureBox4.Location = new System.Drawing.Point(529, 25);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(60, 65);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 47;
-            this.pictureBox4.TabStop = false;
+            this.PxbLogoEq_4.Image = ((System.Drawing.Image)(resources.GetObject("PxbLogoEq_4.Image")));
+            this.PxbLogoEq_4.Location = new System.Drawing.Point(529, 25);
+            this.PxbLogoEq_4.Name = "PxbLogoEq_4";
+            this.PxbLogoEq_4.Size = new System.Drawing.Size(60, 65);
+            this.PxbLogoEq_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PxbLogoEq_4.TabIndex = 47;
+            this.PxbLogoEq_4.TabStop = false;
             // 
             // lblCantVotos_4
             // 
@@ -402,21 +403,21 @@
             this.lblNombreTop4.TabIndex = 43;
             this.lblNombreTop4.Text = "Bruno Fernandes";
             // 
-            // rjCircularPictureBox4
+            // PxFotoJugador_4
             // 
-            this.rjCircularPictureBox4.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.rjCircularPictureBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.rjCircularPictureBox4.BorderColor2 = System.Drawing.Color.White;
-            this.rjCircularPictureBox4.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.rjCircularPictureBox4.BorderSize = 4;
-            this.rjCircularPictureBox4.GradientAngle = 50F;
-            this.rjCircularPictureBox4.Image = global::BEST_PLAYER_2024.Properties.Resources.BrunoFernandes1;
-            this.rjCircularPictureBox4.Location = new System.Drawing.Point(87, 6);
-            this.rjCircularPictureBox4.Name = "rjCircularPictureBox4";
-            this.rjCircularPictureBox4.Size = new System.Drawing.Size(108, 108);
-            this.rjCircularPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.rjCircularPictureBox4.TabIndex = 13;
-            this.rjCircularPictureBox4.TabStop = false;
+            this.PxFotoJugador_4.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.PxFotoJugador_4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.PxFotoJugador_4.BorderColor2 = System.Drawing.Color.White;
+            this.PxFotoJugador_4.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.PxFotoJugador_4.BorderSize = 4;
+            this.PxFotoJugador_4.GradientAngle = 50F;
+            this.PxFotoJugador_4.Image = ((System.Drawing.Image)(resources.GetObject("PxFotoJugador_4.Image")));
+            this.PxFotoJugador_4.Location = new System.Drawing.Point(87, 6);
+            this.PxFotoJugador_4.Name = "PxFotoJugador_4";
+            this.PxFotoJugador_4.Size = new System.Drawing.Size(108, 108);
+            this.PxFotoJugador_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PxFotoJugador_4.TabIndex = 13;
+            this.PxFotoJugador_4.TabStop = false;
             // 
             // label16
             // 
@@ -464,20 +465,20 @@
             this.Text = "FrmTopJugadores";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PxbLogoEq_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PxFotoJugador_1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PxFotoJugador_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PxbLogoEq_2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PxbLogoEq_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PxFotoJugador_3)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PxbLogoEq_4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PxFotoJugador_4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -486,7 +487,7 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label LblBestPlayerContenedor;
-        private RJCodeAdvance.RJControls.RJCircularPictureBox rjCircularPictureBox1;
+        private RJCodeAdvance.RJControls.RJCircularPictureBox PxFotoJugador_1;
         private System.Windows.Forms.Label lblNombreTop1;
         private System.Windows.Forms.Label lblEquipoTop1;
         private System.Windows.Forms.Label lblCantVotos_1;
@@ -500,19 +501,19 @@
         private System.Windows.Forms.Label lblCantVotos_3;
         private System.Windows.Forms.Label lblEquipoTop3;
         private System.Windows.Forms.Label lblNombreTop3;
-        private RJCodeAdvance.RJControls.RJCircularPictureBox rjCircularPictureBox3;
+        private RJCodeAdvance.RJControls.RJCircularPictureBox PxFotoJugador_3;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lblCantVotos_4;
         private System.Windows.Forms.Label lblEquipoTop4;
         private System.Windows.Forms.Label lblNombreTop4;
-        private RJCodeAdvance.RJControls.RJCircularPictureBox rjCircularPictureBox4;
+        private RJCodeAdvance.RJControls.RJCircularPictureBox PxFotoJugador_4;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox PxbLogoEq_1;
+        private System.Windows.Forms.PictureBox PxbLogoEq_2;
+        private System.Windows.Forms.PictureBox PxbLogoEq_3;
+        private System.Windows.Forms.PictureBox PxbLogoEq_4;
         private System.Windows.Forms.Button BtnBuscar;
-        private RJCodeAdvance.RJControls.RJCircularPictureBox rjCircularPictureBox2;
+        private RJCodeAdvance.RJControls.RJCircularPictureBox PxFotoJugador_2;
     }
 }

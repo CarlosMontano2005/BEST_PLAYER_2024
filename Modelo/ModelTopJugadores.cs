@@ -21,12 +21,13 @@ namespace Modelo
                 "B.Apellido, " +
                 "B.Foto, " +
                 "D.Nombre AS NombreEquipo, " +
-                "C.Nombre AS NombrePais " +
+                "C.Nombre AS NombrePais ," +
+                "D.FotoLogoEquipo As FotoLogo "+
                 "FROM Votacion A " + 
                 "JOIN Jugadores B ON A.IdJugador = B.IdJugador " +
                 "JOIN Paises C ON B.IdPais = C.IdPais " + 
-                "JOIN Equipos D ON D.IdEquipo = B.IdEquipo " + 
-                "GROUP BY B.Nombre, B.Apellido, B.IdEquipo, D.Nombre, C.Nombre, B.Foto " + 
+                "JOIN Equipos D ON D.IdEquipo = B.IdEquipo " +
+                "GROUP BY B.Nombre, B.Apellido, B.IdEquipo, D.Nombre, C.Nombre, B.Foto, D.FotoLogoEquipo " + 
                 "ORDER BY cantidadVotos DESC";
 
                 using (SqlConnection connection = dbConection.GetConnection())
