@@ -37,7 +37,7 @@ namespace BEST_PLAYER_2024
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al cargar los datos: {ex}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error al cargar los datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void label1_Click(object sender, EventArgs e)
