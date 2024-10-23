@@ -32,9 +32,12 @@
             this.BtnRegresar = new System.Windows.Forms.Label();
             this.lblNombreDT = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.PxbFotoDT = new RJCodeAdvance.RJControls.RJCircularPictureBox();
             this.lblCantidadEquipo = new System.Windows.Forms.Label();
+            this.lblPais = new System.Windows.Forms.Label();
             this.lblPaisColor = new System.Windows.Forms.Label();
             this.LblNombreEquipo = new System.Windows.Forms.Label();
+            this.PxbLogoEquipo = new System.Windows.Forms.PictureBox();
             this.lblNombre_1 = new System.Windows.Forms.Label();
             this.lblApellido_1 = new System.Windows.Forms.Label();
             this.lblPosicion_1 = new System.Windows.Forms.Label();
@@ -75,10 +78,9 @@
             this.Foto_3 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
             this.Foto_2 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
             this.Foto_1 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
-            this.PxbFotoDT = new RJCodeAdvance.RJControls.RJCircularPictureBox();
-            this.lblPais = new System.Windows.Forms.Label();
-            this.PxbLogoEquipo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PxbFotoDT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PxbLogoEquipo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Foto_10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Foto_9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Foto_8)).BeginInit();
@@ -89,8 +91,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Foto_3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Foto_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Foto_1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PxbFotoDT)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PxbLogoEquipo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -145,6 +145,22 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "DIRECTOR TECNICO";
             // 
+            // PxbFotoDT
+            // 
+            this.PxbFotoDT.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.PxbFotoDT.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.PxbFotoDT.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
+            this.PxbFotoDT.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.PxbFotoDT.BorderSize = 2;
+            this.PxbFotoDT.GradientAngle = 50F;
+            this.PxbFotoDT.Location = new System.Drawing.Point(596, 49);
+            this.PxbFotoDT.Name = "PxbFotoDT";
+            this.PxbFotoDT.Size = new System.Drawing.Size(75, 75);
+            this.PxbFotoDT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PxbFotoDT.TabIndex = 5;
+            this.PxbFotoDT.TabStop = false;
+            this.PxbFotoDT.DoubleClick += new System.EventHandler(this.PxbFotoDT_DoubleClick);
+            // 
             // lblCantidadEquipo
             // 
             this.lblCantidadEquipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(176)))), ((int)(((byte)(176)))));
@@ -154,6 +170,17 @@
             this.lblCantidadEquipo.Size = new System.Drawing.Size(141, 21);
             this.lblCantidadEquipo.TabIndex = 4;
             this.lblCantidadEquipo.Text = "jugadores: 25";
+            // 
+            // lblPais
+            // 
+            this.lblPais.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(176)))), ((int)(((byte)(176)))));
+            this.lblPais.Image = global::BEST_PLAYER_2024.Properties.Resources.globe_americas;
+            this.lblPais.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPais.Location = new System.Drawing.Point(157, 116);
+            this.lblPais.Name = "lblPais";
+            this.lblPais.Size = new System.Drawing.Size(139, 21);
+            this.lblPais.TabIndex = 3;
+            this.lblPais.Text = "    Sudafrica";
             // 
             // lblPaisColor
             // 
@@ -176,6 +203,18 @@
             this.LblNombreEquipo.Size = new System.Drawing.Size(226, 50);
             this.LblNombreEquipo.TabIndex = 2;
             this.LblNombreEquipo.Text = "BARCELONA";
+            // 
+            // PxbLogoEquipo
+            // 
+            this.PxbLogoEquipo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PxbLogoEquipo.Image = global::BEST_PLAYER_2024.Properties.Resources.logo_default;
+            this.PxbLogoEquipo.Location = new System.Drawing.Point(20, 32);
+            this.PxbLogoEquipo.Name = "PxbLogoEquipo";
+            this.PxbLogoEquipo.Size = new System.Drawing.Size(123, 123);
+            this.PxbLogoEquipo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PxbLogoEquipo.TabIndex = 0;
+            this.PxbLogoEquipo.TabStop = false;
+            this.PxbLogoEquipo.DoubleClick += new System.EventHandler(this.PxbLogoEquipo_DoubleClick);
             // 
             // lblNombre_1
             // 
@@ -657,45 +696,6 @@
             this.Foto_1.TabIndex = 8;
             this.Foto_1.TabStop = false;
             // 
-            // PxbFotoDT
-            // 
-            this.PxbFotoDT.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.PxbFotoDT.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.PxbFotoDT.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(232)))), ((int)(((byte)(120)))));
-            this.PxbFotoDT.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.PxbFotoDT.BorderSize = 2;
-            this.PxbFotoDT.GradientAngle = 50F;
-            this.PxbFotoDT.Location = new System.Drawing.Point(596, 49);
-            this.PxbFotoDT.Name = "PxbFotoDT";
-            this.PxbFotoDT.Size = new System.Drawing.Size(75, 75);
-            this.PxbFotoDT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PxbFotoDT.TabIndex = 5;
-            this.PxbFotoDT.TabStop = false;
-            this.PxbFotoDT.DoubleClick += new System.EventHandler(this.PxbFotoDT_DoubleClick);
-            // 
-            // lblPais
-            // 
-            this.lblPais.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(176)))), ((int)(((byte)(176)))));
-            this.lblPais.Image = global::BEST_PLAYER_2024.Properties.Resources.globe_americas;
-            this.lblPais.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblPais.Location = new System.Drawing.Point(157, 116);
-            this.lblPais.Name = "lblPais";
-            this.lblPais.Size = new System.Drawing.Size(139, 21);
-            this.lblPais.TabIndex = 3;
-            this.lblPais.Text = "    Sudafrica";
-            // 
-            // PxbLogoEquipo
-            // 
-            this.PxbLogoEquipo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PxbLogoEquipo.Image = global::BEST_PLAYER_2024.Properties.Resources.logo_default;
-            this.PxbLogoEquipo.Location = new System.Drawing.Point(20, 32);
-            this.PxbLogoEquipo.Name = "PxbLogoEquipo";
-            this.PxbLogoEquipo.Size = new System.Drawing.Size(123, 123);
-            this.PxbLogoEquipo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PxbLogoEquipo.TabIndex = 0;
-            this.PxbLogoEquipo.TabStop = false;
-            this.PxbLogoEquipo.DoubleClick += new System.EventHandler(this.PxbLogoEquipo_DoubleClick);
-            // 
             // FrmInfoEquipo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -752,6 +752,8 @@
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PxbFotoDT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PxbLogoEquipo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Foto_10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Foto_9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Foto_8)).EndInit();
@@ -762,8 +764,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Foto_3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Foto_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Foto_1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PxbFotoDT)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PxbLogoEquipo)).EndInit();
             this.ResumeLayout(false);
 
         }

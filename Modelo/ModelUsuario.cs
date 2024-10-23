@@ -201,6 +201,45 @@ namespace Modelo
             }
 
         }
+        public static bool ActualizarClave(int idUsuario, string clave, out string message)
+        {
+            DatabaseConnection dbConnection = new DatabaseConnection();
+
+            try
+            {
+                string query = "UPDATE Usuarios SET Clave = @clave WHERE IdUsuario = @idUsuario";
+                using (SqlConnection connection = dbConnection.GetConnection())
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@idUsuario", idUsuario);
+                    cmd.Parameters.AddWithValue("@clave", clave);
+                    connection.Open();
+                    int result = cmd.ExecuteNonQuery();
+
+                    if (result > 0)
+                    {
+                        message = "Actualizado Clave Exitoso";
+                        return true;
+                    }
+                    else
+                    {
+                        message = "No se actualizo ningún registro.";
+                        return false;
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                message = $"Error de SQL: {DatabaseValidations.FormatSqlErrorMessage(ex)}";
+                return false;
+            }
+            catch (Exception ex)
+            {
+                message = $"Error general al insertar el usuario: {ex.Message}";
+                return false;
+            }
+
+        }
 
     }
 }

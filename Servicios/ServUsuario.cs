@@ -61,6 +61,21 @@ namespace Servicios
                 return false;
             }
         }
+        public static bool ActualizarClave(CtrUsuario usuario, out string message)
+        {
+            try
+            {
+                return ModelUsuario.ActualizarClave(
+                    usuario.IdUsuario,
+                    usuario.Clave,
+                    out message);
+            }
+            catch (Exception ex)
+            {
+                message = $"Error al registrar el usuario: {ex.Message}";
+                return false;
+            }
+        }
         public static bool RegistrarUsuario(CtrUsuario usuario, out string message)
         {
             try
